@@ -68,6 +68,64 @@ NOTE: This file contains the styling for responsive Template.
 ::-moz-selection { background: var(--iq-primary); color: var(--iq-white); text-shadow: none; }
 ::selection { background: var(--iq-primary); color: var(--iq-white); text-shadow: none; }
 
+/* beranda background image */
+.beranda {
+  background-size: cover;
+  min-height: 90vh;
+  position: relative;
+  color: white;
+  text-shadow: 2px 2px 2px rgba(0,0,0,.2);
+
+}
+
+h1 {
+  text-align: center;
+  vertical-align: middle;
+  font-size: 280%;
+  color: white;
+}
+
+h3 {
+  text-align: center;
+  vertical-align: middle;
+  font-size: 50%;
+  color: white;
+}
+
+.color-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: 2px 2px 2px rgba(0,0,0,.2);
+}
+
+@media (max-width: 1080px) {
+  .beranda {
+    min-height: 50vh
+  }
+
+  h1 {
+    font-size: calc(1.2rem + 2.2vw);
+  }
+}
+
+/* Header */
+.header-app {
+  background-color: #13998A;
+  margin: 0 -10%;
+  padding: 0 10%;
+}
+.header-logo-satu {
+  height: 38px;
+  width: 24px;
+}
+
+.app-e-sertif {
+  font-size: 165%;
+  color: white;
+  /* align-items: center; */
+}
+
 /* Definition Lists */
 dl dd { margin-bottom: 15px; }
 dl dd:last-child { margin-bottom: 0px; }

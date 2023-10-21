@@ -1,10 +1,10 @@
 <div class="iq-sidebar-logo d-flex justify-content-between">
-    <a href="index.html" class="header-logo">
-        <img src="images/logo.png" class="img-fluid rounded-normal" alt="">
-        <div class="logo-title">
-            <!-- <span class="text-danger text-uppercase">Server<span class="text-primary ml-1">360</span></span> -->
-        </div>
-    </a>
+        <a href="/" class="header-logo">
+            <img src="images/diskominfo_loader.png" class="img-fluid rounded-normal" alt="">
+            <div class="logo-title">
+                <span class="text-uppercase" style="color: #13998A;"><b>Side</b><span class="text-primary ml-1"><b>bar.</b></span></span>
+            </div>
+        </a>
     <div class="iq-menu-bt-sidebar">
         <div class="iq-menu-bt align-self-center">
             <div class="wrapper-menu">
@@ -17,14 +17,16 @@
 <div id="sidebar-scrollbar">
     <nav class="iq-sidebar-menu">
         <ul id="iq-sidebar-toggle" class="iq-menu">
-            <li class="active active-menu">
-                <a href="/"><i class="las la-house-damage"></i>Dashboard</a>
-
+            <li>
+                <a href="/" class="iq-waves-effect"><i class="las la-house-damage"></i><span>Beranda</span></a>
             </li>
             <li>
                 <a href="/acara" class="iq-waves-effect"><i class="las la-box iq-arrow-left"></i><span>Kegiatan</span></a>
             </li>
             <li>
+                <a href="/login" class="iq-waves-effect"><i class="las fa-power-off"></i><span>Keluar Aplikasi</span></a>
+            </li>
+            <!-- <li>
                 <a href="#userinfo" class="iq-waves-effect" data-toggle="collapse" aria-expanded="false"><span class="ripple rippleEffect"></span><i class="las la-user-tie iq-arrow-left"></i><span>User</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
                 <ul id="userinfo" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle" style="">
                     <li><a href="profile.html"><i class="las la-id-card-alt"></i>User Profile</a></li>
@@ -33,7 +35,7 @@
                     <li><a href="user-list.html"><i class="las la-th-list"></i>User List</a></li>
                 </ul>
             </li>
-         
+
             <li>
                 <a href="#pages" class="iq-waves-effect collapsed" data-toggle="collapse" aria-expanded="false"><i class="las la-file-alt iq-arrow-left"></i><span>Pages</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
                 <ul id="pages" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
@@ -83,7 +85,7 @@
                     <li><a href="#"><i class="ri-record-circle-line"></i>Menu 3</a></li>
                     <li><a href="#"><i class="ri-record-circle-line"></i>Menu 4</a></li>
                 </ul>
-            </li>
+            </li> -->
         </ul>
     </nav>
     <!-- <div id="sidebar-bottom" class="p-3 position-relative">
