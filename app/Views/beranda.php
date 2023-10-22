@@ -4,8 +4,8 @@
 
 <div class="beranda" style="background-image: url('./images/bg.jpg');">
    <div class="color-overlay d-flex justify-content-center align-items-center">
-      <h1><b>Selamat Datang di Aplikasi E-Sertifikat
-         <h3><b><p>Sistem pembuatan dan pencetakan sertifikat pelatihan Pemerintah Kota Yogyakarta secara online</p></b></h3></b></h1>
+      <h1 class="selamat"><b>Selamat Datang di Aplikasi E-Sertifikat
+         <h3 class="sistem"><b><p>Sistem pembuatan dan pencetakan sertifikat pelatihan Pemerintah Kota Yogyakarta secara online</p></b></h3></b></h1>
    </div>
 </div>
 
