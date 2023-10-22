@@ -36,7 +36,7 @@
                 <div class="bg-white form-container sign-in-container">
                     <div class="sign-in-page-data">
                       <div class="sign-in-from w-100 m-auto">
-                          <h1 class="mb-3 text-center">Sign in</h1>
+                          <h1 class="mb-3 text-center">Sign In</h1>
                           <p class="text-center text-dark">Enter your email address and password to access admin panel.</p>
                           <form class="mt-4">
                               <div class="form-group">
