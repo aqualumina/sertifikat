@@ -53,6 +53,7 @@
                                 <input class="form-control 
                                             <?php if (session('msg')) : ?>is-invalid
                                             <?php endif ?>" name="password" type="password" placeholder="Password" />
+                                            
                                 <label for="inputEmail"></label>
                                 <div class="invalid-feedback">
                                     <?= session('msg') ?>
@@ -61,12 +62,18 @@
                         <div class="custom-control custom-checkbox d-inline-block mt-2 pt-1">
                             <input type="checkbox" class="custom-control-input" id="customCheck2">
                             <label class="custom-control-label" for="customCheck1">Remember Me</label>
+                            <!-- <a href="#" class="float-right">Forgot password?</a> -->
                         </div>
                     </div>
-                    <div class="sign-info">
-                        <button type="submit" class="btn btn-primary">Login</button>
-                        <span class="text-dark dark-color d-block line-height-2">Don't have an account? <a href="#">Sign up</a></span>
+                    <div class="mt-4 mb-0">
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-primary btn-block">Login</button>
+                                </div>
+                                <div class="footer text-center py-3">
+                        <div class="small">Belum Punya Akun ? <a href="/register">Registrasi Disini</a></div>
                     </div>
+                            </div>
+
                 </form>
             </div>
         </div>
