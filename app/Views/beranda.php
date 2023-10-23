@@ -26,7 +26,7 @@
    </div>
 </div> -->
 <!-- color-customizer -->
-<div class="iq-colorbox color-fix">
+<!-- <div class="iq-colorbox color-fix">
    <div class="buy-button"> <a class="color-full" href="#"><i class="fa fa-spinner fa-spin"></i></a> </div>
    <div id="right-sidebar-scrollbar" class="iq-colorbox-inner">
       <div class="clearfix color-picker">
@@ -57,6 +57,6 @@
          <a target="_blank" class="btn btn-primary d-block mt-3" href="">Purchase Now</a>
       </div>
    </div>
-</div>
+</div> -->
 <!-- color-customizer END -->
 <?= $this->endSection() ?>
