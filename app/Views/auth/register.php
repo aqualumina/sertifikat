@@ -39,11 +39,25 @@
                             <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
                         <?php endif; ?>
                         <form action="/login/save" method="post">
-                        <?= csrf_field() ?>
+                        <?= csrf_field() ?> 
+                        
+                        <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <div class="form-floating mb-3 mb-md-0">
+                                        <input type="namadepan" name="namadepan" class="form-control <?php if (session('errors.namadepan')) : ?>is-invalid<?php endif ?>" placeholder="Nama Depan" autocomplete="off" />
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating mb-3 mb-md-0">
+                                        <input type="namabelakang" name="namabelakang" class="form-control <?php if (session('errors.namabelakang')) : ?>is-invalid<?php endif ?>" placeholder="Nama Belakang" autocomplete="off" />
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
                             <div class="form-floating mb-3">
                                 <input class="form-control <?php if (session('error.email')) : ?>is-invalid<?php endif ?>" name="email" type="email" placeholder="Email" value="<?= old('email') ?>" />
-                               
-
                             </div>
 
                             <div class="form-floating mb-3">
