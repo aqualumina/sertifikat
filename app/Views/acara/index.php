@@ -26,7 +26,6 @@
         </div>
         </form>
         <hr>
-
         <div class="widget-box transparent">
             <div class="widget-body">
                 <div class="widget-main no-padding">
@@ -52,11 +51,7 @@
             </div><!-- /.widget-body -->
         </div><!-- /.widget-box -->
     </div>
-    </p>
-</div><!-- /.col -->
 
 </div>
 
-</div>
-</div>
 <?= $this->endSection() ?>
