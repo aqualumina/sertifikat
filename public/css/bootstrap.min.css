@@ -6759,14 +6759,14 @@ a.close.disabled {
 	position: relative;
 	display: none;
 	float: center;
-	width: 175%;
-	margin-left: -40%;
-	margin-right: 50%;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
-	transition: -webkit-transform .6s ease-in-out;
-	transition: transform .6s ease-in-out;
-	transition: transform .6s ease-in-out, -webkit-transform .6s ease-in-out
+	transition: -webkit-transform .3s ease-in-out;
+	transition: transform .3s ease-in-out;
+	transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out
 }
 
 @media (prefers-reduced-motion:reduce) {

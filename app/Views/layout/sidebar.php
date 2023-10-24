@@ -24,7 +24,7 @@
                 <a href="/acara" class="iq-waves-effect"><i class="las la-box iq-arrow-left"></i><span>Kegiatan</span></a>
             </li>
             <li>
-                <a href="/users" class="iq-waves-effect"><i class="las la-box iq-arrow-left"></i><span>Pengguna</span></a>
+                <a href="/users" class="iq-waves-effect"><i class="las la-user iq-arrow-left"></i><span>Pengguna</span></a>
             </li>
             <li>
                 <a href="/login" class="iq-waves-effect"><i class="las fa-power-off"></i><span>Keluar Aplikasi</span></a>
