@@ -127,6 +127,13 @@ NOTE: This file contains the styling for responsive Template.
   /* align-items: center; */
 }
 
+/* logo login */
+.logo-login { 
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 20%;
+}
 /* Definition Lists */
 dl dd { margin-bottom: 15px; }
 dl dd:last-child { margin-bottom: 0px; }
