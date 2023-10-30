@@ -16,12 +16,13 @@ $routes->get('/logout', 'Auth::logout');
 
 $routes->group('acara',['filter' => 'auth'], function ($rs) {
     $rs->get('/', 'Acara::index');
+    $rs->get('format', 'Acara::index');
     $rs->get('create', 'Acara::create');
     $rs->post('create', 'Acara::save');
     $rs->get('edit/(:any)', 'Acara::edit/$1');
     $rs->post('edit/(:any)', 'Acara::update/$1');
     $rs->delete('(:num)', 'Acara::delete/$1');
-    $rs->get('(:any)', 'Acara::detail/$1');
+    $rs->get('/', 'Acara::detail/$1');
     $rs->post('import', 'Acara::importData');
 });
 

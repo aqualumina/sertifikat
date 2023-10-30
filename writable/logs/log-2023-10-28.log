@@ -1,0 +1,827 @@
+INFO - 2023-10-28 09:20:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 09:20:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 09:21:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 09:21:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 09:22:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 09:22:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 09:22:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 09:37:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 09:37:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 09:37:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 09:37:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 09:37:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-28 09:37:21 --> Undefined property: CodeIgniter\View\View::$db
+in APPPATH\Views\acara\index.php on line 57.
+ 1 APPPATH\Views\acara\index.php(57): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: CodeIgniter\\View\\View::$db', 'C:\\Users\\Lenovo\\sertifikat\\app\\Views\\acara\\index.php', 57, [])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\Lenovo\\sertifikat\\app\\Views\\acara\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('acara/index', [], true)
+ 5 APPPATH\Controllers\Acara.php(20): view('acara/index')
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Acara->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Lenovo\\sertifikat\\public\\index.php')
+INFO - 2023-10-28 09:39:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-28 09:39:17 --> Undefined variable: nom
+in APPPATH\Views\acara\index.php on line 58.
+ 1 APPPATH\Views\acara\index.php(58): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: nom', 'C:\\Users\\Lenovo\\sertifikat\\app\\Views\\acara\\index.php', 58, [])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\Lenovo\\sertifikat\\app\\Views\\acara\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('acara/index', [], true)
+ 5 APPPATH\Controllers\Acara.php(20): view('acara/index')
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Acara->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Lenovo\\sertifikat\\public\\index.php')
+INFO - 2023-10-28 09:40:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-28 09:40:58 --> Undefined variable: x
+in APPPATH\Views\acara\index.php on line 64.
+ 1 APPPATH\Views\acara\index.php(64): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: x', 'C:\\Users\\Lenovo\\sertifikat\\app\\Views\\acara\\index.php', 64, [])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\Lenovo\\sertifikat\\app\\Views\\acara\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('acara/index', [], true)
+ 5 APPPATH\Controllers\Acara.php(20): view('acara/index')
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Acara->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Lenovo\\sertifikat\\public\\index.php')
+INFO - 2023-10-28 09:41:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 09:43:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 09:45:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 09:47:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 09:48:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 09:49:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 09:49:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 09:51:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 09:52:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 09:53:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 09:56:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 09:56:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 09:56:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 09:56:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 09:56:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-28 09:56:59 --> Undefined variable: s
+in APPPATH\Views\acara\index.php on line 77.
+ 1 APPPATH\Views\acara\index.php(77): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: s', 'C:\\Users\\Lenovo\\sertifikat\\app\\Views\\acara\\index.php', 77, [])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\Lenovo\\sertifikat\\app\\Views\\acara\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('acara/index', [], true)
+ 5 APPPATH\Controllers\Acara.php(20): view('acara/index')
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Acara->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Lenovo\\sertifikat\\public\\index.php')
+INFO - 2023-10-28 09:57:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-28 09:57:35 --> Undefined variable: s
+in APPPATH\Views\acara\index.php on line 81.
+ 1 APPPATH\Views\acara\index.php(81): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: s', 'C:\\Users\\Lenovo\\sertifikat\\app\\Views\\acara\\index.php', 81, [])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\Lenovo\\sertifikat\\app\\Views\\acara\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('acara/index', [], true)
+ 5 APPPATH\Controllers\Acara.php(20): view('acara/index')
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Acara->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Lenovo\\sertifikat\\public\\index.php')
+INFO - 2023-10-28 09:57:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 09:58:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 09:58:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 09:59:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 09:59:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:00:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:02:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:03:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-28 10:03:34 --> Call to undefined function form_open_multipart()
+in APPPATH\Views\acara\index.php on line 131.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('acara/index', [], true)
+ 4 APPPATH\Controllers\Acara.php(20): view('acara/index')
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Acara->index()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Lenovo\\sertifikat\\public\\index.php')
+INFO - 2023-10-28 10:03:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-28 10:03:47 --> Call to undefined function form_open_multipart()
+in APPPATH\Views\acara\index.php on line 131.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('acara/index', [], true)
+ 4 APPPATH\Controllers\Acara.php(20): view('acara/index')
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Acara->index()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Lenovo\\sertifikat\\public\\index.php')
+INFO - 2023-10-28 10:03:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:04:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:06:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:07:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:08:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:09:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:11:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:12:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:12:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:14:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:15:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:16:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:20:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:20:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:21:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:23:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:23:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:23:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:23:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:23:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:23:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:24:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:27:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:28:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:29:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:32:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-28 10:32:54 --> Undefined variable: year
+in APPPATH\Views\acara\create.php on line 37.
+ 1 APPPATH\Views\acara\create.php(37): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: year', 'C:\\Users\\Lenovo\\sertifikat\\app\\Views\\acara\\create.php', 37, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\Lenovo\\sertifikat\\app\\Views\\acara\\create.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('acara/create', [], true)
+ 5 APPPATH\Controllers\Acara.php(41): view('acara/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Acara->create()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Lenovo\\sertifikat\\public\\index.php')
+INFO - 2023-10-28 10:34:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:34:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:37:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-28 10:37:04 --> Undefined variable: today
+in APPPATH\Views\acara\create.php on line 37.
+ 1 APPPATH\Views\acara\create.php(37): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: today', 'C:\\Users\\Lenovo\\sertifikat\\app\\Views\\acara\\create.php', 37, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\Lenovo\\sertifikat\\app\\Views\\acara\\create.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('acara/create', [], true)
+ 5 APPPATH\Controllers\Acara.php(41): view('acara/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Acara->create()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Lenovo\\sertifikat\\public\\index.php')
+INFO - 2023-10-28 10:37:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-28 10:37:10 --> Undefined variable: today
+in APPPATH\Views\acara\create.php on line 37.
+ 1 APPPATH\Views\acara\create.php(37): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: today', 'C:\\Users\\Lenovo\\sertifikat\\app\\Views\\acara\\create.php', 37, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\Lenovo\\sertifikat\\app\\Views\\acara\\create.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('acara/create', [], true)
+ 5 APPPATH\Controllers\Acara.php(41): view('acara/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Acara->create()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Lenovo\\sertifikat\\public\\index.php')
+INFO - 2023-10-28 10:37:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:39:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:42:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:42:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:43:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:46:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:47:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:47:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:47:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:48:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:48:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:48:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:49:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:50:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:50:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:50:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:50:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:50:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:50:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:51:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:51:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:51:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:52:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:52:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:54:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:54:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:54:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:54:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:55:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:55:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:55:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:56:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:57:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:58:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:58:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:58:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:58:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-28 10:58:47 --> mysqli_sql_exception: Unknown column 'created_at' in 'field list' in C:\Users\Lenovo\sertifikat\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\Lenovo\sertifikat\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\Users\Lenovo\sertifikat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\Users\Lenovo\sertifikat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\Users\Lenovo\sertifikat\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\Users\Lenovo\sertifikat\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\Lenovo\sertifikat\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\Lenovo\sertifikat\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\Users\Lenovo\sertifikat\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 C:\Users\Lenovo\sertifikat\app\Controllers\Acara.php(56): CodeIgniter\BaseModel->save(Array)
+#9 C:\Users\Lenovo\sertifikat\system\CodeIgniter.php(919): App\Controllers\Acara->save()
+#10 C:\Users\Lenovo\sertifikat\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#11 C:\Users\Lenovo\sertifikat\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Users\Lenovo\sertifikat\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\Lenovo\sertifikat\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Lenovo...')
+#14 {main}
+CRITICAL - 2023-10-28 10:58:48 --> Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_acara` (`nama_acara`, `created_at`, `updated_at`) VALUES (:nama_acara:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Acara.php(56): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Acara->save()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Lenovo\\sertifikat\\public\\index.php')
+INFO - 2023-10-28 10:58:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:59:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:59:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 10:59:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:00:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:00:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:00:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:00:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:00:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:00:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:00:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:00:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:01:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:01:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:01:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:02:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:03:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:03:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:04:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:04:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:05:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:05:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:05:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:08:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:08:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:08:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:08:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:08:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:09:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:09:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:11:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:11:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:11:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:11:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:31:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:31:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:32:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-28 11:32:50 --> mysqli_sql_exception: Unknown column 'created_at' in 'field list' in C:\Users\Lenovo\sertifikat\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\Lenovo\sertifikat\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\Users\Lenovo\sertifikat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\Users\Lenovo\sertifikat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\Users\Lenovo\sertifikat\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\Users\Lenovo\sertifikat\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\Lenovo\sertifikat\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\Lenovo\sertifikat\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\Users\Lenovo\sertifikat\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 C:\Users\Lenovo\sertifikat\app\Controllers\Acara.php(56): CodeIgniter\BaseModel->save(Array)
+#9 C:\Users\Lenovo\sertifikat\system\CodeIgniter.php(919): App\Controllers\Acara->save()
+#10 C:\Users\Lenovo\sertifikat\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#11 C:\Users\Lenovo\sertifikat\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Users\Lenovo\sertifikat\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\Lenovo\sertifikat\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Lenovo...')
+#14 {main}
+CRITICAL - 2023-10-28 11:32:50 --> Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_acara` (`jenis_dokumen`, `nama_acara`, `no_sertifikat`, `tgl_sertifikat`, `tgl_acara`, `tgl_acara_akhir`, `nama_ttd`, `nip_ttd`, `created_at`, `updated_at`) VALUES (:jenis_dokumen:, :nama_acara:, :no_sertifikat:, :tgl_sertifikat:, :tgl_acara:, :tgl_acara_akhir:, :nama_ttd:, :nip_ttd:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Acara.php(56): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Acara->save()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Lenovo\\sertifikat\\public\\index.php')
+INFO - 2023-10-28 11:39:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:39:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:39:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:40:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:40:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:40:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:40:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:40:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-28 11:40:29 --> mysqli_sql_exception: Unknown column 'created_at' in 'field list' in C:\Users\Lenovo\sertifikat\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\Lenovo\sertifikat\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\Users\Lenovo\sertifikat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\Users\Lenovo\sertifikat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\Users\Lenovo\sertifikat\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\Users\Lenovo\sertifikat\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\Lenovo\sertifikat\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\Lenovo\sertifikat\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\Users\Lenovo\sertifikat\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 C:\Users\Lenovo\sertifikat\app\Controllers\Acara.php(56): CodeIgniter\BaseModel->save(Array)
+#9 C:\Users\Lenovo\sertifikat\system\CodeIgniter.php(919): App\Controllers\Acara->save()
+#10 C:\Users\Lenovo\sertifikat\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#11 C:\Users\Lenovo\sertifikat\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Users\Lenovo\sertifikat\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\Lenovo\sertifikat\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Lenovo...')
+#14 {main}
+CRITICAL - 2023-10-28 11:40:29 --> Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_acara` (`jenis_dokumen`, `nama_acara`, `no_sertifikat`, `tgl_sertifikat`, `tgl_acara`, `tgl_acara_akhir`, `nama_ttd`, `nip_ttd`, `created_at`, `updated_at`) VALUES (:jenis_dokumen:, :nama_acara:, :no_sertifikat:, :tgl_sertifikat:, :tgl_acara:, :tgl_acara_akhir:, :nama_ttd:, :nip_ttd:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Acara.php(56): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Acara->save()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Lenovo\\sertifikat\\public\\index.php')
+INFO - 2023-10-28 11:42:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:42:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-28 11:42:11 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\Users\Lenovo\sertifikat\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\Lenovo\sertifikat\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\Users\Lenovo\sertifikat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\Users\Lenovo\sertifikat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\Users\Lenovo\sertifikat\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\Users\Lenovo\sertifikat\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\Lenovo\sertifikat\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\Lenovo\sertifikat\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\Users\Lenovo\sertifikat\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 C:\Users\Lenovo\sertifikat\app\Controllers\Acara.php(56): CodeIgniter\BaseModel->save(Array)
+#9 C:\Users\Lenovo\sertifikat\system\CodeIgniter.php(919): App\Controllers\Acara->save()
+#10 C:\Users\Lenovo\sertifikat\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#11 C:\Users\Lenovo\sertifikat\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Users\Lenovo\sertifikat\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\Lenovo\sertifikat\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Lenovo...')
+#14 {main}
+CRITICAL - 2023-10-28 11:42:11 --> Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_acara` (`jenis_dokumen`, `nama_acara`, `no_sertifikat`, `tgl_sertifikat`, `tgl_acara`, `tgl_acara_akhir`, `nama_ttd`, `nip_ttd`, `created_at`, `updated_at`) VALUES (:jenis_dokumen:, :nama_acara:, :no_sertifikat:, :tgl_sertifikat:, :tgl_acara:, :tgl_acara_akhir:, :nama_ttd:, :nip_ttd:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Acara.php(56): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Acara->save()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Lenovo\\sertifikat\\public\\index.php')
+INFO - 2023-10-28 11:42:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:42:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-28 11:42:51 --> mysqli_sql_exception: Column 'jenis_dokumen' cannot be null in C:\Users\Lenovo\sertifikat\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\Lenovo\sertifikat\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\Users\Lenovo\sertifikat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\Users\Lenovo\sertifikat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\Users\Lenovo\sertifikat\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\Users\Lenovo\sertifikat\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\Lenovo\sertifikat\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\Lenovo\sertifikat\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\Users\Lenovo\sertifikat\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 C:\Users\Lenovo\sertifikat\app\Controllers\Acara.php(56): CodeIgniter\BaseModel->save(Array)
+#9 C:\Users\Lenovo\sertifikat\system\CodeIgniter.php(919): App\Controllers\Acara->save()
+#10 C:\Users\Lenovo\sertifikat\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#11 C:\Users\Lenovo\sertifikat\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Users\Lenovo\sertifikat\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\Lenovo\sertifikat\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Lenovo...')
+#14 {main}
+CRITICAL - 2023-10-28 11:42:51 --> Column 'jenis_dokumen' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_acara` (`jenis_dokumen`, `nama_acara`, `no_sertifikat`, `tgl_sertifikat`, `tgl_acara`, `tgl_acara_akhir`, `nama_ttd`, `nip_ttd`, `created_at`, `updated_at`) VALUES (:jenis_dokumen:, :nama_acara:, :no_sertifikat:, :tgl_sertifikat:, :tgl_acara:, :tgl_acara_akhir:, :nama_ttd:, :nip_ttd:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Acara.php(56): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Acara->save()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Lenovo\\sertifikat\\public\\index.php')
+INFO - 2023-10-28 11:43:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:43:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-28 11:43:04 --> mysqli_sql_exception: Column 'jenis_dokumen' cannot be null in C:\Users\Lenovo\sertifikat\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\Lenovo\sertifikat\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\Users\Lenovo\sertifikat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\Users\Lenovo\sertifikat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\Users\Lenovo\sertifikat\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\Users\Lenovo\sertifikat\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\Lenovo\sertifikat\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\Lenovo\sertifikat\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\Users\Lenovo\sertifikat\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 C:\Users\Lenovo\sertifikat\app\Controllers\Acara.php(56): CodeIgniter\BaseModel->save(Array)
+#9 C:\Users\Lenovo\sertifikat\system\CodeIgniter.php(919): App\Controllers\Acara->save()
+#10 C:\Users\Lenovo\sertifikat\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#11 C:\Users\Lenovo\sertifikat\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Users\Lenovo\sertifikat\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\Lenovo\sertifikat\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Lenovo...')
+#14 {main}
+CRITICAL - 2023-10-28 11:43:04 --> Column 'jenis_dokumen' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_acara` (`jenis_dokumen`, `nama_acara`, `no_sertifikat`, `tgl_sertifikat`, `tgl_acara`, `tgl_acara_akhir`, `nama_ttd`, `nip_ttd`, `created_at`, `updated_at`) VALUES (:jenis_dokumen:, :nama_acara:, :no_sertifikat:, :tgl_sertifikat:, :tgl_acara:, :tgl_acara_akhir:, :nama_ttd:, :nip_ttd:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Acara.php(56): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Acara->save()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Lenovo\\sertifikat\\public\\index.php')
+INFO - 2023-10-28 11:43:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:43:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:44:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-28 11:44:05 --> mysqli_sql_exception: Column 'tgl_sertifikat' cannot be null in C:\Users\Lenovo\sertifikat\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\Lenovo\sertifikat\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\Users\Lenovo\sertifikat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\Users\Lenovo\sertifikat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\Users\Lenovo\sertifikat\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\Users\Lenovo\sertifikat\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\Lenovo\sertifikat\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\Lenovo\sertifikat\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\Users\Lenovo\sertifikat\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 C:\Users\Lenovo\sertifikat\app\Controllers\Acara.php(56): CodeIgniter\BaseModel->save(Array)
+#9 C:\Users\Lenovo\sertifikat\system\CodeIgniter.php(919): App\Controllers\Acara->save()
+#10 C:\Users\Lenovo\sertifikat\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#11 C:\Users\Lenovo\sertifikat\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Users\Lenovo\sertifikat\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\Lenovo\sertifikat\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Lenovo...')
+#14 {main}
+CRITICAL - 2023-10-28 11:44:05 --> Column 'tgl_sertifikat' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_acara` (`jenis_dokumen`, `nama_acara`, `no_sertifikat`, `tgl_sertifikat`, `tgl_acara`, `tgl_acara_akhir`, `nama_ttd`, `nip_ttd`, `created_at`, `updated_at`) VALUES (:jenis_dokumen:, :nama_acara:, :no_sertifikat:, :tgl_sertifikat:, :tgl_acara:, :tgl_acara_akhir:, :nama_ttd:, :nip_ttd:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Acara.php(56): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Acara->save()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Lenovo\\sertifikat\\public\\index.php')
+INFO - 2023-10-28 11:44:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:44:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-28 11:44:18 --> mysqli_sql_exception: Column 'tgl_sertifikat' cannot be null in C:\Users\Lenovo\sertifikat\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\Lenovo\sertifikat\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\Users\Lenovo\sertifikat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\Users\Lenovo\sertifikat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\Users\Lenovo\sertifikat\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\Users\Lenovo\sertifikat\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\Lenovo\sertifikat\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\Lenovo\sertifikat\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\Users\Lenovo\sertifikat\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 C:\Users\Lenovo\sertifikat\app\Controllers\Acara.php(56): CodeIgniter\BaseModel->save(Array)
+#9 C:\Users\Lenovo\sertifikat\system\CodeIgniter.php(919): App\Controllers\Acara->save()
+#10 C:\Users\Lenovo\sertifikat\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#11 C:\Users\Lenovo\sertifikat\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Users\Lenovo\sertifikat\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\Lenovo\sertifikat\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Lenovo...')
+#14 {main}
+CRITICAL - 2023-10-28 11:44:18 --> Column 'tgl_sertifikat' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_acara` (`jenis_dokumen`, `nama_acara`, `no_sertifikat`, `tgl_sertifikat`, `tgl_acara`, `tgl_acara_akhir`, `nama_ttd`, `nip_ttd`, `created_at`, `updated_at`) VALUES (:jenis_dokumen:, :nama_acara:, :no_sertifikat:, :tgl_sertifikat:, :tgl_acara:, :tgl_acara_akhir:, :nama_ttd:, :nip_ttd:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Acara.php(56): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Acara->save()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Lenovo\\sertifikat\\public\\index.php')
+INFO - 2023-10-28 11:44:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:47:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-28 11:47:39 --> mysqli_sql_exception: Column 'tgl_sertifikat' cannot be null in C:\Users\Lenovo\sertifikat\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\Lenovo\sertifikat\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\Users\Lenovo\sertifikat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\Users\Lenovo\sertifikat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\Users\Lenovo\sertifikat\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\Users\Lenovo\sertifikat\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\Lenovo\sertifikat\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\Lenovo\sertifikat\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\Users\Lenovo\sertifikat\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 C:\Users\Lenovo\sertifikat\app\Controllers\Acara.php(56): CodeIgniter\BaseModel->save(Array)
+#9 C:\Users\Lenovo\sertifikat\system\CodeIgniter.php(919): App\Controllers\Acara->save()
+#10 C:\Users\Lenovo\sertifikat\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#11 C:\Users\Lenovo\sertifikat\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Users\Lenovo\sertifikat\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\Lenovo\sertifikat\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Lenovo...')
+#14 {main}
+CRITICAL - 2023-10-28 11:47:39 --> Column 'tgl_sertifikat' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_acara` (`jenis_dokumen`, `nama_acara`, `no_sertifikat`, `tgl_sertifikat`, `tgl_acara`, `tgl_acara_akhir`, `nama_ttd`, `nip_ttd`, `created_at`, `updated_at`) VALUES (:jenis_dokumen:, :nama_acara:, :no_sertifikat:, :tgl_sertifikat:, :tgl_acara:, :tgl_acara_akhir:, :nama_ttd:, :nip_ttd:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Acara.php(56): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Acara->save()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Lenovo\\sertifikat\\public\\index.php')
+INFO - 2023-10-28 11:47:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-28 11:47:41 --> syntax error, unexpected '<', expecting end of file
+in APPPATH\Views\acara\create.php on line 103.
+ 1 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('acara/create', [], true)
+ 3 APPPATH\Controllers\Acara.php(41): view('acara/create', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Acara->create()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Lenovo\\sertifikat\\public\\index.php')
+INFO - 2023-10-28 11:47:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:47:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-28 11:47:59 --> Undefined offset: 1
+in APPPATH\Views\acara\create.php on line 97.
+ 1 APPPATH\Views\acara\create.php(97): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offset: 1', 'C:\\Users\\Lenovo\\sertifikat\\app\\Views\\acara\\create.php', 97, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\Lenovo\\sertifikat\\app\\Views\\acara\\create.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('acara/create', [], true)
+ 5 APPPATH\Controllers\Acara.php(41): view('acara/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Acara->create()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Lenovo\\sertifikat\\public\\index.php')
+INFO - 2023-10-28 11:48:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-28 11:48:28 --> Undefined offset: 1
+in APPPATH\Views\acara\create.php on line 9.
+ 1 APPPATH\Views\acara\create.php(9): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offset: 1', 'C:\\Users\\Lenovo\\sertifikat\\app\\Views\\acara\\create.php', 9, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\Lenovo\\sertifikat\\app\\Views\\acara\\create.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('acara/create', [], true)
+ 5 APPPATH\Controllers\Acara.php(41): view('acara/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Acara->create()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Lenovo\\sertifikat\\public\\index.php')
+INFO - 2023-10-28 11:50:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:50:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:50:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-28 11:50:26 --> mysqli_sql_exception: Column 'tgl_sertifikat' cannot be null in C:\Users\Lenovo\sertifikat\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\Lenovo\sertifikat\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\Users\Lenovo\sertifikat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\Users\Lenovo\sertifikat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\Users\Lenovo\sertifikat\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\Users\Lenovo\sertifikat\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\Lenovo\sertifikat\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\Lenovo\sertifikat\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\Users\Lenovo\sertifikat\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 C:\Users\Lenovo\sertifikat\app\Controllers\Acara.php(56): CodeIgniter\BaseModel->save(Array)
+#9 C:\Users\Lenovo\sertifikat\system\CodeIgniter.php(919): App\Controllers\Acara->save()
+#10 C:\Users\Lenovo\sertifikat\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#11 C:\Users\Lenovo\sertifikat\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Users\Lenovo\sertifikat\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\Lenovo\sertifikat\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Lenovo...')
+#14 {main}
+CRITICAL - 2023-10-28 11:50:26 --> Column 'tgl_sertifikat' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_acara` (`jenis_dokumen`, `nama_acara`, `no_sertifikat`, `tgl_sertifikat`, `tgl_acara`, `tgl_acara_akhir`, `nama_ttd`, `nip_ttd`, `created_at`, `updated_at`) VALUES (:jenis_dokumen:, :nama_acara:, :no_sertifikat:, :tgl_sertifikat:, :tgl_acara:, :tgl_acara_akhir:, :nama_ttd:, :nip_ttd:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Acara.php(56): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Acara->save()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Lenovo\\sertifikat\\public\\index.php')
+INFO - 2023-10-28 11:51:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:51:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:56:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:56:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-28 11:56:14 --> mysqli_sql_exception: Column 'tgl_sertifikat' cannot be null in C:\Users\Lenovo\sertifikat\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\Lenovo\sertifikat\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\Users\Lenovo\sertifikat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\Users\Lenovo\sertifikat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\Users\Lenovo\sertifikat\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\Users\Lenovo\sertifikat\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\Lenovo\sertifikat\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\Lenovo\sertifikat\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\Users\Lenovo\sertifikat\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 C:\Users\Lenovo\sertifikat\app\Controllers\Acara.php(56): CodeIgniter\BaseModel->save(Array)
+#9 C:\Users\Lenovo\sertifikat\system\CodeIgniter.php(919): App\Controllers\Acara->save()
+#10 C:\Users\Lenovo\sertifikat\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#11 C:\Users\Lenovo\sertifikat\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Users\Lenovo\sertifikat\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\Lenovo\sertifikat\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Lenovo...')
+#14 {main}
+CRITICAL - 2023-10-28 11:56:14 --> Column 'tgl_sertifikat' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_acara` (`jenis_dokumen`, `nama_acara`, `no_sertifikat`, `tgl_sertifikat`, `tgl_acara`, `tgl_acara_akhir`, `nama_ttd`, `nip_ttd`, `created_at`, `updated_at`) VALUES (:jenis_dokumen:, :nama_acara:, :no_sertifikat:, :tgl_sertifikat:, :tgl_acara:, :tgl_acara_akhir:, :nama_ttd:, :nip_ttd:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Acara.php(56): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Acara->save()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Lenovo\\sertifikat\\public\\index.php')
+INFO - 2023-10-28 11:56:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:56:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:56:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:57:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:57:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-28 11:57:19 --> mysqli_sql_exception: Column 'tgl_acara' cannot be null in C:\Users\Lenovo\sertifikat\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\Lenovo\sertifikat\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\Users\Lenovo\sertifikat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\Users\Lenovo\sertifikat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\Users\Lenovo\sertifikat\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\Users\Lenovo\sertifikat\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\Lenovo\sertifikat\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\Lenovo\sertifikat\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\Users\Lenovo\sertifikat\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 C:\Users\Lenovo\sertifikat\app\Controllers\Acara.php(56): CodeIgniter\BaseModel->save(Array)
+#9 C:\Users\Lenovo\sertifikat\system\CodeIgniter.php(919): App\Controllers\Acara->save()
+#10 C:\Users\Lenovo\sertifikat\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#11 C:\Users\Lenovo\sertifikat\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Users\Lenovo\sertifikat\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\Lenovo\sertifikat\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Lenovo...')
+#14 {main}
+CRITICAL - 2023-10-28 11:57:19 --> Column 'tgl_acara' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_acara` (`jenis_dokumen`, `nama_acara`, `no_sertifikat`, `tgl_sertifikat`, `tgl_acara`, `tgl_acara_akhir`, `nama_ttd`, `nip_ttd`, `created_at`, `updated_at`) VALUES (:jenis_dokumen:, :nama_acara:, :no_sertifikat:, :tgl_sertifikat:, :tgl_acara:, :tgl_acara_akhir:, :nama_ttd:, :nip_ttd:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Acara.php(56): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Acara->save()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Lenovo\\sertifikat\\public\\index.php')
+INFO - 2023-10-28 11:57:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:57:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:57:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:58:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:58:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:59:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-28 11:59:08 --> mysqli_sql_exception: Column 'nama_ttd' cannot be null in C:\Users\Lenovo\sertifikat\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\Lenovo\sertifikat\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\Users\Lenovo\sertifikat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\Users\Lenovo\sertifikat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\Users\Lenovo\sertifikat\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\Users\Lenovo\sertifikat\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\Lenovo\sertifikat\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\Lenovo\sertifikat\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\Users\Lenovo\sertifikat\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 C:\Users\Lenovo\sertifikat\app\Controllers\Acara.php(56): CodeIgniter\BaseModel->save(Array)
+#9 C:\Users\Lenovo\sertifikat\system\CodeIgniter.php(919): App\Controllers\Acara->save()
+#10 C:\Users\Lenovo\sertifikat\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#11 C:\Users\Lenovo\sertifikat\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Users\Lenovo\sertifikat\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\Lenovo\sertifikat\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Lenovo...')
+#14 {main}
+CRITICAL - 2023-10-28 11:59:08 --> Column 'nama_ttd' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_acara` (`jenis_dokumen`, `nama_acara`, `no_sertifikat`, `tgl_sertifikat`, `tgl_acara`, `tgl_acara_akhir`, `nama_ttd`, `nip_ttd`, `created_at`, `updated_at`) VALUES (:jenis_dokumen:, :nama_acara:, :no_sertifikat:, :tgl_sertifikat:, :tgl_acara:, :tgl_acara_akhir:, :nama_ttd:, :nip_ttd:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Acara.php(56): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Acara->save()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Lenovo\\sertifikat\\public\\index.php')
+INFO - 2023-10-28 11:59:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:59:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-28 11:59:20 --> mysqli_sql_exception: Column 'nama_ttd' cannot be null in C:\Users\Lenovo\sertifikat\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\Lenovo\sertifikat\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\Users\Lenovo\sertifikat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\Users\Lenovo\sertifikat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\Users\Lenovo\sertifikat\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\Users\Lenovo\sertifikat\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\Lenovo\sertifikat\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\Lenovo\sertifikat\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\Users\Lenovo\sertifikat\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 C:\Users\Lenovo\sertifikat\app\Controllers\Acara.php(56): CodeIgniter\BaseModel->save(Array)
+#9 C:\Users\Lenovo\sertifikat\system\CodeIgniter.php(919): App\Controllers\Acara->save()
+#10 C:\Users\Lenovo\sertifikat\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#11 C:\Users\Lenovo\sertifikat\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Users\Lenovo\sertifikat\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\Lenovo\sertifikat\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Lenovo...')
+#14 {main}
+CRITICAL - 2023-10-28 11:59:20 --> Column 'nama_ttd' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_acara` (`jenis_dokumen`, `nama_acara`, `no_sertifikat`, `tgl_sertifikat`, `tgl_acara`, `tgl_acara_akhir`, `nama_ttd`, `nip_ttd`, `created_at`, `updated_at`) VALUES (:jenis_dokumen:, :nama_acara:, :no_sertifikat:, :tgl_sertifikat:, :tgl_acara:, :tgl_acara_akhir:, :nama_ttd:, :nip_ttd:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Acara.php(56): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Acara->save()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Lenovo\\sertifikat\\public\\index.php')
+INFO - 2023-10-28 11:59:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:59:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 11:59:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-28 11:59:25 --> Call to undefined method App\Models\AcaraModel::getAcara
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\Acara.php(26): CodeIgniter\Model->__call('getAcara', [])
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Acara->detail('index')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Lenovo\\sertifikat\\public\\index.php')
+INFO - 2023-10-28 12:01:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-28 12:01:06 --> Call to undefined method App\Models\AcaraModel::getAcara
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\Acara.php(26): CodeIgniter\Model->__call('getAcara', [])
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Acara->detail('index')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Lenovo\\sertifikat\\public\\index.php')
+INFO - 2023-10-28 12:01:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 12:01:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 12:01:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-28 12:01:10 --> Call to undefined method App\Models\AcaraModel::getAcara
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\Acara.php(26): CodeIgniter\Model->__call('getAcara', [])
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Acara->detail('index')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Lenovo\\sertifikat\\public\\index.php')
+INFO - 2023-10-28 12:02:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-28 12:02:31 --> Class 'App\Controllers\AcaraModel' not found
+in APPPATH\Controllers\Acara.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(891): App\Controllers\Acara->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Lenovo\\sertifikat\\public\\index.php')
+INFO - 2023-10-28 12:04:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-28 12:04:40 --> Call to undefined method App\Models\AcaraModel::getAcara
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\Acara.php(25): CodeIgniter\Model->__call('getAcara', [])
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Acara->detail('index')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Lenovo\\sertifikat\\public\\index.php')
+INFO - 2023-10-28 12:06:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-28 12:06:18 --> Invalid file: "acara/detail.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('acara/detail.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('acara/detail', [], true)
+ 3 APPPATH\Controllers\Acara.php(31): view('acara/detail', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Acara->detail('index')
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\Lenovo\\sertifikat\\public\\index.php')
+INFO - 2023-10-28 12:07:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 12:08:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 12:08:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 12:08:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 12:09:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 12:09:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 12:10:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-28 12:10:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
