@@ -14,28 +14,16 @@ class Acara extends BaseController
     public function index()
     {
         $data=[
-            'title'=> "Beranda"
+            'title'=> "Data Acara"
         ];
-        return view('acara/index');
+        return view('acara/index', $data);
     }
-
-
-// public function detail()
-//     {
-//         $dataAcara = $this->acaraModel->getAcara();
-        
-//         $data = [
-//             'title' => 'Detail Acara',
-//             'result' => $dataAcara
-//         ];
-//         return view('acara/detail', $data);
-//     }
 
     public function create()
     {
         session();
         $data = [
-            'title' => 'Aplikasi Sertifikat'
+            'title' => 'Data Acara'
         ];
         return view('acara/create', $data);
     }

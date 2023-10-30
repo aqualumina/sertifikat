@@ -52,7 +52,7 @@
     <div class="overlay-container">
         <div class="sign-in-page-data">
             <div class="sign-in-from w-100 m-auto">
-            <a class="logo-login mb-3" href="#"><img src="images/diskominfo_loader.png" class="img-fluid" alt="logo"></a>
+                <a class="logo-login mb-3" href="#"><img src="images/diskominfo_loader.png" class="img-fluid" alt="logo"></a>
                 <h1 class="mb-4 text-center" style="color: #13988A;"><b>Aplikasi E-Sertifikat</b></h1>
                 <!-- <p class="text-center text-dark">Silahkan input Username anda dan Password Untuk Masuk Menu</p> -->
                 <?php if (isset($validation)) : ?>
@@ -87,7 +87,7 @@
                             <button type="submit" style="background-color: #13988A;" class="btn btn-primary btn-block">Login</button>
                         </div>
                         <div class="footer text-center py-3">
-                            <div class="small" style="color: #13988A;">Belum Punya Akun? <a href="/register" class="text-decoration-underline" style="color: #13988A;" ><u>Registrasi Disini</u></a></div>
+                            <div class="small" style="color: #13988A;">Belum Punya Akun? <a href="/register" class="text-decoration-underline" style="color: #13988A;"><u>Registrasi Disini</u></a></div>
                         </div>
                     </div>
                 </form>

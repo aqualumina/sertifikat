@@ -1,14 +1,15 @@
 <?= $this->extend('layout/template') ?>
 <?= $this->section('content') ?>
-
-
-
 <div class="container-fluid px-4">
-    <h1 class="mt-4">Tambah Nama Kegiatan</h1>
-    <ol class="breadcrumb mb-4">
-        <li class="breadcrumb-item active"></li>
-    </ol>
+
     <div class="card mb-4">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Beranda</a></li>
+                <li class="breadcrumb-item"><a href="/acara">Acara</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Tambah Acara</li>
+            </ol>
+        </nav>
         <div class="card-header">
             <?= $title ?>
         </div>
@@ -17,13 +18,25 @@
             <form action="<?php echo base_url(); ?>acara/create" method="POST" enctype="multipart/form-data">
                 <?= csrf_field() ?>
                 <div class="mb-3 row">
+                    <label for="penyelenggara" class="col-sm-2 col-form-label">Penyelenggara</label>
+                    <div class="col-sm-4">
+                        <input type="text" placeholder="<?= lang('Masukan Nama Penyelenggara') ?>" class="form-control" name="penyelenggara">
+                    </div>
+                    <label for="narasumber" class="col-sm-2 col-form-label">Narasumber</label>
+                    <div class="col-sm-4">
+                        <input type="text" placeholder="<?= lang('Masukan Nama Narasumber') ?>" class="form-control" name="narasumber">
+                    </div>
+                </div>
+                <div class="mb-3 row">
                     <label for="jenis_dokumen" class="col-sm-2 col-form-label">Jenis Dokumen</label>
-                    <select class="form-control col-sm-4" name="jenis_dokumen">
-                        <option selected="">Pilih Jenis Dokumen</option>
-                        <option value="Sertifikat">Sertifikat</option>
-                        <option value="Penghargaan">Penghargaan</option>
-                    </select>
-                    <label for="nama_acara" class="col-sm-2 col-form-label">Nama Kegiatan</label>
+                    <div class="col-sm-4">
+                        <select class="form-control" name="jenis_dokumen">
+                            <!-- <option selected="">Pilih Jenis Dokumen</option> -->
+                            <option value="Sertifikat">Sertifikat</option>
+                            <option value="Penghargaan">Penghargaan</option>
+                        </select>
+                    </div>
+                    <label for="nama_acara" class="col-sm-2 col-form-label">Nama Acara</label>
                     <div class="col-sm-4">
                         <input type="text" class="form-control" name="nama_acara">
                     </div>
@@ -35,44 +48,42 @@
                     </div>
                     <label for="tgl_sertifikat" class="col-sm-2 col-form-label">Tanggal Sertifikat</label>
                     <div class="col-sm-4">
-                        <input type="date" class="form-control" id="tgl_sertifikat" name= "tgl_sertifikat">
+                        <input type="date" class="form-control" id="tgl_sertifikat" name="tgl_sertifikat">
                     </div>
                 </div>
                 <div class="mb-3 row">
-                    <label for="tgl_acara" class="col-sm-2 col-form-label">Masukan Tanggal Mulai</label>
+                    <label for="tgl_acara" class="col-sm-2 col-form-label">Tanggal Mulai</label>
                     <div class="col-sm-4">
                         <input type="datetime-local" class="form-control" id="tgl_acara" name="tgl_acara">
                     </div>
-                    <label for="tgl_acara_akhir" class="col-sm-2 col-form-label">Masukan Tanggal Selesai</label>
+                    <label for="tgl_acara_akhir" class="col-sm-2 col-form-label">Tanggal Selesai</label>
                     <div class="col-sm-4">
                         <input type="datetime-local" class="form-control" id="tgl_acara_akhir" name="tgl_acara_akhir">
                     </div>
                 </div>
                 <div class="mb-3 row">
-                    <label for="nama_ttd" class="col-sm-2 col-form-label">Nama Penandatangan</label>
+                    <label for="nama_ttd" class="col-sm-2 col-form-label">Penandatangan</label>
                     <div class="col-sm-4">
-                        <input type="text" class="form-control" name="nama_ttd">
+                        <input type="text" placeholder="<?= lang('Nama Penandatangan') ?>" class="form-control" name="nama_ttd">
                     </div>
-                    <label for="nip_ttd" class="col-sm-2 col-form-label">Nip Penandatangan</label>
+                    <label for="nip_ttd" class="col-sm-2 col-form-label">NIP</label>
                     <div class="col-sm-4">
-                        <input type="text" class="form-control" name="nip_ttd">
+                        <input type="text" placeholder="<?= lang('NIP Penandatangan') ?>" class="form-control" name="nip_ttd">
                     </div>
                 </div>
 
-
-
                 <div class="widget-toolbar"></div>
-                        <span style="float: right">
-                            <button class="btn btn-primary" type="submit">Simpan</button>
-                            <button href="/" class="btn btn-xs btn-danger" type="reset" data-action="collapse">
-                                Batal
-                                </button>
-                        </span>
-                    </div>
-            </form>
-            <!--  -->
+                <span style="float: right">
+                    <button class="btn btn-primary" type="submit">Simpan</button>
+                    <button href="/" class="btn btn-xs btn-danger" type="reset" data-action="collapse">
+                        Batal
+                    </button>
+                </span>
         </div>
+        </form>
+        <!--  -->
     </div>
+</div>
 </div>
 
 <script>

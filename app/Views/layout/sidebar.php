@@ -21,7 +21,7 @@
                 <a href="/" class="iq-waves-effect"><i class="las la-house-damage"></i><span>Beranda</span></a>
             </li>
             <li>
-                <a href="/acara" class="iq-waves-effect"><i class="las la-box iq-arrow-left"></i><span>Kegiatan</span></a>
+                <a href="/acara" class="iq-waves-effect"><i class="las la-calendar iq-arrow-left"></i><span>Acara</span></a>
             </li>
             <li>
                 <a href="/users" class="iq-waves-effect"><i class="las la-user iq-arrow-left"></i><span>Pengguna</span></a>

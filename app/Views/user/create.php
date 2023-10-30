@@ -2,13 +2,16 @@
 <?= $this->section('content') ?>
 <main>
     <div class="container-fluid px-4">
-        <h1 class="mt-4">DATA USER</h1>
-        <ol class="breadcrumb mb-4">
-            <li class="breadcrumb-item active">Pengelolaan Data User</li>
-        </ol>
+    <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Beranda</a></li>
+                <li class="breadcrumb-item"><a href="/users">Pengguna</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Tambah Pengguna</li>
+            </ol>
+        </nav>
         <div class="card mb-4">
             <div class="card-header">
-                <i class="fas fa-table me-1"></i>
+                <!-- <i class="fas fa-table me-1"></i> -->
                 <?= $title ?>
             </div>
             <div class="card-body">
