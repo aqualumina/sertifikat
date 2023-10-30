@@ -20,8 +20,10 @@ class Auth extends Controller
         helper(['form']);
         //set rules validation form
         $rules = [
+            'namadepan'     => 'required|min_length[0]|max_length[50]',
+            'namabelakang'  => 'required|min_length[0]|max_length[50]',
             'username'      => 'required|min_length[3]|max_length[20]',
-            'email'         => 'required|min_length[6]|max_length[50]|valid_email|is_unique[pengguna.user_email]',
+            'email'         => 'required|min_length[6]|max_length[50]|valid_email|is_unique[users.user_email]',
             'password'      => 'required|min_length[5]|max_length[200]',
             'pass_confirm'  => 'matches[password]'
         ];

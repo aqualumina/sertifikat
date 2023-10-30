@@ -31,8 +31,8 @@
             <div class="widget-body">
                 <div class="widget-main no-padding">
                     <div class="box-body table-responsive no-padding">
-                        <table class="table table-bordered table-striped">
-                            <thead class="thin-border-bottom">
+                        <table class="table table-bordered table-striped mt-3">
+                            <thead class="thin-border-bottom mt-1">
                                 <tr>
                                     <th colspan="6">
                                         <h3 class="widget-title blue smaller">DAFTAR SERTIFIKAT</a></h3>
@@ -333,7 +333,6 @@
             </div><!-- /.widget-body -->
         </div><!-- /.widget-box -->
     </div>
-
 </div>
 
 <?= $this->endSection() ?>

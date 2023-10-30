@@ -6758,14 +6758,15 @@ a.close.disabled {
 .carousel-item {
 	position: relative;
 	display: none;
-	float: left;
+	float: center;
 	width: 100%;
-	margin-right: -100%;
+	margin-left: auto;
+	margin-right: auto;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
-	transition: -webkit-transform .6s ease-in-out;
-	transition: transform .6s ease-in-out;
-	transition: transform .6s ease-in-out, -webkit-transform .6s ease-in-out
+	transition: -webkit-transform .3s ease-in-out;
+	transition: transform .3s ease-in-out;
+	transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out
 }
 
 @media (prefers-reduced-motion:reduce) {
