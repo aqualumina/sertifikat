@@ -1,7 +1,7 @@
 <?= $this->extend('layout/template') ?>
 <?= $this->section('content') ?>
 <main>
-<nav aria-label="breadcrumb">
+    <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/">Beranda</a></li>
             <li class="breadcrumb-item active" aria-current="page">Acara</li>
@@ -41,87 +41,88 @@
             </thead>
 
             <tbody>
-                <tr>
-                    <td class="center">1</td>
-                    <td class="center">
-                        <h5>Webinar Pembangunan Indonesia</h5>
-                        <br>
-                        <b> 08:00 s.d 10:00 </b>
-                        <table>
-                            <tr>
-                                <th>Dengan Link kegiatan : <b> links </b></th>
-                            </tr>
-                        </table>
-                        <br><br>
-                        <a href="#" data-toggle="modal">
-                            <button type="submit" class="btn btn-sm btn-primary" style="border-radius: 50px; background-color: #171ad4; color: #ffffff; border: none;"><i class="ace-icon glyphicon glyphicon-plus"></i> Upload
-                                Materi</button></a>
-                        <br><br>
-                        <table class="table table-bordered table-striped" border="1">
-                            <tr style="background-color: #7599fa;">
-                                <td>No</td>
-                                <td>Materi</td>
-                                <td>Narasumber</td>
-                                <td>Jpl</td>
-                                <td>File</td>
-                                <td>Tindakan</td>
-                            </tr>
-                            <tr style="background-color: #edf0f7;">
-                                <td>1</td>
-                                <td>tes</td>
-                                <td>aldi taher</td>
-                                <td>3</td>
-                                <td>sertifikat</td>
-                                <td class="center">
-                                    <a href="/" class="btn btn-xs btn-danger" type="reset" data-action="collapse">
-                                        <i class="ion-trash-b"></i>
-                                        Hapus
-                                        </button></a>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-
-                    <td class="center">
-                        <center><b><a class="danger" href="/">
-                                    <span class="badge badge-success">13</a></span></b></center>
-                    </td>
-
-                    <td class="center">
-                        <table id="simple-table" class="table table-striped table-bordered table-hover">
-                            <tr>
-                                <td>Upload Peserta</td>
-                                <td><a href="#modalpeserta" data-toggle="modal"><button class="btn btn-xs btn-primary" type="">Upload</button></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Upload Background Depan</td>
-                                <td><a href="#depan" data-toggle="modal"><button class="btn btn-xs btn-primary" type="">Upload</button></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Upload Background Belakang</td>
-                                <td><a href="#belakang" data-toggle="modal"><button class="btn btn-xs btn-primary" type="">Upload</button></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Upload Stample</td>
-                                <td><a href="#stample" data-toggle="modal"><button class="btn btn-xs btn-primary" type="">Upload</button></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Upload Tanda Tangan</td>
-                                <td><a href="#ttd" data-toggle="modal"><button class="btn btn-xs btn-primary" type="">Upload</button></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Upload Template</td>
-                                <td><a href="#template" data-toggle="modal"><button class="btn btn-xs btn-primary" type="">Upload</button></a>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
+                <?php $no = 1;
+                foreach ($result as $value) : ?>
+                    <tr>
+                        <td><?= $no++ ?></td>
+                        <td class="center">
+                            <h5><?= $value['nama_acara'] ?></h5>
+                            <br>
+                            <b> <?= $value['tgl_acara_mulai'] ?> s/d <?= $value['tgl_acara_selesai'] ?></b>
+                            <table>
+                                <tr>
+                                    <th>Dengan Link kegiatan : <b> links </b></th>
+                                </tr>
+                            </table>
+                            <br><br>
+                            
+                            <a href="#" data-toggle="modal">
+                                <button type="submit" class="btn btn-sm btn-primary" style="border-radius: 50px; background-color: #171ad4; color: #ffffff; border: none;"><i class="ace-icon glyphicon glyphicon-plus"></i> Upload
+                                    Materi</button></a>
+                            <br><br>
+                            <table class="table table-bordered table-striped" border="1">
+                                <tr style="background-color: #7599fa;">
+                                    <td>Materi</td>
+                                    <td>Narasumber</td>
+                                    <td>Jpl</td>
+                                    <td>File</td>
+                                    <td>Tindakan</td>
+                                </tr>
+                                
+                                <tr style="background-color: #edf0f7;">
+                                    <td><?= $value['materi'] ?></td>
+                                    <td><?= $value['narasumber'] ?></td>
+                                    <td><?= $value['jpl'] ?></td>
+                                    <td><?= $value['link_file'] ?></td>
+                                    <td class="center">
+                                        <a href="/" class="btn btn-xs btn-danger" type="reset" data-action="collapse">
+                                            <i class="ion-trash-b"></i>
+                                            Hapus
+                                            </button></a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td class="center">
+                            <center><b><a class="danger" href="/">
+                            <span class="badge badge-success"><?= $value['jumlah_peserta'] ?></a></span></b></center>
+                        </td>
+                        <td class="center">
+                            <table id="simple-table" class="table table-striped table-bordered table-hover">
+                                <tr>
+                                    <td>Upload Peserta</td>
+                                    <td><a href="#modalpeserta" data-toggle="modal"><button class="btn btn-xs btn-primary" type="">Upload</button></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Upload Background Depan</td>
+                                    <td><a href="#depan" data-toggle="modal"><button class="btn btn-xs btn-primary" type="">Upload</button></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Upload Background Belakang</td>
+                                    <td><a href="#belakang" data-toggle="modal"><button class="btn btn-xs btn-primary" type="">Upload</button></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Upload Stample</td>
+                                    <td><a href="#stample" data-toggle="modal"><button class="btn btn-xs btn-primary" type="">Upload</button></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Upload Tanda Tangan</td>
+                                    <td><a href="#ttd" data-toggle="modal"><button class="btn btn-xs btn-primary" type="">Upload</button></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Upload Template</td>
+                                    <td><a href="#template" data-toggle="modal"><button class="btn btn-xs btn-primary" type="">Upload</button></a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <?php endforeach; ?>
             </tbody>
         </table>
     </div>

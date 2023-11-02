@@ -13,22 +13,20 @@ class AcaraModel extends Model
     // Atribut untuk menyimpan created_at dan update_at
     protected $useTimestamps    = true;
     protected $allowedFields = [
-        'no_sertifikat','tgl_sertifikat', 'nama_acara', 'metode', 'tgl_acara', 'tgl_acara_akhir', 'waktu_awal',
-        'waktu_akhir', 'keterangan', 'kode_acara', 'link_acara', 'sts_acara', 'sts_sertifikat',
-        'jumlah_peserta', 'gbr_sert_blk', 'gbr_sert_blk', 'id_unit', 'template', 'jenis_dokumen',
-        'kepada_statis', 'ket_statis_awal', 'ket_statis_tengah', 'ket_statis_akhir', 'nama_keg_sert',
-        'nama_ttd', 'nip_ttd', 'ttd', 'cap'
+        'no_sertifikat','tgl_sertifikat', 'nama_acara', 'narasumber', 'tgl_acara_mulai', 'tgl_acara_selesai', 
+        'keterangan', 'kode_acara', 'link_acara','jumlah_peserta', 'gbr_sert_blk', 'gbr_sert_blk','template', 'jenis_dokumen',
+        'ket_statis_awal','ket_statis_akhir','nama_ttd', 'nip_ttd', 'ttd', 'cap','materi'
     ];
 
-    public function getAcara($id_acara = false)
+    public function getAcara($id = false)
     {
         $query = $this->select('*');
-
-        // ->where('id', $id);
-        if ($id_acara === false) {
+        if ($id === false) {
             return $query->findAll();
         } else {
-            return $query->where(['id_acara' => $id_acara])->first();
+            return $query->where(['id_acara' => $id])->first();
         }
     }
+
+
 }
