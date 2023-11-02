@@ -17,20 +17,20 @@ $tahun = date(" Y");
     <!-- <nav class="navbar navbar-expand-lg navbar-light p-0"> -->
     <div class="header-app" style="background-size: cover;">
         <div class="d-flex align-items-center justify-content-center ">
-            <img src="<?= base_url()?>images/diskominfo_loader.png" class="header-logo-satu ml-auto" alt="">
+            <img src="<?= base_url() ?>images/diskominfo_loader.png" class="header-logo-satu ml-auto" alt="">
             <div class="navbar-breadcrumb ">
                 <h4 class="app-e-sertif mt-0 ml-2 text-uppercase"><b>Aplikasi E-Sertifikat</b></h4>
             </div>
             <div class="navbar-nav ml-auto navbar-list">
                 <li class="line-height">
                     <a href="#" class="search-toggle iq-waves-effect d-flex align-items-center">
-                        <img src="<?= base_url()?>images/user/user.png" class="img-fluid rounded-circle" alt="user">
+                        <img src="<?= base_url() ?>images/user/user.png" class="img-fluid rounded-circle" alt="user">
                     </a>
                     <div class="iq-sub-dropdown iq-user-dropdown">
                         <div class="iq-card shadow-none m-0">
                             <div class="iq-card-body p-0 ">
                                 <div class="p-3" style="background-color: #13998A;">
-                                    <h5 class="mb-0 text-white line-height">Hello Barry Tech</h5>
+                                    <h5 class="mb-0 text-white line-height"><?= session ()->role ?></h5>
                                     <span class="text-white font-size-12">Available</span>
                                 </div>
                                 <a href="profile.html" class="iq-sub-card iq-bg-primary-hover">
@@ -83,7 +83,7 @@ $tahun = date(" Y");
                             </div>
                         </div>
                     </div>
-                    
+
                 </li>
             </div>
         </div>

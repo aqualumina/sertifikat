@@ -38,3 +38,15 @@ $routes->group('users',['filter' => 'auth'], function ($rs) {
     $rs->get('edit/(:any)', 'Users::edit/$1');
     $rs->post('edit/(:any)', 'Users::update/$1');
 });
+
+$routes->group('penyelenggara',['filter' => 'auth'], function ($rs) {
+    // ['filter' =>'role:Admin,Owner1,Owner2']
+    $rs->get('/', 'Penyelenggara::index');
+    $rs->get('create', 'Penyelenggara::create');
+    $rs->post('create', 'Penyelenggara::save');
+    $rs->get('index', 'Penyelenggara::index');
+    $rs->get('create', 'Penyelenggara::create');
+    $rs->delete('(:num)', 'Penyelenggara::delete/$1');
+    $rs->get('edit/(:any)', 'Penyelenggara::edit/$1');
+    $rs->post('edit/(:any)', 'Penyelenggara::update/$1');
+});
