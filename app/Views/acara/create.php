@@ -54,11 +54,11 @@
                 <div class="mb-3 row">
                     <label for="tgl_acara" class="col-sm-2 col-form-label">Tanggal Mulai</label>
                     <div class="col-sm-4">
-                        <input type="datetime-local" class="form-control" id="tgl_acara" name="tgl_acara">
+                        <input type="datetime-local" class="form-control" id="tgl_acara" name="tgl_acara_mulai">
                     </div>
                     <label for="tgl_acara_akhir" class="col-sm-2 col-form-label">Tanggal Selesai</label>
                     <div class="col-sm-4">
-                        <input type="datetime-local" class="form-control" id="tgl_acara_akhir" name="tgl_acara_akhir">
+                        <input type="datetime-local" class="form-control" id="tgl_acara_akhir" name="tgl_acara_selesai">
                     </div>
                 </div>
                 <div class="mb-3 row">
