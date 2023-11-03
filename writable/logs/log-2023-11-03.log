@@ -1,0 +1,1056 @@
+INFO - 2023-11-03 06:04:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 06:04:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 06:04:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 06:04:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 06:04:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 06:04:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 06:05:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 06:07:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 06:07:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 06:27:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 06:27:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 06:28:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 06:30:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 06:30:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 06:30:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 06:31:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 06:31:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 06:32:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 06:32:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 06:32:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 06:33:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 06:33:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 06:37:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 06:37:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 06:47:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 06:47:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 06:47:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 06:47:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 06:48:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 06:48:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 06:51:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 06:51:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 06:51:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 06:55:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 06:56:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 06:56:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 06:59:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-03 06:59:29 --> Undefined variable: penyelenggara
+in APPPATH\Views\acara\create.php on line 30.
+ 1 APPPATH\Views\acara\create.php(30): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: penyelenggara', 'C:\\xampp\\htdocs\\sertifikat\\app\\Views\\acara\\create.php', 30, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\sertifikat\\app\\Views\\acara\\create.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('acara/create', [], true)
+ 5 APPPATH\Controllers\Acara.php(34): view('acara/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Acara->create()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sertifikat\\public\\index.php')
+INFO - 2023-11-03 07:04:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-03 07:04:13 --> Undefined variable: penyelenggara
+in APPPATH\Views\acara\create.php on line 30.
+ 1 APPPATH\Views\acara\create.php(30): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: penyelenggara', 'C:\\xampp\\htdocs\\sertifikat\\app\\Views\\acara\\create.php', 30, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\sertifikat\\app\\Views\\acara\\create.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('acara/create', [], true)
+ 5 APPPATH\Controllers\Acara.php(34): view('acara/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Acara->create()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sertifikat\\public\\index.php')
+INFO - 2023-11-03 07:10:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 07:11:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-03 07:11:56 --> mysqli_sql_exception: Column 'deleted_at' in where clause is ambiguous in C:\xampp\htdocs\sertifikat\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\sertifikat\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sertifikat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sertifikat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sertifikat\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sertifikat\system\Model.php(871): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sertifikat\app\Models\AcaraModel.php(30): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\sertifikat\app\Controllers\Acara.php(21): App\Models\AcaraModel->getAcara()
+#7 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(919): App\Controllers\Acara->index()
+#8 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#9 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\sertifikat\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-11-03 07:11:56 --> Column 'deleted_at' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_acara`
+JOIN `tbl_kategori` USING (`id_kategori`)
+JOIN `tbl_penyelenggara` USING (`id_penyelenggara`)
+WHERE `deleted_at` is null', [], false)
+ 2 SYSTEMPATH\Model.php(871): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Models\AcaraModel.php(30): CodeIgniter\Model->__call('get', [])
+ 4 APPPATH\Controllers\Acara.php(21): App\Models\AcaraModel->getAcara()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Acara->index()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sertifikat\\public\\index.php')
+INFO - 2023-11-03 07:12:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-03 07:12:28 --> syntax error, unexpected 'if' (T_IF)
+in APPPATH\Models\AcaraModel.php on line 28.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\sertifikat\\app\\Models\\AcaraModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\AcaraModel')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\AcaraModel')
+ 4 APPPATH\Controllers\Acara.php(14): spl_autoload_call('App\\Models\\AcaraModel')
+ 5 SYSTEMPATH\CodeIgniter.php(891): App\Controllers\Acara->__construct()
+ 6 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sertifikat\\public\\index.php')
+INFO - 2023-11-03 07:12:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-03 07:12:43 --> mysqli_sql_exception: Column 'deleted_at' in where clause is ambiguous in C:\xampp\htdocs\sertifikat\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\sertifikat\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sertifikat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sertifikat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sertifikat\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sertifikat\system\Model.php(871): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sertifikat\app\Models\AcaraModel.php(30): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\sertifikat\app\Controllers\Acara.php(21): App\Models\AcaraModel->getAcara()
+#7 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(919): App\Controllers\Acara->index()
+#8 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#9 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\sertifikat\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-11-03 07:12:43 --> Column 'deleted_at' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_acara`
+JOIN `tbl_kategori` USING (`id_kategori`)
+JOIN `tbl_penyelenggara` USING (`id_penyelenggara`)
+WHERE `deleted_at` is null', [], false)
+ 2 SYSTEMPATH\Model.php(871): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Models\AcaraModel.php(30): CodeIgniter\Model->__call('get', [])
+ 4 APPPATH\Controllers\Acara.php(21): App\Models\AcaraModel->getAcara()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Acara->index()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sertifikat\\public\\index.php')
+INFO - 2023-11-03 07:13:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-03 07:13:15 --> syntax error, unexpected ','
+in APPPATH\Models\AcaraModel.php on line 25.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\sertifikat\\app\\Models\\AcaraModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\AcaraModel')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\AcaraModel')
+ 4 APPPATH\Controllers\Acara.php(14): spl_autoload_call('App\\Models\\AcaraModel')
+ 5 SYSTEMPATH\CodeIgniter.php(891): App\Controllers\Acara->__construct()
+ 6 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sertifikat\\public\\index.php')
+INFO - 2023-11-03 07:13:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-03 07:13:17 --> syntax error, unexpected ','
+in APPPATH\Models\AcaraModel.php on line 25.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\sertifikat\\app\\Models\\AcaraModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\AcaraModel')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\AcaraModel')
+ 4 APPPATH\Controllers\Acara.php(14): spl_autoload_call('App\\Models\\AcaraModel')
+ 5 SYSTEMPATH\CodeIgniter.php(891): App\Controllers\Acara->__construct()
+ 6 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sertifikat\\public\\index.php')
+INFO - 2023-11-03 07:13:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-03 07:13:21 --> syntax error, unexpected ','
+in APPPATH\Models\AcaraModel.php on line 26.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\sertifikat\\app\\Models\\AcaraModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\AcaraModel')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\AcaraModel')
+ 4 APPPATH\Controllers\Acara.php(14): spl_autoload_call('App\\Models\\AcaraModel')
+ 5 SYSTEMPATH\CodeIgniter.php(891): App\Controllers\Acara->__construct()
+ 6 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sertifikat\\public\\index.php')
+INFO - 2023-11-03 07:13:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-03 07:13:23 --> syntax error, unexpected ','
+in APPPATH\Models\AcaraModel.php on line 26.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\sertifikat\\app\\Models\\AcaraModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\AcaraModel')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\AcaraModel')
+ 4 APPPATH\Controllers\Acara.php(14): spl_autoload_call('App\\Models\\AcaraModel')
+ 5 SYSTEMPATH\CodeIgniter.php(891): App\Controllers\Acara->__construct()
+ 6 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sertifikat\\public\\index.php')
+INFO - 2023-11-03 07:13:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-03 07:13:24 --> mysqli_sql_exception: Column 'deleted_at' in where clause is ambiguous in C:\xampp\htdocs\sertifikat\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\sertifikat\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sertifikat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sertifikat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sertifikat\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sertifikat\system\Model.php(871): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sertifikat\app\Models\AcaraModel.php(30): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\sertifikat\app\Controllers\Acara.php(21): App\Models\AcaraModel->getAcara()
+#7 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(919): App\Controllers\Acara->index()
+#8 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#9 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\sertifikat\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-11-03 07:13:24 --> Column 'deleted_at' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_acara`
+JOIN `tbl_kategori` USING (`id_kategori`)
+JOIN `tbl_penyelenggara` USING (`id_penyelenggara`)
+WHERE `deleted_at` is null', [], false)
+ 2 SYSTEMPATH\Model.php(871): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Models\AcaraModel.php(30): CodeIgniter\Model->__call('get', [])
+ 4 APPPATH\Controllers\Acara.php(21): App\Models\AcaraModel->getAcara()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Acara->index()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sertifikat\\public\\index.php')
+INFO - 2023-11-03 07:13:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-03 07:13:45 --> mysqli_sql_exception: Column 'deleted_at' in where clause is ambiguous in C:\xampp\htdocs\sertifikat\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\sertifikat\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sertifikat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sertifikat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sertifikat\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sertifikat\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sertifikat\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\sertifikat\app\Models\AcaraModel.php(29): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\sertifikat\app\Controllers\Acara.php(21): App\Models\AcaraModel->getAcara()
+#8 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(919): App\Controllers\Acara->index()
+#9 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#10 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\sertifikat\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-11-03 07:13:45 --> Column 'deleted_at' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_acara`
+JOIN `tbl_kategori` USING (`id_kategori`)
+JOIN `tbl_penyelenggara` USING (`id_penyelenggara`)
+WHERE `deleted_at` is null', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\AcaraModel.php(29): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Acara.php(21): App\Models\AcaraModel->getAcara()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Acara->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sertifikat\\public\\index.php')
+INFO - 2023-11-03 07:13:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-03 07:13:46 --> mysqli_sql_exception: Column 'deleted_at' in where clause is ambiguous in C:\xampp\htdocs\sertifikat\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\sertifikat\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sertifikat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sertifikat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sertifikat\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sertifikat\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sertifikat\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\sertifikat\app\Models\AcaraModel.php(29): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\sertifikat\app\Controllers\Acara.php(21): App\Models\AcaraModel->getAcara()
+#8 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(919): App\Controllers\Acara->index()
+#9 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#10 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\sertifikat\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-11-03 07:13:46 --> Column 'deleted_at' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_acara`
+JOIN `tbl_kategori` USING (`id_kategori`)
+JOIN `tbl_penyelenggara` USING (`id_penyelenggara`)
+WHERE `deleted_at` is null', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\AcaraModel.php(29): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Acara.php(21): App\Models\AcaraModel->getAcara()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Acara->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sertifikat\\public\\index.php')
+INFO - 2023-11-03 07:13:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-03 07:13:57 --> mysqli_sql_exception: Column 'deleted_at' in where clause is ambiguous in C:\xampp\htdocs\sertifikat\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\sertifikat\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sertifikat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sertifikat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sertifikat\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sertifikat\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sertifikat\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\sertifikat\app\Models\AcaraModel.php(29): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\sertifikat\app\Controllers\Acara.php(21): App\Models\AcaraModel->getAcara()
+#8 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(919): App\Controllers\Acara->index()
+#9 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#10 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\sertifikat\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-11-03 07:13:57 --> Column 'deleted_at' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_acara`
+JOIN `tbl_kategori` USING (`id_kategori`)
+JOIN `tbl_penyelenggara` USING (`id_penyelenggara`)
+WHERE `deleted_at` is null', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\AcaraModel.php(29): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Acara.php(21): App\Models\AcaraModel->getAcara()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Acara->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sertifikat\\public\\index.php')
+INFO - 2023-11-03 07:14:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-03 07:14:31 --> mysqli_sql_exception: Column 'deleted_at' in where clause is ambiguous in C:\xampp\htdocs\sertifikat\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\sertifikat\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sertifikat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sertifikat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sertifikat\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sertifikat\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sertifikat\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\sertifikat\app\Models\AcaraModel.php(30): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\sertifikat\app\Controllers\Acara.php(21): App\Models\AcaraModel->getAcara()
+#8 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(919): App\Controllers\Acara->index()
+#9 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#10 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\sertifikat\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-11-03 07:14:31 --> Column 'deleted_at' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_acara`
+JOIN `tbl_kategori` USING (`id_kategori`)
+JOIN `tbl_penyelenggara` USING (`id_penyelenggara`)
+WHERE `deleted_at` is null
+AND `tbl_acara`.`deleted_at` IS NULL', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\AcaraModel.php(30): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Acara.php(21): App\Models\AcaraModel->getAcara()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Acara->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sertifikat\\public\\index.php')
+INFO - 2023-11-03 07:14:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-03 07:14:32 --> mysqli_sql_exception: Column 'deleted_at' in where clause is ambiguous in C:\xampp\htdocs\sertifikat\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\sertifikat\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sertifikat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sertifikat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sertifikat\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sertifikat\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sertifikat\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\sertifikat\app\Models\AcaraModel.php(30): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\sertifikat\app\Controllers\Acara.php(21): App\Models\AcaraModel->getAcara()
+#8 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(919): App\Controllers\Acara->index()
+#9 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#10 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\sertifikat\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-11-03 07:14:32 --> Column 'deleted_at' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_acara`
+JOIN `tbl_kategori` USING (`id_kategori`)
+JOIN `tbl_penyelenggara` USING (`id_penyelenggara`)
+WHERE `deleted_at` is null
+AND `tbl_acara`.`deleted_at` IS NULL', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\AcaraModel.php(30): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Acara.php(21): App\Models\AcaraModel->getAcara()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Acara->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sertifikat\\public\\index.php')
+INFO - 2023-11-03 07:14:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-03 07:14:33 --> mysqli_sql_exception: Column 'deleted_at' in where clause is ambiguous in C:\xampp\htdocs\sertifikat\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\sertifikat\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sertifikat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sertifikat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sertifikat\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sertifikat\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sertifikat\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\sertifikat\app\Models\AcaraModel.php(30): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\sertifikat\app\Controllers\Acara.php(21): App\Models\AcaraModel->getAcara()
+#8 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(919): App\Controllers\Acara->index()
+#9 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#10 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\sertifikat\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-11-03 07:14:33 --> Column 'deleted_at' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_acara`
+JOIN `tbl_kategori` USING (`id_kategori`)
+JOIN `tbl_penyelenggara` USING (`id_penyelenggara`)
+WHERE `deleted_at` is null
+AND `tbl_acara`.`deleted_at` IS NULL', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\AcaraModel.php(30): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Acara.php(21): App\Models\AcaraModel->getAcara()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Acara->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sertifikat\\public\\index.php')
+INFO - 2023-11-03 07:14:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-03 07:14:33 --> mysqli_sql_exception: Column 'deleted_at' in where clause is ambiguous in C:\xampp\htdocs\sertifikat\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\sertifikat\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sertifikat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sertifikat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sertifikat\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sertifikat\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sertifikat\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\sertifikat\app\Models\AcaraModel.php(30): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\sertifikat\app\Controllers\Acara.php(21): App\Models\AcaraModel->getAcara()
+#8 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(919): App\Controllers\Acara->index()
+#9 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#10 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\sertifikat\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-11-03 07:14:33 --> Column 'deleted_at' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_acara`
+JOIN `tbl_kategori` USING (`id_kategori`)
+JOIN `tbl_penyelenggara` USING (`id_penyelenggara`)
+WHERE `deleted_at` is null
+AND `tbl_acara`.`deleted_at` IS NULL', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\AcaraModel.php(30): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Acara.php(21): App\Models\AcaraModel->getAcara()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Acara->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sertifikat\\public\\index.php')
+INFO - 2023-11-03 07:14:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-03 07:14:33 --> mysqli_sql_exception: Column 'deleted_at' in where clause is ambiguous in C:\xampp\htdocs\sertifikat\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\sertifikat\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sertifikat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sertifikat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sertifikat\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sertifikat\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sertifikat\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\sertifikat\app\Models\AcaraModel.php(30): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\sertifikat\app\Controllers\Acara.php(21): App\Models\AcaraModel->getAcara()
+#8 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(919): App\Controllers\Acara->index()
+#9 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#10 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\sertifikat\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-11-03 07:14:33 --> Column 'deleted_at' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_acara`
+JOIN `tbl_kategori` USING (`id_kategori`)
+JOIN `tbl_penyelenggara` USING (`id_penyelenggara`)
+WHERE `deleted_at` is null
+AND `tbl_acara`.`deleted_at` IS NULL', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\AcaraModel.php(30): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Acara.php(21): App\Models\AcaraModel->getAcara()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Acara->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sertifikat\\public\\index.php')
+INFO - 2023-11-03 07:14:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-03 07:14:43 --> mysqli_sql_exception: Column 'deleted_at' in where clause is ambiguous in C:\xampp\htdocs\sertifikat\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\sertifikat\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sertifikat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sertifikat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sertifikat\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sertifikat\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sertifikat\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\sertifikat\app\Models\AcaraModel.php(29): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\sertifikat\app\Controllers\Acara.php(21): App\Models\AcaraModel->getAcara()
+#8 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(919): App\Controllers\Acara->index()
+#9 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#10 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\sertifikat\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-11-03 07:14:43 --> Column 'deleted_at' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_acara`
+JOIN `tbl_kategori` USING (`id_kategori`)
+WHERE `deleted_at` is null
+AND `tbl_acara`.`deleted_at` IS NULL', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\AcaraModel.php(29): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Acara.php(21): App\Models\AcaraModel->getAcara()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Acara->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sertifikat\\public\\index.php')
+INFO - 2023-11-03 07:14:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-03 07:14:44 --> mysqli_sql_exception: Column 'deleted_at' in where clause is ambiguous in C:\xampp\htdocs\sertifikat\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\sertifikat\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sertifikat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sertifikat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sertifikat\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sertifikat\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sertifikat\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\sertifikat\app\Models\AcaraModel.php(29): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\sertifikat\app\Controllers\Acara.php(21): App\Models\AcaraModel->getAcara()
+#8 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(919): App\Controllers\Acara->index()
+#9 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#10 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\sertifikat\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-11-03 07:14:44 --> Column 'deleted_at' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_acara`
+JOIN `tbl_kategori` USING (`id_kategori`)
+WHERE `deleted_at` is null
+AND `tbl_acara`.`deleted_at` IS NULL', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\AcaraModel.php(29): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Acara.php(21): App\Models\AcaraModel->getAcara()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Acara->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sertifikat\\public\\index.php')
+INFO - 2023-11-03 07:16:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-03 07:16:03 --> mysqli_sql_exception: Column 'deleted_at' in where clause is ambiguous in C:\xampp\htdocs\sertifikat\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\sertifikat\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sertifikat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sertifikat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sertifikat\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sertifikat\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sertifikat\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\sertifikat\app\Models\AcaraModel.php(30): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\sertifikat\app\Controllers\Acara.php(21): App\Models\AcaraModel->getAcara()
+#8 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(919): App\Controllers\Acara->index()
+#9 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#10 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\sertifikat\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-11-03 07:16:03 --> Column 'deleted_at' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_acara`
+JOIN `tbl_kategori` USING (`id_kategori`)
+JOIN `tbl_penyelenggara` USING (`id_penyelenggara`)
+WHERE `deleted_at` is null
+AND `tbl_acara`.`deleted_at` IS NULL', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\AcaraModel.php(30): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Acara.php(21): App\Models\AcaraModel->getAcara()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Acara->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sertifikat\\public\\index.php')
+INFO - 2023-11-03 07:17:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-03 07:17:15 --> mysqli_sql_exception: Column 'deleted_at' in where clause is ambiguous in C:\xampp\htdocs\sertifikat\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\sertifikat\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sertifikat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sertifikat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sertifikat\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sertifikat\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sertifikat\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\sertifikat\app\Models\AcaraModel.php(30): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\sertifikat\app\Controllers\Acara.php(21): App\Models\AcaraModel->getAcara()
+#8 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(919): App\Controllers\Acara->index()
+#9 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#10 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\sertifikat\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-11-03 07:17:15 --> Column 'deleted_at' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_acara`
+JOIN `tbl_kategori` USING (`id_kategori`)
+JOIN `tbl_penyelenggara` USING (`id_penyelenggara`)
+WHERE `deleted_at` is null
+AND `tbl_acara`.`deleted_at` IS NULL', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\AcaraModel.php(30): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Acara.php(21): App\Models\AcaraModel->getAcara()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Acara->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sertifikat\\public\\index.php')
+INFO - 2023-11-03 07:17:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-03 07:17:17 --> mysqli_sql_exception: Column 'deleted_at' in where clause is ambiguous in C:\xampp\htdocs\sertifikat\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\sertifikat\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sertifikat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sertifikat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sertifikat\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sertifikat\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sertifikat\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\sertifikat\app\Models\AcaraModel.php(30): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\sertifikat\app\Controllers\Acara.php(21): App\Models\AcaraModel->getAcara()
+#8 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(919): App\Controllers\Acara->index()
+#9 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#10 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\sertifikat\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-11-03 07:17:17 --> Column 'deleted_at' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_acara`
+JOIN `tbl_kategori` USING (`id_kategori`)
+JOIN `tbl_penyelenggara` USING (`id_penyelenggara`)
+WHERE `deleted_at` is null
+AND `tbl_acara`.`deleted_at` IS NULL', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\AcaraModel.php(30): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Acara.php(21): App\Models\AcaraModel->getAcara()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Acara->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sertifikat\\public\\index.php')
+INFO - 2023-11-03 07:17:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-03 07:17:17 --> mysqli_sql_exception: Column 'deleted_at' in where clause is ambiguous in C:\xampp\htdocs\sertifikat\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\sertifikat\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sertifikat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sertifikat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sertifikat\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sertifikat\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sertifikat\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\sertifikat\app\Models\AcaraModel.php(30): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\sertifikat\app\Controllers\Acara.php(21): App\Models\AcaraModel->getAcara()
+#8 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(919): App\Controllers\Acara->index()
+#9 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#10 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\sertifikat\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-11-03 07:17:17 --> Column 'deleted_at' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_acara`
+JOIN `tbl_kategori` USING (`id_kategori`)
+JOIN `tbl_penyelenggara` USING (`id_penyelenggara`)
+WHERE `deleted_at` is null
+AND `tbl_acara`.`deleted_at` IS NULL', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\AcaraModel.php(30): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Acara.php(21): App\Models\AcaraModel->getAcara()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Acara->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sertifikat\\public\\index.php')
+INFO - 2023-11-03 07:17:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-03 07:17:17 --> mysqli_sql_exception: Column 'deleted_at' in where clause is ambiguous in C:\xampp\htdocs\sertifikat\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\sertifikat\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sertifikat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sertifikat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sertifikat\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sertifikat\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sertifikat\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\sertifikat\app\Models\AcaraModel.php(30): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\sertifikat\app\Controllers\Acara.php(21): App\Models\AcaraModel->getAcara()
+#8 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(919): App\Controllers\Acara->index()
+#9 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#10 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\sertifikat\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-11-03 07:17:17 --> Column 'deleted_at' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_acara`
+JOIN `tbl_kategori` USING (`id_kategori`)
+JOIN `tbl_penyelenggara` USING (`id_penyelenggara`)
+WHERE `deleted_at` is null
+AND `tbl_acara`.`deleted_at` IS NULL', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\AcaraModel.php(30): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Acara.php(21): App\Models\AcaraModel->getAcara()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Acara->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sertifikat\\public\\index.php')
+INFO - 2023-11-03 07:17:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-03 07:17:18 --> mysqli_sql_exception: Column 'deleted_at' in where clause is ambiguous in C:\xampp\htdocs\sertifikat\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\sertifikat\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sertifikat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sertifikat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sertifikat\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sertifikat\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sertifikat\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\sertifikat\app\Models\AcaraModel.php(30): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\sertifikat\app\Controllers\Acara.php(21): App\Models\AcaraModel->getAcara()
+#8 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(919): App\Controllers\Acara->index()
+#9 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#10 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\sertifikat\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-11-03 07:17:18 --> Column 'deleted_at' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_acara`
+JOIN `tbl_kategori` USING (`id_kategori`)
+JOIN `tbl_penyelenggara` USING (`id_penyelenggara`)
+WHERE `deleted_at` is null
+AND `tbl_acara`.`deleted_at` IS NULL', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\AcaraModel.php(30): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Acara.php(21): App\Models\AcaraModel->getAcara()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Acara->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sertifikat\\public\\index.php')
+INFO - 2023-11-03 07:17:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-03 07:17:19 --> mysqli_sql_exception: Column 'deleted_at' in where clause is ambiguous in C:\xampp\htdocs\sertifikat\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\sertifikat\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sertifikat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sertifikat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sertifikat\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sertifikat\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sertifikat\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\sertifikat\app\Models\AcaraModel.php(30): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\sertifikat\app\Controllers\Acara.php(21): App\Models\AcaraModel->getAcara()
+#8 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(919): App\Controllers\Acara->index()
+#9 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#10 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\sertifikat\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-11-03 07:17:19 --> Column 'deleted_at' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_acara`
+JOIN `tbl_kategori` USING (`id_kategori`)
+JOIN `tbl_penyelenggara` USING (`id_penyelenggara`)
+WHERE `deleted_at` is null
+AND `tbl_acara`.`deleted_at` IS NULL', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\AcaraModel.php(30): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Acara.php(21): App\Models\AcaraModel->getAcara()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Acara->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sertifikat\\public\\index.php')
+INFO - 2023-11-03 07:20:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-03 07:20:39 --> mysqli_sql_exception: Column 'deleted_at' in where clause is ambiguous in C:\xampp\htdocs\sertifikat\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\sertifikat\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sertifikat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sertifikat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sertifikat\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sertifikat\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sertifikat\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\sertifikat\app\Models\AcaraModel.php(30): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\sertifikat\app\Controllers\Acara.php(21): App\Models\AcaraModel->getAcara()
+#8 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(919): App\Controllers\Acara->index()
+#9 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#10 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\sertifikat\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-11-03 07:20:39 --> Column 'deleted_at' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_acara`
+JOIN `tbl_kategori` USING (`id_kategori`)
+JOIN `tbl_penyelenggara` USING (`id_penyelenggara`)
+WHERE `deleted_at` is null
+AND `tbl_acara`.`deleted_at` IS NULL', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\AcaraModel.php(30): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Acara.php(21): App\Models\AcaraModel->getAcara()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Acara->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sertifikat\\public\\index.php')
+INFO - 2023-11-03 07:20:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-03 07:20:40 --> mysqli_sql_exception: Column 'deleted_at' in where clause is ambiguous in C:\xampp\htdocs\sertifikat\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\sertifikat\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sertifikat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sertifikat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sertifikat\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sertifikat\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sertifikat\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\sertifikat\app\Models\AcaraModel.php(30): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\sertifikat\app\Controllers\Acara.php(21): App\Models\AcaraModel->getAcara()
+#8 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(919): App\Controllers\Acara->index()
+#9 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#10 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\sertifikat\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-11-03 07:20:40 --> Column 'deleted_at' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_acara`
+JOIN `tbl_kategori` USING (`id_kategori`)
+JOIN `tbl_penyelenggara` USING (`id_penyelenggara`)
+WHERE `deleted_at` is null
+AND `tbl_acara`.`deleted_at` IS NULL', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\AcaraModel.php(30): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Acara.php(21): App\Models\AcaraModel->getAcara()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Acara->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sertifikat\\public\\index.php')
+INFO - 2023-11-03 07:26:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-03 07:26:30 --> mysqli_sql_exception: Column 'deleted_at' in where clause is ambiguous in C:\xampp\htdocs\sertifikat\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\sertifikat\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sertifikat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sertifikat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sertifikat\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sertifikat\system\Model.php(871): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sertifikat\app\Models\AcaraModel.php(29): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\sertifikat\app\Controllers\Acara.php(21): App\Models\AcaraModel->getAcara()
+#7 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(919): App\Controllers\Acara->index()
+#8 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#9 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\sertifikat\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-11-03 07:26:30 --> Column 'deleted_at' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_acara`
+JOIN `tbl_kategori` USING (`id_kategori`)
+WHERE `deleted_at` is null', [], false)
+ 2 SYSTEMPATH\Model.php(871): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Models\AcaraModel.php(29): CodeIgniter\Model->__call('get', [])
+ 4 APPPATH\Controllers\Acara.php(21): App\Models\AcaraModel->getAcara()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Acara->index()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sertifikat\\public\\index.php')
+INFO - 2023-11-03 07:26:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 07:26:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 07:26:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 07:26:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 07:26:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 07:27:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 07:27:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 07:27:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 07:29:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 07:30:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-03 07:30:08 --> mysqli_sql_exception: Column 'deleted_at' in where clause is ambiguous in C:\xampp\htdocs\sertifikat\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\sertifikat\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sertifikat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sertifikat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sertifikat\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sertifikat\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sertifikat\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\sertifikat\app\Models\AcaraModel.php(27): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\sertifikat\app\Controllers\Acara.php(21): App\Models\AcaraModel->getAcara()
+#8 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(919): App\Controllers\Acara->index()
+#9 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#10 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\sertifikat\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-11-03 07:30:08 --> Column 'deleted_at' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_acara`
+JOIN `tbl_kategori` USING (`id_kategori`)
+WHERE `deleted_at` is null', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\AcaraModel.php(27): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Acara.php(21): App\Models\AcaraModel->getAcara()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Acara->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sertifikat\\public\\index.php')
+INFO - 2023-11-03 07:30:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 07:30:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 07:31:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 07:31:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 07:32:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 07:32:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 07:34:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-03 07:34:51 --> Undefined index: penyelenggara
+in APPPATH\Views\acara\index.php on line 73.
+ 1 APPPATH\Views\acara\index.php(73): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: penyelenggara', 'C:\\xampp\\htdocs\\sertifikat\\app\\Views\\acara\\index.php', 73, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\sertifikat\\app\\Views\\acara\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('acara/index', [], true)
+ 5 APPPATH\Controllers\Acara.php(26): view('acara/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Acara->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sertifikat\\public\\index.php')
+INFO - 2023-11-03 07:35:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-03 07:35:14 --> mysqli_sql_exception: Column 'deleted_at' in where clause is ambiguous in C:\xampp\htdocs\sertifikat\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\sertifikat\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sertifikat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sertifikat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sertifikat\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sertifikat\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sertifikat\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\sertifikat\app\Models\AcaraModel.php(27): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\sertifikat\app\Controllers\Acara.php(21): App\Models\AcaraModel->getAcara()
+#8 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(919): App\Controllers\Acara->index()
+#9 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#10 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\sertifikat\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-11-03 07:35:14 --> Column 'deleted_at' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_acara`
+JOIN `tbl_penyelenggara` USING (`id_penyelenggara`)
+WHERE `deleted_at` is null', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\AcaraModel.php(27): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Acara.php(21): App\Models\AcaraModel->getAcara()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Acara->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sertifikat\\public\\index.php')
+INFO - 2023-11-03 07:35:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-03 07:35:18 --> syntax error, unexpected 'if' (T_IF)
+in APPPATH\Models\AcaraModel.php on line 25.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\sertifikat\\app\\Models\\AcaraModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\AcaraModel')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\AcaraModel')
+ 4 APPPATH\Controllers\Acara.php(14): spl_autoload_call('App\\Models\\AcaraModel')
+ 5 SYSTEMPATH\CodeIgniter.php(891): App\Controllers\Acara->__construct()
+ 6 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sertifikat\\public\\index.php')
+INFO - 2023-11-03 07:35:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 07:35:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 07:35:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 07:35:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 07:37:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 07:37:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 07:37:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 07:38:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 07:38:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 07:38:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 07:38:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 07:39:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 07:39:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-03 07:39:35 --> Invalid file: "penyelenggara/edit.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('penyelenggara/edit.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('penyelenggara/edit', [], true)
+ 3 APPPATH\Controllers\Penyelenggara.php(133): view('penyelenggara/edit', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Penyelenggara->edit('1')
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penyelenggara))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sertifikat\\public\\index.php')
+INFO - 2023-11-03 07:39:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 07:39:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 07:39:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 07:39:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 07:39:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 07:40:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-03 07:40:22 --> mysqli_sql_exception: Column 'narasumber' cannot be null in C:\xampp\htdocs\sertifikat\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\sertifikat\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\xampp\htdocs\sertifikat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\xampp\htdocs\sertifikat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\xampp\htdocs\sertifikat\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\xampp\htdocs\sertifikat\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\sertifikat\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\sertifikat\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\sertifikat\system\BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\sertifikat\app\Controllers\Acara.php(66): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(919): App\Controllers\Acara->save()
+#10 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#11 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\sertifikat\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2023-11-03 07:40:22 --> Column 'narasumber' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_acara` (`jenis_dokumen`, `nama_acara`, `narasumber`, `no_sertifikat`, `tgl_sertifikat`, `tgl_acara_mulai`, `tgl_acara_selesai`, `created_at`, `updated_at`) VALUES (:jenis_dokumen:, :nama_acara:, :narasumber:, :no_sertifikat:, :tgl_sertifikat:, :tgl_acara_mulai:, :tgl_acara_selesai:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Acara.php(66): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Acara->save()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sertifikat\\public\\index.php')
+INFO - 2023-11-03 07:40:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 07:42:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 07:42:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 07:42:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 07:42:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 07:43:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
