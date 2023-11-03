@@ -8,7 +8,7 @@
                   </ul>
                </div>
                <div class="col-lg-6 text-right">
-                  Copyright 2020 <a href="#">Server360</a> All Rights Reserved.
+                  Copyright 2023 <a href="#">Diskominfosan</a> All Rights Reserved.
                </div>
             </div>
          </div>

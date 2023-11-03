@@ -32,13 +32,13 @@
                     </div>
                     <div class="mb-3 row">
                         <label for="nip" class="col-sm-2 col-form-label">NIP</label>
-                        <div class="col-sm-10">
+                        <div class="col-sm-4">
                             <input type="text" class="form-control" placeholder="<?= lang('Masukan NIP Penandatangan') ?>" name="nip_ttd">
                         </div>
                     </div>
                     <div class="mb-3 row">
                     <label for="ttd" class="col-sm-2 col-form-label">Tanda Tangan</label>
-                        <div class="col-sm-5">
+                        <div class="col-sm-4">
                             <input type="file" class="form-control <?= $validation->hasError('ttd') ?
                                                                         'is-invalid' : '' ?>" id="ttd" name="ttd" onchange="previewImage()">
                             <div id="validationTextarea" class="invalid-feedback"><?= $validation->getError('ttd') ?></div>
@@ -46,13 +46,13 @@
                     </div>
                     <div class="mb-3 row">
                         <label for="cap" class="col-sm-2 col-form-label">Cap</label>
-                        <div class="col-sm-5">
-                            <input type="file" class="form-control-file" id="cap" name="cap" onchange="previewImage()">
+                        <div class="col-sm-4">
+                            <input type="file" class="form-control" id="cap" name="cap" onchange="previewImage()">
                             <div id="validationTextarea" class="invalid-feedback"></div>
                         </div>
                     </div>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-                        <button class="btn btn-primary me-md-2" type="submit">Simpan</button>
+                        <button class="btn btn-primary mx-md-2" type="submit">Simpan</button>
                         <button class="btn btn-danger" type="reset">Batal</button>
                     </div>
                     <div class="col-sm-6 mt-2">

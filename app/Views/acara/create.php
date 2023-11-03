@@ -29,13 +29,16 @@
                 </div>
                 <div class="mb-3 row">
                     <label for="jenis_dokumen" class="col-sm-2 col-form-label">Jenis Dokumen</label>
-                    <div class="col-sm-4">
+                    <div class="col-sm-2">
                         <select class="form-control" name="jenis_dokumen">
                             <!-- <option selected="">Pilih Jenis Dokumen</option> -->
                             <option value="Sertifikat">Sertifikat</option>
                             <option value="Penghargaan">Penghargaan</option>
                         </select>
                     </div>
+
+                    <div class="col-sm"></div>
+                    
                     <label for="nama_acara" class="col-sm-2 col-form-label">Nama Acara</label>
                     <div class="col-sm-4">
                         <input type="text" class="form-control" name="nama_acara">

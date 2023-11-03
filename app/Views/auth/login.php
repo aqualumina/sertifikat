@@ -37,13 +37,13 @@
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="images/tugu3.png" class="d-block w-100" alt="#">
+                    <img src="images/tugu3.png" class="img-fluid d-block w-100" alt="#">
                 </div>
                 <div class="carousel-item">
-                    <img src="images/prambanan-3.png" class="d-block w-100" alt="#">
+                    <img src="images/prambanan-3.png" class="img-fluid d-block w-100" alt="#">
                 </div>
                 <div class="carousel-item">
-                    <img src="images/merapi-1.jpg" class="d-block w-100" alt="#">
+                    <img src="images/merapi-1.jpg" class="img-fluid d-block w-100" alt="#">
                 </div>
             </div>
         </div>

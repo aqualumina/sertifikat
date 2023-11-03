@@ -34,21 +34,22 @@
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="images/tugu2.jpg" class="d-block w-100" alt="#">
+                    <img src="images/tugu3.png" class="d-block w-100" alt="#">
                 </div>
                 <div class="carousel-item">
-                    <img src="images/prambanan.png" class="d-block w-100" alt="#">
+                    <img src="images/prambanan-3.png" class="d-block w-100" alt="#">
                 </div>
                 <div class="carousel-item">
-                    <img src="images/merapi.jpg" class="d-block w-100" alt="#">
+                    <img src="images/merapi-1.jpg" class="d-block w-100" alt="#">
                 </div>
             </div>
         </div>
     </div>
+
     <div class="overlay-container">
         <div class="sign-in-page-data">
             <div class="sign-in-from w-100 m-auto">
-            <a class="logo-login mb-3" href="#"><img src="images/diskominfo_loader.png" class="img-fluid" alt="logo"></a>
+                <a class="logo-login mb-3" href="#"><img src="images/diskominfo_loader.png" class="img-fluid" alt="logo"></a>
                 <h1 class="mb-3 text-center" style="color: #13988A;"><b>Pendaftaran Akun</b></h1>
                 <!-- <p class="text-center text-dark ">Enter your email address and password to access admin panel.</p> -->
                 <?php if (isset($validation)) : ?>
@@ -107,4 +108,4 @@
         </div>
     </div>
 </div>
-    <?= $this->endSection() ?>
+<?= $this->endSection() ?>

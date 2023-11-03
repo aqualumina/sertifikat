@@ -27,7 +27,7 @@
                 <a href="/penyelenggara" class="iq-waves-effect"><i class="las la-user iq-arrow-left"></i><span>Penyelenggara</span></a>
             </li>
             <li>
-                <a href="/users" class="iq-waves-effect"><i class="las la-user iq-arrow-left"></i><span>Pengguna</span></a>
+                <a href="/users" class="iq-waves-effect"><i class="las la-users iq-arrow-left"></i><span>Pengguna</span></a>
             </li>
             <!-- <li>
                 <a href="#userinfo" class="iq-waves-effect" data-toggle="collapse" aria-expanded="false"><span class="ripple rippleEffect"></span><i class="las la-user-tie iq-arrow-left"></i><span>User</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
