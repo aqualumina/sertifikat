@@ -3,7 +3,8 @@
 namespace App\Controllers;
 
 use \App\Models\AcaraModel;
-use \App\Models\ProgramModel;
+use \App\Models\PenyelenggaraModel;
+use \App\Models\KategoriModel;
 
 class Acara extends BaseController
 {
@@ -11,7 +12,8 @@ class Acara extends BaseController
     public function __construct()
     {
         $this->acaraModel = new AcaraModel();
-        $this->programModel = new ProgramModel();
+        $this->penyelenggaraModel = new PenyelenggaraModel();
+        $this->kategoriModel = new KategoriModel();
     }
 
     public function index()
@@ -28,8 +30,9 @@ class Acara extends BaseController
     {
         session();
         $data = [
-            'title' => 'Data Acara',
-            'category' => $this->programModel->findAll(),
+            'title'         => 'Data Acara',
+            'kategori'      => $this->kategoriModel->findAll(),
+            'penyelenggara' => $this->penyelenggaraModel->findAll(),
         ];
         return view('acara/create', $data);
     }
@@ -58,6 +61,8 @@ class Acara extends BaseController
             'tgl_sertifikat' => $this->request->getVar('tgl_sertifikat'),
             'tgl_acara_mulai' => $this->request->getVar('tgl_acara_mulai'),
             'tgl_acara_selesai' => $this->request->getVar('tgl_acara_selesai'),
+            'id_penyelenggara'=> $this->request->getVar('id_penyelenggara'),
+            'id_kategori'=> $this->request->getVar('id_kategori'),
             'jpl' => $jam,
 
         ]);

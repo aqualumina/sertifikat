@@ -18,34 +18,48 @@
             <form action="<?php echo base_url(); ?>acara/create" method="POST" enctype="multipart/form-data">
                 <?= csrf_field() ?>
                 <div class="mb-3 row">
+                    <label for="nama_acara" class="col-sm-2 col-form-label">Nama Acara</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" name="nama_acara">
+                    </div>
+                    <label for="nama_narasumber" class="col-sm-2 col-form-label">Nama Narasumber</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" name="narasumber">
+                    </div>
+                </div>
+                <div class="mb-3 row">
                     <label for="penyelenggara" class="col-sm-2 col-form-label">Penyelenggara</label>
                     <div class="col-sm-4">
-                        <input type="text" placeholder="<?= lang('Masukan Nama Penyelenggara') ?>" class="form-control" name="penyelenggara">
+                        <select class="form-control" name="penyelenggara">
+                            <?php foreach ($penyelenggara as $value) : ?>
+                                <option value="<?= $value['id_penyelenggara'] ?>">
+                                    <?= $value['nama_penyelenggara'] ?></option>
+                            <?php endforeach; ?>
+                        </select>
                     </div>
-                    <label for="narasumber" class="col-sm-2 col-form-label">Narasumber</label>
+                </div>
+                <div class="mb-3 row">
+                    <label for="no_sertifikat" class="col-sm-2 col-form-label">Kategori</label>
                     <div class="col-sm-4">
-                        <input type="text" placeholder="<?= lang('Masukan Nama Narasumber') ?>" class="form-control" name="narasumber">
+                    <select class="form-control" name="no_sertifikat">
+                            <?php foreach ($kategori as $value) : ?>
+                                <option value="<?= $value['id_kategori'] ?>">
+                                    <?= $value['nama_kategori'] ?></option>
+                            <?php endforeach; ?>
+                        </select>
                     </div>
                 </div>
                 <div class="mb-3 row">
                     <label for="jenis_dokumen" class="col-sm-2 col-form-label">Jenis Dokumen</label>
                     <div class="col-sm-4">
                         <select class="form-control" name="jenis_dokumen">
-                            <!-- <option selected="">Pilih Jenis Dokumen</option> -->
+                            <option selected="">Pilih Jenis Dokumen</option>
                             <option value="Sertifikat">Sertifikat</option>
                             <option value="Penghargaan">Penghargaan</option>
                         </select>
                     </div>
-                    <label for="nama_acara" class="col-sm-2 col-form-label">Nama Acara</label>
-                    <div class="col-sm-4">
-                        <input type="text" class="form-control" name="nama_acara">
-                    </div>
                 </div>
                 <div class="mb-3 row">
-                    <label for="no_sertifikat" class="col-sm-2 col-form-label">Nomor Sertifikat</label>
-                    <div class="col-sm-4">
-                        <input type="text" class="form-control" name="no_sertifikat">
-                    </div>
                     <label for="tgl_sertifikat" class="col-sm-2 col-form-label">Tanggal Sertifikat</label>
                     <div class="col-sm-4">
                         <input type="date" class="form-control" id="tgl_sertifikat" name="tgl_sertifikat">
@@ -62,14 +76,7 @@
                     </div>
                 </div>
                 <div class="mb-3 row">
-                    <label for="nama_ttd" class="col-sm-2 col-form-label">Penandatangan</label>
-                    <div class="col-sm-4">
-                        <input type="text" placeholder="<?= lang('Nama Penandatangan') ?>" class="form-control" name="nama_ttd">
-                    </div>
-                    <label for="nip_ttd" class="col-sm-2 col-form-label">NIP</label>
-                    <div class="col-sm-4">
-                        <input type="text" placeholder="<?= lang('NIP Penandatangan') ?>" class="form-control" name="nip_ttd">
-                    </div>
+
                 </div>
 
                 <div class="widget-toolbar"></div>

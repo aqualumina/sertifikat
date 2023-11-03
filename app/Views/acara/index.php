@@ -65,7 +65,6 @@
                                     <td>Materi</td>
                                     <td>Narasumber</td>
                                     <td>Jpl</td>
-                                    <td>File</td>
                                     <td>Tindakan</td>
                                 </tr>
                                 
@@ -73,7 +72,6 @@
                                     <td><?= $value['materi'] ?></td>
                                     <td><?= $value['narasumber'] ?></td>
                                     <td><?= $value['jpl'] ?></td>
-                                    <td><?= $value['link_file'] ?></td>
                                     <td class="center">
                                         <a href="/" class="btn btn-xs btn-danger" type="reset" data-action="collapse">
                                             <i class="ion-trash-b"></i>
@@ -102,16 +100,6 @@
                                 <tr>
                                     <td>Upload Background Belakang</td>
                                     <td><a href="#belakang" data-toggle="modal"><button class="btn btn-xs btn-primary" type="">Upload</button></a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Upload Stample</td>
-                                    <td><a href="#stample" data-toggle="modal"><button class="btn btn-xs btn-primary" type="">Upload</button></a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Upload Tanda Tangan</td>
-                                    <td><a href="#ttd" data-toggle="modal"><button class="btn btn-xs btn-primary" type="">Upload</button></a>
                                     </td>
                                 </tr>
                                 <tr>
