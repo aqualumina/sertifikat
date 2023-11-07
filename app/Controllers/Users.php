@@ -43,12 +43,51 @@ class Users extends BaseController
     public function save()
     {
         if (!$this->validate([
-            'firstname' => 'required',
-            'lastname' => 'required|integer',
-            'user_name' => 'required',
-            'user_email' => 'required|numeric',
-            'role' => 'permit_empty|decimal',
-            'user_password' => 'permit_empty|decimal',
+            'firstname' => [
+                'rules' => 'required|is_unique[users.firstname]',
+                'errors' => [
+                    'required' => 'Nama Depan Harus Diisi',
+                    'is_unique' => '{field} Anda Sudah Terdaftar'
+                ]
+            ],
+            'lastname' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Nama Belakang Harus Diisi',
+                ]
+            ],
+            'username' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Username Harus Diisi',
+                ]
+            ],
+            'email' =>  [
+                'rules' => 'valid_emails',
+                'errors' => [
+                    'valid_emails' => 'Masukan Email Yang Valid'
+                ]
+            ],
+            'role' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Silahkan Pilih Role',
+                ]
+            ],
+            'password' => [
+                'rules' => 'required|min_length[5]',
+                'errors' => [
+                    'required' => 'Silahkan Masukan Password',
+                    'min_length' => 'Panjang password minimal 5',
+                ]
+            ],
+            'pass_confirm' => [
+                'rules' => 'required|matches[password]',
+                'errors' => [
+                    'required' => 'Silahkan Masukan Password',
+                    'matches' => 'Password Harus Sama'
+                ]
+            ],
         ])) {
             $validation = \Config\Services::validation();
             // dd($validation);
@@ -89,6 +128,58 @@ class Users extends BaseController
 
     public function update($id)
     {
+        if (!$this->validate([
+            'firstname' => [
+                'rules' => 'required|is_unique[users.firstname]',
+                'errors' => [
+                    'required' => 'Nama Depan Harus Diisi',
+                    'is_unique' => '{field} Anda Sudah Terdaftar'
+                ]
+            ],
+            'lastname' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Nama Belakang Harus Diisi',
+                ]
+            ],
+            'username' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Username Harus Diisi',
+                ]
+            ],
+            'email' =>  [
+                'rules' => 'valid_emails',
+                'errors' => [
+                    'valid_emails' => 'Masukan Email Yang Valid'
+                ]
+            ],
+            'role' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Silahkan Pilih Role',
+                ]
+            ],
+            'password' => [
+                'rules' => 'required|min_length[5]',
+                'errors' => [
+                    'required' => 'Silahkan Masukan Password',
+                    'min_length' => 'Panjang password minimal 5',
+                ]
+            ],
+            'pass_confirm' => [
+                'rules' => 'required|matches[password]',
+                'errors' => [
+                    'required' => 'Silahkan Masukan Password',
+                    'matches' => 'Password Harus Sama'
+                ]
+            ],
+        ])) {
+            $validation = \Config\Services::validation();
+            // dd($validation);
+            return redirect()->back()->withInput()->with('validation', $validation);
+        }
+        
         $user_myth = new UserModel();
         // dd($this->request->getVar('username'));
         $this->userModel->save([
