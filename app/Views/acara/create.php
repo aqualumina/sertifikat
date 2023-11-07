@@ -20,11 +20,17 @@
                 <div class="mb-3 row">
                     <label for="nama_acara" class="col-sm-2 col-form-label">Nama Acara</label>
                     <div class="col-sm-4">
-                        <input type="text" class="form-control" name="nama_acara">
+                        <input type="text" class="form-control is-invalid" name="nama_acara" id="nama_acara" required>
+                        <div class="invalid-feedback">
+                            Masukkan Nama Acara!
+                        </div>
                     </div>
                     <label for="nama_narasumber" class="col-sm-2 col-form-label">Nama Narasumber</label>
                     <div class="col-sm-4">
-                        <input type="text" class="form-control" name="narasumber">
+                        <input type="text" class="form-control is-invalid" name="narasumber" required>
+                        <div class="invalid-feedback">
+                            Masukkan Nama Narasumber!
+                        </div>
                     </div>
                 </div>
                 <div class="mb-3 row">
@@ -41,7 +47,7 @@
                 <div class="mb-3 row">
                     <label for="no_sertifikat" class="col-sm-2 col-form-label">Kategori</label>
                     <div class="col-sm-4">
-                    <select class="form-control" name="no_sertifikat">
+                        <select class="form-control" name="no_sertifikat">
                             <?php foreach ($kategori as $value) : ?>
                                 <option value="<?= $value['id_kategori'] ?>">
                                     <?= $value['nama_kategori'] ?></option>

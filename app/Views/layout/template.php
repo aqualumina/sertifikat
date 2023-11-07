@@ -16,6 +16,7 @@
    <link rel="stylesheet" href="<?= base_url()?>/css/style.css">
    <!-- Responsive CSS -->
    <link rel="stylesheet" href="<?= base_url()?>/css/responsive.css">
+   <link rel="stylesheet" href="<?= base_url()?>/css/validation.css">
 </head>
 
 <body>
