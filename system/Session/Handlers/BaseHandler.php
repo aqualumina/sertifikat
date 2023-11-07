@@ -11,8 +11,7 @@
 
 namespace CodeIgniter\Session\Handlers;
 
-use Config\Cookie as CookieConfig;
-use Config\Session as SessionConfig;
+use Config\App as AppConfig;
 use Psr\Log\LoggerAwareTrait;
 use SessionHandlerInterface;
 
@@ -33,15 +32,12 @@ abstract class BaseHandler implements SessionHandlerInterface
     /**
      * Lock placeholder.
      *
-     * @var bool|string
+     * @var mixed
      */
     protected $lock = false;
 
     /**
      * Cookie prefix
-     *
-     * The Config\Cookie::$prefix setting is completely ignored.
-     * See https://codeigniter4.github.io/CodeIgniter4/libraries/sessions.html#session-preferences
      *
      * @var string
      */
@@ -85,7 +81,7 @@ abstract class BaseHandler implements SessionHandlerInterface
     /**
      * Current session ID
      *
-     * @var string|null
+     * @var string
      */
     protected $sessionID;
 
@@ -104,21 +100,16 @@ abstract class BaseHandler implements SessionHandlerInterface
      */
     protected $ipAddress;
 
-    public function __construct(SessionConfig $config, string $ipAddress)
+    public function __construct(AppConfig $config, string $ipAddress)
     {
-        // Store Session configurations
-        $this->cookieName = $config->cookieName;
-        $this->matchIP    = $config->matchIP;
-        $this->savePath   = $config->savePath;
-
-        $cookie = config(CookieConfig::class);
-
-        // Session cookies have no prefix.
-        $this->cookieDomain = $cookie->domain;
-        $this->cookiePath   = $cookie->path;
-        $this->cookieSecure = $cookie->secure;
-
-        $this->ipAddress = $ipAddress;
+        $this->cookiePrefix = $config->cookiePrefix;
+        $this->cookieDomain = $config->cookieDomain;
+        $this->cookiePath   = $config->cookiePath;
+        $this->cookieSecure = $config->cookieSecure;
+        $this->cookieName   = $config->sessionCookieName;
+        $this->matchIP      = $config->sessionMatchIP;
+        $this->savePath     = $config->sessionSavePath;
+        $this->ipAddress    = $ipAddress;
     }
 
     /**

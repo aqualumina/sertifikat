@@ -85,8 +85,6 @@ class DotEnv
      * Sets the variable into the environment. Will parse the string
      * first to look for {name}={value} pattern, ensure that nested
      * variables are handled, and strip it of single and double quotes.
-     *
-     * @return void
      */
     protected function setVariable(string $name, string $value = '')
     {
@@ -118,8 +116,7 @@ class DotEnv
         $value = trim($value);
 
         // Sanitize the name
-        $name = preg_replace('/^export[ \t]++(\S+)/', '$1', $name);
-        $name = str_replace(['\'', '"'], '', $name);
+        $name = str_replace(['export', '\'', '"'], '', $name);
 
         // Sanitize the value
         $value = $this->sanitizeValue($value);

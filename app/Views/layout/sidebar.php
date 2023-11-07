@@ -1,6 +1,6 @@
 <div class="iq-sidebar-logo d-flex justify-content-between">
         <a href="/" class="header-logo">
-            <img src="<?= base_url()?>images/diskominfo_loader.png" class="img-fluid rounded-normal" alt="">
+            <img src="<?= base_url()?>/images/diskominfo_loader.png" class="img-fluid rounded-normal" alt="">
             <div class="logo-title">
                 <span class="text-uppercase" style="color: #13998A;"><b>Side</b><span class="text-primary ml-1"><b>bar.</b></span></span>
             </div>
@@ -24,7 +24,7 @@
                 <a href="/acara" class="iq-waves-effect"><i class="las la-calendar iq-arrow-left"></i><span>Acara</span></a>
             </li>
             <li>
-                <a href="/penyelenggara" class="iq-waves-effect"><i class="las la-user iq-arrow-left"></i><span>Penyelenggara</span></a>
+                <a href="/penyelenggara" class="iq-waves-effect"><i class="las la-id-card iq-arrow-left"></i><span>Penyelenggara</span></a>
             </li>
             <li>
                 <a href="/users" class="iq-waves-effect"><i class="las la-user iq-arrow-left"></i><span>Pengguna</span></a>

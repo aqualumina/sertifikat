@@ -11,6 +11,8 @@
 
 namespace CodeIgniter\Debug\Toolbar\Collectors;
 
+use CodeIgniter\Debug\Exceptions;
+
 /**
  * Base Toolbar collector
  */
@@ -137,8 +139,6 @@ class BaseCollector
      *          'bar' => 'baz'
      *      ],
      *  ];
-     *
-     * @return array|null
      */
     public function getVarData()
     {
@@ -174,19 +174,17 @@ class BaseCollector
     }
 
     /**
-     * This makes nicer looking paths for the error output.
+     * Clean Path
      *
-     * @deprecated Use the dedicated `clean_path()` function.
+     * This makes nicer looking paths for the error output.
      */
     public function cleanPath(string $file): string
     {
-        return clean_path($file);
+        return Exceptions::cleanPath($file);
     }
 
     /**
      * Gets the "badge" value for the button.
-     *
-     * @return int|null
      */
     public function getBadgeValue()
     {

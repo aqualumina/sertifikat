@@ -21,18 +21,17 @@ use Closure;
  * add a number of additional methods to customize how the routes are defined.
  *
  * The RouteCollection provides the Router with the routes so that it can determine
- * which controller should be run.
+ * which controller should be ran.
  */
 interface RouteCollectionInterface
 {
     /**
      * Adds a single route to the collection.
      *
-     * @param string               $from    The route path (with placeholders or regex)
-     * @param array|Closure|string $to      The route handler
-     * @param array|null           $options The route options
+     * @param array|Closure|string $to
+     * @param array                $options
      *
-     * @return RouteCollectionInterface
+     * @return mixed
      */
     public function add(string $from, $to, ?array $options = null);
 
@@ -45,9 +44,9 @@ interface RouteCollectionInterface
      * multiple placeholders added at once.
      *
      * @param array|string $placeholder
-     * @param string|null  $pattern     The regex pattern
+     * @param string       $pattern
      *
-     * @return RouteCollectionInterface
+     * @return mixed
      */
     public function addPlaceholder($placeholder, ?string $pattern = null);
 
@@ -55,7 +54,7 @@ interface RouteCollectionInterface
      * Sets the default namespace to use for Controllers when no other
      * namespace has been specified.
      *
-     * @return RouteCollectionInterface
+     * @return mixed
      */
     public function setDefaultNamespace(string $value);
 
@@ -63,7 +62,7 @@ interface RouteCollectionInterface
      * Sets the default controller to use when no other controller has been
      * specified.
      *
-     * @return RouteCollectionInterface
+     * @return mixed
      */
     public function setDefaultController(string $value);
 
@@ -71,7 +70,7 @@ interface RouteCollectionInterface
      * Sets the default method to call on the controller when no other
      * method has been set in the route.
      *
-     * @return RouteCollectionInterface
+     * @return mixed
      */
     public function setDefaultMethod(string $value);
 
@@ -82,7 +81,7 @@ interface RouteCollectionInterface
      * find words and meaning in the URI for better SEO. But it
      * doesn't work well with PHP method names....
      *
-     * @return RouteCollectionInterface
+     * @return mixed
      */
     public function setTranslateURIDashes(bool $value);
 
@@ -132,7 +131,7 @@ interface RouteCollectionInterface
     /**
      * Returns the current value of the translateURIDashes setting.
      *
-     * @return bool
+     * @return mixed
      */
     public function shouldTranslateURIDashes();
 
@@ -146,7 +145,7 @@ interface RouteCollectionInterface
     /**
      * Returns the raw array of available routes.
      *
-     * @return array
+     * @return mixed
      */
     public function getRoutes();
 
@@ -158,7 +157,7 @@ interface RouteCollectionInterface
     public function getHTTPVerb();
 
     /**
-     * Attempts to look up a route based on its destination.
+     * Attempts to look up a route based on it's destination.
      *
      * If a route exists:
      *
@@ -170,25 +169,19 @@ interface RouteCollectionInterface
      *      // Equals 'path/$param1/$param2'
      *      reverseRoute('Controller::method', $param1, $param2);
      *
-     * @param string     $search    Named route or Controller::method
-     * @param int|string ...$params
+     * @param array ...$params
      *
-     * @return false|string The route (URI path relative to baseURL) or false if not found.
+     * @return false|string
      */
     public function reverseRoute(string $search, ...$params);
 
     /**
      * Determines if the route is a redirecting route.
      */
-    public function isRedirect(string $routeKey): bool;
+    public function isRedirect(string $from): bool;
 
     /**
      * Grabs the HTTP status code from a redirecting Route.
      */
-    public function getRedirectCode(string $routeKey): int;
-
-    /**
-     * Get the flag that limit or not the routes with {locale} placeholder to App::$supportedLocales
-     */
-    public function shouldUseSupportedLocalesOnly(): bool;
+    public function getRedirectCode(string $from): int;
 }

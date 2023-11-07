@@ -49,7 +49,7 @@
                     <div class="col-sm-4">
                         <select class="form-control" name="no_sertifikat">
                             <?php foreach ($kategori as $value) : ?>
-                                <option value="<?= $value['id_kategori'] ?>">
+                                <option value="<?= $value['nomor_kategori'] ?>">
                                     <?= $value['nama_kategori'] ?></option>
                             <?php endforeach; ?>
                         </select>

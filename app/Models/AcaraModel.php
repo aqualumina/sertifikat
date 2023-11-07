@@ -15,7 +15,7 @@ class AcaraModel extends Model
     protected $allowedFields = [
         'no_sertifikat','tgl_sertifikat', 'nama_acara', 'narasumber', 'tgl_acara_mulai', 'tgl_acara_selesai', 
         'keterangan', 'kode_acara', 'link_acara','jumlah_peserta', 'gbr_sert_blk', 'gbr_sert_blk','template', 'jenis_dokumen',
-        'ket_statis_awal','ket_statis_akhir','nama_ttd', 'nip_ttd', 'ttd', 'cap','materi'
+        'ket_statis_awal','ket_statis_akhir','nama_ttd', 'nip_ttd', 'ttd', 'cap','materi','jpl'
     ];
 
     public function getAcara($id = false)

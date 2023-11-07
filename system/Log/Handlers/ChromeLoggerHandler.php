@@ -128,7 +128,7 @@ class ChromeLoggerHandler extends BaseHandler
     /**
      * Converts the object to display nicely in the Chrome Logger UI.
      *
-     * @param array|int|object|string $object
+     * @param mixed $object
      *
      * @return array
      */
@@ -149,7 +149,7 @@ class ChromeLoggerHandler extends BaseHandler
     /**
      * Attaches the header and the content to the passed in request object.
      *
-     * @return void
+     * @param ResponseInterface $response
      */
     public function sendLogs(?ResponseInterface &$response = null)
     {
@@ -157,9 +157,7 @@ class ChromeLoggerHandler extends BaseHandler
             $response = Services::response(null, true);
         }
 
-        $data = base64_encode(
-            mb_convert_encoding(json_encode($this->json), 'UTF-8', mb_list_encodings())
-        );
+        $data = base64_encode(utf8_encode(json_encode($this->json)));
 
         $response->setHeader($this->header, $data);
     }

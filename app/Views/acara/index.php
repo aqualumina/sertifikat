@@ -83,7 +83,7 @@
                             </table>
                         </td>
                         <td class="center">
-                            <center><b><a class="danger" href="/">
+                            <center><b><a class="danger" href="/peserta">
                             <span class="badge badge-success"><?= $value['jumlah_peserta'] ?></a></span></b></center>
                         </td>
                         <td class="center">

@@ -23,7 +23,7 @@ class Config
      * @param string $name      Configuration name
      * @param bool   $getShared Use shared instance
      *
-     * @return object|null
+     * @return mixed|null
      */
     public static function get(string $name, bool $getShared = true)
     {
@@ -34,8 +34,6 @@ class Config
      * Helper method for injecting mock instances while testing.
      *
      * @param object $instance
-     *
-     * @return void
      */
     public static function injectMock(string $name, $instance)
     {
@@ -44,8 +42,6 @@ class Config
 
     /**
      * Resets the static arrays
-     *
-     * @return void
      */
     public static function reset()
     {

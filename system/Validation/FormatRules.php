@@ -176,6 +176,8 @@ class FormatRules
      * timezone_identifiers_list function.
      *
      * @see http://php.net/manual/en/datetimezone.listidentifiers.php
+     *
+     * @param string $str
      */
     public function timezone(?string $str = null): bool
     {
@@ -187,6 +189,8 @@ class FormatRules
      *
      * Tests a string for characters outside of the Base64 alphabet
      * as defined by RFC 2045 http://www.faqs.org/rfcs/rfc2045
+     *
+     * @param string $str
      */
     public function valid_base64(?string $str = null): bool
     {
@@ -199,6 +203,8 @@ class FormatRules
 
     /**
      * Valid JSON
+     *
+     * @param string $str
      */
     public function valid_json(?string $str = null): bool
     {
@@ -209,6 +215,8 @@ class FormatRules
 
     /**
      * Checks for a correctly formatted email address
+     *
+     * @param string $str
      */
     public function valid_email(?string $str = null): bool
     {
@@ -225,6 +233,8 @@ class FormatRules
      *
      * Example:
      *     valid_emails[one@example.com,two@example.com]
+     *
+     * @param string $str
      */
     public function valid_emails(?string $str = null): bool
     {
@@ -256,19 +266,19 @@ class FormatRules
 
         switch (strtolower($which ?? '')) {
             case 'ipv4':
-                $option = FILTER_FLAG_IPV4;
+                $which = FILTER_FLAG_IPV4;
                 break;
 
             case 'ipv6':
-                $option = FILTER_FLAG_IPV6;
+                $which = FILTER_FLAG_IPV6;
                 break;
 
             default:
-                $option = 0;
+                $which = 0;
         }
 
-        return filter_var($ip, FILTER_VALIDATE_IP, $option) !== false
-            || (! ctype_print($ip) && filter_var(inet_ntop($ip), FILTER_VALIDATE_IP, $option) !== false);
+        return filter_var($ip, FILTER_VALIDATE_IP, $which) !== false
+            || (! ctype_print($ip) && filter_var(inet_ntop($ip), FILTER_VALIDATE_IP, $which) !== false);
     }
 
     /**
@@ -283,7 +293,7 @@ class FormatRules
             return false;
         }
 
-        if (preg_match('/\A(?:([^:]*)\:)?\/\/(.+)\z/', $str, $matches)) {
+        if (preg_match('/^(?:([^:]*)\:)?\/\/(.+)$/', $str, $matches)) {
             if (! in_array($matches[1], ['http', 'https'], true)) {
                 return false;
             }
@@ -307,8 +317,7 @@ class FormatRules
             return false;
         }
 
-        // parse_url() may return null and false
-        $scheme       = strtolower((string) parse_url($str, PHP_URL_SCHEME));
+        $scheme       = strtolower(parse_url($str, PHP_URL_SCHEME) ?? ''); // absent scheme gives null
         $validSchemes = explode(
             ',',
             strtolower($validSchemes ?? 'http,https')
@@ -323,10 +332,6 @@ class FormatRules
      */
     public function valid_date(?string $str = null, ?string $format = null): bool
     {
-        if ($str === null) {
-            return false;
-        }
-
         if (empty($format)) {
             return strtotime($str) !== false;
         }
@@ -334,15 +339,6 @@ class FormatRules
         $date   = DateTime::createFromFormat($format, $str);
         $errors = DateTime::getLastErrors();
 
-        if ($date === false) {
-            return false;
-        }
-
-        // PHP 8.2 or later.
-        if ($errors === false) {
-            return true;
-        }
-
-        return $errors['warning_count'] === 0 && $errors['error_count'] === 0;
+        return $date !== false && $errors !== false && $errors['warning_count'] === 0 && $errors['error_count'] === 0;
     }
 }

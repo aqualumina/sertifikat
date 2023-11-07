@@ -84,11 +84,6 @@ class Table
     public $function;
 
     /**
-     * Order each inserted row by heading keys
-     */
-    private bool $syncRowsWithHeading = false;
-
-    /**
      * Set the template from the table config file if it exists
      *
      * @param array $config (default: array())
@@ -166,8 +161,7 @@ class Table
 
         // Turn off the auto-heading feature since it's doubtful we
         // will want headings from a one-dimensional array
-        $this->autoHeading         = false;
-        $this->syncRowsWithHeading = false;
+        $this->autoHeading = false;
 
         if ($columnLimit === 0) {
             return $array;
@@ -193,7 +187,9 @@ class Table
     /**
      * Set "empty" cells
      *
-     * @param string $value
+     * Can be passed as an array or discreet params
+     *
+     * @param mixed $value
      *
      * @return Table
      */
@@ -213,40 +209,7 @@ class Table
      */
     public function addRow()
     {
-        $tmpRow = $this->_prepArgs(func_get_args());
-
-        if ($this->syncRowsWithHeading && ! empty($this->heading)) {
-            // each key has an index
-            $keyIndex = array_flip(array_keys($this->heading));
-
-            // figure out which keys need to be added
-            $missingKeys = array_diff_key($keyIndex, $tmpRow);
-
-            // Remove all keys which don't exist in $keyIndex
-            $tmpRow = array_filter($tmpRow, static fn ($k) => array_key_exists($k, $keyIndex), ARRAY_FILTER_USE_KEY);
-
-            // add missing keys to row, but use $this->emptyCells
-            $tmpRow = array_merge($tmpRow, array_map(fn ($v) => ['data' => $this->emptyCells], $missingKeys));
-
-            // order keys by $keyIndex values
-            uksort($tmpRow, static fn ($k1, $k2) => $keyIndex[$k1] <=> $keyIndex[$k2]);
-        }
-        $this->rows[] = $tmpRow;
-
-        return $this;
-    }
-
-    /**
-     * Set to true if each row column should be synced by keys defined in heading.
-     *
-     * If a row has a key which does not exist in heading, it will be filtered out
-     * If a row does not have a key which exists in heading, the field will stay empty
-     *
-     * @return $this
-     */
-    public function setSyncRowsWithHeading(bool $orderByKey)
-    {
-        $this->syncRowsWithHeading = $orderByKey;
+        $this->rows[] = $this->_prepArgs(func_get_args());
 
         return $this;
     }
@@ -293,7 +256,7 @@ class Table
     /**
      * Generate the table
      *
-     * @param array|BaseResult|null $tableData
+     * @param mixed $tableData
      *
      * @return string
      */
@@ -332,20 +295,14 @@ class Table
 
         // Is there a table heading to display?
         if (! empty($this->heading)) {
-            $headerTag = null;
-
-            if (preg_match('/(<)(td|th)(?=\h|>)/i', $this->template['heading_cell_start'], $matches) === 1) {
-                $headerTag = $matches[0];
-            }
-
             $out .= $this->template['thead_open'] . $this->newline . $this->template['heading_row_start'] . $this->newline;
 
             foreach ($this->heading as $heading) {
                 $temp = $this->template['heading_cell_start'];
 
                 foreach ($heading as $key => $val) {
-                    if ($key !== 'data' && $headerTag !== null) {
-                        $temp = str_replace($headerTag, $headerTag . ' ' . $key . '="' . $val . '"', $temp);
+                    if ($key !== 'data') {
+                        $temp = str_replace('<th', '<th ' . $key . '="' . $val . '"', $temp);
                     }
                 }
 
@@ -398,20 +355,14 @@ class Table
 
         // Any table footing to display?
         if (! empty($this->footing)) {
-            $footerTag = null;
-
-            if (preg_match('/(<)(td|th)(?=\h|>)/i', $this->template['footing_cell_start'], $matches)) {
-                $footerTag = $matches[0];
-            }
-
             $out .= $this->template['tfoot_open'] . $this->newline . $this->template['footing_row_start'] . $this->newline;
 
             foreach ($this->footing as $footing) {
                 $temp = $this->template['footing_cell_start'];
 
                 foreach ($footing as $key => $val) {
-                    if ($key !== 'data' && $footerTag !== null) {
-                        $temp = str_replace($footerTag, $footerTag . ' ' . $key . '="' . $val . '"', $temp);
+                    if ($key !== 'data') {
+                        $temp = str_replace('<th', '<th ' . $key . '="' . $val . '"', $temp);
                     }
                 }
 
@@ -450,8 +401,6 @@ class Table
      * Set table data from a database result object
      *
      * @param BaseResult $object Database result object
-     *
-     * @return void
      */
     protected function _setFromDBResult($object)
     {
@@ -469,8 +418,6 @@ class Table
      * Set table data from an array
      *
      * @param array $data
-     *
-     * @return void
      */
     protected function _setFromArray($data)
     {
@@ -479,14 +426,12 @@ class Table
         }
 
         foreach ($data as &$row) {
-            $this->addRow($row);
+            $this->rows[] = $this->_prepArgs($row);
         }
     }
 
     /**
      * Compile Template
-     *
-     * @return void
      */
     protected function _compileTemplate()
     {

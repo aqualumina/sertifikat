@@ -1,10 +1,38 @@
 <?php
 
-use CodeIgniter\Router\RouteCollection;
+namespace Config;
 
-/**
- * @var RouteCollection $routes
+// Create a new instance of our RouteCollection class.
+$routes = Services::routes();
+
+// Load the system's routing file first, so that the app and ENVIRONMENT
+// can override as needed.
+if (file_exists(SYSTEMPATH . 'Config/Routes.php')) {
+    require SYSTEMPATH . 'Config/Routes.php';
+}
+
+/*
+ * --------------------------------------------------------------------
+ * Router Setup
+ * --------------------------------------------------------------------
  */
+$routes->setDefaultNamespace('App\Controllers');
+$routes->setDefaultController('Home');
+$routes->setDefaultMethod('index');
+$routes->setTranslateURIDashes(false);
+$routes->set404Override();
+$routes->setAutoRoute(false);
+
+/*
+ * --------------------------------------------------------------------
+ * Route Definitions
+ * --------------------------------------------------------------------
+ */
+
+// We get a performance increase by specifying the default
+// route since we don't have to scan directories.
+$routes->get('/', 'Home::index');
+
 $routes->get('/','Home::index', ['filter' => 'auth']);
 $routes->get('/login', 'Auth::indexlogin');
 $routes->post('/login/auth', 'Auth::auth');
@@ -40,7 +68,6 @@ $routes->group('users',['filter' => 'auth'], function ($rs) {
 });
 
 $routes->group('penyelenggara',['filter' => 'auth'], function ($rs) {
-    // ['filter' =>'role:Admin,Owner1,Owner2']
     $rs->get('/', 'Penyelenggara::index');
     $rs->get('create', 'Penyelenggara::create');
     $rs->post('create', 'Penyelenggara::save');
@@ -50,3 +77,29 @@ $routes->group('penyelenggara',['filter' => 'auth'], function ($rs) {
     $rs->get('edit/(:any)', 'Penyelenggara::edit/$1');
     $rs->post('edit/(:any)', 'Penyelenggara::update/$1');
 });
+
+// $routes->group('peserta',['filter' => 'auth'], function ($rs) {
+//     $rs->get('/', 'Peserta::index');
+//     $rs->get('index', 'Peserta::index');
+//     $rs->get('create', 'Peserta::create');
+//     $rs->delete('(:num)', 'Peserta::delete/$1');
+//     $rs->get('edit/(:any)', 'Peserta::edit/$1');
+//     $rs->post('edit/(:any)', 'Peserta::update/$1');
+// });
+
+/*
+ * --------------------------------------------------------------------
+ * Additional Routing
+ * --------------------------------------------------------------------
+ *
+ * There will often be times that you need additional routing and you
+ * need it to be able to override any defaults in this file. Environment
+ * based routes is one such time. require() additional route files here
+ * to make that happen.
+ *
+ * You will have access to the $routes object within that file without
+ * needing to reload it.
+ */
+if (file_exists(APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php')) {
+    require APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php';
+}

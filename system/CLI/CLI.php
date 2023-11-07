@@ -142,8 +142,6 @@ class CLI
 
     /**
      * Static "constructor".
-     *
-     * @return void
      */
     public static function init()
     {
@@ -163,10 +161,9 @@ class CLI
             static::parseCommandLine();
 
             static::$initialized = true;
-        } elseif (! defined('STDOUT')) {
+        } else {
             // If the command is being called from a controller
             // we need to define STDOUT ourselves
-            // For "! defined('STDOUT')" see: https://github.com/codeigniter4/CodeIgniter4/issues/7047
             define('STDOUT', 'php://output'); // @codeCoverageIgnore
         }
     }
@@ -177,18 +174,19 @@ class CLI
      * Named options must be in the following formats:
      * php index.php user -v --v -name=John --name=John
      *
-     * @param string $prefix You may specify a string with which to prompt the user.
+     * @param string $prefix
+     *
+     * @codeCoverageIgnore
      */
     public static function input(?string $prefix = null): string
     {
-        // readline() can't be tested.
-        if (static::$readline_support && ENVIRONMENT !== 'testing') {
-            return readline($prefix); // @codeCoverageIgnore
+        if (static::$readline_support) {
+            return readline($prefix);
         }
 
         echo $prefix;
 
-        return fgets(fopen('php://stdin', 'rb'));
+        return fgets(STDIN);
     }
 
     /**
@@ -284,106 +282,14 @@ class CLI
             throw new InvalidArgumentException('$text can only be of type string|array');
         }
 
-        CLI::isZeroOptions($options);
+        if (! $options) {
+            throw new InvalidArgumentException('No options to select from were provided');
+        }
 
         if ($line = array_shift($text)) {
             CLI::write($line);
         }
 
-        CLI::printKeysAndValues($options);
-
-        return static::prompt(PHP_EOL . array_shift($text), array_keys($options), $validation);
-    }
-
-    /**
-     * This method is the same as promptByKey(), but this method supports multiple keys, separated by commas.
-     *
-     * @param string $text    Output "field" text or an one or two value array where the first value is the text before listing the options
-     *                        and the second value the text before asking to select one option. Provide empty string to omit
-     * @param array  $options A list of options (array(key => description)), the first option will be the default value
-     *
-     * @return array The selected key(s) and value(s) of $options
-     */
-    public static function promptByMultipleKeys(string $text, array $options): array
-    {
-        CLI::isZeroOptions($options);
-
-        $extraOutputDefault = static::color('0', 'green');
-        $opts               = $options;
-        unset($opts[0]);
-
-        if (empty($opts)) {
-            $extraOutput = $extraOutputDefault;
-        } else {
-            $optsKey = [];
-
-            foreach (array_keys($opts) as $key) {
-                $optsKey[] = $key;
-            }
-            $extraOutput = '[' . $extraOutputDefault . ', ' . implode(', ', $optsKey) . ']';
-            $extraOutput = 'You can specify multiple values separated by commas.' . PHP_EOL . $extraOutput;
-        }
-
-        CLI::write($text);
-        CLI::printKeysAndValues($options);
-        CLI::newLine();
-        $input = static::prompt($extraOutput) ?: 0; // 0 is default
-
-        // validation
-        while (true) {
-            $pattern = preg_match_all('/^\d+(,\d+)*$/', trim($input));
-
-            // separate input by comma and convert all to an int[]
-            $inputToArray = array_map(static fn ($value) => (int) $value, explode(',', $input));
-            // find max from key of $options
-            $maxOptions = array_key_last($options);
-            // find max from input
-            $maxInput = max($inputToArray);
-
-            // return the prompt again if $input contain(s) non-numeric charachter, except a comma.
-            // And if max from $options less than max from input
-            // it is mean user tried to access null value in $options
-            if (! $pattern || $maxOptions < $maxInput) {
-                static::error('Please select correctly.');
-                CLI::newLine();
-                $input = static::prompt($extraOutput) ?: 0;
-            } else {
-                break;
-            }
-        }
-
-        $input = [];
-
-        foreach ($options as $key => $description) {
-            foreach ($inputToArray as $inputKey) {
-                if ($key === $inputKey) {
-                    $input[$key] = $description;
-                }
-            }
-        }
-
-        return $input;
-    }
-
-    // --------------------------------------------------------------------
-    // Utility for promptBy...
-    // --------------------------------------------------------------------
-
-    /**
-     * Validation for $options in promptByKey() and promptByMultipleKeys(). Return an error if $options is an empty array.
-     */
-    private static function isZeroOptions(array $options): void
-    {
-        if (! $options) {
-            throw new InvalidArgumentException('No options to select from were provided');
-        }
-    }
-
-    /**
-     * Print each key and value one by one
-     */
-    private static function printKeysAndValues(array $options): void
-    {
         // +2 for the square brackets around the key
         $keyMaxLength = max(array_map('mb_strwidth', array_keys($options))) + 2;
 
@@ -391,11 +297,9 @@ class CLI
             $name = str_pad('  [' . $key . ']  ', $keyMaxLength + 4, ' ');
             CLI::write(CLI::color($name, 'green') . CLI::wrap($description, 125, $keyMaxLength + 4));
         }
-    }
 
-    // --------------------------------------------------------------------
-    // End Utility for promptBy...
-    // --------------------------------------------------------------------
+        return static::prompt(PHP_EOL . array_shift($text), array_keys($options), $validation);
+    }
 
     /**
      * Validate one prompt "field" at a time
@@ -431,8 +335,6 @@ class CLI
     /**
      * Outputs a string to the CLI without any surrounding newlines.
      * Useful for showing repeating elements on a single line.
-     *
-     * @return void
      */
     public static function print(string $text = '', ?string $foreground = null, ?string $background = null)
     {
@@ -447,8 +349,6 @@ class CLI
 
     /**
      * Outputs a string to the cli on it's own line.
-     *
-     * @return void
      */
     public static function write(string $text = '', ?string $foreground = null, ?string $background = null)
     {
@@ -466,8 +366,6 @@ class CLI
 
     /**
      * Outputs an error to the CLI using STDERR instead of STDOUT
-     *
-     * @return void
      */
     public static function error(string $text, string $foreground = 'light_red', ?string $background = null)
     {
@@ -489,8 +387,6 @@ class CLI
      * Beeps a certain number of times.
      *
      * @param int $num The number of times to beep
-     *
-     * @return void
      */
     public static function beep(int $num = 1)
     {
@@ -503,8 +399,6 @@ class CLI
      *
      * @param int  $seconds   Number of seconds
      * @param bool $countdown Show a countdown or not
-     *
-     * @return void
      */
     public static function wait(int $seconds, bool $countdown = false)
     {
@@ -531,18 +425,14 @@ class CLI
 
     /**
      * if operating system === windows
-     *
-     * @deprecated 4.3.0 Use `is_windows()` instead
      */
     public static function isWindows(): bool
     {
-        return is_windows();
+        return PHP_OS_FAMILY === 'Windows';
     }
 
     /**
      * Enter a number of empty lines
-     *
-     * @return void
      */
     public static function newLine(int $num = 1)
     {
@@ -556,14 +446,12 @@ class CLI
      * Clears the screen of output
      *
      * @codeCoverageIgnore
-     *
-     * @return void
      */
     public static function clearScreen()
     {
         // Unix systems, and Windows with VT100 Terminal support (i.e. Win10)
         // can handle CSI sequences. For lower than Win10 we just shove in 40 new lines.
-        is_windows() && ! static::streamSupports('sapi_windows_vt100_support', STDOUT)
+        static::isWindows() && ! static::streamSupports('sapi_windows_vt100_support', STDOUT)
             ? static::newLine(40)
             : static::fwrite(STDOUT, "\033[H\033[2J");
     }
@@ -581,7 +469,7 @@ class CLI
      */
     public static function color(string $text, string $foreground, ?string $background = null, ?string $format = null): string
     {
-        if (! static::$isColored || $text === '') {
+        if (! static::$isColored) {
             return $text;
         }
 
@@ -593,48 +481,6 @@ class CLI
             throw CLIException::forInvalidColor('background', $background);
         }
 
-        $newText = '';
-
-        // Detect if color method was already in use with this text
-        if (strpos($text, "\033[0m") !== false) {
-            $pattern = '/\\033\\[0;.+?\\033\\[0m/u';
-
-            preg_match_all($pattern, $text, $matches);
-            $coloredStrings = $matches[0];
-
-            // No colored string found. Invalid strings with no `\033[0;??`.
-            if ($coloredStrings === []) {
-                return $newText . self::getColoredText($text, $foreground, $background, $format);
-            }
-
-            $nonColoredText = preg_replace(
-                $pattern,
-                '<<__colored_string__>>',
-                $text
-            );
-            $nonColoredChunks = preg_split(
-                '/<<__colored_string__>>/u',
-                $nonColoredText
-            );
-
-            foreach ($nonColoredChunks as $i => $chunk) {
-                if ($chunk !== '') {
-                    $newText .= self::getColoredText($chunk, $foreground, $background, $format);
-                }
-
-                if (isset($coloredStrings[$i])) {
-                    $newText .= $coloredStrings[$i];
-                }
-            }
-        } else {
-            $newText .= self::getColoredText($text, $foreground, $background, $format);
-        }
-
-        return $newText;
-    }
-
-    private static function getColoredText(string $text, string $foreground, ?string $background, ?string $format): string
-    {
         $string = "\033[" . static::$foreground_colors[$foreground] . 'm';
 
         if ($background !== null) {
@@ -643,6 +489,30 @@ class CLI
 
         if ($format === 'underline') {
             $string .= "\033[4m";
+        }
+
+        // Detect if color method was already in use with this text
+        if (strpos($text, "\033[0m") !== false) {
+            // Split the text into parts so that we can see
+            // if any part missing the color definition
+            $chunks = mb_split('\\033\\[0m', $text);
+            // Reset text
+            $text = '';
+
+            foreach ($chunks as $chunk) {
+                if ($chunk === '') {
+                    continue;
+                }
+
+                // If chunk doesn't have colors defined we need to add them
+                if (strpos($chunk, "\033[") === false) {
+                    $chunk = static::color($chunk, $foreground, $background, $format);
+                    // Add color reset before chunk and clear end of the string
+                    $text .= rtrim("\033[0m" . $chunk, "\033[0m");
+                } else {
+                    $text .= $chunk;
+                }
+            }
         }
 
         return $string . $text . "\033[0m";
@@ -710,7 +580,7 @@ class CLI
             return true;
         }
 
-        if (is_windows()) {
+        if (static::isWindows()) {
             // @codeCoverageIgnoreStart
             return static::streamSupports('sapi_windows_vt100_support', $resource)
                 || isset($_SERVER['ANSICON'])
@@ -751,13 +621,11 @@ class CLI
      * Populates the CLI's dimensions.
      *
      * @codeCoverageIgnore
-     *
-     * @return void
      */
     public static function generateDimensions()
     {
         try {
-            if (is_windows()) {
+            if (static::isWindows()) {
                 // Shells such as `Cygwin` and `Git bash` returns incorrect values
                 // when executing `mode CON`, so we use `tput` instead
                 if (getenv('TERM') || (($shell = getenv('SHELL')) && preg_match('/(?:bash|zsh)(?:\.exe)?$/', $shell))) {
@@ -787,7 +655,7 @@ class CLI
             // Then let the developer know of the error.
             static::$height = null;
             static::$width  = null;
-            log_message('error', (string) $e);
+            log_message('error', $e->getMessage());
         }
     }
 
@@ -796,8 +664,6 @@ class CLI
      * to update it. Set $thisStep = false to erase the progress bar.
      *
      * @param bool|int $thisStep
-     *
-     * @return void
      */
     public static function showProgress($thisStep = 1, int $totalSteps = 10)
     {
@@ -872,15 +738,13 @@ class CLI
         return $lines;
     }
 
-    // --------------------------------------------------------------------
+    //--------------------------------------------------------------------
     // Command-Line 'URI' support
-    // --------------------------------------------------------------------
+    //--------------------------------------------------------------------
 
     /**
      * Parses the command line it was called from and collects all
      * options and valid segments.
-     *
-     * @return void
      */
     protected static function parseCommandLine()
     {
@@ -937,7 +801,7 @@ class CLI
      *
      * **IMPORTANT:** The index here is one-based instead of zero-based.
      *
-     * @return string|null
+     * @return mixed
      */
     public static function getSegment(int $index)
     {
@@ -956,7 +820,7 @@ class CLI
      * Gets a single command-line option. Returns TRUE if the option
      * exists, but doesn't have a value, and is simply acting as a flag.
      *
-     * @return string|true|null
+     * @return mixed
      */
     public static function getOption(string $name)
     {
@@ -1020,8 +884,6 @@ class CLI
      *
      * @param array $tbody List of rows
      * @param array $thead List of columns
-     *
-     * @return void
      */
     public static function table(array $tbody, array $thead = [])
     {
@@ -1085,7 +947,6 @@ class CLI
         }
 
         $table = '';
-        $cols  = '';
 
         // Joins columns and append the well formatted rows to the table
         for ($row = 0; $row < $totalRows; $row++) {
@@ -1103,7 +964,7 @@ class CLI
             $table .= '| ' . implode(' | ', $tableRows[$row]) . ' |' . PHP_EOL;
 
             // Set the thead and table borders-bottom
-            if (($row === 0 && ! empty($thead)) || ($row + 1 === $totalRows)) {
+            if (isset($cols) && (($row === 0 && ! empty($thead)) || ($row + 1 === $totalRows))) {
                 $table .= $cols . PHP_EOL;
             }
         }
@@ -1120,8 +981,6 @@ class CLI
      * solution down the road.
      *
      * @param resource $handle
-     *
-     * @return void
      */
     protected static function fwrite($handle, string $string)
     {

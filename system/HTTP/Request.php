@@ -12,33 +12,51 @@
 namespace CodeIgniter\HTTP;
 
 use CodeIgniter\Validation\FormatRules;
-use Config\App;
 
 /**
- * Representation of an incoming, server-side HTTP request.
+ * Representation of an HTTP request.
  */
-class Request extends OutgoingRequest implements RequestInterface
+class Request extends Message implements MessageInterface, RequestInterface
 {
     use RequestTrait;
 
     /**
      * Proxy IPs
      *
-     * @var array<string, string>
+     * @var array|string
      *
-     * @deprecated 4.0.5 No longer used. Check the App config directly
+     * @deprecated Check the App config directly
      */
     protected $proxyIPs;
 
     /**
+     * Request method.
+     *
+     * @var string
+     */
+    protected $method;
+
+    /**
+     * A URI instance.
+     *
+     * @var URI
+     */
+    protected $uri;
+
+    /**
      * Constructor.
      *
-     * @param App $config
+     * @param object $config
      *
-     * @deprecated 4.0.5 The $config is no longer needed and will be removed in a future version
+     * @deprecated The $config is no longer needed and will be removed in a future version
      */
-    public function __construct($config = null) // @phpstan-ignore-line
+    public function __construct($config = null)
     {
+        /**
+         * @deprecated $this->proxyIps property will be removed in the future
+         */
+        $this->proxyIPs = $config->proxyIPs;
+
         if (empty($this->method)) {
             $this->method = $this->getServer('REQUEST_METHOD') ?? 'GET';
         }
@@ -54,7 +72,7 @@ class Request extends OutgoingRequest implements RequestInterface
      * @param string $ip    IP Address
      * @param string $which IP protocol: 'ipv4' or 'ipv6'
      *
-     * @deprecated 4.0.5 Use Validation instead
+     * @deprecated Use Validation instead
      *
      * @codeCoverageIgnore
      */
@@ -68,7 +86,7 @@ class Request extends OutgoingRequest implements RequestInterface
      *
      * @param bool $upper Whether to return in upper or lower case.
      *
-     * @deprecated 4.0.5 The $upper functionality will be removed and this will revert to its PSR-7 equivalent
+     * @deprecated The $upper functionality will be removed and this will revert to its PSR-7 equivalent
      *
      * @codeCoverageIgnore
      */
@@ -80,9 +98,9 @@ class Request extends OutgoingRequest implements RequestInterface
     /**
      * Sets the request method. Used when spoofing the request.
      *
-     * @return $this
+     * @return Request
      *
-     * @deprecated 4.0.5 Use withMethod() instead for immutability
+     * @deprecated Use withMethod() instead for immutability
      *
      * @codeCoverageIgnore
      */

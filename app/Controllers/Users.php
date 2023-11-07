@@ -32,14 +32,29 @@ class Users extends BaseController
 
     public function create()
     {
+        session();
         $data = [
-            'title' => 'Tambah User'
+            'title' => 'Tambah User',
+            'validation' => \Config\Services::validation()
         ];
         return view('user/create', $data);
     }
 
     public function save()
     {
+        if (!$this->validate([
+            'firstname' => 'required',
+            'lastname' => 'required|integer',
+            'user_name' => 'required',
+            'user_email' => 'required|numeric',
+            'role' => 'permit_empty|decimal',
+            'user_password' => 'permit_empty|decimal',
+        ])) {
+            $validation = \Config\Services::validation();
+            // dd($validation);
+            return redirect()->back()->withInput()->with('validation', $validation);
+        }
+
         $user_myth = new UserModel();
         $user_myth->save([
 
@@ -48,9 +63,11 @@ class Users extends BaseController
             'user_name' => $this->request->getVar('username'),
             'user_email' => $this->request->getVar('email'),
             'role' => $this->request->getVar('role'),
-            'user_password' => password_hash($this->request->getVar('password'),
-            
-            PASSWORD_DEFAULT),
+            'user_password' => password_hash(
+                $this->request->getVar('password'),
+
+                PASSWORD_DEFAULT
+            ),
 
         ]);
 
@@ -66,7 +83,7 @@ class Users extends BaseController
             'result' => $dataUser
         ];
 
-        
+
         return view('user/edit', $data);
     }
 

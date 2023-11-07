@@ -11,7 +11,6 @@
 
 namespace CodeIgniter\Debug\Toolbar\Collectors;
 
-use CodeIgniter\Router\DefinedRouteCollector;
 use Config\Services;
 use ReflectionException;
 use ReflectionFunction;
@@ -56,6 +55,9 @@ class Routes extends BaseCollector
         $rawRoutes = Services::routes(true);
         $router    = Services::router(null, null, true);
 
+        // Matched Route
+        $route = $router->getMatchedRoute();
+
         // Get our parameters
         // Closure routes
         if (is_callable($router->controllerName())) {
@@ -76,13 +78,9 @@ class Routes extends BaseCollector
 
         foreach ($rawParams as $key => $param) {
             $params[] = [
-                'name'  => '$' . $param->getName() . ' = ',
+                'name'  => $param->getName(),
                 'value' => $router->params()[$key] ??
-                    ' <empty> | default: '
-                    . var_export(
-                        $param->isDefaultValueAvailable() ? $param->getDefaultValue() : null,
-                        true
-                    ),
+                    ('&lt;empty&gt;&nbsp| default: ' . var_export($param->isDefaultValueAvailable() ? $param->getDefaultValue() : null, true)),
             ];
         }
 
@@ -98,18 +96,32 @@ class Routes extends BaseCollector
         ];
 
         // Defined Routes
-        $routes = [];
+        $routes  = [];
+        $methods = [
+            'get',
+            'head',
+            'post',
+            'patch',
+            'put',
+            'delete',
+            'options',
+            'trace',
+            'connect',
+            'cli',
+        ];
 
-        $definedRouteCollector = new DefinedRouteCollector($rawRoutes);
+        foreach ($methods as $method) {
+            $raw = $rawRoutes->getRoutes($method);
 
-        foreach ($definedRouteCollector->collect() as $route) {
-            // filter for strings, as callbacks aren't displayable
-            if ($route['handler'] !== '(Closure)') {
-                $routes[] = [
-                    'method'  => strtoupper($route['method']),
-                    'route'   => $route['route'],
-                    'handler' => $route['handler'],
-                ];
+            foreach ($raw as $route => $handler) {
+                // filter for strings, as callbacks aren't displayable
+                if (is_string($handler)) {
+                    $routes[] = [
+                        'method'  => strtoupper($method),
+                        'route'   => $route,
+                        'handler' => $handler,
+                    ];
+                }
             }
         }
 

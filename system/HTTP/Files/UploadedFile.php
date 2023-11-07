@@ -35,13 +35,6 @@ class UploadedFile extends File implements UploadedFileInterface
     protected $path;
 
     /**
-     * The webkit relative path of the file.
-     *
-     * @var string
-     */
-    protected $clientPath;
-
-    /**
      * The original filename as provided by the client.
      *
      * @var string
@@ -85,9 +78,8 @@ class UploadedFile extends File implements UploadedFileInterface
      * @param string $mimeType     The type of file as provided by PHP
      * @param int    $size         The size of the file, in bytes
      * @param int    $error        The error constant of the upload (one of PHP's UPLOADERRXXX constants)
-     * @param string $clientPath   The webkit relative path of the uploaded file.
      */
-    public function __construct(string $path, string $originalName, ?string $mimeType = null, ?int $size = null, ?int $error = null, ?string $clientPath = null)
+    public function __construct(string $path, string $originalName, ?string $mimeType = null, ?int $size = null, ?int $error = null)
     {
         $this->path             = $path;
         $this->name             = $originalName;
@@ -95,7 +87,6 @@ class UploadedFile extends File implements UploadedFileInterface
         $this->originalMimeType = $mimeType;
         $this->size             = $size;
         $this->error            = $error;
-        $this->clientPath       = $clientPath;
 
         parent::__construct($path, false);
     }
@@ -127,11 +118,11 @@ class UploadedFile extends File implements UploadedFileInterface
      * @param bool   $overwrite  State for indicating whether to overwrite the previously generated file with the same
      *                           name or not.
      *
-     * @return bool
-     *
      * @throws InvalidArgumentException if the $path specified is invalid.
      * @throws RuntimeException         on any error during the move operation.
      * @throws RuntimeException         on the second or subsequent call to the method.
+     *
+     * @return bool
      */
     public function move(string $targetPath, ?string $name = null, bool $overwrite = false)
     {
@@ -146,7 +137,7 @@ class UploadedFile extends File implements UploadedFileInterface
             throw HTTPException::forInvalidFile();
         }
 
-        $name ??= $this->getName();
+        $name        = $name ?? $this->getName();
         $destination = $overwrite ? $targetPath . $name : $this->getDestination($targetPath . $name);
 
         try {
@@ -277,15 +268,6 @@ class UploadedFile extends File implements UploadedFileInterface
     }
 
     /**
-     * (PHP 8.1+)
-     * Returns the webkit relative path of the uploaded file on directory uploads.
-     */
-    public function getClientPath(): ?string
-    {
-        return $this->clientPath;
-    }
-
-    /**
      * Gets the temporary filename where the file was uploaded to.
      */
     public function getTempName(): string
@@ -301,7 +283,7 @@ class UploadedFile extends File implements UploadedFileInterface
      * type but will return the clientExtension if it fails to do so.
      *
      * This method will always return a more or less helpfull extension
-     * but might be insecure if the mime type is not matched. Consider
+     * but might be insecure if the mime type is not machted. Consider
      * using guessExtension for a more safe version.
      */
     public function getExtension(): string
@@ -353,7 +335,7 @@ class UploadedFile extends File implements UploadedFileInterface
     public function store(?string $folderName = null, ?string $fileName = null): string
     {
         $folderName = rtrim($folderName ?? date('Ymd'), '/') . '/';
-        $fileName ??= $this->getRandomName();
+        $fileName   = $fileName ?? $this->getRandomName();
 
         // Move the uploaded file to a new location.
         $this->move(WRITEPATH . 'uploads/' . $folderName, $fileName);
