@@ -4,7 +4,6 @@
             <div class="modal-header">
                 <h5 class="modal-title">Silahkan Upload Background Depan</h5>
             </div>
-            <!-- < ?php echo form_open_multipart('c_acara/kirim_exel/' . $s->id_acara); ?> -->
             <div class="modal-body">
                 <p class="error-text">
                     <input type="file" name="userfile" size="20" />

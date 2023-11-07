@@ -73,10 +73,11 @@
                                     <td><?= $value['narasumber'] ?></td>
                                     <td><?= $value['jpl'] ?></td>
                                     <td class="center">
-                                        <a href="/" class="btn btn-xs btn-danger" type="reset" data-action="collapse">
-                                            <i class="ion-trash-b"></i>
-                                            Hapus
-                                            </button></a>
+                                    <form action="<?= base_url('acara/' . $value['id_acara'])  ?>" method="post" class="d-inline">
+                                    <?= csrf_field() ?>
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    <button type="submit" class="btn btn-danger" role="button" onclick="return confirm('Apakah anda yakin?')">Hapus</button>
+                                </form>
                                     </td>
                                 </tr>
                             </table>
