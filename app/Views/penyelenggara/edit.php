@@ -16,7 +16,7 @@
             </div>
             <div class="card-body">
                 <!-- Form Tambah User -->
-                <form action="<?= base_url('penyelenggara/create') ?>" method="POST" enctype="multipart/form-data">
+                <form action="/penyelenggara/edit/<?= $result['id_penyelenggara'] ?>" method="POST" enctype="multipart/form-data">
                     <?= csrf_field() ?>
                     <div class="mb-3 row">
                         <label for="namattd" class="col-sm-2 col-form-label">Penyelenggara</label>

@@ -41,10 +41,10 @@
                             <td><?= $value['nama_ttd']  ?></td>
                             <td><?= $value['nip_ttd']  ?></td>
                             <td>
-                                <img src="img/<?= $value['ttd'] ?>" alt="" width="100">
+                                <img src="images/ttd/<?= $value['ttd'] ?>" alt="" width="100">
                             </td>
                             <td>
-                                <img src="img/<?= $value['cap'] ?>" alt="" width="100">
+                                <img src="images/cap/<?= $value['cap'] ?>" alt="" width="100">
                             </td>
                             <td>
                                 <a class="btn btn-warning" href="<?= base_url('penyelenggara/edit/' . $value['id_penyelenggara'])  ?>" role="button">Edit</a>
