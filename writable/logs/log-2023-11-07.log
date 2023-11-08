@@ -145,3 +145,344 @@ CRITICAL - 2023-11-07 08:35:29 --> Argument 2 passed to CodeIgniter\Validation\R
 #7 C:\xampp\htdocs\sertifikat\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #8 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
 #9 {main}
+CRITICAL - 2023-11-07 10:07:16 -->  is not a valid rule.
+#0 C:\xampp\htdocs\sertifikat\system\Validation\Validation.php(300): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('')
+#1 C:\xampp\htdocs\sertifikat\system\Validation\Validation.php(157): CodeIgniter\Validation\Validation->processRules('ttd', 'ttd', 'WhatsApp Image ...', Array, Array)
+#2 C:\xampp\htdocs\sertifikat\system\Controller.php(160): CodeIgniter\Validation\Validation->run()
+#3 C:\xampp\htdocs\sertifikat\app\Controllers\Penyelenggara.php(39): CodeIgniter\Controller->validate(Array)
+#4 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(832): App\Controllers\Penyelenggara->save()
+#5 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penyelenggara))
+#6 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\sertifikat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2023-11-07 10:09:31 -->  is not a valid rule.
+#0 C:\xampp\htdocs\sertifikat\system\Validation\Validation.php(300): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('')
+#1 C:\xampp\htdocs\sertifikat\system\Validation\Validation.php(157): CodeIgniter\Validation\Validation->processRules('cap', 'cap', 'images.jpeg', Array, Array)
+#2 C:\xampp\htdocs\sertifikat\system\Controller.php(160): CodeIgniter\Validation\Validation->run()
+#3 C:\xampp\htdocs\sertifikat\app\Controllers\Penyelenggara.php(39): CodeIgniter\Controller->validate(Array)
+#4 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(832): App\Controllers\Penyelenggara->save()
+#5 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penyelenggara))
+#6 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\sertifikat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2023-11-07 10:13:20 --> Call to a member function getError() on null
+#0 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(832): App\Controllers\Penyelenggara->save()
+#1 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penyelenggara))
+#2 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\sertifikat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2023-11-07 19:54:50 --> Call to a member function getError() on null
+#0 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(832): App\Controllers\Penyelenggara->save()
+#1 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penyelenggara))
+#2 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\sertifikat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2023-11-07 19:57:09 --> Call to a member function getError() on null
+#0 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(832): App\Controllers\Penyelenggara->save()
+#1 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penyelenggara))
+#2 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\sertifikat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2023-11-07 19:57:09 --> Call to a member function getError() on null
+#0 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(832): App\Controllers\Penyelenggara->save()
+#1 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penyelenggara))
+#2 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\sertifikat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2023-11-07 19:57:09 --> Call to a member function getError() on null
+#0 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(832): App\Controllers\Penyelenggara->save()
+#1 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penyelenggara))
+#2 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\sertifikat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2023-11-07 19:57:10 --> Call to a member function getError() on null
+#0 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(832): App\Controllers\Penyelenggara->save()
+#1 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penyelenggara))
+#2 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\sertifikat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2023-11-07 19:57:10 --> Call to a member function getError() on null
+#0 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(832): App\Controllers\Penyelenggara->save()
+#1 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penyelenggara))
+#2 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\sertifikat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2023-11-07 19:57:10 --> Call to a member function getError() on null
+#0 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(832): App\Controllers\Penyelenggara->save()
+#1 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penyelenggara))
+#2 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\sertifikat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2023-11-07 19:57:10 --> Call to a member function getError() on null
+#0 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(832): App\Controllers\Penyelenggara->save()
+#1 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penyelenggara))
+#2 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\sertifikat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2023-11-07 19:58:54 --> Call to a member function getError() on null
+#0 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(832): App\Controllers\Penyelenggara->save()
+#1 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penyelenggara))
+#2 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\sertifikat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2023-11-07 19:59:20 --> Call to a member function getError() on null
+#0 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(832): App\Controllers\Penyelenggara->save()
+#1 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penyelenggara))
+#2 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\sertifikat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2023-11-07 19:59:22 --> Call to a member function getError() on null
+#0 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(832): App\Controllers\Penyelenggara->save()
+#1 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penyelenggara))
+#2 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\sertifikat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2023-11-07 19:59:23 --> Call to a member function getError() on null
+#0 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(832): App\Controllers\Penyelenggara->save()
+#1 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penyelenggara))
+#2 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\sertifikat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2023-11-07 19:59:23 --> Call to a member function getError() on null
+#0 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(832): App\Controllers\Penyelenggara->save()
+#1 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penyelenggara))
+#2 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\sertifikat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2023-11-07 19:59:23 --> Call to a member function getError() on null
+#0 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(832): App\Controllers\Penyelenggara->save()
+#1 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penyelenggara))
+#2 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\sertifikat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2023-11-07 19:59:23 --> Call to a member function getError() on null
+#0 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(832): App\Controllers\Penyelenggara->save()
+#1 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penyelenggara))
+#2 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\sertifikat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2023-11-07 19:59:31 --> syntax error, unexpected 'return' (T_RETURN)
+#0 C:\xampp\htdocs\sertifikat\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\sertifikat\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(797): class_exists('\\App\\Controller...', true)
+#5 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->startController()
+#6 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\sertifikat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2023-11-07 19:59:31 --> syntax error, unexpected 'return' (T_RETURN)
+#0 C:\xampp\htdocs\sertifikat\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\sertifikat\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(797): class_exists('\\App\\Controller...', true)
+#5 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->startController()
+#6 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\sertifikat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2023-11-07 19:59:31 --> syntax error, unexpected 'return' (T_RETURN)
+#0 C:\xampp\htdocs\sertifikat\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\sertifikat\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(797): class_exists('\\App\\Controller...', true)
+#5 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->startController()
+#6 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\sertifikat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2023-11-07 19:59:31 --> syntax error, unexpected 'return' (T_RETURN)
+#0 C:\xampp\htdocs\sertifikat\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\sertifikat\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(797): class_exists('\\App\\Controller...', true)
+#5 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->startController()
+#6 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\sertifikat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2023-11-07 20:00:10 --> Call to a member function getError() on null
+#0 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(832): App\Controllers\Penyelenggara->save()
+#1 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penyelenggara))
+#2 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\sertifikat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2023-11-07 20:01:09 --> Call to a member function getError() on null
+#0 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(832): App\Controllers\Penyelenggara->save()
+#1 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penyelenggara))
+#2 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\sertifikat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2023-11-07 20:01:42 --> Call to a member function getError() on null
+#0 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(832): App\Controllers\Penyelenggara->save()
+#1 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penyelenggara))
+#2 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\sertifikat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2023-11-07 20:07:50 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2023-11-07 20:07:55 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2023-11-07 20:12:19 --> Call to a member function getRandomName() on null
+#0 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(832): App\Controllers\Penyelenggara->save()
+#1 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penyelenggara))
+#2 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\sertifikat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2023-11-07 20:13:36 --> Call to a member function getRandomName() on null
+#0 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(832): App\Controllers\Penyelenggara->save()
+#1 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penyelenggara))
+#2 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\sertifikat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2023-11-07 20:13:37 --> Call to a member function getRandomName() on null
+#0 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(832): App\Controllers\Penyelenggara->save()
+#1 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penyelenggara))
+#2 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\sertifikat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2023-11-07 20:17:01 --> Call to a member function getRandomName() on null
+#0 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(832): App\Controllers\Penyelenggara->save()
+#1 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penyelenggara))
+#2 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\sertifikat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2023-11-07 20:17:02 --> Call to a member function getRandomName() on null
+#0 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(832): App\Controllers\Penyelenggara->save()
+#1 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penyelenggara))
+#2 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\sertifikat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2023-11-07 20:17:03 --> Call to a member function getRandomName() on null
+#0 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(832): App\Controllers\Penyelenggara->save()
+#1 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penyelenggara))
+#2 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\sertifikat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2023-11-07 20:17:03 --> Call to a member function getRandomName() on null
+#0 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(832): App\Controllers\Penyelenggara->save()
+#1 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penyelenggara))
+#2 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\sertifikat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+ERROR - 2023-11-07 20:29:30 --> Column 'nama_penyelenggara' cannot be null
+CRITICAL - 2023-11-07 20:29:30 --> Column 'nama_penyelenggara' cannot be null
+#0 C:\xampp\htdocs\sertifikat\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\xampp\htdocs\sertifikat\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\xampp\htdocs\sertifikat\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\xampp\htdocs\sertifikat\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\xampp\htdocs\sertifikat\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\sertifikat\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\sertifikat\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\sertifikat\system\BaseModel.php(658): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\sertifikat\app\Controllers\Penyelenggara.php(112): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(832): App\Controllers\Penyelenggara->save()
+#10 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penyelenggara))
+#11 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\sertifikat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2023-11-07 20:37:35 --> Invalid file: penyelenggara/edit.php
+#0 C:\xampp\htdocs\sertifikat\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('penyelenggara/e...')
+#1 C:\xampp\htdocs\sertifikat\system\Common.php(1089): CodeIgniter\View\View->render('penyelenggara/e...', Array, true)
+#2 C:\xampp\htdocs\sertifikat\app\Controllers\Penyelenggara.php(128): view('penyelenggara/e...', Array)
+#3 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(832): App\Controllers\Penyelenggara->edit('1')
+#4 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penyelenggara))
+#5 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\sertifikat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2023-11-07 20:55:04 --> Undefined variable: validation
+#0 C:\xampp\htdocs\sertifikat\app\Views\penyelenggara\edit.php(24): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 24, Array)
+#1 C:\xampp\htdocs\sertifikat\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\sertifikat\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\sertifikat\system\Common.php(1089): CodeIgniter\View\View->render('penyelenggara/e...', Array, true)
+#4 C:\xampp\htdocs\sertifikat\app\Controllers\Penyelenggara.php(128): view('penyelenggara/e...', Array)
+#5 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(832): App\Controllers\Penyelenggara->edit('1')
+#6 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penyelenggara))
+#7 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\sertifikat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-11-07 20:59:50 --> Undefined variable: validation
+#0 C:\xampp\htdocs\sertifikat\app\Views\penyelenggara\edit.php(24): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 24, Array)
+#1 C:\xampp\htdocs\sertifikat\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\sertifikat\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\sertifikat\system\Common.php(1089): CodeIgniter\View\View->render('penyelenggara/e...', Array, true)
+#4 C:\xampp\htdocs\sertifikat\app\Controllers\Penyelenggara.php(128): view('penyelenggara/e...', Array)
+#5 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(832): App\Controllers\Penyelenggara->edit('1')
+#6 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penyelenggara))
+#7 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\sertifikat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-11-07 20:59:51 --> Undefined variable: validation
+#0 C:\xampp\htdocs\sertifikat\app\Views\penyelenggara\edit.php(24): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 24, Array)
+#1 C:\xampp\htdocs\sertifikat\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\sertifikat\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\sertifikat\system\Common.php(1089): CodeIgniter\View\View->render('penyelenggara/e...', Array, true)
+#4 C:\xampp\htdocs\sertifikat\app\Controllers\Penyelenggara.php(128): view('penyelenggara/e...', Array)
+#5 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(832): App\Controllers\Penyelenggara->edit('1')
+#6 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penyelenggara))
+#7 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\sertifikat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-11-07 20:59:52 --> Undefined variable: validation
+#0 C:\xampp\htdocs\sertifikat\app\Views\penyelenggara\edit.php(24): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 24, Array)
+#1 C:\xampp\htdocs\sertifikat\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\sertifikat\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\sertifikat\system\Common.php(1089): CodeIgniter\View\View->render('penyelenggara/e...', Array, true)
+#4 C:\xampp\htdocs\sertifikat\app\Controllers\Penyelenggara.php(128): view('penyelenggara/e...', Array)
+#5 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(832): App\Controllers\Penyelenggara->edit('1')
+#6 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penyelenggara))
+#7 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\sertifikat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-11-07 21:02:49 --> Undefined variable: validation
+#0 C:\xampp\htdocs\sertifikat\app\Views\penyelenggara\edit.php(24): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 24, Array)
+#1 C:\xampp\htdocs\sertifikat\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\sertifikat\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\sertifikat\system\Common.php(1089): CodeIgniter\View\View->render('penyelenggara/e...', Array, true)
+#4 C:\xampp\htdocs\sertifikat\app\Controllers\Penyelenggara.php(128): view('penyelenggara/e...', Array)
+#5 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(832): App\Controllers\Penyelenggara->edit('1')
+#6 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penyelenggara))
+#7 C:\xampp\htdocs\sertifikat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\sertifikat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\sertifikat\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
