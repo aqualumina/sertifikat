@@ -10,9 +10,9 @@
                 </p>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-danger btn-sm" data-dismiss="modal" aria-hidden="true">Batal</button>
-                <button class="btn btn-info btn-sm" type="submit">
-                    <i class="ace-icon fa fa-floppy-o bigger-110"></i>
+                <button class="btn btn-danger btn" data-dismiss="modal" aria-hidden="true"><i class="fa fa-close"></i>Cancel</button>
+                <button class="btn btn-primary btn" type="submit">
+                    <i class="fa fa-save"></i>
                     Upload
                 </button>
             </div>
