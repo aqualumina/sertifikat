@@ -134,6 +134,14 @@ NOTE: This file contains the styling for responsive Template.
   margin-left: auto;
   width: 20%;
 }
+
+/* modal title */
+.modal-title {
+  font-weight: bold;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 /* Definition Lists */
 dl dd { margin-bottom: 15px; }
 dl dd:last-child { margin-bottom: 0px; }
