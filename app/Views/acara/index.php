@@ -31,7 +31,7 @@
             </form>
         </div>
         <table class="table table-bordered table-striped mt-3">
-            <thead class="thin-border-bottom mt-1">
+            <thead class="thin-border-bottom mt-1 thead-light">
                 <tr>
                     <th class="center">No</th>
                     <th class="center">Acara</th>
@@ -57,8 +57,8 @@
                             <br><br>
 
                             <a href="#" data-toggle="modal">
-                                <button type="submit" class="btn btn-sm btn-primary" style="border-radius: 50px; background-color: #171ad4; color: #ffffff; border: none;"><i class="ace-icon glyphicon glyphicon-plus"></i> Upload
-                                    Materi</button></a>
+                                <button type="submit" class="btn btn-primary">
+                                <i class="fa fa-plus"></i>Upload Materi</button></a>
                             <br><br>
                             <table class="table table-bordered table-striped" border="1">
                                 <tr style="background-color: #7599fa;">

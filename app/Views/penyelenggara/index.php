@@ -21,7 +21,7 @@
         <div class="card-body">
             <a class="btn btn-primary mb-3 float-right" type="button" href="<?= base_url('penyelenggara/create') ?>">Tambah Penyelenggara</a>
             <table class="table table-hover">
-                <thead>
+                <thead class="thead-light">
                     <tr>
                         <th>No</th>
                         <th>Nama Penyelenggara</th>

@@ -1,3 +1,4 @@
+
 <?php foreach ($result as $value) : ?>
 <div class="modal small fade" id="depan<?= $value['id_acara'] ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-sm">
