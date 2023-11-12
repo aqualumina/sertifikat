@@ -1,0 +1,507 @@
+CRITICAL - 2023-11-12 05:13:32 --> Undefined property: App\Controllers\Acara::$defaultImage
+#0 C:\Users\Lenovo\sertifikat-1\app\Controllers\Acara.php(156): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\Users\\Lenovo...', 156, Array)
+#1 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(832): App\Controllers\Acara->upload()
+#2 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#3 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Lenovo\sertifikat-1\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Lenovo\sertifikat-1\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Lenovo...')
+#6 {main}
+CRITICAL - 2023-11-12 05:16:22 --> Call to a member function getError() on null
+#0 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(832): App\Controllers\Acara->upload()
+#1 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#2 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\Lenovo\sertifikat-1\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\Lenovo\sertifikat-1\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Lenovo...')
+#5 {main}
+CRITICAL - 2023-11-12 05:16:35 --> Call to a member function getError() on null
+#0 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(832): App\Controllers\Acara->upload()
+#1 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#2 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\Lenovo\sertifikat-1\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\Lenovo\sertifikat-1\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Lenovo...')
+#5 {main}
+CRITICAL - 2023-11-12 05:24:26 --> Call to undefined method App\Models\AcaraModel::saveBgDepan
+#0 C:\Users\Lenovo\sertifikat-1\app\Controllers\Acara.php(155): CodeIgniter\Model->__call('saveBgDepan', Array)
+#1 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(832): App\Controllers\Acara->upload()
+#2 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#3 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Lenovo\sertifikat-1\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Lenovo\sertifikat-1\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Lenovo...')
+#6 {main}
+CRITICAL - 2023-11-12 05:27:40 --> Call to undefined method App\Models\AcaraModel::saveBgDepan
+#0 C:\Users\Lenovo\sertifikat-1\app\Controllers\Acara.php(155): CodeIgniter\Model->__call('saveBgDepan', Array)
+#1 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(832): App\Controllers\Acara->upload()
+#2 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#3 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Lenovo\sertifikat-1\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Lenovo\sertifikat-1\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Lenovo...')
+#6 {main}
+CRITICAL - 2023-11-12 05:42:31 --> Undefined index: id
+#0 C:\Users\Lenovo\sertifikat-1\app\Views\acara\index.php(98): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\Users\\Lenovo...', 98, Array)
+#1 C:\Users\Lenovo\sertifikat-1\system\View\View.php(210): include('C:\\Users\\Lenovo...')
+#2 C:\Users\Lenovo\sertifikat-1\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\Lenovo\sertifikat-1\system\Common.php(1089): CodeIgniter\View\View->render('acara/index', Array, true)
+#4 C:\Users\Lenovo\sertifikat-1\app\Controllers\Acara.php(32): view('acara/index', Array)
+#5 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(832): App\Controllers\Acara->index()
+#6 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#7 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Lenovo\sertifikat-1\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Lenovo\sertifikat-1\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Lenovo...')
+#10 {main}
+CRITICAL - 2023-11-12 05:42:44 --> Undefined index: id
+#0 C:\Users\Lenovo\sertifikat-1\app\Views\acara\index.php(98): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\Users\\Lenovo...', 98, Array)
+#1 C:\Users\Lenovo\sertifikat-1\system\View\View.php(210): include('C:\\Users\\Lenovo...')
+#2 C:\Users\Lenovo\sertifikat-1\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\Lenovo\sertifikat-1\system\Common.php(1089): CodeIgniter\View\View->render('acara/index', Array, true)
+#4 C:\Users\Lenovo\sertifikat-1\app\Controllers\Acara.php(32): view('acara/index', Array)
+#5 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(832): App\Controllers\Acara->index()
+#6 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#7 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Lenovo\sertifikat-1\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Lenovo\sertifikat-1\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Lenovo...')
+#10 {main}
+CRITICAL - 2023-11-12 05:49:49 --> Undefined index: book_id
+#0 C:\Users\Lenovo\sertifikat-1\app\Views\acara\modal-bgdepan.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\Users\\Lenovo...', 8, Array)
+#1 C:\Users\Lenovo\sertifikat-1\system\View\View.php(210): include('C:\\Users\\Lenovo...')
+#2 C:\Users\Lenovo\sertifikat-1\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\Lenovo\sertifikat-1\system\View\View.php(424): CodeIgniter\View\View->render('acara/modal-bgd...', NULL, true)
+#4 C:\Users\Lenovo\sertifikat-1\app\Views\acara\index.php(121): CodeIgniter\View\View->include('acara/modal-bgd...')
+#5 C:\Users\Lenovo\sertifikat-1\system\View\View.php(210): include('C:\\Users\\Lenovo...')
+#6 C:\Users\Lenovo\sertifikat-1\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 C:\Users\Lenovo\sertifikat-1\system\Common.php(1089): CodeIgniter\View\View->render('acara/index', Array, true)
+#8 C:\Users\Lenovo\sertifikat-1\app\Controllers\Acara.php(32): view('acara/index', Array)
+#9 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(832): App\Controllers\Acara->index()
+#10 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#11 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Users\Lenovo\sertifikat-1\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\Lenovo\sertifikat-1\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Lenovo...')
+#14 {main}
+CRITICAL - 2023-11-12 05:50:20 --> Undefined index: book_id
+#0 C:\Users\Lenovo\sertifikat-1\app\Views\acara\modal-bgdepan.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\Users\\Lenovo...', 8, Array)
+#1 C:\Users\Lenovo\sertifikat-1\system\View\View.php(210): include('C:\\Users\\Lenovo...')
+#2 C:\Users\Lenovo\sertifikat-1\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\Lenovo\sertifikat-1\system\View\View.php(424): CodeIgniter\View\View->render('acara/modal-bgd...', NULL, true)
+#4 C:\Users\Lenovo\sertifikat-1\app\Views\acara\index.php(120): CodeIgniter\View\View->include('acara/modal-bgd...')
+#5 C:\Users\Lenovo\sertifikat-1\system\View\View.php(210): include('C:\\Users\\Lenovo...')
+#6 C:\Users\Lenovo\sertifikat-1\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 C:\Users\Lenovo\sertifikat-1\system\Common.php(1089): CodeIgniter\View\View->render('acara/index', Array, true)
+#8 C:\Users\Lenovo\sertifikat-1\app\Controllers\Acara.php(32): view('acara/index', Array)
+#9 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(832): App\Controllers\Acara->index()
+#10 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#11 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Users\Lenovo\sertifikat-1\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\Lenovo\sertifikat-1\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Lenovo...')
+#14 {main}
+CRITICAL - 2023-11-12 05:50:29 --> Undefined index: book_id
+#0 C:\Users\Lenovo\sertifikat-1\app\Views\acara\modal-bgdepan.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\Users\\Lenovo...', 8, Array)
+#1 C:\Users\Lenovo\sertifikat-1\system\View\View.php(210): include('C:\\Users\\Lenovo...')
+#2 C:\Users\Lenovo\sertifikat-1\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\Lenovo\sertifikat-1\system\View\View.php(424): CodeIgniter\View\View->render('acara/modal-bgd...', NULL, true)
+#4 C:\Users\Lenovo\sertifikat-1\app\Views\acara\index.php(120): CodeIgniter\View\View->include('acara/modal-bgd...')
+#5 C:\Users\Lenovo\sertifikat-1\system\View\View.php(210): include('C:\\Users\\Lenovo...')
+#6 C:\Users\Lenovo\sertifikat-1\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 C:\Users\Lenovo\sertifikat-1\system\Common.php(1089): CodeIgniter\View\View->render('acara/index', Array, true)
+#8 C:\Users\Lenovo\sertifikat-1\app\Controllers\Acara.php(32): view('acara/index', Array)
+#9 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(832): App\Controllers\Acara->index()
+#10 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#11 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Users\Lenovo\sertifikat-1\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\Lenovo\sertifikat-1\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Lenovo...')
+#14 {main}
+CRITICAL - 2023-11-12 05:50:31 --> Undefined index: book_id
+#0 C:\Users\Lenovo\sertifikat-1\app\Views\acara\modal-bgdepan.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\Users\\Lenovo...', 8, Array)
+#1 C:\Users\Lenovo\sertifikat-1\system\View\View.php(210): include('C:\\Users\\Lenovo...')
+#2 C:\Users\Lenovo\sertifikat-1\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\Lenovo\sertifikat-1\system\View\View.php(424): CodeIgniter\View\View->render('acara/modal-bgd...', NULL, true)
+#4 C:\Users\Lenovo\sertifikat-1\app\Views\acara\index.php(120): CodeIgniter\View\View->include('acara/modal-bgd...')
+#5 C:\Users\Lenovo\sertifikat-1\system\View\View.php(210): include('C:\\Users\\Lenovo...')
+#6 C:\Users\Lenovo\sertifikat-1\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 C:\Users\Lenovo\sertifikat-1\system\Common.php(1089): CodeIgniter\View\View->render('acara/index', Array, true)
+#8 C:\Users\Lenovo\sertifikat-1\app\Controllers\Acara.php(32): view('acara/index', Array)
+#9 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(832): App\Controllers\Acara->index()
+#10 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#11 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Users\Lenovo\sertifikat-1\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\Lenovo\sertifikat-1\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Lenovo...')
+#14 {main}
+CRITICAL - 2023-11-12 05:50:58 --> Undefined index: acara_id
+#0 C:\Users\Lenovo\sertifikat-1\app\Views\acara\modal-bgdepan.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\Users\\Lenovo...', 8, Array)
+#1 C:\Users\Lenovo\sertifikat-1\system\View\View.php(210): include('C:\\Users\\Lenovo...')
+#2 C:\Users\Lenovo\sertifikat-1\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\Lenovo\sertifikat-1\system\View\View.php(424): CodeIgniter\View\View->render('acara/modal-bgd...', NULL, true)
+#4 C:\Users\Lenovo\sertifikat-1\app\Views\acara\index.php(120): CodeIgniter\View\View->include('acara/modal-bgd...')
+#5 C:\Users\Lenovo\sertifikat-1\system\View\View.php(210): include('C:\\Users\\Lenovo...')
+#6 C:\Users\Lenovo\sertifikat-1\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 C:\Users\Lenovo\sertifikat-1\system\Common.php(1089): CodeIgniter\View\View->render('acara/index', Array, true)
+#8 C:\Users\Lenovo\sertifikat-1\app\Controllers\Acara.php(32): view('acara/index', Array)
+#9 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(832): App\Controllers\Acara->index()
+#10 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#11 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Users\Lenovo\sertifikat-1\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\Lenovo\sertifikat-1\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Lenovo...')
+#14 {main}
+CRITICAL - 2023-11-12 05:51:06 --> Undefined index: acara_id
+#0 C:\Users\Lenovo\sertifikat-1\app\Views\acara\modal-bgdepan.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\Users\\Lenovo...', 8, Array)
+#1 C:\Users\Lenovo\sertifikat-1\system\View\View.php(210): include('C:\\Users\\Lenovo...')
+#2 C:\Users\Lenovo\sertifikat-1\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\Lenovo\sertifikat-1\system\View\View.php(424): CodeIgniter\View\View->render('acara/modal-bgd...', NULL, true)
+#4 C:\Users\Lenovo\sertifikat-1\app\Views\acara\index.php(120): CodeIgniter\View\View->include('acara/modal-bgd...')
+#5 C:\Users\Lenovo\sertifikat-1\system\View\View.php(210): include('C:\\Users\\Lenovo...')
+#6 C:\Users\Lenovo\sertifikat-1\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 C:\Users\Lenovo\sertifikat-1\system\Common.php(1089): CodeIgniter\View\View->render('acara/index', Array, true)
+#8 C:\Users\Lenovo\sertifikat-1\app\Controllers\Acara.php(32): view('acara/index', Array)
+#9 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(832): App\Controllers\Acara->index()
+#10 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#11 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Users\Lenovo\sertifikat-1\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\Lenovo\sertifikat-1\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Lenovo...')
+#14 {main}
+CRITICAL - 2023-11-12 05:51:26 --> Undefined index: id_acara
+#0 C:\Users\Lenovo\sertifikat-1\app\Views\acara\modal-bgdepan.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\Users\\Lenovo...', 8, Array)
+#1 C:\Users\Lenovo\sertifikat-1\system\View\View.php(210): include('C:\\Users\\Lenovo...')
+#2 C:\Users\Lenovo\sertifikat-1\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\Lenovo\sertifikat-1\system\View\View.php(424): CodeIgniter\View\View->render('acara/modal-bgd...', NULL, true)
+#4 C:\Users\Lenovo\sertifikat-1\app\Views\acara\index.php(120): CodeIgniter\View\View->include('acara/modal-bgd...')
+#5 C:\Users\Lenovo\sertifikat-1\system\View\View.php(210): include('C:\\Users\\Lenovo...')
+#6 C:\Users\Lenovo\sertifikat-1\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 C:\Users\Lenovo\sertifikat-1\system\Common.php(1089): CodeIgniter\View\View->render('acara/index', Array, true)
+#8 C:\Users\Lenovo\sertifikat-1\app\Controllers\Acara.php(32): view('acara/index', Array)
+#9 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(832): App\Controllers\Acara->index()
+#10 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#11 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Users\Lenovo\sertifikat-1\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\Lenovo\sertifikat-1\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Lenovo...')
+#14 {main}
+CRITICAL - 2023-11-12 05:55:53 --> Undefined index: id_acara
+#0 C:\Users\Lenovo\sertifikat-1\app\Views\acara\modal-bgdepan.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\Users\\Lenovo...', 8, Array)
+#1 C:\Users\Lenovo\sertifikat-1\system\View\View.php(210): include('C:\\Users\\Lenovo...')
+#2 C:\Users\Lenovo\sertifikat-1\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\Lenovo\sertifikat-1\system\View\View.php(424): CodeIgniter\View\View->render('acara/modal-bgd...', NULL, true)
+#4 C:\Users\Lenovo\sertifikat-1\app\Views\acara\index.php(120): CodeIgniter\View\View->include('acara/modal-bgd...')
+#5 C:\Users\Lenovo\sertifikat-1\system\View\View.php(210): include('C:\\Users\\Lenovo...')
+#6 C:\Users\Lenovo\sertifikat-1\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 C:\Users\Lenovo\sertifikat-1\system\Common.php(1089): CodeIgniter\View\View->render('acara/index', Array, true)
+#8 C:\Users\Lenovo\sertifikat-1\app\Controllers\Acara.php(32): view('acara/index', Array)
+#9 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(832): App\Controllers\Acara->index()
+#10 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#11 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Users\Lenovo\sertifikat-1\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\Lenovo\sertifikat-1\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Lenovo...')
+#14 {main}
+CRITICAL - 2023-11-12 06:00:16 --> Undefined property: App\Controllers\Acara::$AcaraModel
+#0 C:\Users\Lenovo\sertifikat-1\app\Controllers\Acara.php(141): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\Users\\Lenovo...', 141, Array)
+#1 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(832): App\Controllers\Acara->bgdepan(' 18')
+#2 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#3 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Lenovo\sertifikat-1\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Lenovo\sertifikat-1\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Lenovo...')
+#6 {main}
+CRITICAL - 2023-11-12 06:01:23 --> Undefined property: App\Controllers\Acara::$AcaraModel
+#0 C:\Users\Lenovo\sertifikat-1\app\Controllers\Acara.php(142): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\Users\\Lenovo...', 142, Array)
+#1 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(832): App\Controllers\Acara->bgdepan(' 18')
+#2 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#3 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Lenovo\sertifikat-1\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Lenovo\sertifikat-1\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Lenovo...')
+#6 {main}
+CRITICAL - 2023-11-12 06:02:24 --> Undefined property: App\Controllers\Acara::$AcaraModel
+#0 C:\Users\Lenovo\sertifikat-1\app\Controllers\Acara.php(141): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\Users\\Lenovo...', 141, Array)
+#1 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(832): App\Controllers\Acara->bgdepan(' 18')
+#2 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#3 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Lenovo\sertifikat-1\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Lenovo\sertifikat-1\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Lenovo...')
+#6 {main}
+CRITICAL - 2023-11-12 06:02:29 --> Undefined property: App\Controllers\Acara::$AcaraModel
+#0 C:\Users\Lenovo\sertifikat-1\app\Controllers\Acara.php(141): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\Users\\Lenovo...', 141, Array)
+#1 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(832): App\Controllers\Acara->bgdepan(' 18')
+#2 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#3 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Lenovo\sertifikat-1\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Lenovo\sertifikat-1\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Lenovo...')
+#6 {main}
+CRITICAL - 2023-11-12 06:07:22 --> Undefined property: App\Controllers\Acara::$AcaraModel
+#0 C:\Users\Lenovo\sertifikat-1\app\Controllers\Acara.php(141): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\Users\\Lenovo...', 141, Array)
+#1 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(832): App\Controllers\Acara->bgdepan(' 18')
+#2 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#3 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Lenovo\sertifikat-1\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Lenovo\sertifikat-1\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Lenovo...')
+#6 {main}
+CRITICAL - 2023-11-12 06:08:13 --> Undefined index: id
+#0 C:\Users\Lenovo\sertifikat-1\app\Views\acara\index.php(97): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\Users\\Lenovo...', 97, Array)
+#1 C:\Users\Lenovo\sertifikat-1\system\View\View.php(210): include('C:\\Users\\Lenovo...')
+#2 C:\Users\Lenovo\sertifikat-1\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\Lenovo\sertifikat-1\system\Common.php(1089): CodeIgniter\View\View->render('acara/index', Array, true)
+#4 C:\Users\Lenovo\sertifikat-1\app\Controllers\Acara.php(32): view('acara/index', Array)
+#5 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(832): App\Controllers\Acara->index()
+#6 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#7 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Lenovo\sertifikat-1\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Lenovo\sertifikat-1\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Lenovo...')
+#10 {main}
+CRITICAL - 2023-11-12 06:08:29 --> Undefined property: App\Controllers\Acara::$AcaraModel
+#0 C:\Users\Lenovo\sertifikat-1\app\Controllers\Acara.php(141): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\Users\\Lenovo...', 141, Array)
+#1 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(832): App\Controllers\Acara->bgdepan(' 18')
+#2 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#3 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Lenovo\sertifikat-1\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Lenovo\sertifikat-1\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Lenovo...')
+#6 {main}
+CRITICAL - 2023-11-12 06:14:21 --> Undefined property: App\Controllers\Acara::$AcaraModel
+#0 C:\Users\Lenovo\sertifikat-1\app\Controllers\Acara.php(141): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\Users\\Lenovo...', 141, Array)
+#1 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(832): App\Controllers\Acara->bgdepan('18')
+#2 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#3 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Lenovo\sertifikat-1\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Lenovo\sertifikat-1\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Lenovo...')
+#6 {main}
+CRITICAL - 2023-11-12 06:45:08 --> Call to a member function getError() on null
+#0 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(832): App\Controllers\Acara->upload('17')
+#1 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#2 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\Lenovo\sertifikat-1\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\Lenovo\sertifikat-1\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Lenovo...')
+#5 {main}
+CRITICAL - 2023-11-12 06:46:01 --> Call to a member function getError() on null
+#0 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(832): App\Controllers\Acara->upload('17')
+#1 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#2 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\Lenovo\sertifikat-1\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\Lenovo\sertifikat-1\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Lenovo...')
+#5 {main}
+CRITICAL - 2023-11-12 06:46:35 --> Call to a member function getError() on null
+#0 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(832): App\Controllers\Acara->upload('17')
+#1 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#2 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\Lenovo\sertifikat-1\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\Lenovo\sertifikat-1\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Lenovo...')
+#5 {main}
+CRITICAL - 2023-11-12 06:48:57 --> Call to a member function getError() on null
+#0 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(832): App\Controllers\Acara->upload('17')
+#1 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#2 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\Lenovo\sertifikat-1\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\Lenovo\sertifikat-1\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Lenovo...')
+#5 {main}
+CRITICAL - 2023-11-12 06:49:12 --> Call to a member function getError() on null
+#0 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(832): App\Controllers\Acara->upload('17')
+#1 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#2 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\Lenovo\sertifikat-1\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\Lenovo\sertifikat-1\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Lenovo...')
+#5 {main}
+CRITICAL - 2023-11-12 06:49:43 --> Undefined variable: dataAcara
+#0 C:\Users\Lenovo\sertifikat-1\app\Controllers\Acara.php(193): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\Lenovo...', 193, Array)
+#1 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(832): App\Controllers\Acara->uploadbgbelakang('17')
+#2 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#3 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\Lenovo\sertifikat-1\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\Lenovo\sertifikat-1\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Lenovo...')
+#6 {main}
+CRITICAL - 2023-11-12 06:59:57 --> Call to a member function getExtension() on null
+#0 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(832): App\Controllers\Acara->importData('1')
+#1 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#2 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\Lenovo\sertifikat-1\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\Lenovo\sertifikat-1\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Lenovo...')
+#5 {main}
+CRITICAL - 2023-11-12 07:02:47 --> Call to a member function getExtension() on null
+#0 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(832): App\Controllers\Acara->importData('17')
+#1 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#2 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\Lenovo\sertifikat-1\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\Lenovo\sertifikat-1\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Lenovo...')
+#5 {main}
+CRITICAL - 2023-11-12 07:05:11 --> Call to a member function getExtension() on null
+#0 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(832): App\Controllers\Acara->importData('1')
+#1 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#2 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\Lenovo\sertifikat-1\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\Lenovo\sertifikat-1\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Lenovo...')
+#5 {main}
+CRITICAL - 2023-11-12 07:08:19 --> Call to a member function getExtension() on null
+#0 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(832): App\Controllers\Acara->importData('1')
+#1 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#2 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\Lenovo\sertifikat-1\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\Lenovo\sertifikat-1\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Lenovo...')
+#5 {main}
+CRITICAL - 2023-11-12 07:08:21 --> Call to a member function getExtension() on null
+#0 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(832): App\Controllers\Acara->importData('1')
+#1 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#2 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\Lenovo\sertifikat-1\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\Lenovo\sertifikat-1\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Lenovo...')
+#5 {main}
+CRITICAL - 2023-11-12 07:08:34 --> Call to a member function getExtension() on null
+#0 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(832): App\Controllers\Acara->importData('1')
+#1 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#2 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\Lenovo\sertifikat-1\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\Lenovo\sertifikat-1\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Lenovo...')
+#5 {main}
+CRITICAL - 2023-11-12 07:08:46 --> Call to a member function getExtension() on null
+#0 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(832): App\Controllers\Acara->importData('1')
+#1 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#2 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\Lenovo\sertifikat-1\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\Lenovo\sertifikat-1\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Lenovo...')
+#5 {main}
+CRITICAL - 2023-11-12 07:09:47 --> File "xlsx" does not exist.
+#0 C:\Users\Lenovo\sertifikat-1\vendor\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Reader\Xlsx.php(427): PhpOffice\PhpSpreadsheet\Shared\File::assertFile('xlsx', '_rels/.rels')
+#1 C:\Users\Lenovo\sertifikat-1\vendor\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Reader\BaseReader.php(182): PhpOffice\PhpSpreadsheet\Reader\Xlsx->loadSpreadsheetFromFile('xlsx')
+#2 C:\Users\Lenovo\sertifikat-1\app\Controllers\Acara.php(221): PhpOffice\PhpSpreadsheet\Reader\BaseReader->load('xlsx')
+#3 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(832): App\Controllers\Acara->importData('1')
+#4 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#5 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Lenovo\sertifikat-1\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\Lenovo\sertifikat-1\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Lenovo...')
+#8 {main}
+CRITICAL - 2023-11-12 07:10:00 --> File "xlsx" does not exist.
+#0 C:\Users\Lenovo\sertifikat-1\vendor\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Reader\Xlsx.php(427): PhpOffice\PhpSpreadsheet\Shared\File::assertFile('xlsx', '_rels/.rels')
+#1 C:\Users\Lenovo\sertifikat-1\vendor\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Reader\BaseReader.php(182): PhpOffice\PhpSpreadsheet\Reader\Xlsx->loadSpreadsheetFromFile('xlsx')
+#2 C:\Users\Lenovo\sertifikat-1\app\Controllers\Acara.php(221): PhpOffice\PhpSpreadsheet\Reader\BaseReader->load('xlsx')
+#3 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(832): App\Controllers\Acara->importData('1')
+#4 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#5 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Lenovo\sertifikat-1\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\Lenovo\sertifikat-1\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Lenovo...')
+#8 {main}
+CRITICAL - 2023-11-12 07:10:10 --> File "xlsx" does not exist.
+#0 C:\Users\Lenovo\sertifikat-1\vendor\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Reader\Xlsx.php(427): PhpOffice\PhpSpreadsheet\Shared\File::assertFile('xlsx', '_rels/.rels')
+#1 C:\Users\Lenovo\sertifikat-1\vendor\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Reader\BaseReader.php(182): PhpOffice\PhpSpreadsheet\Reader\Xlsx->loadSpreadsheetFromFile('xlsx')
+#2 C:\Users\Lenovo\sertifikat-1\app\Controllers\Acara.php(221): PhpOffice\PhpSpreadsheet\Reader\BaseReader->load('xlsx')
+#3 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(832): App\Controllers\Acara->importData('1')
+#4 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#5 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Lenovo\sertifikat-1\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\Lenovo\sertifikat-1\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Lenovo...')
+#8 {main}
+CRITICAL - 2023-11-12 07:10:56 --> File "xlsx" does not exist.
+#0 C:\Users\Lenovo\sertifikat-1\vendor\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Reader\Xlsx.php(427): PhpOffice\PhpSpreadsheet\Shared\File::assertFile('xlsx', '_rels/.rels')
+#1 C:\Users\Lenovo\sertifikat-1\vendor\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Reader\BaseReader.php(182): PhpOffice\PhpSpreadsheet\Reader\Xlsx->loadSpreadsheetFromFile('xlsx')
+#2 C:\Users\Lenovo\sertifikat-1\app\Controllers\Acara.php(221): PhpOffice\PhpSpreadsheet\Reader\BaseReader->load('xlsx')
+#3 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(832): App\Controllers\Acara->importData('1')
+#4 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#5 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Lenovo\sertifikat-1\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\Lenovo\sertifikat-1\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Lenovo...')
+#8 {main}
+CRITICAL - 2023-11-12 07:11:25 --> File "xlsx" does not exist.
+#0 C:\Users\Lenovo\sertifikat-1\vendor\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Reader\Xlsx.php(427): PhpOffice\PhpSpreadsheet\Shared\File::assertFile('xlsx', '_rels/.rels')
+#1 C:\Users\Lenovo\sertifikat-1\vendor\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Reader\BaseReader.php(182): PhpOffice\PhpSpreadsheet\Reader\Xlsx->loadSpreadsheetFromFile('xlsx')
+#2 C:\Users\Lenovo\sertifikat-1\app\Controllers\Acara.php(221): PhpOffice\PhpSpreadsheet\Reader\BaseReader->load('xlsx')
+#3 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(832): App\Controllers\Acara->importData('1')
+#4 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#5 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Lenovo\sertifikat-1\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\Lenovo\sertifikat-1\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Lenovo...')
+#8 {main}
+CRITICAL - 2023-11-12 07:11:47 --> File "xlsx" does not exist.
+#0 C:\Users\Lenovo\sertifikat-1\vendor\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Reader\Xlsx.php(427): PhpOffice\PhpSpreadsheet\Shared\File::assertFile('xlsx', '_rels/.rels')
+#1 C:\Users\Lenovo\sertifikat-1\vendor\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Reader\BaseReader.php(182): PhpOffice\PhpSpreadsheet\Reader\Xlsx->loadSpreadsheetFromFile('xlsx')
+#2 C:\Users\Lenovo\sertifikat-1\app\Controllers\Acara.php(221): PhpOffice\PhpSpreadsheet\Reader\BaseReader->load('xlsx')
+#3 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(832): App\Controllers\Acara->importData('1')
+#4 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#5 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Lenovo\sertifikat-1\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\Lenovo\sertifikat-1\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Lenovo...')
+#8 {main}
+CRITICAL - 2023-11-12 07:11:59 --> File "xlsx" does not exist.
+#0 C:\Users\Lenovo\sertifikat-1\vendor\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Reader\Xlsx.php(427): PhpOffice\PhpSpreadsheet\Shared\File::assertFile('xlsx', '_rels/.rels')
+#1 C:\Users\Lenovo\sertifikat-1\vendor\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Reader\BaseReader.php(182): PhpOffice\PhpSpreadsheet\Reader\Xlsx->loadSpreadsheetFromFile('xlsx')
+#2 C:\Users\Lenovo\sertifikat-1\app\Controllers\Acara.php(221): PhpOffice\PhpSpreadsheet\Reader\BaseReader->load('xlsx')
+#3 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(832): App\Controllers\Acara->importData('1')
+#4 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#5 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Lenovo\sertifikat-1\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\Lenovo\sertifikat-1\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Lenovo...')
+#8 {main}
+CRITICAL - 2023-11-12 07:12:10 --> File "xlsx" does not exist.
+#0 C:\Users\Lenovo\sertifikat-1\vendor\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Reader\Xlsx.php(427): PhpOffice\PhpSpreadsheet\Shared\File::assertFile('xlsx', '_rels/.rels')
+#1 C:\Users\Lenovo\sertifikat-1\vendor\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Reader\BaseReader.php(182): PhpOffice\PhpSpreadsheet\Reader\Xlsx->loadSpreadsheetFromFile('xlsx')
+#2 C:\Users\Lenovo\sertifikat-1\app\Controllers\Acara.php(221): PhpOffice\PhpSpreadsheet\Reader\BaseReader->load('xlsx')
+#3 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(832): App\Controllers\Acara->importData('1')
+#4 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#5 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Lenovo\sertifikat-1\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\Lenovo\sertifikat-1\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Lenovo...')
+#8 {main}
+CRITICAL - 2023-11-12 07:13:19 --> There is no data to update.
+#0 C:\Users\Lenovo\sertifikat-1\system\BaseModel.php(846): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+#1 C:\Users\Lenovo\sertifikat-1\system\Model.php(651): CodeIgniter\BaseModel->update(Array, Array)
+#2 C:\Users\Lenovo\sertifikat-1\system\BaseModel.php(656): CodeIgniter\Model->update('1', Array)
+#3 C:\Users\Lenovo\sertifikat-1\app\Controllers\Acara.php(227): CodeIgniter\BaseModel->save(Array)
+#4 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(832): App\Controllers\Acara->importData('1')
+#5 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#6 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\Lenovo\sertifikat-1\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\Lenovo\sertifikat-1\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Lenovo...')
+#9 {main}
+CRITICAL - 2023-11-12 07:15:38 --> There is no data to update.
+#0 C:\Users\Lenovo\sertifikat-1\system\BaseModel.php(846): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+#1 C:\Users\Lenovo\sertifikat-1\system\Model.php(651): CodeIgniter\BaseModel->update(Array, Array)
+#2 C:\Users\Lenovo\sertifikat-1\system\BaseModel.php(656): CodeIgniter\Model->update('1', Array)
+#3 C:\Users\Lenovo\sertifikat-1\app\Controllers\Acara.php(227): CodeIgniter\BaseModel->save(Array)
+#4 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(832): App\Controllers\Acara->importData('1')
+#5 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#6 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\Lenovo\sertifikat-1\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\Lenovo\sertifikat-1\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Lenovo...')
+#9 {main}
+CRITICAL - 2023-11-12 07:18:42 --> There is no data to update.
+#0 C:\Users\Lenovo\sertifikat-1\system\BaseModel.php(846): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+#1 C:\Users\Lenovo\sertifikat-1\system\Model.php(651): CodeIgniter\BaseModel->update(Array, Array)
+#2 C:\Users\Lenovo\sertifikat-1\system\BaseModel.php(656): CodeIgniter\Model->update('18', Array)
+#3 C:\Users\Lenovo\sertifikat-1\app\Controllers\Acara.php(227): CodeIgniter\BaseModel->save(Array)
+#4 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(832): App\Controllers\Acara->importData('18')
+#5 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#6 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\Lenovo\sertifikat-1\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\Lenovo\sertifikat-1\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Lenovo...')
+#9 {main}
+CRITICAL - 2023-11-12 07:19:49 --> There is no data to update.
+#0 C:\Users\Lenovo\sertifikat-1\system\BaseModel.php(846): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+#1 C:\Users\Lenovo\sertifikat-1\system\Model.php(651): CodeIgniter\BaseModel->update(Array, Array)
+#2 C:\Users\Lenovo\sertifikat-1\system\BaseModel.php(656): CodeIgniter\Model->update('17', Array)
+#3 C:\Users\Lenovo\sertifikat-1\app\Controllers\Acara.php(227): CodeIgniter\BaseModel->save(Array)
+#4 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(832): App\Controllers\Acara->importData('17')
+#5 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#6 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\Lenovo\sertifikat-1\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\Lenovo\sertifikat-1\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Lenovo...')
+#9 {main}
+CRITICAL - 2023-11-12 07:21:24 --> There is no data to update.
+#0 C:\Users\Lenovo\sertifikat-1\system\BaseModel.php(846): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+#1 C:\Users\Lenovo\sertifikat-1\system\Model.php(651): CodeIgniter\BaseModel->update(Array, Array)
+#2 C:\Users\Lenovo\sertifikat-1\system\BaseModel.php(656): CodeIgniter\Model->update('17', Array)
+#3 C:\Users\Lenovo\sertifikat-1\app\Controllers\Acara.php(227): CodeIgniter\BaseModel->save(Array)
+#4 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(832): App\Controllers\Acara->importData('17')
+#5 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#6 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\Lenovo\sertifikat-1\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\Lenovo\sertifikat-1\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Lenovo...')
+#9 {main}
+CRITICAL - 2023-11-12 07:22:43 --> There is no data to update.
+#0 C:\Users\Lenovo\sertifikat-1\system\BaseModel.php(846): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+#1 C:\Users\Lenovo\sertifikat-1\system\Model.php(651): CodeIgniter\BaseModel->update(Array, Array)
+#2 C:\Users\Lenovo\sertifikat-1\system\BaseModel.php(656): CodeIgniter\Model->update('1', Array)
+#3 C:\Users\Lenovo\sertifikat-1\app\Controllers\Acara.php(227): CodeIgniter\BaseModel->save(Array)
+#4 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(832): App\Controllers\Acara->importData('1')
+#5 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#6 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\Lenovo\sertifikat-1\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\Lenovo\sertifikat-1\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Lenovo...')
+#9 {main}
+CRITICAL - 2023-11-12 07:25:36 --> There is no data to update.
+#0 C:\Users\Lenovo\sertifikat-1\system\BaseModel.php(846): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+#1 C:\Users\Lenovo\sertifikat-1\system\Model.php(651): CodeIgniter\BaseModel->update(Array, Array)
+#2 C:\Users\Lenovo\sertifikat-1\system\BaseModel.php(656): CodeIgniter\Model->update('1', Array)
+#3 C:\Users\Lenovo\sertifikat-1\app\Controllers\Acara.php(227): CodeIgniter\BaseModel->save(Array)
+#4 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(832): App\Controllers\Acara->importData('1')
+#5 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#6 C:\Users\Lenovo\sertifikat-1\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\Lenovo\sertifikat-1\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\Lenovo\sertifikat-1\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Lenovo...')
+#9 {main}

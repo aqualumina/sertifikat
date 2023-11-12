@@ -33,7 +33,7 @@ $routes->setAutoRoute(false);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
-$routes->get('/','Home::index', ['filter' => 'auth']);
+$routes->get('/', 'Home::index', ['filter' => 'auth']);
 $routes->get('/login', 'Auth::indexlogin');
 $routes->post('/login/auth', 'Auth::auth');
 $routes->get('/register', 'Auth::indexregister');
@@ -42,20 +42,23 @@ $routes->get('/logout', 'Auth::logout');
 
 
 
-$routes->group('acara',['filter' => 'auth'], function ($rs) {
+$routes->group('acara', ['filter' => 'auth'], function ($rs) {
     $rs->get('/', 'Acara::index');
     $rs->get('format', 'Acara::index');
     $rs->get('create', 'Acara::create');
     $rs->post('create', 'Acara::save');
     $rs->get('edit/(:any)', 'Acara::edit/$1');
     $rs->post('edit/(:any)', 'Acara::update/$1');
+    $rs->post('upload/(:any)', 'Acara::upload/$1');
+    $rs->post('uploadbg/(:any)', 'Acara::uploadbgbelakang/$1');
+    $rs->post('import/(:any)', 'Acara::importData/$1');
     $rs->delete('(:num)', 'Acara::delete/$1');
     $rs->get('/', 'Acara::detail/$1');
-    $rs->post('import', 'Acara::importData');
+    
 });
 
 
-$routes->group('users',['filter' => 'auth'], function ($rs) {
+$routes->group('users', ['filter' => 'auth'], function ($rs) {
     // ['filter' =>'role:Admin,Owner1,Owner2']
     $rs->get('/', 'Users::index');
     $rs->get('create', 'Users::create');
@@ -67,7 +70,7 @@ $routes->group('users',['filter' => 'auth'], function ($rs) {
     $rs->post('edit/(:any)', 'Users::update/$1');
 });
 
-$routes->group('penyelenggara',['filter' => 'auth'], function ($rs) {
+$routes->group('penyelenggara', ['filter' => 'auth'], function ($rs) {
     $rs->get('/', 'Penyelenggara::index');
     $rs->get('create', 'Penyelenggara::create');
     $rs->post('create', 'Penyelenggara::save');
