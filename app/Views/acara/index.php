@@ -57,8 +57,8 @@
                             <br><br>
 
                             <a href="#" data-toggle="modal">
-                                <button type="submit" class="btn btn-sm btn-primary" style="border-radius: 50px; background-color: #171ad4; color: #ffffff; border: none;"><i class="ace-icon glyphicon glyphicon-plus"></i> Upload
-                                    Materi</button></a>
+                                <button type="submit" class="btn btn-primary">
+                                <i class="fa fa-plus"></i>Upload Materi</button></a>
                             <br><br>
                             <table class="table table-bordered table-striped" border="1">
                                 <tr style="background-color: #7599fa;">
@@ -90,17 +90,17 @@
                             <table id="simple-table" class="table table-striped table-bordered table-hover">
                                 <tr>
                                     <td>Upload Peserta</td>
-                                    <td><a href="#modalpeserta" data-toggle="modal"><button class="btn btn-xs btn-primary" type="">Upload</button></a>
+                                    <td><a href="#modalpeserta<?= $value['id_acara'] ?>" data-toggle="modal"><button class="btn btn-xs btn-primary" type="">Upload</button></a>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Upload Background Depan</td>
-                                    <td><a href="#depan" data-toggle="modal"><button class="btn btn-xs btn-primary" type="">Upload</button></a>
+                                    <td>Upload Background Depan <?= $value['id_acara'] ?></td>
+                                    <td><a href="#depan<?= $value['id_acara'] ?>" data-toggle="modal"><button class="btn btn-xs btn-primary" type="">Upload</button></a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Upload Background Belakang</td>
-                                    <td><a href="#belakang" data-toggle="modal"><button class="btn btn-xs btn-primary" type="">Upload</button></a>
+                                    <td><a href="#belakang<?= $value['id_acara'] ?>" data-toggle="modal"><button class="btn btn-xs btn-primary" type="">Upload</button></a>
                                     </td>
                                 </tr>
                                 <tr>
@@ -111,13 +111,20 @@
                             </table>
                         </td>
                     </tr>
+                    <!-- modal -->
                 <?php endforeach; ?>
             </tbody>
         </table>
+
     </div>
+
+
 </main>
+
+
+
 <?= $this->include('acara/modal-peserta') ?>
-<?= $this->include('acara/modal-bgdepan') ?>
+ <?= $this->include('acara/modal-bgdepan') ?>
 <?= $this->include('acara/modal-bgbelakang') ?>
 <?= $this->include('acara/modal-stample') ?>
 <?= $this->include('acara/modal-template') ?>

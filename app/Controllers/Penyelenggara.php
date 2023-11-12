@@ -51,7 +51,7 @@ class Penyelenggara extends BaseController
                 ]
             ],
             'nip_ttd' => [
-                'rules' => 'required|exact_length[18]',
+                'rules' => 'required',
                 'errors' => [
                     'required' => 'Silahkan Masukan NIP',
                     'exact_length' => 'NIP harus 18 digit',
@@ -86,7 +86,6 @@ class Penyelenggara extends BaseController
         // dd($fileTTD);
         if ($fileTTD->getError() == 4) {
             $namaFileTTD = $this->defaultImage;
-
         } else {
 
             $namaFileTTD = $fileTTD->getRandomName();
