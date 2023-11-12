@@ -15,7 +15,7 @@
         </div>
         <div class="card-body">
             <!-- Form Tambah Buku -->
-            <form action="<?php echo base_url(); ?>acara/create" method="POST" enctype="multipart/form-data">
+            <form action="<?php echo base_url('acara/create'); ?>" method="POST" enctype="multipart/form-data">
                 <?= csrf_field() ?>
                 <div class="mb-3 row">
                     <label for="nama_acara" class="col-sm-2 col-form-label">Nama Acara</label>

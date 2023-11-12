@@ -42,15 +42,11 @@ class Acara extends BaseController
 
     public function save()
     {
-        // $start = $this->request->getVar('tanggal_awal');
-        // $end = $this->request->getVar('tanggal_akhir');
-        // $diff = strtotime($end) - strtotime($start);
-        // $durasi = ($diff / (60 * 60 * 24));
-        $waktu_awal     = $this->request->getVar('tgl_acara_mulai');
-        $waktu_akhir    = $this->request->getVar('tgl_acara_selesai'); // bisa juga waktu sekarang now()
 
+        $start     = $this->request->getVar('tgl_acara_mulai');
+        $end    = $this->request->getVar('tgl_acara_selesai'); 
         //menghitung selisih dengan hasil detik
-        $diff = strtotime($waktu_akhir) - strtotime($waktu_awal);
+        $diff = strtotime($end) - strtotime($start);
 
         //membagi detik menjadi jam
         $jam    = floor($diff / (60 * 60));

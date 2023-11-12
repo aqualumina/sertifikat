@@ -84,7 +84,7 @@ class Penyelenggara extends BaseController
 
         $fileTTD = $this->request->getFile('ttd');
         // dd($fileTTD);
-        if (isset($fileTTD->getError)==4) {
+        if ($fileTTD->getError() == 4) {
             $namaFileTTD = $this->defaultImage;
 
         } else {
@@ -225,7 +225,7 @@ class Penyelenggara extends BaseController
             'user_name' => $this->request->getVar('username'),
             'user_email' => $this->request->getVar('email'),
             'role' => $this->request->getVar('role'),
-        ]);
+        ]); 
 
         session()->setFlashdata('msg', 'Berhasil memperbarui Penyelenggara');
         return redirect()->to('/penyelenggara');

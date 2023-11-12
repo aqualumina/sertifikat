@@ -32,7 +32,7 @@
         </div>
         <table class="table table-bordered table-striped mt-3">
             <thead class="thin-border-bottom mt-1">
-                <tr>
+                <tr style="text-align:center">
                     <th class="center">No</th>
                     <th class="center">Acara</th>
                     <th class="center">Penerima Sertifikat</th>
@@ -43,7 +43,7 @@
             <tbody>
                 <?php $no = 1;
                 foreach ($result as $value) : ?>
-                    <tr>
+                    <tr >
                         <td><?= $no++ ?></td>
                         <td class="center">
                             <h5><?= $value['nama_acara'] ?></h5>
@@ -55,7 +55,7 @@
                                 </tr>
                             </table>
                             <br><br>
-                            
+
                             <a href="#" data-toggle="modal">
                                 <button type="submit" class="btn btn-sm btn-primary" style="border-radius: 50px; background-color: #171ad4; color: #ffffff; border: none;"><i class="ace-icon glyphicon glyphicon-plus"></i> Upload
                                     Materi</button></a>
@@ -67,26 +67,26 @@
                                     <td>Jpl</td>
                                     <td>Tindakan</td>
                                 </tr>
-                                
+
                                 <tr style="background-color: #edf0f7;">
                                     <td><?= $value['materi'] ?></td>
                                     <td><?= $value['narasumber'] ?></td>
                                     <td><?= $value['jpl'] ?></td>
                                     <td class="center">
-                                    <form action="<?= base_url('acara/' . $value['id_acara'])  ?>" method="post" class="d-inline">
-                                    <?= csrf_field() ?>
-                                    <input type="hidden" name="_method" value="DELETE">
-                                    <button type="submit" class="btn btn-danger" role="button" onclick="return confirm('Apakah anda yakin?')">Hapus</button>
-                                </form>
+                                        <form action="<?= base_url('acara/' . $value['id_acara'])  ?>" method="post" class="d-inline">
+                                            <?= csrf_field() ?>
+                                            <input type="hidden" name="_method" value="DELETE">
+                                            <button type="submit" class="btn btn-danger" role="button" onclick="return confirm('Apakah anda yakin?')">Hapus</button>
+                                        </form>
                                     </td>
                                 </tr>
                             </table>
                         </td>
-                        <td class="center">
-                            <center><b><a class="danger" href="/peserta">
-                            <span class="badge badge-success"><?= $value['jumlah_peserta'] ?></a></span></b></center>
+                        <td style="text-align:center">
+                            <b><a href="/peserta" >
+                                    <span class="badge badge-success"><?= $value['jumlah_peserta'] ?></a></b>
                         </td>
-                        <td class="center">
+                        <td>
                             <table id="simple-table" class="table table-striped table-bordered table-hover">
                                 <tr>
                                     <td>Upload Peserta</td>
@@ -111,7 +111,7 @@
                             </table>
                         </td>
                     </tr>
-                    <?php endforeach; ?>
+                <?php endforeach; ?>
             </tbody>
         </table>
     </div>
