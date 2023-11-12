@@ -4,17 +4,24 @@ namespace App\Controllers;
 
 use \App\Models\AcaraModel;
 use \App\Models\PenyelenggaraModel;
+use \App\Models\PesertaModel;
 use \App\Models\KategoriModel;
+use PhpOffice\PhpSpreadsheet\Reader\Xls;
+use PhpOffice\PhpSpreadsheet\Reader\Xlsx;
+use PHPUnit\Util\Xml\Validator;
+use PhpOffice\PhpSpreadsheet\IOFactory;
 
 class Acara extends BaseController
 {
     private $acaraModel;
     private $penyelenggaraModel;
+    private $pesertaModel;
     private $kategoriModel;
     public function __construct()
     {
         $this->acaraModel = new AcaraModel();
         $this->penyelenggaraModel = new PenyelenggaraModel();
+        $this->pesertaModel = new PesertaModel();
         $this->kategoriModel = new KategoriModel();
     }
 
@@ -35,6 +42,7 @@ class Acara extends BaseController
             'title'         => 'Data Acara',
             'kategori'      => $this->kategoriModel->findAll(),
             'penyelenggara' => $this->penyelenggaraModel->findAll(),
+            'peserta' => $this->pesertaModel->findAll(),
             'validation' => \Config\Services::validation()
         ];
         return view('acara/create', $data);
@@ -61,17 +69,51 @@ class Acara extends BaseController
         $dataAcara = new AcaraModel();
         
 
-        if(!$this->validate([
-            'narasumber'=> [
+        if (!$this->validate([
+            'nama_acara' => [
                 'rules' => 'required',
                 'errors' => [
-                    'required' => '{field} harus diisi',
-                    'is_unique' => '{field} hanya sudah ada'
+                    'required' => 'Nama Acara Harus Diisi',
                 ]
-                ],
+            ],
+            'narasumber' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Narasumber Harus Diisi',
+                ]
+            ],
+            'jenis_dokumen' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Jenis Dokumen Harus Diisi',
+                ]
+            ],
+            'tgl_sertifikat' =>  [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Tanggal Sertifikat  Harus Diisi'
+                ]
+            ],
+            'tgl_acara' =>  [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Tanggal Acara  Harus Diisi'
+                ]
+            ],
+            'tgl_acara_akhir' =>  [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Tanggal Acara Akhir  Harus Diisi'
+                ]
+            ],
         ])) {
-            return redirect()->to('/acara/create')->withInput();
+            // return redirect()->to('/acara/create')->withInput();
+            $validation = \Config\Services::validation();
+            // dd($validation);
+            return redirect()->back()->withInput()->with('validation', $validation);
         }
+
+        
 
         $dataAcara->save([
 
@@ -99,41 +141,105 @@ class Acara extends BaseController
         return redirect()->to('acara/');
     }
 
-    public function upload()
+        // public function bgdepan($id){
+        //     $dataAcara = $this->AcaraModel->getAcara($id);
+        //     if (empty($dataAcara)){
+        //         throw new \CodeIgniter\Exeptions\PageNotFoundExeption("Judul acara $id tidak ditemukan!");
+
+        //     }
+        //     $data=[
+        //         'title'=> 'Ubah Buku',
+        //         'validation'=> \Config\Services::validation(),
+        //         'result'=> $dataAcara
+        //     ];
+        //     return view('acara/modal-bgdepan',$data);
+        // }
+
+    public function upload($id)
     {
-        if ($this->request->getMethod() === 'post') {
-            // Validasi gambar yang diunggah
-            $validation = \Config\Services::validation();
-            $validation->setRule('userfile', 'User File', 'uploaded[userfile]|max_size[userfile,1024]|mime_in[userfile,image/jpeg,image/png,image/gif]');
 
-            if ($validation->withRequest($this->request)->run()) {
-                $file = $this->request->getFile('userfile');
+        $dataAcara = new AcaraModel();
+        $fileBG = $this->request->getFile('bgdepan');
+        if ($fileBG->getError() == 4) {
+            $namaFileBGDpn = $this->defaultImage;
+        } else {
 
-                if ($file->isValid() && !$file->hasMoved()) {
-                    // Tentukan folder tempat gambar akan disimpan
-                    $uploadPath = WRITEPATH . 'uploads'; // Sesuaikan dengan path yang sesuai
+            $namaFileBGDpn = $fileBG->getRandomName();
 
-                    // Generasi nama file gambar unik
-                    $newName = $file->getRandomName();
-
-                    // Pindahkan gambar ke folder yang ditentukan
-                    if ($file->move($uploadPath, $newName)) {
-                        // File gambar berhasil diunggah, tambahkan logika penyimpanan data ke database jika diperlukan
-
-                        // Redirect atau tampilkan pesan sukses
-                        return redirect()->to('/acara/index')->with('success', 'Gambar berhasil diunggah.');
-                    } else {
-                        // Gagal memindahkan gambar, tampilkan pesan kesalahan
-                        return redirect()->to('/acara/index')->with('error', 'Gagal mengunggah gambar.');
-                    }
-                } else {
-                    // Gambar tidak valid atau gagal diunggah
-                    return redirect()->to('/acara/index')->with('error', 'Gambar tidak valid atau gagal diunggah.');
-                }
-            } else {
-                // Validasi gagal
-                return redirect()->to('/acara/index')->with('error', $validation->getErrors());
-            }
+            $fileBG->move('images/bgdepan', $namaFileBGDpn);
         }
+
+        $dataAcara->save    ([
+            'id_acara' => $id,
+            'gbr_sert_depan' => $namaFileBGDpn,
+
+        ]);
+        // dd($fileBG);
+       session()->setFlashdata('msg', 'Berhasil Upload Background Depan');
+        return redirect()->to('/acara'); 
+
+        
     }
+
+    public function uploadbgbelakang($id)
+    {
+        $dataAcara = new AcaraModel();
+        $fileBGback = $this->request->getFile('bgbelakang');
+        if ($fileBGback->getError() == 4) {
+            $namaFileBGBelakang = $this->defaultImage;
+        } else {
+
+            $namaFileBGBelakang = $fileBGback->getRandomName();
+
+            $fileBGback->move('images/bgbelakang', $namaFileBGBelakang);
+        }
+       
+
+        $dataAcara->save    ([
+            'id_acara' => $id,
+            'gbr_sert_blk' => $namaFileBGBelakang,
+
+        ]);
+        // dd($fileBG);
+       session()->setFlashdata('msg', 'Berhasil Upload Background Belakang');
+        return redirect()->to('/acara'); 
+
+        
+    }
+
+    public function importData($id)
+        {
+            $dataPeserta = new AcaraModel();
+            $file = $this->request->getFile("formatpeserta");
+            $ext = $file->getExtension();
+           
+            if($ext == "xls")
+            $reader = new Xls();
+            else
+            $reader = new Xlsx();
+            $spreadsheet= $reader->load($file);
+            $sheet = $spreadsheet->getActiveSheet()->toArray();
+           
+            foreach($sheet as $key => $value){
+              if($key == 0) continue;
+                $nama = url_title($value[1], '-',true);
+                $dataPeserta->save    ([
+                    'id_acara' => $id,
+                ]);
+                $dataOld = $this->pesertaModel->getPeserta($nama);
+                if($dataOld['nama'] != $value[1]){
+                    $this->pesertaModel->save([
+                        'nama'=> $value[1],
+                        'nip'=> $value[2],
+                        'no_hp'=> $value[3],
+                        'email'=> $value[4],
+                        'kategori'=> $value[5],
+                        
+                    ]);
+                }
+}
+
+        session()->setFlashData("msg", "Data berhasil diimport!");
+        return redirect()->to('/acara');
+       }
 }
