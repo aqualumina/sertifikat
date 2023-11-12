@@ -31,8 +31,8 @@
             </form>
         </div>
         <table class="table table-bordered table-striped mt-3">
-            <thead class="thin-border-bottom mt-1">
-                <tr style="text-align:center">
+            <thead class="thin-border-bottom mt-1 thead-light">
+                <tr>
                     <th class="center">No</th>
                     <th class="center">Acara</th>
                     <th class="center">Penerima Sertifikat</th>
@@ -43,7 +43,7 @@
             <tbody>
                 <?php $no = 1;
                 foreach ($result as $value) : ?>
-                    <tr >
+                    <tr>
                         <td><?= $no++ ?></td>
                         <td class="center">
                             <h5><?= $value['nama_acara'] ?></h5>
@@ -82,11 +82,11 @@
                                 </tr>
                             </table>
                         </td>
-                        <td style="text-align:center">
-                            <b><a href="/peserta" >
-                                    <span class="badge badge-success"><?= $value['jumlah_peserta'] ?></a></b>
+                        <td class="center">
+                            <center><b><a class="danger" href="/peserta">
+                                        <span class="badge badge-success"><?= $value['jumlah_peserta'] ?></a></span></b></center>
                         </td>
-                        <td>
+                        <td class="center">
                             <table id="simple-table" class="table table-striped table-bordered table-hover">
                                 <tr>
                                     <td>Upload Peserta</td>
@@ -112,6 +112,7 @@
                         </td>
                     </tr>
                     <!-- modal -->
+
                 <?php endforeach; ?>
             </tbody>
         </table>

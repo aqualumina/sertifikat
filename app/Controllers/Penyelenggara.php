@@ -224,7 +224,7 @@ class Penyelenggara extends BaseController
             'user_name' => $this->request->getVar('username'),
             'user_email' => $this->request->getVar('email'),
             'role' => $this->request->getVar('role'),
-        ]); 
+        ]);
 
         session()->setFlashdata('msg', 'Berhasil memperbarui Penyelenggara');
         return redirect()->to('/penyelenggara');

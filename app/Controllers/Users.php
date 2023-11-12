@@ -3,10 +3,15 @@
 namespace App\Controllers;
 
 use App\Models\UserModel;
+use App\Models\UsersModel;
+
+// use Myth\Auth\Models\UserModel;
+use Myth\Auth\Password;
 
 class Users extends BaseController
 {
     private $userModel;
+    // private $usersModel;
     public function __construct()
     {
         $this->userModel = new UserModel();

@@ -10,7 +10,7 @@ class PesertaModel extends Model
     protected $table      = 'tbl_peserta';
     protected $primaryKey = 'id_peserta';
     protected $useTimestamps = true;
-    protected $useSoftDeletes = true;
+    protected $useSoftDeletes = false;
     protected $allowedFields = ['nama', 'nip', 'no_hp', 'email', 'kode_unik', 'nama_file', 'judul','kategori'];
 
     public function getPeserta($id = false)

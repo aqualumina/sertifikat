@@ -30,7 +30,7 @@ $tahun = date(" Y");
                         <div class="iq-card shadow-none m-0">
                             <div class="iq-card-body p-0 ">
                                 <div class="p-3" style="background-color: #13998A;">
-                                    <h5 class="mb-0 text-white line-height"><?= session ()->id ?></h5>
+                                    <h5 class="mb-0 text-white line-height"><?= session ()->role ?></h5>
                                     <span class="text-white font-size-12">Available</span>
                                 </div>
                                 <a href="profile.html" class="iq-sub-card iq-bg-primary-hover">

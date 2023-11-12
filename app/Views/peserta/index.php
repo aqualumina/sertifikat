@@ -15,81 +15,45 @@
     <?php endif; ?>
     <!-- End Flash Data -->
     <div class="card mb-4">
+        <div class="card-header">
+            <?= $title ?>
+        </div>
         <div class="card-body">
-            <!-- <table id="dynamic-table" class="table table-striped table-bordered table-hover">
-                <tr>
-                    <td>
-                        Silahkan beri tanda check box dibawah untuk memilih aksi <br>
-                        <input type="radio" name="filter" value="1"> <b>GENERATE QR CODE SERTIFIKAT</b><br>
-                        <input type="radio" name="filter" value="2"> <b>KIRIM SERTIFIKAT (WHATSAPP)</b><br>
-                        <input type="radio" name="filter" value="3"> <b>KIRIM SERTIFIKAT (EMAIL)</b><br>
-                        <?php echo '<input class="btn btn-xs btn-warning" type="submit" name="submit" value="PROSES PILIHAN" onclick="return confirm(\'Apakah anda yakin akan memproses pilihan  ini  ?\')">' ?>
-                    </td>
-                </tr>
-            </table> -->
-            <div class="box-body table-responsive no-padding">
-                <table class="table table-bordered table-hover">
-                    <tr style="text-align:center">
-                        <th class="center">No</th>
-                        <!-- <th class="center" width="3">Pilih</th> -->
-                        <th class="center">Profil</th>
-                        <th class="center">Email</th>
-                        <th class="center">No HP</th>
-                        <th class="center">QRCODE</th>
-                        <th class="center">Tindakan</th>
+            <a class="btn btn-primary mb-3 float-right" type="button" href="<?= base_url('users/create') ?>">Tambah User</a>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama Depan</th>
+                        <th>Nama Belakang</th>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Role/Group</th>
+                        <th>Aksi</th>
                     </tr>
-                    <tbody>
-                        <?php $no = 1;
-                        foreach ($result as $value) : ?>
-                            <tr>
-                                <td><?= $no++  ?></td>
-                                <!-- <td style="text-align:center;">
-                                    <input type="checkbox" class="ace" value="' . $s->id_tamu . '" />
-                                </td> -->
-                                <td>
-                                    <table id="dynamic-table" class="table table-striped table-bordered table-hover">
-                                        <tr>
-                                            <td>Nama</td>
-                                            <td><?= $value['nama'] ?></td>
-                                        </tr>
-                                        <tr>
-                                            <td>NIP</td>
-                                            <td><?= $value['nip'] ?></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Kategori</td>
-                                            <td><?= $value['kategori'] ?></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Judul</td>
-                                            <td><?= $value['judul'] ?></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Cetak</td>
-                                            <td><a href="<?php echo base_url(); ?>verify/v/<?= $value['kode_unik'] ?><?= $value['id_acara'] ?>" target="_blank"><span class="label label-success">DOWNLOAD VERSI CETAK</span></a><br>
-                                        </tr>
-                                        <tr>
-                                            <td><a href="peserta/ubah<?= $value['id_peserta'] ?>" data-toggle="modal"><button class="btn btn-info btn-sm" type="">UBAH DATA</button></a></td>
-                                            <td><a href="#" data-toggle="modal"><button class="btn btn-success btn-sm" type="">GENERATE</button></a> <?= $value['kode_unik'] ?></td>
-                                        </tr>
-                                    </table>
-                                </td>
-                                <td><?= $value['email'] ?></td>
-                                <td><?= $value['no_hp'] ?></td>
-                                <td>
-                                    <?php if ($value['kode_unik'] != NULL) {; ?>
-                                        <a href="<?php echo base_url(); ?>verify/v/<?= $value['kode_unik'] ?>/<?= $value['id_acara'] ?>" target="_blank"><img src="<?= base_url() ?>/images/diskominfo_loader.png"></a>
-                                    <?php } ?>
-                                </td>
-                                <td style="text-align:center;">
+                </thead>
+                <tbody>
+                    <?php $no = 1;
+                    foreach ($result as $value) : ?>
+                        <tr>
+                            <td><?= $no++  ?></td>
+                            <td><?= $value['firstname'] ?></td>
+                            <td><?= $value['lastname']  ?></td>
+                            <td><?= $value['user_name']  ?></td>
+                            <td><?= $value['user_email']  ?></td>
+                            <td><?= $value['role']  ?></td>
+                            <td>
+                                <a class="btn btn-warning" href="<?= base_url('users/edit/' . $value['id'])  ?>" role="button">Edit</a>
+                                <form action="<?= base_url('users/' . $value['id'])  ?>" method="post" class="d-inline">
+                                    <?= csrf_field() ?>
                                     <input type="hidden" name="_method" value="DELETE">
-                                    <button type="submit" class="btn btn-danger las la-trash" role="button" onclick="return confirm('Apakah anda yakin?')"></button>
-                                </td>
-                            </tr>
-                        <?php endforeach; ?>
-                    </tbody>
-                </table>
-            </div>
+                                    <button type="submit" class="btn btn-danger" role="button" onclick="return confirm('Apakah anda yakin?')">Hapus</button>
+                                </form>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
         </div>
     </div>
 </main>
