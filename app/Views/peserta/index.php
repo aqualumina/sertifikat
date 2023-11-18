@@ -17,7 +17,7 @@
     <!-- End Flash Data -->
     <div class="card mb-4">
         <div class="card-body">
-            
+
             <div class="box-body table-responsive no-padding">
                 <table class="table table-bordered table-hover">
                     <tr style="text-align:center">
@@ -40,6 +40,10 @@
                                 <td>
                                     <table id="dynamic-table" class="table table-striped table-bordered table-hover">
                                         <tr>
+                                            <td>Id</td>
+                                            <td><?= $value['id_acara'] ?></td>
+                                        </tr>
+                                        <tr>
                                             <td>Nama</td>
                                             <td><?= $value['nama'] ?></td>
                                         </tr>
@@ -56,7 +60,7 @@
                                             <td><a href="<?php echo base_url(); ?>verify/v/<?= $value['kode_unik'] ?><?= $value['id_acara'] ?>" target="_blank"><span class="label label-success">DOWNLOAD VERSI CETAK</span></a><br>
                                         </tr>
                                         <tr>
-                                        <td>Kode Unik</td>
+                                            <td>Kode Unik</td>
                                             <!-- <td><a href="peserta/ubah<?= $value['id_peserta'] ?>" data-toggle="modal"><button class="btn btn-info btn-sm" type="">UBAH DATA</button></a></td> -->
                                             <td><a href="#" data-toggle="modal"></a> <?= $value['kode_unik'] ?></td>
                                         </tr>
