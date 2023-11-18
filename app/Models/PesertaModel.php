@@ -11,7 +11,7 @@ class PesertaModel extends Model
     protected $primaryKey = 'id_peserta';
     protected $useTimestamps = true;
     protected $useSoftDeletes = true;
-    protected $allowedFields = ['nama', 'nip', 'no_hp', 'email', 'kode_unik', 'nama_file', 'judul','kategori'];
+    protected $allowedFields = ['id_acara','nama', 'nip', 'no_hp', 'email', 'kode_unik', 'nama_file', 'judul','kategori'];
 
     public function getPeserta($id = false)
     {
@@ -24,4 +24,5 @@ class PesertaModel extends Model
             return $query->where(['id_peserta' => $id])->first();
         }
     }
+    
 }

@@ -14,7 +14,7 @@ class Peserta extends BaseController
 
     public function index()
     {
-        $dataPeserta = $this->pesertaModel->findAll();
+        $dataPeserta = $this->pesertaModel->getPeserta();
         // dd($dataPeserta);
         $data = [
             'title' => 'Data Peserta',

@@ -42,7 +42,7 @@ class Acara extends BaseController
             'title'         => 'Data Acara',
             'kategori'      => $this->kategoriModel->findAll(),
             'penyelenggara' => $this->penyelenggaraModel->findAll(),
-            'peserta' => $this->pesertaModel->findAll(),
+            'peserta'       => $this->pesertaModel->findAll(),
             'validation' => \Config\Services::validation()
         ];
         return view('acara/create', $data);
@@ -52,7 +52,7 @@ class Acara extends BaseController
     {
 
         $start     = $this->request->getVar('tgl_acara_mulai');
-        $end    = $this->request->getVar('tgl_acara_selesai'); 
+        $end    = $this->request->getVar('tgl_acara_selesai');
         //menghitung selisih dengan hasil detik
         $diff = strtotime($end) - strtotime($start);
 
@@ -63,7 +63,7 @@ class Acara extends BaseController
         $menit    = $diff - $jam * (60 * 60);
 
         $dataAcara = new AcaraModel();
-        
+
 
         if (!$this->validate([
             'nama_acara' => [
@@ -109,8 +109,6 @@ class Acara extends BaseController
             return redirect()->back()->withInput()->with('validation', $validation);
         }
 
-        
-
         $dataAcara->save([
 
             'jenis_dokumen' => $this->request->getVar('jenis_dokumen'),
@@ -137,19 +135,19 @@ class Acara extends BaseController
         return redirect()->to('acara/');
     }
 
-        // public function bgdepan($id){
-        //     $dataAcara = $this->AcaraModel->getAcara($id);
-        //     if (empty($dataAcara)){
-        //         throw new \CodeIgniter\Exeptions\PageNotFoundExeption("Judul acara $id tidak ditemukan!");
+    // public function bgdepan($id){
+    //     $dataAcara = $this->AcaraModel->getAcara($id);
+    //     if (empty($dataAcara)){
+    //         throw new \CodeIgniter\Exeptions\PageNotFoundExeption("Judul acara $id tidak ditemukan!");
 
-        //     }
-        //     $data=[
-        //         'title'=> 'Ubah Buku',
-        //         'validation'=> \Config\Services::validation(),
-        //         'result'=> $dataAcara
-        //     ];
-        //     return view('acara/modal-bgdepan',$data);
-        // }
+    //     }
+    //     $data=[
+    //         'title'=> 'Ubah Buku',
+    //         'validation'=> \Config\Services::validation(),
+    //         'result'=> $dataAcara
+    //     ];
+    //     return view('acara/modal-bgdepan',$data);
+    // }
 
     public function upload($id)
     {
@@ -165,16 +163,14 @@ class Acara extends BaseController
             $fileBG->move('images/bgdepan', $namaFileBGDpn);
         }
 
-        $dataAcara->save    ([
+        $dataAcara->save([
             'id_acara' => $id,
             'gbr_sert_depan' => $namaFileBGDpn,
 
         ]);
         // dd($fileBG);
-       session()->setFlashdata('msg', 'Berhasil Upload Background Depan');
-        return redirect()->to('/acara'); 
-
-        
+        session()->setFlashdata('msg', 'Berhasil Upload Background Depan');
+        return redirect()->to('/acara');
     }
 
     public function uploadbgbelakang($id)
@@ -189,53 +185,54 @@ class Acara extends BaseController
 
             $fileBGback->move('images/bgbelakang', $namaFileBGBelakang);
         }
-       
 
-        $dataAcara->save    ([
+
+        $dataAcara->save([
             'id_acara' => $id,
             'gbr_sert_blk' => $namaFileBGBelakang,
 
         ]);
         // dd($fileBG);
-       session()->setFlashdata('msg', 'Berhasil Upload Background Belakang');
-        return redirect()->to('/acara'); 
-
-        
+        session()->setFlashdata('msg', 'Berhasil Upload Background Belakang');
+        return redirect()->to('/acara');
     }
 
     public function importData($id)
-        {
-            $dataPeserta = new AcaraModel();
-            $file = $this->request->getFile("formatpeserta");
-            $ext = $file->getExtension();
-           
-            if($ext == "xls")
+    {
+        $dataPeserta = new PesertaModel();
+        $file = $this->request->getFile("uploadexcel");
+        $ext = $file->getClientExtension();
+
+        // dd($ext);
+        if ($ext == "xls")
             $reader = new Xls();
-            else
+        else
             $reader = new Xlsx();
-            $spreadsheet= $reader->load($file);
-            $sheet = $spreadsheet->getActiveSheet()->toArray();
-           
-            foreach($sheet as $key => $value){
-              if($key == 0) continue;
-                $nama = url_title($value[1], '-',true);
-                $dataPeserta->save    ([
-                    'id_acara' => $id,
-                ]);
-                $dataOld = $this->pesertaModel->getPeserta($nama);
-                if($dataOld['nama'] != $value[1]){
-                    $this->pesertaModel->save([
-                        'nama'=> $value[1],
-                        'nip'=> $value[2],
-                        'no_hp'=> $value[3],
-                        'email'=> $value[4],
-                        'kategori'=> $value[5],
-                        
-                    ]);
-                }
-}
+
+        $spreadsheet = $reader->load($file);
+        $sheet = $spreadsheet->getActiveSheet()->toArray();
+
+        foreach ($sheet as $key => $value) {
+            if ($key == 0) {
+                continue;
+            }
+            $this->acaraModel->insert([
+                'jumlah_peserta' => count($id),
+            ]);
+
+            $this->pesertaModel->insert([
+                'id_acara' => $id,
+                'nama' => $value['0'],
+                'nip' => $value['1'],
+                'no_hp' => $value['2'],
+                'email' => $value['3'],
+                'kategori' => $value['4'],
+                'kode_unik' => md5(($value['1'])+$id)
+
+            ]);
+        }
 
         session()->setFlashData("msg", "Data berhasil diimport!");
-        return redirect()->to('/acara');
-       }
+        return redirect()->to('/peserta');
+    }
 }
