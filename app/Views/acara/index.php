@@ -43,7 +43,7 @@
             <tbody>
                 <?php $no = 1;
                 foreach ($result as $value) : ?>
-                    <tr >
+                    <tr>
                         <td><?= $no++ ?></td>
                         <td class="center">
                             <h5><?= $value['nama_acara'] ?></h5>
@@ -58,7 +58,7 @@
 
                             <a href="#" data-toggle="modal">
                                 <button type="submit" class="btn btn-primary">
-                                <i class="fa fa-plus"></i>Upload Materi</button></a>
+                                    <i class="fa fa-plus"></i>Upload Materi</button></a>
                             <br><br>
                             <table class="table table-bordered table-striped" border="1">
                                 <tr style="background-color: #7599fa;">
@@ -83,18 +83,18 @@
                             </table>
                         </td>
                         <td style="text-align:center">
-                            <b><a href="/peserta" >
+                            <b><a href="/peserta">
                                     <span class="badge badge-success"><?= $value['jumlah_peserta'] ?></a></b>
                         </td>
                         <td>
                             <table id="simple-table" class="table table-striped table-bordered table-hover">
                                 <tr>
                                     <td>Upload Peserta</td>
-                                    <td><a href="#modalpeserta<?= $value['id_acara'] ?>" data-toggle="modal"><button class="btn btn-xs btn-primary" type="">Upload</button></a>
+                                    <td><a href="#modalpeserta <?= $value['id_acara'] ?>" data-toggle="modal"><button class="btn btn-xs btn-primary" type="">Upload</button></a>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Upload Background Depan <?= $value['id_acara'] ?></td>
+                                    <td>Upload Background Depan<?= $value['id_acara'] ?></td>
                                     <td><a href="#depan<?= $value['id_acara'] ?>" data-toggle="modal"><button class="btn btn-xs btn-primary" type="">Upload</button></a>
                                     </td>
                                 </tr>
@@ -124,7 +124,7 @@
 
 
 <?= $this->include('acara/modal-peserta') ?>
- <?= $this->include('acara/modal-bgdepan') ?>
+<?= $this->include('acara/modal-bgdepan') ?>
 <?= $this->include('acara/modal-bgbelakang') ?>
 <?= $this->include('acara/modal-stample') ?>
 <?= $this->include('acara/modal-template') ?>

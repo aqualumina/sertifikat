@@ -28,5 +28,13 @@ class AcaraModel extends Model
         }
     }
 
+    function getTotal($id_acara)
+	{
+		$this->from('tbl_peserta');
+		$this->where('id_acara', $id_acara);
+		$data = $this->count();
+		return $data;
+	}
+
 
 }

@@ -4,7 +4,8 @@
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/">Beranda</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Pengguna</li>
+            <li class="breadcrumb-item"><a href="/acara">Acara</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Peserta</li>
         </ol>
     </nav>
     <!-- Start Flash Data -->
@@ -16,17 +17,7 @@
     <!-- End Flash Data -->
     <div class="card mb-4">
         <div class="card-body">
-            <!-- <table id="dynamic-table" class="table table-striped table-bordered table-hover">
-                <tr>
-                    <td>
-                        Silahkan beri tanda check box dibawah untuk memilih aksi <br>
-                        <input type="radio" name="filter" value="1"> <b>GENERATE QR CODE SERTIFIKAT</b><br>
-                        <input type="radio" name="filter" value="2"> <b>KIRIM SERTIFIKAT (WHATSAPP)</b><br>
-                        <input type="radio" name="filter" value="3"> <b>KIRIM SERTIFIKAT (EMAIL)</b><br>
-                        <?php echo '<input class="btn btn-xs btn-warning" type="submit" name="submit" value="PROSES PILIHAN" onclick="return confirm(\'Apakah anda yakin akan memproses pilihan  ini  ?\')">' ?>
-                    </td>
-                </tr>
-            </table> -->
+            
             <div class="box-body table-responsive no-padding">
                 <table class="table table-bordered table-hover">
                     <tr style="text-align:center">
@@ -61,16 +52,13 @@
                                             <td><?= $value['kategori'] ?></td>
                                         </tr>
                                         <tr>
-                                            <td>Judul</td>
-                                            <td><?= $value['judul'] ?></td>
-                                        </tr>
-                                        <tr>
                                             <td>Cetak</td>
                                             <td><a href="<?php echo base_url(); ?>verify/v/<?= $value['kode_unik'] ?><?= $value['id_acara'] ?>" target="_blank"><span class="label label-success">DOWNLOAD VERSI CETAK</span></a><br>
                                         </tr>
                                         <tr>
-                                            <td><a href="peserta/ubah<?= $value['id_peserta'] ?>" data-toggle="modal"><button class="btn btn-info btn-sm" type="">UBAH DATA</button></a></td>
-                                            <td><a href="#" data-toggle="modal"><button class="btn btn-success btn-sm" type="">GENERATE</button></a> <?= $value['kode_unik'] ?></td>
+                                        <td>Kode Unik</td>
+                                            <!-- <td><a href="peserta/ubah<?= $value['id_peserta'] ?>" data-toggle="modal"><button class="btn btn-info btn-sm" type="">UBAH DATA</button></a></td> -->
+                                            <td><a href="#" data-toggle="modal"></a> <?= $value['kode_unik'] ?></td>
                                         </tr>
                                     </table>
                                 </td>
