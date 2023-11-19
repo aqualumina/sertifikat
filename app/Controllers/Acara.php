@@ -27,12 +27,26 @@ class Acara extends BaseController
 
     public function index()
     {
+        $getTotal = $this->acaraModel->Total();
         $dataAcara = $this->acaraModel->getAcara();
         $data = [
-            'title' => "Data Acara",
-            'result' => $dataAcara
+            'title'  => "Data Acara",
+            'result' => $dataAcara,
+            'total'  => $getTotal
         ];
         return view('acara/index', $data);
+    }
+
+    public function detail($id)
+    {
+        $dataPeserta = $this->pesertaModel->getPeserta($id);
+        
+        $data = [
+            'title' => 'Data Peserta',
+            'result' => $dataPeserta
+        ];
+        
+        return view('peserta/index', $data);
     }
 
     public function create()
@@ -51,7 +65,7 @@ class Acara extends BaseController
     public function save()
     {
 
-        $start     = $this->request->getVar('tgl_acara_mulai');
+        $start  = $this->request->getVar('tgl_acara_mulai');
         $end    = $this->request->getVar('tgl_acara_selesai');
         //menghitung selisih dengan hasil detik
         $diff = strtotime($end) - strtotime($start);
@@ -216,9 +230,6 @@ class Acara extends BaseController
             if ($key == 0) {
                 continue;
             }
-            $this->acaraModel->insert([
-                'jumlah_peserta' => count($id),
-            ]);
 
             $this->pesertaModel->insert([
                 'id_acara' => $id,

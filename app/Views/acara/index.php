@@ -16,6 +16,7 @@
     <!-- End Flash Data -->
     <div class="card mb-4">
         <div class="card-header">
+            
             <?= $title ?>
         </div>
         <div class="card-body">
@@ -30,12 +31,12 @@
                 </span>
             </form>
         </div>
-        <table class="table table-bordered table-striped mt-3">
+        <table class="table table-bordered table-hover">
             <thead class="thin-border-bottom mt-1">
                 <tr style="text-align:center">
                     <th class="center">No</th>
                     <th class="center">Acara</th>
-                    <th class="center">Penerima Sertifikat</th>
+                    <th class="center">Jumlah Peserta</th>
                     <th class="center" colspan="4">Tindakan</th>
                 </tr>
             </thead>
@@ -46,51 +47,36 @@
                     <tr>
                         <td><?= $no++ ?></td>
                         <td class="center">
-                            <h5><?= $value['nama_acara'] ?></h5>
-                            <br>
-                            <b> <?= $value['tgl_acara_mulai'] ?> s/d <?= $value['tgl_acara_selesai'] ?></b>
-                            <table>
+                            <table id="fixed-table" class="table table-striped table-bordered table-fixed">
                                 <tr>
-                                    <th>Dengan Link kegiatan : <b> links </b></th>
+                                    <td>Nama</td>
+                                    <td width="70%"><b><?= $value['nama_acara'] ?></b></td>
                                 </tr>
-                            </table>
-                            <br><br>
-
-                            <a href="#" data-toggle="modal">
-                                <button type="submit" class="btn btn-primary">
-                                    <i class="fa fa-plus"></i>Upload Materi</button></a>
-                            <br><br>
-                            <table class="table table-bordered table-striped" border="1">
-                                <tr style="background-color: #7599fa;">
-                                    <td>Materi</td>
-                                    <td>Narasumber</td>
-                                    <td>Jpl</td>
-                                    <td>Tindakan</td>
+                                <tr>
+                                    <td>Mulai</td>
+                                    <td><?= $value['tgl_acara_mulai'] ?></td>
                                 </tr>
-
-                                <tr style="background-color: #edf0f7;">
-                                    <td><?= $value['materi'] ?></td>
-                                    <td><?= $value['narasumber'] ?></td>
+                                <tr>
+                                    <td>Selesai</td>
+                                    <td><?= $value['tgl_acara_selesai'] ?></td>
+                                </tr>
+                                <tr>
+                                    <td>Total Jam</td>
                                     <td><?= $value['jpl'] ?></td>
-                                    <td class="center">
-                                        <form action="<?= base_url('acara/' . $value['id_acara'])  ?>" method="post" class="d-inline">
-                                            <?= csrf_field() ?>
-                                            <input type="hidden" name="_method" value="DELETE">
-                                            <button type="submit" class="btn btn-danger" role="button" onclick="return confirm('Apakah anda yakin?')">Hapus</button>
-                                        </form>
-                                    </td>
                                 </tr>
+                                
                             </table>
                         </td>
+                        
                         <td style="text-align:center">
-                            <b><a href="/peserta">
-                                    <span class="badge badge-success"><?= $value['jumlah_peserta'] ?></a></b>
+                            <b><a href="/acara/<?= $value['id_acara'] ?>">
+                                    <span class="badge badge-success"><?= $total ?></a></b>
                         </td>
                         <td>
                             <table id="simple-table" class="table table-striped table-bordered table-hover">
                                 <tr>
                                     <td>Upload Peserta</td>
-                                    <td><a href="#modalpeserta <?= $value['id_acara'] ?>" data-toggle="modal"><button class="btn btn-xs btn-primary" type="">Upload</button></a>
+                                    <td><a href="#modalpeserta<?= $value['id_acara'] ?>" data-toggle="modal"><button class="btn btn-xs btn-primary" type="">Upload</button></a>
                                     </td>
                                 </tr>
                                 <tr>

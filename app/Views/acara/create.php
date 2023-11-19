@@ -99,19 +99,4 @@
 </div>
 </div>
 
-<!-- <script>
-    // Mendapatkan tanggal saat ini dalam format yyyy-mm-dd
-    var currentDate = new Date().toISOString().slice(0, 10);
-
-    // Mengatur nilai input tanggal ke tanggal saat ini
-    document.getElementById('tgl_sertifikat').value = currentDate;
-
-    // Mendapatkan tanggal dan waktu saat ini dalam format "yyyy-mm-ddThh:mm"
-    var currentDatetime = new Date().toISOString().slice(0, 16);
-
-    // Mengatur nilai input datetime-local ke tanggal dan waktu saat ini
-    document.getElementById('tgl_acara').value = currentDatetime;
-    document.getElementById('tgl_acara_akhir').value = currentDatetime;
-</script> -->
-
 <?= $this->endSection() ?>

@@ -49,6 +49,7 @@ $routes->group('acara', ['filter' => 'auth'], function ($rs) {
     $rs->post('edit/(:any)', 'Acara::update/$1');
     $rs->post('upload/(:any)', 'Acara::upload/$1');
     $rs->post('uploadbg/(:any)', 'Acara::uploadbgbelakang/$1');
+    $rs->get('(:any)', 'Acara::detail/$1');
     $rs->post('import/(:any)', 'Acara::importData/$1');
     $rs->delete('(:num)', 'Acara::delete/$1');
     $rs->get('/', 'Acara::detail/$1');
@@ -80,10 +81,10 @@ $routes->group('penyelenggara', ['filter' => 'auth'], function ($rs) {
 });
 
 $routes->group('peserta',['filter' => 'auth'], function ($rs) {
-    $rs->get('/', 'Peserta::index/');
+    $rs->get('(:num)', 'Peserta::index/$1');
     $rs->get('create', 'Peserta::create');
     $rs->post('create', 'Peserta::save');
-    $rs->get('index(:num)', 'Peserta::index/$1');
+    $rs->get('index/(:num)', 'Peserta::index/$1');
     $rs->get('create', 'Peserta::create');
     $rs->delete('(:num)', 'Peserta::delete/$1');
     $rs->get('edit/(:any)', 'Peserta::edit/$1');

@@ -51,10 +51,7 @@
                                             <td>NIP</td>
                                             <td><?= $value['nip'] ?></td>
                                         </tr>
-                                        <tr>
-                                            <td>Kategori</td>
-                                            <td><?= $value['kategori'] ?></td>
-                                        </tr>
+                                        
                                         <tr>
                                             <td>Cetak</td>
                                             <td><a href="<?php echo base_url(); ?>verify/v/<?= $value['kode_unik'] ?><?= $value['id_acara'] ?>" target="_blank"><span class="label label-success">DOWNLOAD VERSI CETAK</span></a><br>
