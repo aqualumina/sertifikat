@@ -83,14 +83,14 @@
                             </table>
                         </td>
                         <td style="text-align:center">
-                            <b><a href="/peserta">
+                            <b><a href="/peserta/<?= $value['id_acara'] ?>">
                                     <span class="badge badge-success"><?= $value['jumlah_peserta'] ?></a></b>
                         </td>
                         <td>
                             <table id="simple-table" class="table table-striped table-bordered table-hover">
                                 <tr>
                                     <td>Upload Peserta</td>
-                                    <td><a href="#modalpeserta <?= $value['id_acara'] ?>" data-toggle="modal"><button class="btn btn-xs btn-primary" type="">Upload</button></a>
+                                    <td><a href="#modalpeserta<?= $value['id_acara'] ?>" data-toggle="modal"><button class="btn btn-xs btn-primary" type="">Upload</button></a>
                                     </td>
                                 </tr>
                                 <tr>

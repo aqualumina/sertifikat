@@ -84,24 +84,24 @@ class Acara extends BaseController
                     'required' => 'Jenis Dokumen Harus Diisi',
                 ]
             ],
-            'tgl_sertifikat' =>  [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Tanggal Sertifikat  Harus Diisi'
-                ]
-            ],
-            'tgl_acara' =>  [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Tanggal Acara  Harus Diisi'
-                ]
-            ],
-            'tgl_acara_akhir' =>  [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Tanggal Acara Akhir  Harus Diisi'
-                ]
-            ],
+            // 'tgl_sertifikat' =>  [
+            //     'rules' => 'required',
+            //     'errors' => [
+            //         'required' => 'Tanggal Sertifikat  Harus Diisi'
+            //     ]
+            // ],
+            // 'tgl_acara' =>  [
+            //     'rules' => 'required',
+            //     'errors' => [
+            //         'required' => 'Tanggal Acara  Harus Diisi'
+            //     ]
+            // ],
+            // 'tgl_acara_akhir' =>  [
+            //     'rules' => 'required',
+            //     'errors' => [
+            //         'required' => 'Tanggal Acara Akhir  Harus Diisi'
+            //     ]
+            // ],
         ])) {
             // return redirect()->to('/acara/create')->withInput();
             $validation = \Config\Services::validation();
@@ -199,7 +199,8 @@ class Acara extends BaseController
 
     public function importData($id)
     {
-        $dataPeserta = new PesertaModel();
+        // $dataPeserta = new PesertaModel();
+        $dataAcara = new AcaraModel();
         $file = $this->request->getFile("uploadexcel");
         $ext = $file->getClientExtension();
 
@@ -212,14 +213,16 @@ class Acara extends BaseController
         $spreadsheet = $reader->load($file);
         $sheet = $spreadsheet->getActiveSheet()->toArray();
 
+        $totalPeserta = count($sheet) - 1;
+
+    
         foreach ($sheet as $key => $value) {
             if ($key == 0) {
                 continue;
             }
-            $this->acaraModel->insert([
-                'jumlah_peserta' => count($id),
-            ]);
 
+        
+            
             $this->pesertaModel->insert([
                 'id_acara' => $id,
                 'nama' => $value['0'],
@@ -232,7 +235,13 @@ class Acara extends BaseController
             ]);
         }
 
+        $dataAcara->save([
+            'id_acara' => $id,
+            'jumlah_peserta' => $totalPeserta,
+
+        ]);
+
         session()->setFlashData("msg", "Data berhasil diimport!");
-        return redirect()->to('/peserta');
+        return redirect()->to('/acara');
     }
 }

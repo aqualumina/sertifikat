@@ -80,7 +80,7 @@ $routes->group('penyelenggara', ['filter' => 'auth'], function ($rs) {
 });
 
 $routes->group('peserta',['filter' => 'auth'], function ($rs) {
-    $rs->get('/', 'Peserta::index/');
+    $rs->get('(:any)', 'Peserta::index/$1');
     $rs->get('create', 'Peserta::create');
     $rs->post('create', 'Peserta::save');
     $rs->get('index(:num)', 'Peserta::index/$1');

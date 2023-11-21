@@ -61,7 +61,7 @@
                                         </tr>
                                         <tr>
                                             <td>Kode Unik</td>
-                                            <!-- <td><a href="peserta/ubah<?= $value['id_peserta'] ?>" data-toggle="modal"><button class="btn btn-info btn-sm" type="">UBAH DATA</button></a></td> -->
+                                            <!-- <td><a href="peserta/ubah< ?= $value['id_peserta'] ?>" data-toggle="modal"><button class="btn btn-info btn-sm" type="">UBAH DATA</button></a></td> -->
                                             <td><a href="#" data-toggle="modal"></a> <?= $value['kode_unik'] ?></td>
                                         </tr>
                                     </table>

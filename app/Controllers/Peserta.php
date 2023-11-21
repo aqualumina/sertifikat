@@ -3,18 +3,20 @@
 namespace App\Controllers;
 
 use App\Models\PesertaModel;
+use App\Models\AcaraModel;
 
 class Peserta extends BaseController
 {
-    private $pesertaModel;
+    private $pesertaModel, $acaraModel;
     public function __construct()
     {
         $this->pesertaModel = new PesertaModel();
-    }
+        $this->acaraModel = new AcaraModel();
+    }  
 
-    public function index()
+    public function index($id_acara)
     {
-        $dataPeserta = $this->pesertaModel->getPeserta();
+        $dataPeserta = $this->pesertaModel->where('id_acara', $id_acara)->findAll();
         // dd($dataPeserta);
         $data = [
             'title' => 'Data Peserta',
