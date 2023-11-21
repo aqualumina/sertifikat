@@ -20,12 +20,12 @@
                 <div class="mb-3 row">
                     <label for="nama_acara" class="col-sm-2 col-form-label">Nama Acara</label>
                     <div class="col-sm-4">
-                        <input type="text" class="form-control <?= $validation->hasError('nama_acara') ? 'is-invalid' : '' ?> " name="nama_acara" id="nama_acara" placeholder="<?= lang('Masukan Nama Acara ') ?>">
+                        <input type="text" class="form-control <?= $validation->hasError('nama_acara') ? 'is-invalid' : '' ?> " name="nama_acara" id="nama_acara" value="<?= old('nama_acara') ?>" placeholder="<?= lang('Masukan Nama Acara ') ?>">
                         <div class="invalid-feedback"><?= $validation->getError('nama_acara') ?></div>
                     </div>
                     <label for="nama_narasumber" class="col-sm-2 col-form-label">Nama Narasumber</label>
                     <div class="col-sm-4">
-                        <input type="text" class="form-control <?= $validation->hasError('narasumber') ? 'is-invalid' : '' ?>" name="narasumber" placeholder="<?= lang('Masukan Nama Narasumber') ?>">
+                        <input type="text" class="form-control <?= $validation->hasError('narasumber') ? 'is-invalid' : '' ?>" name="narasumber" value="<?= old('narasumber') ?>" placeholder="<?= lang('Masukan Nama Narasumber') ?>">
                         <div class="invalid-feedback"><?= $validation->getError('narasumber') ?></div>
                     </div>
                 </div>
@@ -45,7 +45,7 @@
                     <div class="col-sm-4">
                         <select class="form-control" name="no_sertifikat">
                             <?php foreach ($kategori as $value) : ?>
-                                <option value="<?= $value['nomor_kategori'] ?>">
+                                <option value="<?= $value['id_kategori'] ?>">
                                     <?= $value['nama_kategori'] ?></option>
                             <?php endforeach; ?>
                         </select>

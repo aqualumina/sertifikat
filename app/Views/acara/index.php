@@ -16,7 +16,7 @@
     <!-- End Flash Data -->
     <div class="card mb-4">
         <div class="card-header">
-            
+
             <?= $title ?>
         </div>
         <div class="card-body">
@@ -64,29 +64,36 @@
                                     <td>Total Jam</td>
                                     <td><?= $value['jpl'] ?></td>
                                 </tr>
-                                
+
                             </table>
                         </td>
-                        
+
                         <td style="text-align:center">
                             <b><a href="/acara/<?= $value['id_acara'] ?>">
-                                    <span class="badge badge-success"><?= $total ?></a></b>
+                                    <span class="badge badge-success"><?= $value['total'] ?></a></b>
                         </td>
+                        
                         <td>
                             <table id="simple-table" class="table table-striped table-bordered table-hover">
                                 <tr>
                                     <td>Upload Peserta</td>
-                                    <td><a href="#modalpeserta<?= $value['id_acara'] ?>" data-toggle="modal"><button class="btn btn-xs btn-primary" type="">Upload</button></a>
+                                    <td>
+                                        <a href="#modalpeserta<?= $value['id_acara'] ?>" data-toggle="modal">
+                                            <button class="btn btn-xs btn-primary" type="">Upload</button></a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Upload Background Depan<?= $value['id_acara'] ?></td>
-                                    <td><a href="#depan<?= $value['id_acara'] ?>" data-toggle="modal"><button class="btn btn-xs btn-primary" type="">Upload</button></a>
+                                    <td>
+                                        <a href="#depan<?= $value['id_acara'] ?>" data-toggle="modal">
+                                            <button class="btn btn-xs btn-primary" type="">Upload</button></a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Upload Background Belakang</td>
-                                    <td><a href="#belakang<?= $value['id_acara'] ?>" data-toggle="modal"><button class="btn btn-xs btn-primary" type="">Upload</button></a>
+                                    <td>
+                                        <a href="#belakang<?= $value['id_acara'] ?>" data-toggle="modal">
+                                            <button class="btn btn-xs btn-primary" type="">Upload</button></a>
                                     </td>
                                 </tr>
                                 <tr>
@@ -106,14 +113,8 @@
 
 
 </main>
-
-
-
 <?= $this->include('acara/modal-peserta') ?>
 <?= $this->include('acara/modal-bgdepan') ?>
 <?= $this->include('acara/modal-bgbelakang') ?>
-<?= $this->include('acara/modal-stample') ?>
 <?= $this->include('acara/modal-template') ?>
-<?= $this->include('acara/modal-ttd') ?>
-
 <?= $this->endSection() ?>
