@@ -36,17 +36,17 @@
                 <tr style="text-align:center">
                     <th class="center">No</th>
                     <th class="center">Acara</th>
-                    <th class="center">Jumlah Peserta</th>
+                    <th class="center">Daftar Peserta</th>
                     <th class="center" colspan="4">Tindakan</th>
                 </tr>
             </thead>
 
-            <tbody>
+            <tbody >
                 <?php $no = 1;
                 foreach ($result as $value) : ?>
                     <tr>
                         <td><?= $no++ ?></td>
-                        <td class="center">
+                        <td >
                             <table id="fixed-table" class="table table-striped table-bordered table-fixed">
                                 <tr>
                                     <td>Nama</td>
@@ -70,7 +70,7 @@
 
                         <td style="text-align:center">
                             <b><a href="/acara/<?= $value['id_acara'] ?>">
-                                    <span class="badge badge-success"><?= $value['total'] ?></a></b>
+                                    <span class="badge badge-success">Detail</a></b>
                         </td>
                         
                         <td>

@@ -38,6 +38,20 @@ class Acara extends BaseController
         return view('acara/index', $data);
     }
 
+    public function detail($id)
+    {
+        $Total = $this->pesertaModel->where('id_acara', $id)->CountAllResults();
+        $dataPeserta = $this->pesertaModel->where('id_acara', $id)->findAll();
+        
+        $data = [
+            'title' => 'Data Peserta',
+            'result' => $dataPeserta,
+            'total' => $Total,
+        ];
+        
+        return view('peserta/index', $data);
+    }
+
     public function create()
     {
         session();

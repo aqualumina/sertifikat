@@ -15,7 +15,7 @@ class Peserta extends BaseController
     public function index($id)
     {
         $getTotal = $this->pesertaModel->Total();
-        $dataPeserta = $this->pesertaModel->getPeserta($id);
+        $dataPeserta = $this->pesertaModel->where('id_acara', $id)->findAll();
         
         $data = [
             'title' => 'Data Peserta',
