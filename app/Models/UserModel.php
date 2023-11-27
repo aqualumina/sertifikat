@@ -10,8 +10,8 @@ class UserModel extends Model
     protected $table      = 'users';
     protected $primaryKey = 'id';
     protected $useTimestamps = true;
-    protected $useSoftDeletes = false;
-    protected $allowedFields = ['firstname', 'lastname', 'role', 'user_name', 'user_email', 'user_password', 'user_created_at'];
+    protected $useSoftDeletes = true;
+    protected $allowedFields = ['firstname', 'lastname', 'role', 'user_name', 'user_email', 'user_password', 'created_at', 'updated_at', 'deleted_at'];
 
     public function getUsers($id = false)
     {

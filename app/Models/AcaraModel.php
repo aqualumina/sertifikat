@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Models;
+
 use CodeIgniter\Model;
 
 class AcaraModel extends Model
@@ -13,10 +14,11 @@ class AcaraModel extends Model
     // Atribut untuk menyimpan created_at dan update_at
     protected $useTimestamps    = true;
     protected $allowedFields = [
-        'no_sertifikat','tgl_sertifikat', 'nama_acara', 'narasumber', 'tgl_acara_mulai', 'tgl_acara_selesai', 
-        'keterangan', 'kode_acara', 'link_acara','jumlah_peserta', 'gbr_sert_depan', 'gbr_sert_blk','template', 'jenis_dokumen',
-        'ket_statis_awal','ket_statis_akhir','nama_ttd', 'nip_ttd', 'ttd', 'cap','materi','jpl'
+        'no_sertifikat', 'tgl_sertifikat', 'nama_acara', 'narasumber', 'tgl_acara_mulai', 'tgl_acara_selesai',
+        'keterangan', 'kode_acara', 'link_acara', 'jumlah_peserta', 'gbr_sert_depan', 'gbr_sert_blk', 'template', 'jenis_dokumen',
+        'ket_statis_awal', 'ket_statis_akhir', 'nama_ttd', 'nip_ttd', 'ttd', 'cap', 'materi', 'jpl','id_penyelenggara','id_kategori'
     ];
+
 
     public function getAcara($id = false)
     {
@@ -28,13 +30,11 @@ class AcaraModel extends Model
         }
     }
 
-    function getTotal($id_acara)
-	{
-		$this->from('tbl_peserta');
-		$this->where('id_acara', $id_acara);
-		$data = $this->count();
-		return $data;
-	}
-
-
+    function Total($id = false)
+    {
+        $query = $this->table('tbl_peserta')
+        ->join ('tbl_acara', 'id_acara')    
+        ->where('id_acara', $id)->CountAllResults();
+        return $query;
+    }
 }

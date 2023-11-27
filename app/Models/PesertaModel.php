@@ -15,14 +15,23 @@ class PesertaModel extends Model
 
     public function getPeserta($id = false)
     {
-        $query = $this->select('*');
-
-        // ->where('id', $id);
+        $query = $this->table('tbl_peserta')
+        ->where('id_acara', $id);
+        
         if ($id === false) {
             return $query->findAll();
         } else {
+            return $query->get()->getResultArray();
             return $query->where(['id_peserta' => $id])->first();
         }
+    }
+
+    function Total($id = false)
+    {
+        $this->from('tbl_peserta');
+        $this->where('id_acara', $id);
+        $data = $this->countAll();
+        return $data;
     }
     
 }

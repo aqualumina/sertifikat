@@ -15,8 +15,10 @@ class PenyelenggaraModel extends Model
 
     public function getPenyelenggara($id = false)
     {
-        $query = $this->select('*');
-
+        
+        $query = $this->table('tbl_penyelenggara')
+        ->join('tbl_acara', 'id_acara')
+        ->where('deleted_at is null');
         // ->where('id', $id);
         if ($id === false) {
             return $query->findAll();

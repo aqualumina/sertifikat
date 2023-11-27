@@ -27,12 +27,29 @@ class Acara extends BaseController
 
     public function index()
     {
+        // $getTotal = $this->acaraModel->Total();
         $dataAcara = $this->acaraModel->getAcara();
         $data = [
-            'title' => "Data Acara",
-            'result' => $dataAcara
+            'title'  => "Data Acara",
+            'result' => $dataAcara,
+            // 'total'  => $getTotal,
         ];
+        // dd($data);
         return view('acara/index', $data);
+    }
+
+    public function detail($id)
+    {
+        $Total = $this->pesertaModel->where('id_acara', $id)->CountAllResults();
+        $dataPeserta = $this->pesertaModel->where('id_acara', $id)->findAll();
+        
+        $data = [
+            'title' => 'Data Peserta',
+            'result' => $dataPeserta,
+            'total' => $Total,
+        ];
+        
+        return view('peserta/index', $data);
     }
 
     public function create()
@@ -45,13 +62,14 @@ class Acara extends BaseController
             'peserta'       => $this->pesertaModel->findAll(),
             'validation' => \Config\Services::validation()
         ];
+        // dd($data);
         return view('acara/create', $data);
     }
 
     public function save()
     {
 
-        $start     = $this->request->getVar('tgl_acara_mulai');
+        $start  = $this->request->getVar('tgl_acara_mulai');
         $end    = $this->request->getVar('tgl_acara_selesai');
         //menghitung selisih dengan hasil detik
         $diff = strtotime($end) - strtotime($start);
@@ -90,18 +108,18 @@ class Acara extends BaseController
                     'required' => 'Tanggal Sertifikat  Harus Diisi'
                 ]
             ],
-            'tgl_acara' =>  [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Tanggal Acara  Harus Diisi'
-                ]
-            ],
-            'tgl_acara_akhir' =>  [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Tanggal Acara Akhir  Harus Diisi'
-                ]
-            ],
+            // 'tgl_acara' =>  [
+            //     'rules' => 'required',
+            //     'errors' => [
+            //         'required' => 'Tanggal Acara  Harus Diisi'
+            //     ]
+            // ],
+            // 'tgl_acara_akhir' =>  [
+            //     'rules' => 'required',
+            //     'errors' => [
+            //         'required' => 'Tanggal Acara Akhir  Harus Diisi'
+            //     ]
+            // ],
         ])) {
             // return redirect()->to('/acara/create')->withInput();
             $validation = \Config\Services::validation();
@@ -125,6 +143,7 @@ class Acara extends BaseController
         ]);
 
         session()->setFlashdata('msg', 'Berhasil menambahkan acara');
+        
         return redirect()->to('/acara');
     }
 
@@ -216,9 +235,6 @@ class Acara extends BaseController
             if ($key == 0) {
                 continue;
             }
-            $this->acaraModel->insert([
-                'jumlah_peserta' => count($id),
-            ]);
 
             $this->pesertaModel->insert([
                 'id_acara' => $id,
@@ -233,6 +249,6 @@ class Acara extends BaseController
         }
 
         session()->setFlashData("msg", "Data berhasil diimport!");
-        return redirect()->to('/peserta');
+        return redirect()->to('/acara', $id);
     }
 }
