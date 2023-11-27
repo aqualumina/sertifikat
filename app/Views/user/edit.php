@@ -16,30 +16,35 @@
                     <div class="mb-3 row">
                         <label for="name" class="col-sm-2 col-for  m-label">Nama Depan</label>
                         <div class="col-sm-4">
-                            <input type="text" class="form-control" name="firstname" value="<?= $result['firstname'] ?>">
+                            <input type="text" class="form-control <?= $validation->hasError('firstname') ? 'is-invalid' : '' ?>" name="firstname" value="<?= $result['firstname'] ?>">
+                            <div class="invalid-feedback"><?= $validation->getError('firstname') ?></div>
                         </div>
                         <label for="name" class="col-sm-2 col-for  m-label">Nama Belakang</label>
                         <div class="col-sm-4">
-                            <input type="text" class="form-control" name="lastname" value="<?= $result['lastname'] ?>">
+                            <input type="text" class="form-control <?= $validation->hasError('lastname') ? 'is-invalid' : '' ?>" name="lastname" value="<?= $result['lastname'] ?>">
+                            <div class="invalid-feedback"><?= $validation->getError('lastname') ?></div>
                         </div>
                     </div>
                     <div class="mb-3 row">
                         <label for="username" class="col-sm-2 col-form-label">Username</label>
                         <div class="col-sm-4">
-                            <input type="text" class="form-control" name="username" value="<?= $result['user_name'] ?>">
+                            <input type="text" class="form-control <?= $validation->hasError('username') ? 'is-invalid' : '' ?>" name="username" value="<?= $result['user_name'] ?>">
+                            <div class="invalid-feedback"><?= $validation->getError('username') ?></div>
                         </div>
                         <label for="email" class="col-sm-2 col-form-label">Email</label>
                         <div class="col-sm-4">
-                            <input type="text" class="form-control" name="email" value="<?= $result['user_email'] ?>">
+                            <input type="text" class="form-control <?= $validation->hasError('email') ? 'is-invalid' : '' ?>" name="email" value="<?= $result['user_email'] ?>">
+                            <div class="invalid-feedback"><?= $validation->getError('email') ?></div>
                         </div>
                     </div>
                     <div class="mb-3 row">
                         <label for="username" class="col-sm-2 col-form-label">Role</label>
                         <div class="col-sm-4">
-                            <select class="form-control" name="role">
+                            <select class="form-control <?= $validation->hasError('role') ? 'is-invalid' : '' ?>" name="role">
                                 <option value="Karyawan" <?= $result['role'] == 'Karyawan' ? 'selected' : '' ?>>Pengguna</option>
                                 <option value="Admin" <?= $result['role'] == 'Admin' ? 'selected' : '' ?>>Admin</option>
                             </select>
+                            <div class="invalid-feedback"><?= $validation->getError('role') ?></div>
                         </div>
                     </div>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-end">

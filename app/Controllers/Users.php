@@ -114,7 +114,8 @@ class Users extends BaseController
         $dataUser = $this->userModel->getUsers($id);
         $data = [
             'title' => 'Ubah User',
-            'result' => $dataUser
+            'result' => $dataUser,
+            'validation' => \Config\Services::validation()
         ];
 
 
@@ -155,20 +156,20 @@ class Users extends BaseController
                     'required' => 'Silahkan Pilih Role',
                 ]
             ],
-            'password' => [
-                'rules' => 'required|min_length[5]',
-                'errors' => [
-                    'required' => 'Silahkan Masukan Password',
-                    'min_length' => 'Panjang password minimal 5',
-                ]
-            ],
-            'pass_confirm' => [
-                'rules' => 'required|matches[password]',
-                'errors' => [
-                    'required' => 'Silahkan Masukan Password',
-                    'matches' => 'Password Harus Sama'
-                ]
-            ],
+            // 'password' => [
+            //     'rules' => 'required|min_length[5]',
+            //     'errors' => [
+            //         'required' => 'Silahkan Masukan Password',
+            //         'min_length' => 'Panjang password minimal 5',
+            //     ]
+            // ],
+            // 'pass_confirm' => [
+            //     'rules' => 'required|matches[password]',
+            //     'errors' => [
+            //         'required' => 'Silahkan Masukan Password',
+            //         'matches' => 'Password Harus Sama'
+            //     ]
+            // ],
         ])) {
             $validation = \Config\Services::validation();
             // dd($validation);
