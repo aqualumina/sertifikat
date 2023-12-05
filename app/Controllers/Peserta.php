@@ -31,11 +31,58 @@ class Peserta extends BaseController
         $dataPeserta = $this->pesertaModel->getPeserta($id);
         $data = [
             'title' => 'Ubah Peserta',
-            'result' => $dataPeserta
+            'result' => $dataPeserta,
+            'validation' => \Config\Services::validation()
         ];
 
         
         return view('peserta/edit', $data);
+    }
+
+    public function update($id)
+    {
+        if (!$this->validate([
+            'nama_acara' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Nama Acara Harus Diisi',
+                ]
+            ],
+            'narasumber' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Narasumber Harus Diisi',
+                ]
+            ],
+            'jenis_dokumen' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Jenis Dokumen Harus Diisi',
+                ]
+            ],
+            'tgl_sertifikat' =>  [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Tanggal Sertifikat  Harus Diisi'
+                ]
+            ],
+        ])) {
+            $validation = \Config\Services::validation();
+            // dd($validation);
+            return redirect()->back()->withInput()->with('validation', $validation);
+        }
+
+        $this->pesertaModel->save([
+            
+            'nama' => $this->request->getVar('nama'),
+            'nip' => $this->request->getVar('nip'),
+            'no_hp' => $this->request->getVar('no_hp'),
+            'email' => $this->request->getVar('email'),
+            'kode_unik' => md5($this->request->getVar('nip')+$id)
+        ]);
+
+        session()->setFlashdata('msg', 'Berhasil memperbarui user');
+        return redirect()->to('/peserta');
     }
 
     public function delete($id)

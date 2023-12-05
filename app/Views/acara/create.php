@@ -81,9 +81,6 @@
                         <div class="invalid-feedback"><?= $validation->getError('tgl_acara_akhir') ?></div>
                     </div>
                 </div>
-                <div class="mb-3 row">
-
-                </div>
 
                 <div class="widget-toolbar"></div>
                 <span style="float: right">
