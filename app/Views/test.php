@@ -1,0 +1,1 @@
+<?= $result['nama_acara'] ?>

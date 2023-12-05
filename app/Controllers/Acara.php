@@ -41,7 +41,7 @@ class Acara extends BaseController
     public function detail($id)
     {
         $Total = $this->pesertaModel->where('id_acara', $id)->CountAllResults();
-        $dataPeserta = $this->pesertaModel->where('id_acara', $id)->findAll();
+        $dataPeserta = $this->pesertaModel->getPeserta($id);
         
         $data = [
             'title' => 'Data Peserta',
@@ -154,20 +154,6 @@ class Acara extends BaseController
         return redirect()->to('acara/');
     }
 
-    // public function bgdepan($id){
-    //     $dataAcara = $this->AcaraModel->getAcara($id);
-    //     if (empty($dataAcara)){
-    //         throw new \CodeIgniter\Exeptions\PageNotFoundExeption("Judul acara $id tidak ditemukan!");
-
-    //     }
-    //     $data=[
-    //         'title'=> 'Ubah Buku',
-    //         'validation'=> \Config\Services::validation(),
-    //         'result'=> $dataAcara
-    //     ];
-    //     return view('acara/modal-bgdepan',$data);
-    // }
-
     public function upload($id)
     {
 
@@ -192,29 +178,27 @@ class Acara extends BaseController
         return redirect()->to('/acara');
     }
 
-    public function uploadbgbelakang($id)
-    {
-        $dataAcara = new AcaraModel();
-        $fileBGback = $this->request->getFile('bgbelakang');
-        if ($fileBGback->getError() == 4) {
-            $namaFileBGBelakang = $this->defaultImage;
-        } else {
+    // public function uploadbgbelakang($id)
+    // {
+    //     $dataAcara = new AcaraModel();
+    //     $fileBGback = $this->request->getFile('bgbelakang');
+    //     if ($fileBGback->getError() == 4) {
+    //         $namaFileBGBelakang = $this->defaultImage;
+    //     } else {
 
-            $namaFileBGBelakang = $fileBGback->getRandomName();
+    //         $namaFileBGBelakang = $fileBGback->getRandomName();
 
-            $fileBGback->move('images/bgbelakang', $namaFileBGBelakang);
-        }
+    //         $fileBGback->move('images/bgbelakang', $namaFileBGBelakang);
+    //     }
+    //     $dataAcara->save([
+    //         'id_acara' => $id,
+    //         'gbr_sert_blk' => $namaFileBGBelakang,
 
-
-        $dataAcara->save([
-            'id_acara' => $id,
-            'gbr_sert_blk' => $namaFileBGBelakang,
-
-        ]);
-        // dd($fileBG);
-        session()->setFlashdata('msg', 'Berhasil Upload Background Belakang');
-        return redirect()->to('/acara');
-    }
+    //     ]);
+    //     // dd($fileBG);
+    //     session()->setFlashdata('msg', 'Berhasil Upload Background Belakang');
+    //     return redirect()->to('/acara');
+    // }
 
     public function importData($id)
     {
@@ -250,5 +234,28 @@ class Acara extends BaseController
 
         session()->setFlashData("msg", "Data berhasil diimport!");
         return redirect()->to('/acara', $id);
+    }
+
+    
+    public function export($id)
+    {
+
+        $abc = $this->request->getVar('gambar');
+        
+        $image = \Config\Services::image();
+        $image->withFile("./images/bgdepan/$abc")
+        ->text('Telah mengikuti kegiatan', [
+            'color'      => '#fff',
+            'opacity'    => 0.5,
+            'withShadow' => true,
+            'hAlign'     => 'center',
+            'vAlign'     => 'bottom',
+            'fontSize'   => 20,
+        ])
+        ->save('./image/test/');
+
+        // dd($image);
+        // dd($sertifikat);
+        // return redirect()->to('/acara', $id);
     }
 }

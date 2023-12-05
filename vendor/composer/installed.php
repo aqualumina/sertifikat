@@ -3,7 +3,7 @@
         'name' => 'codeigniter4/codeigniter4',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'b59854a73c7d9910f1ef7010f1d104d421c14f9a',
+        'reference' => 'ec7b958e87cb63c43b6e750cb3d42c06ba416a0f',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -22,7 +22,7 @@
         'codeigniter4/codeigniter4' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'b59854a73c7d9910f1ef7010f1d104d421c14f9a',
+            'reference' => 'ec7b958e87cb63c43b6e750cb3d42c06ba416a0f',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -117,6 +117,24 @@
             'install_path' => __DIR__ . '/../friendsofphp/php-cs-fixer',
             'aliases' => array(),
             'dev_requirement' => true,
+        ),
+        'guzzlehttp/psr7' => array(
+            'pretty_version' => '2.6.2',
+            'version' => '2.6.2.0',
+            'reference' => '45b30f99ac27b5ca93cb4831afe16285f57b8221',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../guzzlehttp/psr7',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'intervention/image' => array(
+            'pretty_version' => '2.7.2',
+            'version' => '2.7.2.0',
+            'reference' => '04be355f8d6734c826045d02a1079ad658322dad',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../intervention/image',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'kint-php/kint' => array(
             'pretty_version' => '4.2.3',
@@ -376,6 +394,12 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'psr/http-factory-implementation' => array(
+            'dev_requirement' => false,
+            'provided' => array(
+                0 => '1.0',
+            ),
+        ),
         'psr/http-message' => array(
             'pretty_version' => '1.1',
             'version' => '1.1.0.0',
@@ -384,6 +408,12 @@
             'install_path' => __DIR__ . '/../psr/http-message',
             'aliases' => array(),
             'dev_requirement' => false,
+        ),
+        'psr/http-message-implementation' => array(
+            'dev_requirement' => false,
+            'provided' => array(
+                0 => '1.0',
+            ),
         ),
         'psr/log' => array(
             'pretty_version' => '1.1.4',
@@ -406,6 +436,15 @@
             'reference' => '408d5eafb83c57f6365a3ca330ff23aa4a5fa39b',
             'type' => 'library',
             'install_path' => __DIR__ . '/../psr/simple-cache',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'ralouphie/getallheaders' => array(
+            'pretty_version' => '3.0.3',
+            'version' => '3.0.3.0',
+            'reference' => '120b605dfeb996808c31b6477290a714d356e822',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../ralouphie/getallheaders',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
@@ -738,6 +777,15 @@
             'install_path' => __DIR__ . '/../symfony/string',
             'aliases' => array(),
             'dev_requirement' => true,
+        ),
+        'tecnickcom/tcpdf' => array(
+            'pretty_version' => '6.6.5',
+            'version' => '6.6.5.0',
+            'reference' => '5fce932fcee4371865314ab7f6c0d85423c5c7ce',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../tecnickcom/tcpdf',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'theseer/tokenizer' => array(
             'pretty_version' => '1.2.1',

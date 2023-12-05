@@ -44,8 +44,12 @@
                                 <td>
                                     <table id="dynamic-table" class="table table-striped table-bordered table-hover">
                                         <tr>
-                                            <td>Id</td>
-                                            <td><?= $value['id_acara'] ?></td>
+                                            <td>Nama Acara</td>
+                                            <td><?= $value['nama_penyelenggara'] ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Nama Acara</td>
+                                            <td><?= $value['nama_acara'] ?></td>
                                         </tr>
                                         <tr>
                                             <td>Nama</td>
@@ -58,7 +62,10 @@
 
                                         <tr>
                                             <td>Cetak</td>
-                                            <td><a href="<?php echo base_url(); ?> \route EXPORT DISINI<?= $value['kode_unik'] ?><?= $value['id_acara'] ?>" target="_blank"><span class="label label-success">DOWNLOAD VERSI CETAK</span></a><br>
+                                            <form action="/acara/export/<?= $value['id_peserta'] ?>" method="POST" enctype="multipart/form-data">
+                                                <input type="hidden" name="gambar" value="<?= $value['gbr_sert_depan'] ?>">
+                                                <td><button type="submit"><span class="label label-success">DOWNLOAD VERSI CETAK</span></button><br>
+                                            </form>
                                         </tr>
                                         <tr>
                                             <td>Kode Unik</td>

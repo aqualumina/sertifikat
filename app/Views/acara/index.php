@@ -83,16 +83,9 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Upload Background Depan<?= $value['id_acara'] ?></td>
+                                    <td>Upload Background<?= $value['id_acara'] ?></td>
                                     <td>
                                         <a href="#depan<?= $value['id_acara'] ?>" data-toggle="modal">
-                                            <button class="btn btn-xs btn-primary" type="">Upload</button></a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Upload Background Belakang</td>
-                                    <td>
-                                        <a href="#belakang<?= $value['id_acara'] ?>" data-toggle="modal">
                                             <button class="btn btn-xs btn-primary" type="">Upload</button></a>
                                     </td>
                                 </tr>

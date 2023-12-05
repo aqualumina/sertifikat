@@ -11,13 +11,16 @@ class PesertaModel extends Model
     protected $primaryKey = 'id_peserta';
     protected $useTimestamps = true;
     protected $useSoftDeletes = true;
-    protected $allowedFields = ['id_acara','nama', 'nip', 'no_hp', 'email', 'kode_unik', 'nama_file', 'judul','kategori'];
+    protected $allowedFields = ['id_acara','nama', 'nip', 'no_hp', 'email', 'kode_unik', 'nama_file', 'judul','kategori', 'sertif'];
 
     public function getPeserta($id = false)
     {
+        // $query = $this->select('*');
         $query = $this->table('tbl_peserta')
-        ->where('id_acara', $id);
-        
+            ->select('*')
+            ->join('tbl_acara', 'id_acara')
+            ->where('id_acara', $id);
+
         if ($id === false) {
             return $query->findAll();
         } else {

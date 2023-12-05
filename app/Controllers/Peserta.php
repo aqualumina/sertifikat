@@ -44,4 +44,5 @@ class Peserta extends BaseController
         session()->setFlashdata("msg", "Data berhasil dihapus!");
         return redirect()->to('/peserta');
     }
+
 }
