@@ -37,28 +37,72 @@
             <!-- <div class="bg-landing">
             <img src="images/bg.jpg" alt="">
         </div> -->
-        <section class="bg-landing">
-            <div class="container-fluid-landing">
-                <div class="card" style="width:48rem; height:20rem">
-                    <div class="card-body">
-                        <form style="text-align: center;">
-                            <h2 class="cari-sertif pt-2">CARI SERTIFIKAT</h2>
-                            <br>
-                            
-                            <div style="font-size:18px; font-weight: bold; width: 70%; margin: 0 auto;">
-                                <p style="color: #13998A;">Ketik Nama atau NIP kemudian tekan tombol Cari</p>
-                            </div><br>
-                            <input type="text" placeholder="Tulis disini........" name="cari" id="certi" maxlength="100" class="form-control input-lg" style="width: 350px !important; display:inline-block; text-align: center;" required="">&nbsp;
-                            <button type="submit" class="btn" style="background-color: #13998A; color:#FFFFFF"><i class="fa fa-search"></i><strong>C A R I</strong></button>          
-                            <br>
-                        </form>
+            <section class="bg-landing">
+                <div class="container-fluid-landing">
+                    <div class="card" style="width:48rem; height:20rem">
+                        <div class="card-body">
+                            <!-- <form style="text-align: center;"> -->
+                            <form action="<?= base_url('/landing') ?>" method="post" style="text-align: center;">
+                                <h2 class="cari-sertif pt-2">CARI SERTIFIKAT</h2>
+                                <br>
+
+                                <div style="font-size:18px; font-weight: bold; width: 70%; margin: 0 auto;">
+                                    <p style="color: #13998A;">Ketik NIP kemudian tekan tombol Cari</p>
+                                </div><br>
+                                <input type="text" placeholder="Tulis disini........" name="cari" id="certi" maxlength="100" class="form-control input-lg" style="width: 350px !important; display:inline-block; text-align: center;" required="">
+                                <button type="submit" class="btn" style="background-color: #13998A; color:#FFFFFF"><i class="fa fa-search"></i><strong>C A R I</strong></button>
+                                <button type="button" class="btn btn-danger" onclick="resetInput()">Reset</button>
+                                <br>
+                            </form>
+
+
+                            <!-- Tambahkan untuk menampilkan hasil pencarian -->
+                            <?php if (!empty($result)) : ?>
+                                <div class="container">
+                                    <h2>Hasil Pencarian:</h2>
+                                    
+                                    <ul>
+
+                                        <table class="table table-hover">
+                                            <thead class="thead-light">
+                                                <tr>
+                                                    <th>No</th>
+                                                    <th>Nama Peserta</th>
+                                                    <th>NIP</th>
+                                                    <th>Nama Acara</th>
+                                                    <th>Aksi</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <?php $no = 1;
+                                                foreach ($result as $value) : ?>
+                                                    <tr>
+                                                        <td><?= $no++  ?></td>
+                                                        <td><?= $value['nama'] ?></td>
+                                                        <td><?= $value['nip']  ?></td>
+                                                        <td><?= $value['nama_acara']  ?></td>
+                                                        <td>
+                                                            <a class="btn btn-primary" href="#" role="button">Download</a>
+                                                            </form>
+                                                        </td>
+                                                    </tr>
+                                                <?php endforeach; ?>
+
+                                            </tbody>
+
+                                        <?php endif; ?>
+                                </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </section>
+            </section>
         </header>
     </div>
 
 </body>
 
 </html>
+<script>
+    function resetInput() {
+        document.getElementById("certi").value = ''; 
+    }
+</script>
