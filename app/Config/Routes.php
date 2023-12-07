@@ -38,7 +38,8 @@ $routes->get('/register', 'Auth::indexregister');
 $routes->post('/login/save', 'Auth::saveRegister');
 $routes->get('/logout', 'Auth::logout');
 
-
+$routes->get('/landing', 'Landing::index');
+$routes->post('/landing', 'Landing::search');
 
 $routes->group('acara', ['filter' => 'auth'], function ($rs) {
     $rs->get('/', 'Acara::index');

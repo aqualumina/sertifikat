@@ -116,7 +116,8 @@ NOTE: This file contains the styling for responsive Template.
   margin: 0 -10%;
   padding: 0 10%;
 }
-.header-logo-satu {
+
+.header-logo-satu {  
   height: 38px;
   width: 28px;
 }
@@ -126,6 +127,8 @@ NOTE: This file contains the styling for responsive Template.
   color: white;
   /* align-items: center; */
 }
+
+  /* align-items: center; */
 
 /* logo login */
 .logo-login { 

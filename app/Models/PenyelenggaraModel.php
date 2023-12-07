@@ -17,7 +17,7 @@ class PenyelenggaraModel extends Model
     {
         
         $query = $this->table('tbl_penyelenggara')
-        ->join('tbl_acara', 'id_acara')
+        // ->join('tbl_acara', 'id_acara')
         ->where('deleted_at is null');
         // ->where('id', $id);
         if ($id === false) {
