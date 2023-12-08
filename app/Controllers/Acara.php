@@ -127,17 +127,28 @@ class Acara extends BaseController
             return redirect()->back()->withInput()->with('validation', $validation);
         }
 
+        $id_kategori = $this->request->getVar('id_kategori');
+
+        if($id_kategori == 1)
+        {
+            $no_sertifikat = 100;
+        } else if ($id_kategori == 2) {
+            $no_sertifikat = 200;
+        } else {
+
+        }
+
         $dataAcara->save([
 
             'jenis_dokumen' => $this->request->getVar('jenis_dokumen'),
             'nama_acara' => $this->request->getVar('nama_acara'),
             'narasumber' => $this->request->getVar('narasumber'),
-            'no_sertifikat' => $this->request->getVar('no_sertifikat'),
+            'no_sertifikat' => $no_sertifikat,
             'tgl_sertifikat' => $this->request->getVar('tgl_sertifikat'),
             'tgl_acara_mulai' => $this->request->getVar('tgl_acara_mulai'),
             'tgl_acara_selesai' => $this->request->getVar('tgl_acara_selesai'),
-            'id_penyelenggara' => $this->request->getVar('id_penyelenggara'),
-            'id_kategori' => $this->request->getVar('id_kategori'),
+            'id_penyelenggara' => $this->request->getVar('penyelenggara'),
+            'id_kategori' => $id_kategori,
             'jpl' => $jam,
 
         ]);

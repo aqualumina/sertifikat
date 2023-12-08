@@ -42,8 +42,8 @@ class Landing extends BaseController
         // return view('landing', $data);
         $keyword = $this->request->getPost('cari');
 
-    $dataPeserta = $this->pesertaModel->like('nama', $keyword)
-        ->orLike('nip', $keyword)
+    $dataPeserta = $this->pesertaModel->like('nip', $keyword)
+        // ->orLike('nip', $keyword)
         ->findAll();
 
     // Ambil informasi nama acara untuk setiap peserta

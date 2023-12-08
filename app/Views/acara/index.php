@@ -53,6 +53,14 @@
                                     <td width="70%"><b><?= $value['nama_acara'] ?></b></td>
                                 </tr>
                                 <tr>
+                                    <td>Penyelenggara</td>
+                                    <td width="70%"><b><?= $value['nama_penyelenggara'] ?></b></td>
+                                </tr>
+                                <tr>
+                                    <td>Kategori</td>
+                                    <td width="70%"><b><?= $value['nama_kategori'] ?></b></td>
+                                </tr>
+                                <tr>
                                     <td>Mulai</td>
                                     <td><?= $value['tgl_acara_mulai'] ?></td>
                                 </tr>
