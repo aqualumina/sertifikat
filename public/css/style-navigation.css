@@ -1,0 +1,90 @@
+/* Header */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  
+  .landing-nav{
+    width: 100%;
+    height: 65px;
+    line-height: 65px;
+    padding: 0px 100px;
+    position: fixed;
+    background-color: #13998A;
+  }
+  
+  
+  .header-logo-landing {  
+    height: 45px;
+    width: 30px;
+    
+  }
+  
+  .landing-a {
+    text-decoration: none !important;
+  }
+
+  .app-e-sertif-landing {
+    font-size: 175%;
+    color: white;
+    align-items: center;
+    font-weight: bold;
+    padding-left: 7px;
+    padding-top: 0.5em;
+    
+  }
+
+  .app-e-sertif-landing:hover {
+    color: #ffdf00;
+    transition: all 0.4s ease 0s;
+    background-color: transparent;
+    text-decoration: none !important;
+  }
+
+  .login-tombol-landing {
+    font-size: 100%;
+    color: white;
+    align-items: center;
+    font-weight: 600;
+    padding-left: 7px;
+    padding-top: 10px;
+    
+  }
+
+  .login-tombol-landing:hover {
+    color: #ffdf00;
+    transition: all 0.4s ease 0s;
+    background-color: transparent;
+    text-decoration: none !important;
+  }
+  .bg-landing{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/bg.jpg);
+    display: flex;
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+
+
+    .login-landing {
+        float: right;
+        text-decoration: none;
+    }
+    
+    .container-fluid-landing {
+      justify-content: center;
+      opacity: 94%;
+
+    }
+
+    .cari-sertif {
+      font-weight: bold;
+      color: #13998A;
+      font-size: 320%;
+      font-stretch: semi-expanded;
+    }
+    
+  }

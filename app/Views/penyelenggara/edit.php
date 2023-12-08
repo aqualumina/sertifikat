@@ -5,7 +5,7 @@
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="/">Beranda</a></li>
-                    <li class="breadcrumb-item"><a href="/users">Penyelenggara</a></li>
+                    <li class="breadcrumb-item"><a href="/penyelenggara">Penyelenggara</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Tambah Penyelenggara</li>
                 </ol>
             </nav>
