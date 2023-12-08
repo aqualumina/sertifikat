@@ -41,12 +41,12 @@
                 </tr>
             </thead>
 
-            <tbody >
+            <tbody>
                 <?php $no = 1;
                 foreach ($result as $value) : ?>
                     <tr>
                         <td><?= $no++ ?></td>
-                        <td >
+                        <td>
                             <table id="fixed-table" class="table table-striped table-bordered table-fixed">
                                 <tr>
                                     <td>Nama</td>
@@ -61,10 +61,9 @@
                                     <td><?= $value['tgl_acara_selesai'] ?></td>
                                 </tr>
                                 <tr>
-                                    <td>Total Jam</td>
-                                    <td><?= $value['jpl'] ?></td>
+                                    <td>Total</td>
+                                    <td><?= $value['jpl'] ?> Jam</td>
                                 </tr>
-
                             </table>
                         </td>
 
@@ -72,33 +71,39 @@
                             <b><a href="/acara/<?= $value['id_acara'] ?>">
                                     <span class="badge badge-success">Detail</a></b>
                         </td>
-                        
+
                         <td>
                             <table id="simple-table" class="table table-striped table-bordered table-hover">
                                 <tr>
                                     <td>Upload Peserta</td>
-                                    <td>
+                                    <td style="text-align:center">
                                         <a href="#modalpeserta<?= $value['id_acara'] ?>" data-toggle="modal">
                                             <button class="btn btn-xs btn-primary" type="">Upload</button></a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Upload Background Depan<?= $value['id_acara'] ?></td>
-                                    <td>
+                                    <td style="text-align:center">
                                         <a href="#depan<?= $value['id_acara'] ?>" data-toggle="modal">
                                             <button class="btn btn-xs btn-primary" type="">Upload</button></a>
                                     </td>
                                 </tr>
-                                <tr>
+                                <!-- <tr>
                                     <td>Upload Background Belakang</td>
-                                    <td>
+                                    <td style="text-align:center">
                                         <a href="#belakang<?= $value['id_acara'] ?>" data-toggle="modal">
                                             <button class="btn btn-xs btn-primary" type="">Upload</button></a>
                                     </td>
-                                </tr>
+                                </tr> -->
                                 <tr>
                                     <td>Upload Template</td>
-                                    <td><a href="#template" data-toggle="modal"><button class="btn btn-xs btn-primary" type="">Upload</button></a>
+                                    <td style="text-align:center"><a href="#template" data-toggle="modal"><button class="btn btn-xs btn-primary" type="">Upload</button></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Edit Acara</td>
+                                    <td style="text-align:center">
+                                        <a class="btn btn-warning las la-pen" href="<?= base_url('acara/edit/' . $value['id_acara'])  ?>" role="button"></a>
                                     </td>
                                 </tr>
                             </table>
