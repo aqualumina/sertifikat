@@ -6,10 +6,12 @@ use \App\Models\AcaraModel;
 use \App\Models\PenyelenggaraModel;
 use \App\Models\PesertaModel;
 use \App\Models\KategoriModel;
+use PhpOffice\PhpSpreadsheet\Calculation\Web\Service;
 use PhpOffice\PhpSpreadsheet\Reader\Xls;
 use PhpOffice\PhpSpreadsheet\Reader\Xlsx;
 use PHPUnit\Util\Xml\Validator;
 use PhpOffice\PhpSpreadsheet\IOFactory;
+use TCPDF;
 
 class Acara extends BaseController
 {
@@ -17,8 +19,10 @@ class Acara extends BaseController
     private $penyelenggaraModel;
     private $pesertaModel;
     private $kategoriModel;
+    private $mypdf;
     public function __construct()
     {
+        $this->mypdf = new TCPDF();
         $this->acaraModel = new AcaraModel();
         $this->penyelenggaraModel = new PenyelenggaraModel();
         $this->pesertaModel = new PesertaModel();
@@ -321,5 +325,22 @@ class Acara extends BaseController
 
         session()->setFlashData("msg", "Data berhasil diimport!");
         return redirect()->to('/acara', $id);
+    }
+    public function export($id){
+        // dd($id);
+        $acara =  $this->acaraModel->getAcara($id);
+        
+     
+        $pdf= new TCPDF('L', 'mm', 'A4', true, 'UTF-8', false);
+        // $pdf->Open();
+        $pdf->Open();
+
+        // $pdf->SetTitle($detail->nama);
+        
+        // $pdf->AddPage('L', 'A4');
+        
+        //Buat PDF 
+        $pdf->Output("huasbduyas" . '.pdf', 'I');
+        
     }
 }

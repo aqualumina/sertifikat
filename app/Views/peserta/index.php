@@ -58,7 +58,7 @@
 
                                         <tr>
                                             <td>Cetak</td>
-                                            <td><a href="<?php echo base_url(); ?> \route EXPORT DISINI<?= $value['kode_unik'] ?><?= $value['id_acara'] ?>" target="_blank"><span class="label label-success">DOWNLOAD VERSI CETAK</span></a><br>
+                                            <td><a href="<?php echo base_url('acara/export/' . $value['id_acara']); ?>" target="_blank"><span class="label label-success">DOWNLOAD VERSI CETAK</span></a><br>
                                         </tr>
                                         <tr>
                                             <td>Kode Unik</td>
