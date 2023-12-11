@@ -81,8 +81,6 @@ class Acara extends BaseController
         $menit    = $diff - $jam * (60 * 60);
 
         $dataAcara = new AcaraModel();
-
-
         if (!$this->validate([
             'nama_acara' => [
                 'rules' => 'required',
@@ -127,8 +125,97 @@ class Acara extends BaseController
             return redirect()->back()->withInput()->with('validation', $validation);
         }
 
+        $id_kategori = $this->request->getVar('id_kategori');
+
+        if($id_kategori == 1)
+        {
+            $no_sertifikat = 100;
+        } else if ($id_kategori == 2) {
+            $no_sertifikat = 200;
+        } else {
+
+        }
+
         $dataAcara->save([
 
+            'jenis_dokumen' => $this->request->getVar('jenis_dokumen'),
+            'nama_acara' => $this->request->getVar('nama_acara'),
+            'narasumber' => $this->request->getVar('narasumber'),
+            'no_sertifikat' => $no_sertifikat,
+            'tgl_sertifikat' => $this->request->getVar('tgl_sertifikat'),
+            'tgl_acara_mulai' => $this->request->getVar('tgl_acara_mulai'),
+            'tgl_acara_selesai' => $this->request->getVar('tgl_acara_selesai'),
+            'id_penyelenggara' => $this->request->getVar('penyelenggara'),
+            'id_kategori' => $id_kategori,
+            'jpl' => $jam,
+            
+
+        ]);
+
+        session()->setFlashdata('msg', 'Berhasil menambahkan acara');
+        // dd($dataAcara);
+        
+        return redirect()->to('/acara');
+    }
+
+    public function edit($id)
+    {
+        $dataAcara = $this->acaraModel->getAcara($id);
+        $data = [
+            'title' => 'Ubah Acara',
+            'kategori'      => $this->kategoriModel->findAll(),
+            'penyelenggara' => $this->penyelenggaraModel->findAll(),
+            'result' => $dataAcara,
+            'validation' => \Config\Services::validation()
+        ];
+
+
+        return view('acara/edit', $data);
+    }
+
+    public function update($id)
+    {
+        if (!$this->validate([
+            'nama_acara' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Nama Acara Harus Diisi',
+                ]
+            ],
+            'narasumber' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Narasumber Harus Diisi',
+                ]
+            ],
+            'jenis_dokumen' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Jenis Dokumen Harus Diisi',
+                ]
+            ],
+            'tgl_sertifikat' =>  [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Tanggal Sertifikat  Harus Diisi'
+                ]
+            ],
+        ])) {
+            $validation = \Config\Services::validation();
+            // dd($validation);
+            return redirect()->back()->withInput()->with('validation', $validation);
+        }
+
+        $start  = $this->request->getVar('tgl_acara_mulai');
+        $end    = $this->request->getVar('tgl_acara_selesai');
+        //menghitung selisih dengan hasil detik
+        $diff = strtotime($end) - strtotime($start);
+
+        //membagi detik menjadi jam
+        $jam    = floor($diff / (60 * 60));
+
+        $this->acaraModel->save([
+            
             'jenis_dokumen' => $this->request->getVar('jenis_dokumen'),
             'nama_acara' => $this->request->getVar('nama_acara'),
             'narasumber' => $this->request->getVar('narasumber'),
@@ -136,14 +223,12 @@ class Acara extends BaseController
             'tgl_sertifikat' => $this->request->getVar('tgl_sertifikat'),
             'tgl_acara_mulai' => $this->request->getVar('tgl_acara_mulai'),
             'tgl_acara_selesai' => $this->request->getVar('tgl_acara_selesai'),
-            'id_penyelenggara' => $this->request->getVar('id_penyelenggara'),
-            'id_kategori' => $this->request->getVar('id_kategori'),
+            'id_penyelenggara' => $this->request->getVar('penyelenggara'),
+            'id_kategori' => $this->request->getVar('kategori'),
             'jpl' => $jam,
-
         ]);
 
-        session()->setFlashdata('msg', 'Berhasil menambahkan acara');
-        
+        session()->setFlashdata('msg', 'Berhasil memperbarui user');
         return redirect()->to('/acara');
     }
 
@@ -153,20 +238,6 @@ class Acara extends BaseController
         session()->setFlashdata("msg", "Data berhasil dihapus!");
         return redirect()->to('acara/');
     }
-
-    // public function bgdepan($id){
-    //     $dataAcara = $this->AcaraModel->getAcara($id);
-    //     if (empty($dataAcara)){
-    //         throw new \CodeIgniter\Exeptions\PageNotFoundExeption("Judul acara $id tidak ditemukan!");
-
-    //     }
-    //     $data=[
-    //         'title'=> 'Ubah Buku',
-    //         'validation'=> \Config\Services::validation(),
-    //         'result'=> $dataAcara
-    //     ];
-    //     return view('acara/modal-bgdepan',$data);
-    // }
 
     public function upload($id)
     {
