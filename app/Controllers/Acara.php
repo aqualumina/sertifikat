@@ -48,13 +48,13 @@ class Acara extends BaseController
     {
         $Total = $this->pesertaModel->where('id_acara', $id)->CountAllResults();
         $dataPeserta = $this->pesertaModel->where('id_acara', $id)->findAll();
-        
+
         $data = [
             'title' => 'Data Peserta',
             'result' => $dataPeserta,
             'total' => $Total,
         ];
-        
+
         return view('peserta/index', $data);
     }
 
@@ -133,13 +133,11 @@ class Acara extends BaseController
 
         $id_kategori = $this->request->getVar('id_kategori');
 
-        if($id_kategori == 1)
-        {
+        if ($id_kategori == 1) {
             $no_sertifikat = 100;
         } else if ($id_kategori == 2) {
             $no_sertifikat = 200;
         } else {
-
         }
 
         $dataAcara->save([
@@ -154,13 +152,13 @@ class Acara extends BaseController
             'id_penyelenggara' => $this->request->getVar('penyelenggara'),
             'id_kategori' => $id_kategori,
             'jpl' => $jam,
-            
+
 
         ]);
 
         session()->setFlashdata('msg', 'Berhasil menambahkan acara');
         // dd($dataAcara);
-        
+
         return redirect()->to('/acara');
     }
 
@@ -221,7 +219,7 @@ class Acara extends BaseController
         $jam    = floor($diff / (60 * 60));
 
         $this->acaraModel->save([
-            
+
             'jenis_dokumen' => $this->request->getVar('jenis_dokumen'),
             'nama_acara' => $this->request->getVar('nama_acara'),
             'narasumber' => $this->request->getVar('narasumber'),
@@ -279,7 +277,7 @@ class Acara extends BaseController
 
             $namaFileBGBelakang = $fileBGback->getRandomName();
 
-            $fileBGback->move('images/bgbelakang', $namaFileBGBelakang);
+            $fileBGback->move('images/background', $namaFileBGBelakang);
         }
 
 
@@ -289,7 +287,7 @@ class Acara extends BaseController
 
         ]);
         // dd($fileBG);
-        session()->setFlashdata('msg', 'Berhasil Upload Background Belakang');
+        session()->setFlashdata('msg', 'Berhasil Upload Background');
         return redirect()->to('/acara');
     }
 
@@ -320,36 +318,48 @@ class Acara extends BaseController
                 'no_hp' => $value['2'],
                 'email' => $value['3'],
                 'kategori' => $value['4'],
-                'kode_unik' => md5(($value['1'])+$id)
-
+                'kode_unik' => md5(($value['1']) + $id)
             ]);
         }
 
         session()->setFlashData("msg", "Data berhasil diimport!");
         return redirect()->to('/acara', $id);
     }
-    public function export($id){
+    public function export($id)
+    {
         // dd($id);
         $acaraModel = new AcaraModel();
+        $pesertaModel = new PesertaModel();
         $acara = $acaraModel->getAcara($id);
+        $peserta = $pesertaModel->getPeserta($id);
 
         // Load TCPDF library
         $pdf = new TCPDF();
 
         // Add a page
-        $pdf->AddPage();
+        $pdf->AddPage('L');
 
         // Set font
         $pdf->SetFont('times', 'normal', 12);
         $imageFilename = $acara['gbr_sert_depan'];
-        $imagePath = 'C:/xampp/htdocs/sertifikat/public/images/bgbelakang/' . $imageFilename;        
+        $imagePath = 'C:/xampp/htdocs/sertifikat/public/images/background/' . $imageFilename;
+        $pdf->SetAutoPageBreak(false, 0);
+        $pdf->Image($imageFilename, 0, 0, 297, 210);
         // $imageUrl = base_url('images/bgbelakang/' . $acara['gbr_sert_depan']);
 
 
-        $html = '<h1>Event Details</h1>';
-        $html .= '<img src="' . $imagePath . '" alt="Event Image">';
+        $html  = '<img src="' . $imagePath . '" alt="Event Image">';
+
+        //KODE SERTIFIKAT
+        $pdf->SetFont('helvetica', 'B', 11);
+        $pdf->Ln(40);
+        $pdf->Cell(464, 0, 'NO :' . $peserta['kode_unik'], 0, $Ln = 8, 'C', 0, '', 0, false, 'D', 'T');
+
+        $html .= '<h1>Event Details</h1>';
+        $html .= '<h1 style="color:blue;text-align:center;">This is a heading</h1>';
+        $html .= '<p> Telah diberikan sertifikat kepada</p>';
         $html .= '<p><strong>Dokumen:</strong> ' . $acara['jenis_dokumen'] . '</p>';
-        $html .= '<p><strong>Dokumen:</strong> ' . $imagePath . '</p>';
+        // $html .= '<p><strong>Dokumen:</strong> ' . $imagePath . '</p>';
 
 
         // Add more HTML content or customize as neded
@@ -359,6 +369,5 @@ class Acara extends BaseController
 
         // Save the PDF to a file or stream to the browser
         $pdf->Output('custom_content.pdf', 'D');
-    
     }
 }
