@@ -10,9 +10,11 @@
         "ext-intl": "*",
         "ext-json": "*",
         "ext-mbstring": "*",
+        "dompdf/dompdf": "*",
         "kint-php/kint": "^4.0",
         "laminas/laminas-escaper": "^2.9",
         "phpoffice/phpspreadsheet": "*",
+        "predis/predis": "*",
         "psr/log": "^1.1",
         "tecnickcom/tcpdf": "*"
     },
@@ -25,7 +27,6 @@
         "nexusphp/tachycardia": "^1.0",
         "phpstan/phpstan": "1.4.3",
         "phpunit/phpunit": "^9.1",
-        "predis/predis": "^1.1",
         "rector/rector": "0.12.10"
     },
     "suggest": {

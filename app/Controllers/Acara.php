@@ -11,6 +11,8 @@ use PhpOffice\PhpSpreadsheet\Reader\Xls;
 use PhpOffice\PhpSpreadsheet\Reader\Xlsx;
 use PHPUnit\Util\Xml\Validator;
 use PhpOffice\PhpSpreadsheet\IOFactory;
+use PhpOffice\PhpSpreadsheet\Writer\Pdf\Dompdf;
+use Predis\Configuration\Options;
 use TCPDF;
 
 class Acara extends BaseController
@@ -328,19 +330,35 @@ class Acara extends BaseController
     }
     public function export($id){
         // dd($id);
-        $acara =  $this->acaraModel->getAcara($id);
-        
-     
-        $pdf= new TCPDF('L', 'mm', 'A4', true, 'UTF-8', false);
-        // $pdf->Open();
-        $pdf->Open();
+        $acaraModel = new AcaraModel();
+        $acara = $acaraModel->getAcara($id);
 
-        // $pdf->SetTitle($detail->nama);
-        
-        // $pdf->AddPage('L', 'A4');
-        
-        //Buat PDF 
-        $pdf->Output("huasbduyas" . '.pdf', 'I');
-        
+        // Load TCPDF library
+        $pdf = new TCPDF();
+
+        // Add a page
+        $pdf->AddPage();
+
+        // Set font
+        $pdf->SetFont('times', 'normal', 12);
+        $imageFilename = $acara['gbr_sert_depan'];
+        $imagePath = 'C:/xampp/htdocs/sertifikat/public/images/bgbelakang/' . $imageFilename;        
+        // $imageUrl = base_url('images/bgbelakang/' . $acara['gbr_sert_depan']);
+
+
+        $html = '<h1>Event Details</h1>';
+        $html .= '<img src="' . $imagePath . '" alt="Event Image">';
+        $html .= '<p><strong>Dokumen:</strong> ' . $acara['jenis_dokumen'] . '</p>';
+        $html .= '<p><strong>Dokumen:</strong> ' . $imagePath . '</p>';
+
+
+        // Add more HTML content or customize as neded
+
+        // Output the HTML content to the PDF
+        $pdf->writeHTML($html, true, false, true, false, '');
+
+        // Save the PDF to a file or stream to the browser
+        $pdf->Output('custom_content.pdf', 'D');
+    
     }
 }
