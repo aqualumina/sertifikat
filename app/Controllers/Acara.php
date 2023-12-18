@@ -344,22 +344,15 @@ class Acara extends BaseController
         $imageFilename = $acara['gbr_sert_depan'];
         $imagePath = 'C:/xampp/htdocs/sertifikat/public/images/background/' . $imageFilename;
         $pdf->SetAutoPageBreak(false, 0);
-        $pdf->Image($imageFilename, 0, 0, 297, 210);
-        // $imageUrl = base_url('images/bgbelakang/' . $acara['gbr_sert_depan']);
 
+        $html  = '<div class="sertif" style="background-image: url('.$imagePath.');">';
 
-        $html  = '<img src="' . $imagePath . '" alt="Event Image">';
-
-        //KODE SERTIFIKAT
-        $pdf->SetFont('helvetica', 'B', 11);
-        $pdf->Ln(40);
-        $pdf->Cell(464, 0, 'NO :' . $peserta['kode_unik'], 0, $Ln = 8, 'C', 0, '', 0, false, 'D', 'T');
-
-        $html .= '<h1>Event Details</h1>';
-        $html .= '<h1 style="color:blue;text-align:center;">This is a heading</h1>';
-        $html .= '<p> Telah diberikan sertifikat kepada</p>';
-        $html .= '<p><strong>Dokumen:</strong> ' . $acara['jenis_dokumen'] . '</p>';
-        // $html .= '<p><strong>Dokumen:</strong> ' . $imagePath . '</p>';
+        // $html  = '<div style="position: relative;"></div>';
+        // $html  = '<img src="' . $imagePath . '" alt="Event Image">';
+        
+        $html .= '<h1 style="color:blue;">This is a heading</h1>';
+        $html .= '<br><br><br><div style="text-align:center;">Telah diberikan sertifikat kepada</div>';
+        // $html .= '<p><strong>Dokumen:</strong> ' . $acara['jenis_dokumen'] . '</p>';
 
 
         // Add more HTML content or customize as neded
