@@ -37,9 +37,9 @@
                         </div>
                     </div>
                     <div class="mb-3 row">
-                        <label for="no_sertifikat" class="col-sm-2 col-form-label">Kategori</label>
+                        <label for="id_kategori" class="col-sm-2 col-form-label">Kategori</label>
                         <div class="col-sm-4">
-                            <select class="form-control" name="no_sertifikat">
+                            <select class="form-control" name="id_kategori">
                                 <?php foreach ($kategori as $value) : ?>
                                     <option value="<?= $value['id_kategori'] ?>">
                                         <?= $value['nama_kategori'] ?></option>
