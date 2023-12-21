@@ -329,39 +329,36 @@ class Acara extends BaseController
         return redirect()->to('/acara', $id);
     }
     public function export($id){
+        // dd($id);
         $acaraModel = new AcaraModel();
         $acara = $acaraModel->getAcara($id);
-    
+
+        // Load TCPDF library
         $pdf = new TCPDF();
+
+        // Add a page
         $pdf->AddPage();
-    
-        // Set background image
-        $imageFilename = $acara['gbr_sert_depan'];
-        $imagePath = 'C:\xampp\htdocs\sertifikat\public\images\bgbelakang\sertif.jpg';
-    
-        // Calculate image dimensions based on page size
-        $pdfWidth = $pdf->getPageWidth();
-        $pdfHeight = $pdf->getPageHeight();
-        $imageDimensions = getimagesize($imagePath);
-        $imageWidth = $pdfWidth;
-        $imageHeight = ($pdfWidth / $imageDimensions[0]) * $imageDimensions[1];
-    
-        // Draw the background image
-        $pdf->Image($imagePath, 0, 0, $imageWidth, $imageHeight, '', '', '', false, 300);
-    
+
         // Set font
         $pdf->SetFont('times', 'normal', 12);
-    
-        $html = '<div style="text-align: center; color: #000; font-family: Arial, sans-serif; margin-top: '.($pdfHeight/2 - 50).'px; background-color: #f5f5f5; padding: 20px; border-radius: 10px; width: 50%; margin-left: 25%;">';
-        $html .= '<div style="margin-top: 20px;"></div>'; // Adding space with CSS margin
-        $html .= '<h1 style="font-size: 24px; margin-bottom: 20px;">Event Details</h1>';
-        $html .= '<p style="font-size: 18px; margin-bottom: 10px;"><strong>Dokumen: SERTIFIKAT</strong></p>';
-        $html .= '</div>';
-        // Write HTML content
+        $imageFilename = $acara['gbr_sert_depan'];
+        $imagePath = 'C:/xampp/htdocs/sertifikat/public/images/bgbelakang/' . $imageFilename;        
+        // $imageUrl = base_url('images/bgbelakang/' . $acara['gbr_sert_depan']);
+
+
+        $html = '<h1>Event Details</h1>';
+        $html .= '<img src="' . $imagePath . '" alt="Event Image">';
+        $html .= '<p><strong>Dokumen:</strong> ' . $acara['jenis_dokumen'] . '</p>';
+        $html .= '<p><strong>Dokumen:</strong> ' . $imagePath . '</p>';
+
+
+        // Add more HTML content or customize as neded
+
+        // Output the HTML content to the PDF
         $pdf->writeHTML($html, true, false, true, false, '');
-    
-        // Output the PDF
+
+        // Save the PDF to a file or stream to the browser
         $pdf->Output('custom_content.pdf', 'D');
-    }
     
+    }
 }
