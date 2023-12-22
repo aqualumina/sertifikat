@@ -1,53 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
+<?= $this->extend('layout-landing/template-landing') ?>
+<?= $this->section('content') ?>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>App Sertifikat Pelatihan</title>
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="<?= base_url() ?>/images/diskominfo_loader.png" />
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="<?= base_url() ?>/css/bootstrap.min.css">
-    <!-- Typography CSS -->
-    <link rel="stylesheet" href="<?= base_url() ?>/css/typography.css">
-    <!-- Style CSS -->
-    <link rel="stylesheet" href="<?= base_url() ?>/css/style-navigation.css">
-    <!-- Responsive CSS -->
-    <link rel="stylesheet" href="<?= base_url() ?>/css/responsive.css">
-    <link rel="stylesheet" href="<?= base_url() ?>/css/validation.css">
+<main>
+    <section class="bg-landing">
+        <div class="container-landing">
+            <div class="iq-card iq-card-block iq-card-stretch iq-card-height">
+                <div class="iq-card-body">
+                    <form action="<?= base_url('/landing') ?>" method="post" style="text-align: center;">
+                        <h2 class="cari-sertif pt-2" style="color: #13998A; font-weight:800;">CARI SERTIFIKAT</h2>
+                        <br>
 
-</head>
+                        <div style="font-size:18px; font-weight: bold; width: 70%; margin: 0 auto;">
+                            <p style="color: #13998A;">Ketik NIP Kemudian Tekan Tombol Cari</p>
+                        </div><br>
+                        <input type="text" placeholder="Ketikan NIP disini..." name="cari" id="certi" maxlength="100" class="form-control input-lg" style="width: 350px !important; display:inline-block; text-align: center;" required="">
+                        <button type="submit" class="btn" style="background-color: #13998A; color:#FFFFFF"><i class="fa fa-search"></i><strong>C A R I</strong></button>
+                        <button type="reset" class="btn btn-danger" onclick="resetInput()"><strong>R E S E T</strong></button>
+                        <br>
+                    </form>
+                    <style>
+                        .scroll {
+                            height: 220px;
+                            overflow: scroll;
+                            overflow-x: hidden;
+                        }
+                    </style>
 
-<body>
-    <div class="wrapper">
-        <div class="iq-top-navbar">
-            <?= $this->include('beranda/header') ?>
-        </div>
-
-        <section class="bg-landing">
-            <div class="container-fluid-landing">
-                <div class="card">
-                    <div class="card-body">
-                        <!-- <form style="text-align: center;"> -->
-                        <form action="<?= base_url('/landing') ?>" method="post" style="text-align: center;">
-                            <h2 class="cari-sertif pt-2">CARI SERTIFIKAT</h2>
-                            <br>
-
-                            <div style="font-size:18px; font-weight: bold; width: 70%; margin: 0 auto;">
-                                <p style="color: #13998A;">Ketik NIP kemudian tekan tombol Cari</p>
-                            </div><br>
-                            <input type="text" placeholder="Tulis disini........" name="cari" id="certi" maxlength="100" class="form-control input-lg" style="width: 350px !important; display:inline-block; text-align: center;" required="">
-                            <button type="submit" class="btn" style="background-color: #13998A; color:#FFFFFF"><i class="fa fa-search"></i><strong>C A R I</strong></button>
-                            <button type="button" class="btn btn-danger" onclick="resetInput()">Reset</button>
-                            <br>
-                        </form>
-
-
-                        <!-- Tambahkan untuk menampilkan hasil pencarian -->
+                    <!-- Tambahkan untuk menampilkan hasil pencarian -->
+                    
                         <?php if (!empty($result)) : ?>
-                            <div class="container">
-                                <h2>Hasil Pencarian:</h2>
+                            <div class="container-fluid">
+                                <h3 style="color: #13998A;">Hasil Pencarian:</h3>
+                                <div class="scroll">
                                 <div class="card mb-4">
                                     <div class="card-header">
                                         <?= $title ?>
@@ -82,17 +66,15 @@
                                     </table>
                                 </div>
                             </div>
-                        <?php endif; ?>
                     </div>
+                <?php endif; ?>
                 </div>
-        </section>
-
-    </div>
-</body>
-
-</html>
+            </div>
+    </section>
+</main>
 <script>
     function resetInput() {
         document.getElementById("certi").value = '';
     }
 </script>
+<?= $this->endSection() ?>
