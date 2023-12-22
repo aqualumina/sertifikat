@@ -83,12 +83,11 @@ class Peserta extends BaseController
             'nip' => $this->request->getVar('nip'),
             'no_hp' => $this->request->getVar('no_hp'),
             'email' => $this->request->getVar('email'),
+          'kode_unik' => md5($this->request->getVar('nip')+$id)
         ]);
-
         session()->setFlashdata('msg', 'Berhasil memperbarui Peserta');
         return redirect()->to('/acara');
     }
-
 
     public function delete($id)
     {

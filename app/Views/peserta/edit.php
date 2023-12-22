@@ -1,4 +1,5 @@
 <?= $this->extend('layout/template') ?>
+
     <?= $this->section('content') ?>
     <main>
         <div class="container-fluid px-4">

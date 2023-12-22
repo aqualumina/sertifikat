@@ -15,9 +15,7 @@ class PesertaModel extends Model
 
     public function getPeserta($id = false)
     {
-        $query = $this->table('tbl_peserta')
-        ->where('id_acara', $id);
-        
+        $query = $this->select('*');
         if ($id === false) {
             return $query->findAll();
         } else {
