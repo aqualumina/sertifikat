@@ -23,6 +23,13 @@ class PesertaModel extends Model
             return $query->where(['id_peserta' => $id])->first();
         }
     }
+    public function getPesertabyAcara($id)
+    {
+        $query = $this->select('*');
+      
+            return $query->where(['id_acara' => $id])->first();
+        
+    }
 
     function Total($id = false)
     {

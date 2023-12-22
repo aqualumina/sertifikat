@@ -6,6 +6,7 @@ use \App\Models\AcaraModel;
 use \App\Models\PenyelenggaraModel;
 use \App\Models\PesertaModel;
 use \App\Models\KategoriModel;
+use Mpdf\Mpdf;
 use PhpOffice\PhpSpreadsheet\Calculation\Web\Service;
 use PhpOffice\PhpSpreadsheet\Reader\Xls;
 use PhpOffice\PhpSpreadsheet\Reader\Xlsx;
@@ -353,51 +354,101 @@ class Acara extends BaseController
 
     //     $pdf->Output('custom_content.pdf', 'D');
     
+    // }public function export($id){
+    //     $acaraModel = new AcaraModel();
+    //     $pesertaModel = new PesertaModel();
+    //     $acara = $acaraModel->getAcara($id);
+    //     $peserta = $pesertaModel->getPesertabyAcara($id);
+    //     $pdf = new TCPDF();
+    //     $pdf->AddPage('P', 'A4');
+    
+    //     $imageTTD = $acara['ttd'];
+    //     $ttdPath = 'C:/xampp/htdocs/sertifikat/public/images/ttd/' . $imageTTD; 
+    
+    //     $imageCAP = $acara['cap'];
+    //     $capPath = 'C:/xampp/htdocs/sertifikat/public/images/cap/1701413122_39c9501c2d92476fda45.jpeg'; 
+    
+    //     $imageFilename = $acara['gbr_sert_depan'];
+    //     $imagePath = 'C:/xampp/htdocs/sertifikat/public/images/bgbelakang/' . $imageFilename; 
+    //     $pdfWidth = $pdf->getPageWidth();
+    //     $pdfHeight = $pdf->getPageHeight();
+    //     $imageDimensions = getimagesize($imagePath);
+    //     $imageWidth = $pdfWidth;
+    //     $imageHeight = ($pdfWidth / $imageDimensions[0]) * $imageDimensions[1];
+    
+    //     $pdf->Image($imagePath, 0, 0, $imageWidth, $imageHeight, '', '', '', false, 300);
+    
+    //     $pdf->SetFont('times', 'normal', 12);
+    
+    //     $html = '<div style="text-align: center; color: #000; font-family: Arial, sans-serif; margin-top: '.($pdfHeight/2 - 50).'px padding: 20px; border-radius: 10px; width: 50%; margin-left: 25%;">';
+    //     $html .= '<div style="margin-top: 20px;"></div>';
+    //     $html .= '<div style="margin-top: 15px;"></div>'; 
+    //     $html .= '<div style="font-size: 24px; margin-bottom: 5px;">Sertifikat</div>';
+    //     $html .= '<div style="font-size: 8px; margin-bottom: 10px;">Kategori = pelatihan / seminar</div>';
+    //     $html .= '<div style="font-size: 12px; margin-bottom: 25%;">Diberikan Kepada</div>';
+    //     $html .= '<div style="font-size: 26px; margin-bottom: 20px;">' .$peserta['nama'] . '</div>';
+    //     $html .= '<div style="font-size: 12px; margin-bottom: 20px;">Atas Partisipasinya dalam acara (nama Acara) pada tanggal (tanggal awal) yang diselenggarakan oleh (penyelenggara)</div>';
+    //     $html .= '<div style="margin-top: 15px;"></div>'; 
+    //     $html .= '<div style="font-size: 12px; margin-bottom: 25%;">Yogyakarta, (tanggal sertifikat)</div>';
+    //     $html .= '<div style="font-size: 12px; margin-bottom: 25%;">penyelenggara </div>';
+    //     $html .= '<img src="' . $capPath . '" alt="Event Image">';
+    //     $html .= '<div style="font-size: 12px; margin-bottom: 20px;">' . $acara['nama_ttd'] . '</div>';
+    //     $html .= '</div>';
+    
+    //     $pdf->writeHTML($html, true, false, true, false, '');
+    
+    //     $pdf->Output('custom_content.pdf', 'D');
     // }
-    public function export($id){
-        $acaraModel = new AcaraModel();
-        $acara = $acaraModel->getAcara($id);
-    
-        $pdf = new TCPDF();
-        $pdf->AddPage('P', 'A4');// Potrait / A4
+   
+public function export($id) {
+    $acaraModel = new AcaraModel();
+    $pesertaModel = new PesertaModel();
+    $acara = $acaraModel->getAcara($id);
+    $peserta = $pesertaModel->getPesertabyAcara($id);
 
-        $imageTTD = $acara['ttd'];
-        $ttdPath = 'C:/xampp/htdocs/sertifikat/public/images/ttd/' . $imageTTD; 
+    // Initialize mPDF
+    $mpdf = new Mpdf();
+    $mpdf->AddPage('P', 'A4');
 
-        $imageCAP = $acara['cap'];
-        $capPath = 'C:/xampp/htdocs/sertifikat/public/images/cap/' . $imageCAP; 
+    $imageTTD = $acara['ttd'];
+    $ttdPath = 'C:/xampp/htdocs/sertifikat/public/images/ttd/' . $imageTTD;
+
+    $imageCAP = $acara['cap'];
+    $capPath = 'C:/xampp/htdocs/sertifikat/public/images/cap/1701413122_39c9501c2d92476fda4z5.jpeg';
+
+    $imageFilename = $acara['gbr_sert_depan'];
+    $imagePath = 'C:/xampp/htdocs/sertifikat/public/images/bgbelakang/' . $imageFilename;
+
+    // Draw the background image
+    $mpdf->Image($imagePath, 0, 0, 210, 297, '', '', '', false, 300);
+
+    // Set font
+    $mpdf->SetFont('times', 'normal', 12);
+
+    // HTML content with modern styles and black font color
+    $html = <<<HTML
+    <div style="text-align: center; color: #000; font-family: Arial, sans-serif; padding: 20px; border-radius: 10px; width: 50%; margin-left: 25%;">
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <div style="margin-top: 20px;"></div>
+        <div style="margin-top: 15px;"></div>
+        <div style="font-size: 45px; margin-bottom: 5px;">Sertifikat</div>
+        <div style="font-size: 8px; margin-bottom: 10px;">Kategori = pelatihan / seminar</div>
+        <div style="font-size: 12px; margin-bottom: 25%;">Diberikan Kepada</div>
+        <div style="font-size: 26px; margin-bottom: 20px;">{$peserta['nama']}</div>
+        <div style="font-size: 12px; margin-bottom: 20px;">Atas Partisipasinya dalam acara (nama Acara) pada tanggal (tanggal awal) yang diselenggarakan oleh (penyelenggara)</div>
+        <div style="margin-top: 15px;"></div>
+        <div style="font-size: 12px; margin-bottom: 25%;">Yogyakarta, (tanggal sertifikat)</div>
+        <div style="font-size: 12px; margin-bottom: 25%;">penyelenggara </div>
+        <img src="{$capPath}" alt="Event Image">
+        <div style="font-size: 12px; margin-bottom: 20px;">{$acara['nama_ttd']}</div>
+    </div>
+    HTML;
     
-        $imageFilename = $acara['gbr_sert_depan'];
-        $imagePath = 'C:/xampp/htdocs/sertifikat/public/images/bgbelakang/' . $imageFilename; 
-    
-        $pdfWidth = $pdf->getPageWidth();
-        $pdfHeight = $pdf->getPageHeight();
-        $imageDimensions = getimagesize($imagePath);
-        $imageWidth = $pdfWidth;
-        $imageHeight = ($pdfWidth / $imageDimensions[0]) * $imageDimensions[1];
-    
-        $pdf->Image($imagePath, 0, 0, $imageWidth, $imageHeight, '', '', '', false, 300);
-    
-        $pdf->SetFont('times', 'normal', 12);
-    
-        $html = '<div style="text-align: center; color: #000; font-family: Arial, sans-serif; margin-top: '.($pdfHeight/2 - 50).'px; background-color: #f5f5f5; padding: 20px; border-radius: 10px; width: 50%; margin-left: 25%;">';
-        $html .= '<div style="margin-top: 20px;"></div>'; // Adding space with CSS margin
-        $html .= '<div style="margin-top: 15px;"></div>'; // Adding space with CSS marginf
-        $html .= '<div style="font-size: 24px; margin-bottom: 5px; ">Sertifikat</div>';
-        $html .= '<div style="font-size: 8px; margin-bottom: 10px;">Kategori = pelatihan / seminar</div>';
-        $html .= '<div style="font-size: 12px; margin-bottom: 25%;">Diberikan Kepada</div>';
-        $html .= '<div style="font-size: 26px; margin-bottom: 20px;">' . "Nama Penerima" . '</div>';
-        $html .= '<div style="font-size: 12px; margin-bottom: 20px;">Atas Partisipasinya dalam acara (nama Acara) pada tanggal (tanggal awal) yang diselenggarakan oleh (penyelenggara)</div>';
-        $html .= '<div style="margin-top: 15px;"></div>'; // Adding space with CSS marginf
-        $html .= '<div style="font-size: 12px; margin-bottom: 25%;">Yogyakarta, (tanggal sertifikat)</div>';
-        $html .= '<div style="font-size: 12px; margin-bottom: 25%;">penyelenggara </div>';
-        $html .= '<img src="' . $imageCAP . '" alt="Event Image">';
-        $html .= '<div style="font-size: 12px; margin-bottom: 20px;">' . $acara['nama_ttd'] . '</div>';
-        $html .= '</div>';
-    
-        $pdf->writeHTML($html, true, false, true, false, '');
-    
-        $pdf->Output('custom_content.pdf', 'D');
-    }
-    
+
+    // Write HTML content
+    $mpdf->WriteHTML($html);
+
+    // Output the PDF
+    $mpdf->Output('custom_content.pdf', 'D');
+}
 }
