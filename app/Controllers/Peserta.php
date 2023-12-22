@@ -73,7 +73,7 @@ class Peserta extends BaseController
         }
 
         $this->pesertaModel->save([
-            
+            'id_peserta' => $id,
             'nama' => $this->request->getVar('nama'),
             'nip' => $this->request->getVar('nip'),
             'no_hp' => $this->request->getVar('no_hp'),
