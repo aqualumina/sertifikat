@@ -406,7 +406,6 @@ public function export($id) {
     $acara = $acaraModel->getAcara($id);
     $peserta = $pesertaModel->getPesertabyAcara($id);
 
-    // Initialize mPDF
     $mpdf = new Mpdf();
     $mpdf->AddPage('P', 'A4');
 
@@ -419,13 +418,10 @@ public function export($id) {
     $imageFilename = $acara['gbr_sert_depan'];
     $imagePath = 'C:/xampp/htdocs/sertifikat/public/images/bgbelakang/' . $imageFilename;
 
-    // Draw the background image
     $mpdf->Image($imagePath, 0, 0, 210, 297, '', '', '', false, 300);
 
-    // Set font
     $mpdf->SetFont('times', 'normal', 12);
 
-    // HTML content with modern styles and black font color
     $html = <<<HTML
     <div style="text-align: center; color: #000; font-family: Arial, sans-serif; padding: 20px; border-radius: 10px; width: 50%; margin-left: 25%;">
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
@@ -445,10 +441,8 @@ public function export($id) {
     HTML;
     
 
-    // Write HTML content
     $mpdf->WriteHTML($html);
 
-    // Output the PDF
     $mpdf->Output('custom_content.pdf', 'D');
 }
 }
