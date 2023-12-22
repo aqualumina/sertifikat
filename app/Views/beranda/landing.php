@@ -57,7 +57,7 @@
                                                     <td><?= $value['nip']  ?></td>
                                                     <td><?= $value['nama_acara']  ?></td>
                                                     <td>
-                                                        <a class="btn btn-primary" href="#" role="button">Download</a>
+                                                        <a class="btn btn-primary" href="<?= base_url('acara/export/' . $value['id_acara'] . '/' . $value['id_peserta']); ?>" role="button">Download</a>
                                                         </form>
                                                     </td>
                                                 </tr>

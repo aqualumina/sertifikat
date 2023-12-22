@@ -255,7 +255,7 @@ class Acara extends BaseController
 
             $namaFileBGDpn = $fileBG->getRandomName();
 
-            $fileBG->move('images/bgdepan', $namaFileBGDpn);
+            $fileBG->move('images/bgbelakang', $namaFileBGDpn);
         }
 
         $dataAcara->save([
@@ -268,29 +268,29 @@ class Acara extends BaseController
         return redirect()->to('/acara');
     }
 
-    public function uploadbgbelakang($id)
-    {
-        $dataAcara = new AcaraModel();
-        $fileBGback = $this->request->getFile('bgbelakang');
-        if ($fileBGback->getError() == 4) {
-            $namaFileBGBelakang = $this->defaultImage;
-        } else {
+    // public function uploadbgbelakang($id)
+    // {
+    //     $dataAcara = new AcaraModel();
+    //     $fileBGback = $this->request->getFile('bgbelakang');
+    //     if ($fileBGback->getError() == 4) {
+    //         $namaFileBGBelakang = $this->defaultImage;
+    //     } else {
 
-            $namaFileBGBelakang = $fileBGback->getRandomName();
+    //         $namaFileBGBelakang = $fileBGback->getRandomName();
 
-            $fileBGback->move('images/bgbelakang', $namaFileBGBelakang);
-        }
+    //         $fileBGback->move('images/bgbelakang', $namaFileBGBelakang);
+    //     }
 
 
-        $dataAcara->save([
-            'id_acara' => $id,
-            'gbr_sert_blk' => $namaFileBGBelakang,
+    //     $dataAcara->save([
+    //         'id_acara' => $id,
+    //         'gbr_sert_blk' => $namaFileBGBelakang,
 
-        ]);
-        // dd($fileBG);
-        session()->setFlashdata('msg', 'Berhasil Upload Background Belakang');
-        return redirect()->to('/acara');
-    }
+    //     ]);
+    //     // dd($fileBG);
+    //     session()->setFlashdata('msg', 'Berhasil Upload Background Belakang');
+    //     return redirect()->to('/acara');
+    // }
 
     public function importData($id)
     {
@@ -385,7 +385,8 @@ class Acara extends BaseController
         <div style="font-size: 40px; margin-bottom: 5px;"><strong>SERTIFIKAT</strong></div>
         <div style="font-size: 18px; margin-bottom: 50px;">Apresiasi</div>
         <div style="font-size: 16px; margin-bottom: 25px;">Diberikan Kepada</div>
-        <div style="font-size: 26px; margin-bottom: 20px;"><strong>{$peserta['nama']}</strong></div>
+        <div style="font-size: 26px; margin-bottom: 5px;"><strong>{$peserta['nama']}</strong></div>
+        <hr>
         <div style="font-size: 16px; margin-bottom: 20px;">Atas Partisipasinya dalam acara <b>{$acara['nama_acara']}</b> pada tanggal <b>{$tglacara}</b> yang Diselenggarakan oleh <b>{$acara['nama_penyelenggara']}</b></div>
         <div style="margin-top: 50px;"></div>
         <div style="font-size: 14px; margin-bottom: 5px;"><strong>Ketua</strong></div>
