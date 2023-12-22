@@ -1,9 +1,55 @@
 <?= $this->extend('landing/template') ?>
 <?= $this->section('content') ?>
 
+<!-- <div class="iq-card iq-card-block iq-card-stretch iq-card-height">
+                        <div class="iq-card-body">
+                           <ul class="suggestions-lists m-0 p-0">
+                              <li class="d-flex mb-4 align-items-center justify-content-between">
+                                 <div class="col-sm-9 p-0">
+                                    <div class="d-flex align-items-center">
+                                       <div class="avatar-55 text-center rounded iq-bg-danger">
+                                          <span>B5</span>
+                                       </div>
+                                       <div class="media-support-info ml-3">
+                                          <h5>Loads</h5>
+                                          <p class="mb-0">Online Participant</p>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-sm-3 p-0">
+                                    <div class="iq-progress-bar-linear d-inline-block mt-1 w-100">
+                                       <div class="iq-progress-bar">
+                                          <span class="bg-danger" data-percent="50" style="transition: width 2s ease 0s; width: 50%;"></span>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li>
+                              <li class="d-flex align-items-center justify-content-between">
+                                 <div class="col-sm-9 p-0">
+                                    <div class="d-flex align-items-center">
+                                       <div class="avatar-55 text-center rounded iq-bg-primary">
+                                          <span>G2</span>
+                                       </div>
+                                       <div class="media-support-info ml-3">
+                                          <h5>Requests</h5>
+                                          <p class="mb-0">Offline Participant</p>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-sm-3 p-0">
+                                    <div class="iq-progress-bar-linear d-inline-block mt-1 w-100">
+                                       <div class="iq-progress-bar">
+                                          <span class="bg-primary" data-percent="80" style="transition: width 2s ease 0s; width: 80%;"></span>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li>
+                           </ul>
+                        </div>
+                     </div> -->
 <div class="card mb-4">
         <div class="card-header">
-            asd
+          
         </div>
         <div class="card-body">
             <a class="btn btn-primary mb-3 float-right" type="button" href="<?= base_url('users/create') ?>">Tambah User</a>
