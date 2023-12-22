@@ -78,6 +78,15 @@ NOTE: This file contains the styling for responsive Template.
 
 }
 
+ /* CSS for table row background color */
+ table.table-striped tbody tr:nth-child(odd) {
+  background-color: rgba(0, 0, 0, 0.05); /* Change this color as needed */
+}
+
+table.table-striped tbody tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.1); /* Change this color as needed */
+}
+
 .selamat {
   margin-top: -15%;
   text-align: center;

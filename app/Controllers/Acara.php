@@ -221,6 +221,7 @@ class Acara extends BaseController
         $dataPeserta = new PesertaModel();
         $file = $this->request->getFile("uploadexcel");
         $ext = $file->getClientExtension();
+        
 
         // dd($ext);
         if ($ext == "xls")

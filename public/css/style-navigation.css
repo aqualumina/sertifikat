@@ -13,6 +13,16 @@
     position: fixed;
     background-color: #13998A;
   }
+
+
+    /* CSS for table row background color */
+    table.table-striped tbody tr:nth-child(odd) {
+        background-color: white; /* Change this color as needed */
+    }
+
+    table.table-striped tbody tr:nth-child(even) {
+        background-color: white; /* Change this color as needed */
+    }
   
   
   .header-logo-landing {  
