@@ -25,7 +25,6 @@ class AcaraModel extends Model
         $query = $this->table('tbl_acara')
         ->select('*')
         ->join('tbl_penyelenggara', 'id_penyelenggara')
-        ->join('tbl_peserta', 'id_peserta')
         ->join('tbl_kategori', 'id_kategori');
         
         if ($id === false) {

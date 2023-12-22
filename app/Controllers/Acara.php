@@ -360,6 +360,12 @@ class Acara extends BaseController
     
         $pdf = new TCPDF();
         $pdf->AddPage('P', 'A4');// Potrait / A4
+
+        $imageTTD = $acara['ttd'];
+        $ttdPath = 'C:/xampp/htdocs/sertifikat/public/images/ttd/' . $imageTTD; 
+
+        $imageCAP = $acara['cap'];
+        $capPath = 'C:/xampp/htdocs/sertifikat/public/images/cap/' . $imageCAP; 
     
         $imageFilename = $acara['gbr_sert_depan'];
         $imagePath = 'C:/xampp/htdocs/sertifikat/public/images/bgbelakang/' . $imageFilename; 
@@ -377,10 +383,16 @@ class Acara extends BaseController
         $html = '<div style="text-align: center; color: #000; font-family: Arial, sans-serif; margin-top: '.($pdfHeight/2 - 50).'px; background-color: #f5f5f5; padding: 20px; border-radius: 10px; width: 50%; margin-left: 25%;">';
         $html .= '<div style="margin-top: 20px;"></div>'; // Adding space with CSS margin
         $html .= '<div style="margin-top: 15px;"></div>'; // Adding space with CSS marginf
-        $html .= '<div style="font-size: 24px; margin-bottom: 15px; margin-top: 20px;">Sertifikat</div>';
-        $html .= '<div style="font-size: 12px; margin-bottom: 20px;">Diberikan Kepada</div>';
-        $html .= '<div>' . $acara['kategori'] . '</div>';
-        $html .= '<div style="font-size: 18px; margin-bottom: 10px;">Dokumen: SERTIFIKAT</div>';
+        $html .= '<div style="font-size: 24px; margin-bottom: 5px; ">Sertifikat</div>';
+        $html .= '<div style="font-size: 8px; margin-bottom: 10px;">Kategori = pelatihan / seminar</div>';
+        $html .= '<div style="font-size: 12px; margin-bottom: 25%;">Diberikan Kepada</div>';
+        $html .= '<div style="font-size: 26px; margin-bottom: 20px;">' . "Nama Penerima" . '</div>';
+        $html .= '<div style="font-size: 12px; margin-bottom: 20px;">Atas Partisipasinya dalam acara (nama Acara) pada tanggal (tanggal awal) yang diselenggarakan oleh (penyelenggara)</div>';
+        $html .= '<div style="margin-top: 15px;"></div>'; // Adding space with CSS marginf
+        $html .= '<div style="font-size: 12px; margin-bottom: 25%;">Yogyakarta, (tanggal sertifikat)</div>';
+        $html .= '<div style="font-size: 12px; margin-bottom: 25%;">penyelenggara </div>';
+        $html .= '<img src="' . $imageCAP . '" alt="Event Image">';
+        $html .= '<div style="font-size: 12px; margin-bottom: 20px;">' . $acara['nama_ttd'] . '</div>';
         $html .= '</div>';
     
         $pdf->writeHTML($html, true, false, true, false, '');
