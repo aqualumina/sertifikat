@@ -22,11 +22,7 @@ class AcaraModel extends Model
 
     public function getAcara($id = false)
     {
-        $query = $this->table('tbl_acara')
-        ->select('*')
-        ->join('tbl_penyelenggara', 'id_penyelenggara')
-        ->join('tbl_kategori', 'id_kategori');
-        
+        $query = $this->select('*');
         if ($id === false) {
             return $query->findAll();
         } else {
