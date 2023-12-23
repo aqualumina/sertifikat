@@ -86,7 +86,7 @@ class Peserta extends BaseController
           'kode_unik' => md5($this->request->getVar('nip')+$id)
         ]);
         session()->setFlashdata('msg', 'Berhasil memperbarui Peserta');
-        return redirect()->to('/acara');
+        return redirect()->to('/acara', $id);
     }
 
     public function delete($id)

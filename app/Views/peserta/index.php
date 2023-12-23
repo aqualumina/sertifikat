@@ -44,10 +44,6 @@
                                 <td>
                                     <table id="dynamic-table" class="table table-striped table-bordered table-hover">
                                         <tr>
-                                            <td>Id</td>
-                                            <td><?= $value['id_acara'] ?></td>
-                                        </tr>
-                                        <tr>
                                             <td>Nama</td>
                                             <td><?= $value['nama'] ?></td>
                                         </tr>
