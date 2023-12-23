@@ -6,10 +6,15 @@ use \App\Models\AcaraModel;
 use \App\Models\PenyelenggaraModel;
 use \App\Models\PesertaModel;
 use \App\Models\KategoriModel;
+use Mpdf\Mpdf;
+use PhpOffice\PhpSpreadsheet\Calculation\Web\Service;
 use PhpOffice\PhpSpreadsheet\Reader\Xls;
 use PhpOffice\PhpSpreadsheet\Reader\Xlsx;
 use PHPUnit\Util\Xml\Validator;
 use PhpOffice\PhpSpreadsheet\IOFactory;
+use PhpOffice\PhpSpreadsheet\Writer\Pdf\Dompdf;
+use Predis\Configuration\Options;
+use TCPDF;
 
 class Acara extends BaseController
 {
@@ -17,8 +22,10 @@ class Acara extends BaseController
     private $penyelenggaraModel;
     private $pesertaModel;
     private $kategoriModel;
+    private $mypdf;
     public function __construct()
     {
+        $this->mypdf = new TCPDF();
         $this->acaraModel = new AcaraModel();
         $this->penyelenggaraModel = new PenyelenggaraModel();
         $this->pesertaModel = new PesertaModel();
@@ -42,13 +49,13 @@ class Acara extends BaseController
     {
         $Total = $this->pesertaModel->where('id_acara', $id)->CountAllResults();
         $dataPeserta = $this->pesertaModel->where('id_acara', $id)->findAll();
-        
+
         $data = [
             'title' => 'Data Peserta',
             'result' => $dataPeserta,
             'total' => $Total,
         ];
-        
+
         return view('peserta/index', $data);
     }
 
@@ -127,13 +134,11 @@ class Acara extends BaseController
 
         $id_kategori = $this->request->getVar('id_kategori');
 
-        if($id_kategori == 1)
-        {
+        if ($id_kategori == 1) {
             $no_sertifikat = 100;
         } else if ($id_kategori == 2) {
             $no_sertifikat = 200;
         } else {
-
         }
 
         $dataAcara->save([
@@ -148,13 +153,13 @@ class Acara extends BaseController
             'id_penyelenggara' => $this->request->getVar('penyelenggara'),
             'id_kategori' => $id_kategori,
             'jpl' => $jam,
-            
+
 
         ]);
 
         session()->setFlashdata('msg', 'Berhasil menambahkan acara');
         // dd($dataAcara);
-        
+
         return redirect()->to('/acara');
     }
 
@@ -175,6 +180,7 @@ class Acara extends BaseController
 
     public function update($id)
     {
+        $dataAcara = new AcaraModel();
         if (!$this->validate([
             'nama_acara' => [
                 'rules' => 'required',
@@ -214,18 +220,32 @@ class Acara extends BaseController
         //membagi detik menjadi jam
         $jam    = floor($diff / (60 * 60));
 
-        $this->acaraModel->save([
-            
+
+        $id_kategori = $this->request->getVar('id_kategori');
+
+        if($id_kategori == 1)
+        {
+            $no_sertifikat = 100;
+        } else if ($id_kategori == 2) {
+            $no_sertifikat = 200;
+        } else {
+
+        }
+
+        $dataAcara->save([
+            'id_acara' => $id,
             'jenis_dokumen' => $this->request->getVar('jenis_dokumen'),
             'nama_acara' => $this->request->getVar('nama_acara'),
             'narasumber' => $this->request->getVar('narasumber'),
-            'no_sertifikat' => $this->request->getVar('no_sertifikat'),
+            'no_sertifikat' => $no_sertifikat,
             'tgl_sertifikat' => $this->request->getVar('tgl_sertifikat'),
             'tgl_acara_mulai' => $this->request->getVar('tgl_acara_mulai'),
             'tgl_acara_selesai' => $this->request->getVar('tgl_acara_selesai'),
             'id_penyelenggara' => $this->request->getVar('penyelenggara'),
-            'id_kategori' => $this->request->getVar('kategori'),
+            'id_kategori' => $id_kategori,
             'jpl' => $jam,
+            
+
         ]);
 
         session()->setFlashdata('msg', 'Berhasil memperbarui user');
@@ -250,7 +270,7 @@ class Acara extends BaseController
 
             $namaFileBGDpn = $fileBG->getRandomName();
 
-            $fileBG->move('images/bgdepan', $namaFileBGDpn);
+            $fileBG->move('images/bgbelakang', $namaFileBGDpn);
         }
 
         $dataAcara->save([
@@ -263,35 +283,36 @@ class Acara extends BaseController
         return redirect()->to('/acara');
     }
 
-    public function uploadbgbelakang($id)
-    {
-        $dataAcara = new AcaraModel();
-        $fileBGback = $this->request->getFile('bgbelakang');
-        if ($fileBGback->getError() == 4) {
-            $namaFileBGBelakang = $this->defaultImage;
-        } else {
+    // public function uploadbgbelakang($id)
+    // {
+    //     $dataAcara = new AcaraModel();
+    //     $fileBGback = $this->request->getFile('bgbelakang');
+    //     if ($fileBGback->getError() == 4) {
+    //         $namaFileBGBelakang = $this->defaultImage;
+    //     } else {
 
-            $namaFileBGBelakang = $fileBGback->getRandomName();
+    //         $namaFileBGBelakang = $fileBGback->getRandomName();
 
-            $fileBGback->move('images/bgbelakang', $namaFileBGBelakang);
-        }
+    //         $fileBGback->move('images/bgbelakang', $namaFileBGBelakang);
+    //     }
 
 
-        $dataAcara->save([
-            'id_acara' => $id,
-            'gbr_sert_blk' => $namaFileBGBelakang,
+    //     $dataAcara->save([
+    //         'id_acara' => $id,
+    //         'gbr_sert_blk' => $namaFileBGBelakang,
 
-        ]);
-        // dd($fileBG);
-        session()->setFlashdata('msg', 'Berhasil Upload Background Belakang');
-        return redirect()->to('/acara');
-    }
+    //     ]);
+    //     // dd($fileBG);
+    //     session()->setFlashdata('msg', 'Berhasil Upload Background Belakang');
+    //     return redirect()->to('/acara');
+    // }
 
     public function importData($id)
     {
         $dataPeserta = new PesertaModel();
         $file = $this->request->getFile("uploadexcel");
         $ext = $file->getClientExtension();
+        
 
         // dd($ext);
         if ($ext == "xls")
@@ -314,12 +335,90 @@ class Acara extends BaseController
                 'no_hp' => $value['2'],
                 'email' => $value['3'],
                 'kategori' => $value['4'],
-                'kode_unik' => md5(($value['1'])+$id)
+                'kode_unik' => md5(($value['1']) + $id)
 
             ]);
         }
 
         session()->setFlashData("msg", "Data berhasil diimport!");
         return redirect()->to('/acara', $id);
+    }
+    // public function export($id){
+    //     // dd($id);
+    //     $acaraModel = new AcaraModel();
+    //     $acara = $acaraModel->getAcara($id);
+
+    //     $pdf = new TCPDF();
+
+    //     $pdf->AddPage();
+
+    //     $pdf->SetFont('times', 'normal', 12);
+    //     $imageFilename = $acara['gbr_sert_depan'];
+    //     $imagePath = 'C:/xampp/htdocs/sertifikat/public/images/bgbelakang/' . $imageFilename;        
+    //     // $imageUrl = base_url('images/bgbelakang/' . $acara['gbr_sert_depan']);
+
+
+    //     $html = '<h1>Event Details</h1>';
+    //     $html .= '<img src="' . $imagePath . '" alt="Event Image">';
+    //     $html .= '<p><strong>Dokumen:</strong> ' . $acara['jenis_dokumen'] . '</p>';
+    //     $html .= '<p><strong>Dokumen:</strong> ' . $imagePath . '</p>';
+
+
+    //     $pdf->writeHTML($html, true, false, true, false, '');
+
+    //     $pdf->Output('custom_content.pdf', 'D');
+
+
+
+    public function export($id,$idpeserta)
+    {
+        $acaraModel = new AcaraModel();
+        $pesertaModel = new PesertaModel();
+        $acara = $acaraModel->getAcara($id);
+        $peserta = $pesertaModel->getPesertabyAcara($id,$idpeserta);
+
+        $mpdf = new Mpdf();
+        $mpdf->AddPage('L', 'A4');
+        $mpdf->SetAutoPageBreak(false, 0);
+
+        $tglacara = (new \DateTime($acara['tgl_acara_mulai']))->format('d-m-Y');
+        $ttdPath = 'C:/xampp/htdocs/sertifikat/public/images/ttd/' . $acara['ttd'];
+        $capPath = 'C:/xampp/htdocs/sertifikat/public/images/cap/' . $acara['cap'];
+        $imageFilename = $acara['gbr_sert_depan'];
+        $imagePath = 'C:/xampp/htdocs/sertifikat/public/images/bgbelakang/' . $imageFilename;
+        $mpdf->Image($imagePath, 0, 0, 210, 297, '', '', '', false, 300);
+
+        // dd($peserta);
+
+        // ------------------------------------------------------------------------------------------//
+
+        // ------------------------------------------------------------------------------------------//
+
+        $html = <<<HTML
+    <div style="text-align: center; color: #000; font-family: Arial, sans-serif; padding: 20px; border-radius: 10px; width: 50%; margin-left: 25%;">
+        <br><br><br>
+        <div style="margin-top: 20px;"></div>
+        <div style="margin-top: 15px;"></div>
+        <div style="font-size: 50px; margin-bottom: 5px;"><strong>SERTIFIKAT</strong></div>
+        <div style="font-size: 22px; margin-bottom: 50px;">Apresiasi</div>
+        <div style="font-size: 19px; margin-bottom: 25px;">Diberikan Kepada</div>
+        <div style="font-size: 32px; margin-bottom: 5px;"><strong>{$peserta['nama']}</strong></div>
+        <hr>
+        <div style="font-size: 19px; margin-bottom: 20px;">Atas Partisipasinya dalam acara <b>{$acara['nama_acara']}</b> pada tanggal <b>{$tglacara}</b> yang Diselenggarakan oleh <b>{$acara['nama_penyelenggara']}</b></div>
+        <div style="margin-top: 50px;"></div>
+        <div style="font-size: 20px; margin-bottom: 5px;"><strong>Ketua</strong></div>
+        <div>
+        <img src="$capPath" width="150" >
+        </div>
+        <hr style="width:50%;text-align:center;margin-left:0">
+        <div style="font-size: 18px; margin-bottom: 20px;"><strong>{$acara['nama_ttd']}</strong></div>
+        </div>
+        <div style="font-size: 12px; margin-bottom: 20px;"><strong>{$peserta['kode_unik']}</strong></div>
+    HTML;
+
+
+        $mpdf->WriteHTML($html);
+
+        $mpdf->Output('custom_content.pdf', 'D');
     }
 }

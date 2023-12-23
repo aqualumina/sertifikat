@@ -68,6 +68,10 @@ NOTE: This file contains the styling for responsive Template.
 ::-moz-selection { background: var(--iq-primary); color: var(--iq-white); text-shadow: none; }
 ::selection { background: var(--iq-primary); color: var(--iq-white); text-shadow: none; }
 
+.sertif {
+  position: relative;
+}
+
 /* beranda background image */
 .beranda {
   background-size: cover;
@@ -76,6 +80,15 @@ NOTE: This file contains the styling for responsive Template.
   color: white;
   text-shadow: 2px 2px 2px rgba(0,0,0,.2);
 
+}
+
+ /* CSS for table row background color */
+ table.table-striped tbody tr:nth-child(odd) {
+  background-color: rgba(0, 0, 0, 0.05); /* Change this color as needed */
+}
+
+table.table-striped tbody tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.1); /* Change this color as needed */
 }
 
 .selamat {

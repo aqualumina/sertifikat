@@ -10,10 +10,14 @@
         "ext-intl": "*",
         "ext-json": "*",
         "ext-mbstring": "*",
+        "dompdf/dompdf": "*",
         "kint-php/kint": "^4.0",
         "laminas/laminas-escaper": "^2.9",
+        "mpdf/mpdf": "*",
         "phpoffice/phpspreadsheet": "*",
-        "psr/log": "^1.1"
+        "predis/predis": "*",
+        "psr/log": "^1.1",
+        "tecnickcom/tcpdf": "*"
     },
     "require-dev": {
         "codeigniter/coding-standard": "1.2.*",
@@ -24,7 +28,6 @@
         "nexusphp/tachycardia": "^1.0",
         "phpstan/phpstan": "1.4.3",
         "phpunit/phpunit": "^9.1",
-        "predis/predis": "^1.1",
         "rector/rector": "0.12.10"
     },
     "suggest": {
@@ -33,7 +36,11 @@
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",
-        "sort-packages": true
+        "sort-packages": true,
+        "platform": {
+            "php": "7.4.21"
+         }
+
     },
     "extra": {
         "branch-alias": {

@@ -13,6 +13,16 @@
     position: fixed;
     background-color: #13998A;
   }
+
+
+    /* CSS for table row background color */
+    table.table-striped tbody tr:nth-child(odd) {
+        background-color: white; /* Change this color as needed */
+    }
+
+    table.table-striped tbody tr:nth-child(even) {
+        background-color: white; /* Change this color as needed */
+    }
   
   
   .header-logo-landing {  
@@ -58,6 +68,7 @@
     background-color: transparent;
     text-decoration: none !important;
   }
+  
   .bg-landing{
     width: 100%;
     height: 100vh;
@@ -74,14 +85,14 @@
         text-decoration: none;
     }
     
-    .container-fluid-landing {
+    .container-landing {
       justify-content: center;
       opacity: 94%;
 
     }
 
-    .cari-sertif {
-      font-weight: bold;
+    .cari-sertif-landing {
+      font-weight: bolder;
       color: #13998A;
       font-size: 320%;
       font-stretch: semi-expanded;
