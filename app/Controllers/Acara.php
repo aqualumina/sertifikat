@@ -283,29 +283,6 @@ class Acara extends BaseController
         return redirect()->to('/acara');
     }
 
-    // public function uploadbgbelakang($id)
-    // {
-    //     $dataAcara = new AcaraModel();
-    //     $fileBGback = $this->request->getFile('bgbelakang');
-    //     if ($fileBGback->getError() == 4) {
-    //         $namaFileBGBelakang = $this->defaultImage;
-    //     } else {
-
-    //         $namaFileBGBelakang = $fileBGback->getRandomName();
-
-    //         $fileBGback->move('images/bgbelakang', $namaFileBGBelakang);
-    //     }
-
-
-    //     $dataAcara->save([
-    //         'id_acara' => $id,
-    //         'gbr_sert_blk' => $namaFileBGBelakang,
-
-    //     ]);
-    //     // dd($fileBG);
-    //     session()->setFlashdata('msg', 'Berhasil Upload Background Belakang');
-    //     return redirect()->to('/acara');
-    // }
 
     public function importData($id)
     {
@@ -343,32 +320,6 @@ class Acara extends BaseController
         session()->setFlashData("msg", "Data berhasil diimport!");
         return redirect()->to('/acara', $id);
     }
-    // public function export($id){
-    //     // dd($id);
-    //     $acaraModel = new AcaraModel();
-    //     $acara = $acaraModel->getAcara($id);
-
-    //     $pdf = new TCPDF();
-
-    //     $pdf->AddPage();
-
-    //     $pdf->SetFont('times', 'normal', 12);
-    //     $imageFilename = $acara['gbr_sert_depan'];
-    //     $imagePath = 'C:/xampp/htdocs/sertifikat/public/images/bgbelakang/' . $imageFilename;        
-    //     // $imageUrl = base_url('images/bgbelakang/' . $acara['gbr_sert_depan']);
-
-
-    //     $html = '<h1>Event Details</h1>';
-    //     $html .= '<img src="' . $imagePath . '" alt="Event Image">';
-    //     $html .= '<p><strong>Dokumen:</strong> ' . $acara['jenis_dokumen'] . '</p>';
-    //     $html .= '<p><strong>Dokumen:</strong> ' . $imagePath . '</p>';
-
-
-    //     $pdf->writeHTML($html, true, false, true, false, '');
-
-    //     $pdf->Output('custom_content.pdf', 'D');
-
-
 
     public function export($id,$idpeserta)
     {
@@ -380,6 +331,7 @@ class Acara extends BaseController
         $mpdf = new Mpdf();
         $mpdf->AddPage('L', 'A4');
         $mpdf->SetAutoPageBreak(false, 0);
+        $nama = $peserta['nama'];
 
         $tglacara = (new \DateTime($acara['tgl_acara_mulai']))->format('d-m-Y');
         $ttdPath = 'C:/xampp/htdocs/sertifikat/public/images/ttd/' . $acara['ttd'];
@@ -416,9 +368,8 @@ class Acara extends BaseController
         <div style="font-size: 12px; margin-bottom: 20px;"><strong>{$peserta['kode_unik']}</strong></div>
     HTML;
 
-
         $mpdf->WriteHTML($html);
 
-        $mpdf->Output('custom_content.pdf', 'D');
+        $mpdf->Output($peserta['nama'] .'.pdf' , 'D');
     }
 }
