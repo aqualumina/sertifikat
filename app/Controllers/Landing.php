@@ -46,7 +46,6 @@ class Landing extends BaseController
             // ->orLike('nip', $keyword)
             ->findAll();
 
-
         // Ambil informasi nama acara untuk setiap peserta
         foreach ($dataPeserta as &$peserta) {
             $id_acara = $peserta['id_acara'];
