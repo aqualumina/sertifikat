@@ -21,7 +21,7 @@ class Landing extends BaseController
         $data = [
             'title' => "Landing"
         ];
-        return view('landing');
+        return view('beranda/landing');
     }
 
     public function searchs()
@@ -61,7 +61,7 @@ class Landing extends BaseController
             'result' => $dataPeserta,
         ];
 
-        return view('landing', $data);
+        return view('beranda/landing', $data);
     }
 
     public function search()

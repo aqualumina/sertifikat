@@ -58,7 +58,7 @@
 
                                         <tr>
                                             <td>Cetak</td>
-                                            <td><a href="<?php echo base_url(); ?> \route EXPORT DISINI<?= $value['kode_unik'] ?><?= $value['id_acara'] ?>" target="_blank"><span class="label label-success">DOWNLOAD VERSI CETAK</span></a><br>
+                                            <td><a href="<?= base_url('acara/export/' . $value['id_acara'] . '/' . $value['id_peserta']); ?>" target="_blank"><span class="label label-success">DOWNLOAD VERSI CETAK</span></a><br>
                                         </tr>
                                         <tr>
                                             <td>Kode Unik</td>
@@ -74,12 +74,13 @@
                                         <a href="<?php echo base_url(); ?>verify/v/<?= $value['kode_unik'] ?>/<?= $value['id_acara'] ?>" target="_blank"><img src="<?= base_url() ?>/images/diskominfo_loader.png"></a>
                                     <?php } ?>
                                 </td> -->
-
                                 <td style="text-align:center;">
+                                <form action="<?= base_url('peserta/edit/' . $value['id_peserta'])  ?>" method="post" class="d-inline">
+                                    <?= csrf_field() ?>
                                     <a class="btn btn-warning las la-pen" href="<?= base_url('peserta/edit/' . $value['id_peserta'])  ?>" role="button"></a>
                                     <input type="hidden" name="_method" value="DELETE">
                                     <button type="submit" class="btn btn-danger las la-trash" role="button" onclick="return confirm('Apakah anda yakin?')"></button>
-                                </td>
+                                </form>
                             </tr>
                         <?php endforeach; ?>
                     </tbody>

@@ -68,6 +68,10 @@ NOTE: This file contains the styling for responsive Template.
 ::-moz-selection { background: var(--iq-primary); color: var(--iq-white); text-shadow: none; }
 ::selection { background: var(--iq-primary); color: var(--iq-white); text-shadow: none; }
 
+.sertif {
+  position: relative;
+}
+
 /* beranda background image */
 .beranda {
   background-size: cover;

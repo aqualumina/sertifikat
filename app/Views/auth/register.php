@@ -1,36 +1,7 @@
 <?= $this->extend('auth/template') ?>
 <?= $this->section('content') ?>
 <div class="container p-0" id="sign-in-page-box">
-    <!-- <div class="bg-white form-container sign-up-container">
-                   <div class="sign-in-page-data">
-                      <div class="sign-in-from w-100 m-auto">
-                        <h1 class="mb-3 text-center">Sign in</h1>
-                          <p class="text-center text-dark">Enter your email address and password to access admin panel.</p>
-                          <form class="mt-4">
-                              <div class="form-group">
-                                  <label for="exampleInputEmail1">Email address</label>
-                                  <input type="email" class="form-control mb-0" id="exampleInputEmail1" placeholder="Enter email">
-                              </div>
-                              <div class="form-group">
-                                  <label for="exampleInputPassword1">Password</label>
-                                  <a href="#" class="float-right">Forgot password?</a>
-                                  <input type="password" class="form-control mb-0" id="exampleInputPassword1" placeholder="Password">
-                              </div>
-                              <div class="d-inline-block w-100">
-                                  <div class="custom-control custom-checkbox d-inline-block mt-2 pt-1">
-                                      <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                      <label class="custom-control-label" for="customCheck1">Remember Me</label>
-                                  </div>
-                              </div>
-                              <div class="sign-info">
-                                  <button type="submit" class="btn btn-primary mb-2">Sign in</button>
-                                  <span class="text-dark dark-color d-block line-height-2">Don't have an account? <a href="#">Sign up</a></span>
-                              </div>
-                          </form>   
-                      </div>
-                  </div>
-                </div> -->
-                <div class="bg-white form-container sign-in-container">
+    <div class="bg-white form-container sign-in-container">
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -45,11 +16,11 @@
             </div>
         </div>
     </div>
-    
+
     <div class="overlay-container">
         <div class="sign-in-page-data">
             <div class="sign-in-from w-100 m-auto">
-            <a class="logo-login mb-3" href="#"><img src="images/diskominfo_loader.png" class="img-fluid" alt="logo"></a>
+                <a class="logo-login mb-3" href="#"><img src="images/diskominfo_loader.png" class="img-fluid" alt="logo"></a>
                 <h1 class="mb-3 text-center" style="color: #13988A;"><b>Pendaftaran Akun</b></h1>
                 <!-- <p class="text-center text-dark ">Enter your email address and password to access admin panel.</p> -->
                 <?php if (isset($validation)) : ?>
@@ -108,4 +79,4 @@
         </div>
     </div>
 </div>
-    <?= $this->endSection() ?>
+<?= $this->endSection() ?>

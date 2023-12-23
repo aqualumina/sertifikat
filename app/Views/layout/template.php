@@ -40,7 +40,6 @@
       <!-- Page Content  -->
       <div id="content-page" class="content-page">
          <?= $this->renderSection('content') ?>
-
       </div>
    </div>
    <!-- Wrapper END -->
