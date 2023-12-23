@@ -28,6 +28,20 @@ class PesertaModel extends Model
         $query = $this->select('*');
                   return $query->where(['id_acara' => $id])->where(['id_peserta' => $idpeserta])->first();}
 
+    public function getEditPes($id = false)
+    {
+        
+        $query = $this->table('tbl_peserta')
+        // ->join('tbl_acara', 'id_acara')
+        ->where('id_peserta', $id);
+        // ->where('id', $id);
+        if ($id === false) {
+            return $query->findAll();
+        } else {
+            return $query->where(['id_peserta' => $id])->first();
+        }
+    }
+
     function Total($id = false)
     {
         $this->from('tbl_peserta');

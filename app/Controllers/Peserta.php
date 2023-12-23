@@ -28,11 +28,11 @@ class Peserta extends BaseController
 
     public function edit($id)
     {
-        $dataPeserta = $this->pesertaModel->getPeserta($id);
+        $dataPeserta = $this->pesertaModel->getEditPes($id);
         $data = [
             'title' => 'Ubah Peserta',
-            'result' => $dataPeserta,
-            'validation' => \Config\Services::validation()
+            'validation'=> \Config\Services::validation(),
+            'result' => $dataPeserta
         ];
 
         
@@ -41,48 +41,52 @@ class Peserta extends BaseController
 
     public function update($id)
     {
-        if (!$this->validate([
-            'nama_acara' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Nama Acara Harus Diisi',
-                ]
-            ],
-            'narasumber' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Narasumber Harus Diisi',
-                ]
-            ],
-            'jenis_dokumen' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Jenis Dokumen Harus Diisi',
-                ]
-            ],
-            'tgl_sertifikat' =>  [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Tanggal Sertifikat  Harus Diisi'
-                ]
-            ],
-        ])) {
-            $validation = \Config\Services::validation();
-            // dd($validation);
-            return redirect()->back()->withInput()->with('validation', $validation);
-        }
-
+        
+            if (!$this->validate(   
+                [
+                'nama' => [
+                    'rules' => 'required',
+                    'errors' => [
+                        'required' => 'Nama Peserta harus diisi',
+                    ]
+                ],
+                'nip' => [
+                    'rules' => 'required|exact_length[18]',
+                    'errors' => [
+                        'required' => 'Silahkan Masukan NIP',
+                        'exact_length' => 'NIP harus 18 digit',
+                    ]
+                ],
+                'no_hp' => [
+                    'rules' => 'required',
+                    'errors' => [
+                        'required' => 'nomor HP harus diisi',
+                    ]
+                ],
+                'email' =>  [
+                    'rules' => 'valid_emails',
+                    'errors' => [
+                        'valid_emails' => 'Masukan Email Yang Valid'
+                    ]
+                ],
+            ])) 
+            {
+                $validation = \Config\Services::validation();
+                // dd($validation);
+                return redirect()->back()->withInput()->with('validation', $validation);
+            }
+        $dataPeserta = new PesertaModel();
+        // dd($this->request->getVar('username'));
         $this->pesertaModel->save([
             'id_peserta' => $id,
             'nama' => $this->request->getVar('nama'),
             'nip' => $this->request->getVar('nip'),
             'no_hp' => $this->request->getVar('no_hp'),
             'email' => $this->request->getVar('email'),
-            'kode_unik' => md5($this->request->getVar('nip')+$id)
+          'kode_unik' => md5($this->request->getVar('nip')+$id)
         ]);
-
-        session()->setFlashdata('msg', 'Berhasil memperbarui user');
-        return redirect()->to('/peserta');
+        session()->setFlashdata('msg', 'Berhasil memperbarui Peserta');
+        return redirect()->to('/acara');
     }
 
     public function delete($id)

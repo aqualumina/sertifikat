@@ -180,6 +180,7 @@ class Acara extends BaseController
 
     public function update($id)
     {
+        $dataAcara = new AcaraModel();
         if (!$this->validate([
             'nama_acara' => [
                 'rules' => 'required',
@@ -219,18 +220,32 @@ class Acara extends BaseController
         //membagi detik menjadi jam
         $jam    = floor($diff / (60 * 60));
 
-        $this->acaraModel->save([
 
+        $id_kategori = $this->request->getVar('id_kategori');
+
+        if($id_kategori == 1)
+        {
+            $no_sertifikat = 100;
+        } else if ($id_kategori == 2) {
+            $no_sertifikat = 200;
+        } else {
+
+        }
+
+        $dataAcara->save([
+            'id_acara' => $id,
             'jenis_dokumen' => $this->request->getVar('jenis_dokumen'),
             'nama_acara' => $this->request->getVar('nama_acara'),
             'narasumber' => $this->request->getVar('narasumber'),
-            'no_sertifikat' => $this->request->getVar('no_sertifikat'),
+            'no_sertifikat' => $no_sertifikat,
             'tgl_sertifikat' => $this->request->getVar('tgl_sertifikat'),
             'tgl_acara_mulai' => $this->request->getVar('tgl_acara_mulai'),
             'tgl_acara_selesai' => $this->request->getVar('tgl_acara_selesai'),
             'id_penyelenggara' => $this->request->getVar('penyelenggara'),
-            'id_kategori' => $this->request->getVar('kategori'),
+            'id_kategori' => $id_kategori,
             'jpl' => $jam,
+            
+
         ]);
 
         session()->setFlashdata('msg', 'Berhasil memperbarui user');
@@ -297,6 +312,7 @@ class Acara extends BaseController
         $dataPeserta = new PesertaModel();
         $file = $this->request->getFile("uploadexcel");
         $ext = $file->getClientExtension();
+        
 
         // dd($ext);
         if ($ext == "xls")
