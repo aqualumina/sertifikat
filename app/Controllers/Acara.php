@@ -354,12 +354,12 @@ class Acara extends BaseController
 
 
 
-    public function export($id)
+    public function export($id,$idpeserta)
     {
         $acaraModel = new AcaraModel();
         $pesertaModel = new PesertaModel();
         $acara = $acaraModel->getAcara($id);
-        $peserta = $pesertaModel->getPesertabyAcara($id);
+        $peserta = $pesertaModel->getPesertabyAcara($id,$idpeserta);
 
         $mpdf = new Mpdf();
         $mpdf->AddPage('L', 'A4');
@@ -372,6 +372,7 @@ class Acara extends BaseController
         $imagePath = 'C:/xampp/htdocs/sertifikat/public/images/bgbelakang/' . $imageFilename;
         $mpdf->Image($imagePath, 0, 0, 210, 297, '', '', '', false, 300);
 
+        // dd($peserta);
 
         // ------------------------------------------------------------------------------------------//
 
@@ -382,14 +383,14 @@ class Acara extends BaseController
         <br><br><br>
         <div style="margin-top: 20px;"></div>
         <div style="margin-top: 15px;"></div>
-        <div style="font-size: 40px; margin-bottom: 5px;"><strong>SERTIFIKAT</strong></div>
-        <div style="font-size: 18px; margin-bottom: 50px;">Apresiasi</div>
-        <div style="font-size: 16px; margin-bottom: 25px;">Diberikan Kepada</div>
-        <div style="font-size: 26px; margin-bottom: 5px;"><strong>{$peserta['nama']}</strong></div>
+        <div style="font-size: 50px; margin-bottom: 5px;"><strong>SERTIFIKAT</strong></div>
+        <div style="font-size: 22px; margin-bottom: 50px;">Apresiasi</div>
+        <div style="font-size: 19px; margin-bottom: 25px;">Diberikan Kepada</div>
+        <div style="font-size: 32px; margin-bottom: 5px;"><strong>{$peserta['nama']}</strong></div>
         <hr>
-        <div style="font-size: 16px; margin-bottom: 20px;">Atas Partisipasinya dalam acara <b>{$acara['nama_acara']}</b> pada tanggal <b>{$tglacara}</b> yang Diselenggarakan oleh <b>{$acara['nama_penyelenggara']}</b></div>
+        <div style="font-size: 19px; margin-bottom: 20px;">Atas Partisipasinya dalam acara <b>{$acara['nama_acara']}</b> pada tanggal <b>{$tglacara}</b> yang Diselenggarakan oleh <b>{$acara['nama_penyelenggara']}</b></div>
         <div style="margin-top: 50px;"></div>
-        <div style="font-size: 14px; margin-bottom: 5px;"><strong>Ketua</strong></div>
+        <div style="font-size: 20px; margin-bottom: 5px;"><strong>Ketua</strong></div>
         <div>
         <img src="$capPath" width="150" >
         </div>
