@@ -21,7 +21,7 @@
                         <div class="mb-3 row">
                             <label for="penyelenggara" class="col-sm-2 col-form-label">Penyelenggara</label>
                             <div class="col-sm-5">
-                                <input type="text" class="form-control <?= $validation->hasError('penyelenggara') ? 'is-invalid' : '' ?>" id="penyelenggara" name="penyelenggara" placeholder="<?= lang('Masukan Nama Penyelenggara') ?>" value="<?= old('penyelenggara') ?>">
+                                <input type="text" class="form-control <?= $validation->hasError('penyelenggara') ? 'is-invalid' : '' ?>" name="penyelenggara" value="<?= old('penyelenggara', $result['nama_penyelenggara']) ?>">
                                 <div id="validationCustom01" class="invalid-feedback">
                                     <?= $validation->getError('penyelenggara') ?>
                                 </div>
@@ -30,7 +30,7 @@
                         <div class="mb-3 row">
                             <label for="nama_ttd" class="col-sm-2 col-form-label">Penandatangan</label>
                             <div class="col-sm-5">
-                                <input type="text" class="form-control <?= $validation->hasError('nama_ttd') ? 'is-invalid' : '' ?>" id="nama_ttd" name="nama_ttd" placeholder="<?= lang('Masukan Nama Penandatangan') ?>" value="<?= old('nama_ttd') ?>">
+                                <input type="text" class="form-control <?= $validation->hasError('nama_ttd') ? 'is-invalid' : '' ?>" id="nama_ttd" name="nama_ttd" value="<?= old('nama_ttd', $result['nama_ttd']) ?>">
                                 <div id="validationCustom01" class="invalid-feedback">
                                     <?= $validation->getError('nama_ttd') ?>
                                 </div>
@@ -39,7 +39,7 @@
                         <div class="mb-3 row">
                             <label for="nip_ttd" class="col-sm-2 col-form-label">NIP</label>
                             <div class="col-sm-5">
-                                <input type="text" class="form-control <?= $validation->hasError('nip_ttd') ? 'is-invalid' : '' ?>" id="nip_ttd" name="nip_ttd" placeholder="<?= lang('Masukan NIP Penandatangan') ?>" value="<?= old('nip_ttd') ?>">
+                                <input type="text" class="form-control <?= $validation->hasError('nip_ttd') ? 'is-invalid' : '' ?>" id="nip_ttd" name="nip_ttd" value="<?= old('nip_ttd', $result['nip_ttd']) ?>">
                                 <div id="validationCustom01" class="invalid-feedback">
                                     <?= $validation->getError('nip_ttd') ?>
                                 </div>
@@ -53,21 +53,13 @@
                                     <?= $validation->getError('ttd') ?>
                                 </div>
                                 <div class="col-sm-6 mt-2">
-                                    <img src="<?= base_url() ?>/images/default.jpg" alt="" class="img-thumbnail img-preview">
+                                    <!-- Tampilkan pratinjau gambar -->
+                                    <?php if (!empty($result['ttd'])) : ?>
+                                        <img src="<?= base_url() ?>/images/ttd/<?= $result['ttd'] ?>" alt="Preview" class="img-thumbnail img-preview">
+                                    <?php else : ?>
+                                        <img src="<?= base_url() ?>/images/default.jpg" alt="Default Preview" class="img-thumbnail img-preview">
+                                    <?php endif; ?>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="mb-3 row">
-                            <label for="cap" class="col-sm-2 col-form-label">Cap</label>
-                            <div class="col-sm-5">
-                                <input type="file" class="form-control <?= $validation->hasError('cap') ? 'is-invalid' : '' ?>" id="cap" name="cap" value="<?= old('cap') ?>" onchange="previewCap()">
-                                <div id="validationServer03Feedback" class="invalid-feedback">
-                                    <?= $validation->getError('cap') ?>
-                                </div>
-                                <div class="col-sm-6 mt-2">
-                                    <img src="<?= base_url() ?>/images/default.jpg" alt="" class="img-thumbnail img-preview-cap">
-                                </div>
-
                             </div>
                         </div>
                         <div class="d-grid gap-2 d-md-flex justify-content-md-center">
