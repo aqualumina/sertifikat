@@ -48,10 +48,6 @@
                         <td><?= $no++ ?></td>
                         <td>
                             <table id="fixed-table" class="table table-striped table-bordered table-fixed">
-                            <tr>
-                                    <td>id</td>
-                                    <td width="70%"><b><?= $value['id_acara'] ?></b></td>
-                                </tr>
                                 <tr>
                                     <td>Nama</td>
                                     <td width="70%"><b><?= $value['nama_acara'] ?></b></td>

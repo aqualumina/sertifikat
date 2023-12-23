@@ -318,7 +318,7 @@ class Acara extends BaseController
         }
 
         session()->setFlashData("msg", "Data berhasil diimport!");
-        return redirect()->to('/acara', $id);
+        return redirect()->to('/acara/', $id);
     }
 
     public function export($id,$idpeserta)
@@ -360,7 +360,7 @@ class Acara extends BaseController
         <div style="margin-top: 50px;"></div>
         <div style="font-size: 20px; margin-bottom: 5px;"><strong>Ketua</strong></div>
         <div>
-        <img src="$capPath" width="150" >
+        <img src="$ttdPath" width="150" >
         </div>
         <hr style="width:50%;text-align:center;margin-left:0">
         <div style="font-size: 18px; margin-bottom: 20px;"><strong>{$acara['nama_ttd']}</strong></div>
