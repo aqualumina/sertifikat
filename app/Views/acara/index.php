@@ -114,6 +114,16 @@
                                         <a class="btn btn-warning las la-pen" href="<?= base_url('acara/edit/' . $value['id_acara'])  ?>" role="button"></a>
                                     </td>
                                 </tr>
+                                <tr>
+                                    <td>Hapus Acara</td>
+                                    <td style="text-align:center">
+                                        <form action="<?= base_url('acara/' . $value['id_acara'])  ?>" method="post" class="d-inline">
+                                            <?= csrf_field() ?>
+                                            <input type="hidden" name="_method" value="DELETE">
+                                            <button type="submit" class="btn btn-danger" role="button" onclick="return confirm('Apakah anda yakin?')">Hapus</button>
+                                        </form>
+                                    </td>
+                                </tr>
                             </table>
                         </td>
                     </tr>
