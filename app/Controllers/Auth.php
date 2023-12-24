@@ -75,7 +75,7 @@ class Auth extends Controller
                     'logged_in'     => TRUE
                 ];
                 $session->set($ses_data);
-                // dd($session->id);
+                // dd($data);
 
                 return redirect()->to('/beranda');
             } else {

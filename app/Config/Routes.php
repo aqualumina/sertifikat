@@ -92,7 +92,7 @@ $routes->group('peserta', ['filter' => 'auth'], function ($rs) {
     $rs->post('create', 'Peserta::save');
     $rs->get('index/(:num)', 'Peserta::index/$1');
     $rs->get('create', 'Peserta::create');
-    $rs->delete('(:num)', 'Peserta::delete/$1');
+    $rs->delete('peserta/(:num)/(:num)', 'Peserta::delete/$1/$2');
     $rs->get('edit/(:any)', 'Peserta::edit/$1');
     $rs->post('edit/(:any)', 'Peserta::update/$1');
 });
