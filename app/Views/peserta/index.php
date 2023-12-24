@@ -26,11 +26,10 @@
                 <table class="table table-bordered table-hover">
                     <tr style="text-align:center">
                         <th class="center">No</th>
-                        <!-- <th class="center" width="3">Pilih</th> -->
                         <th class="center">Profil</th>
                         <th class="center">Email</th>
                         <th class="center">No HP</th>
-                        <!-- <th class="center">QRCODE</th> -->
+
                         <th class="center">Tindakan</th>
                     </tr>
                     <tbody>
@@ -38,15 +37,8 @@
                         foreach ($result as $value) : ?>
                             <tr>
                                 <td><?= $no++  ?></td>
-                                <!-- <td style="text-align:center;">
-                                    <input type="checkbox" class="ace" value="' . $s->id_tamu . '" />
-                                </td> -->
                                 <td>
                                     <table id="dynamic-table" class="table table-striped table-bordered table-hover">
-                                        <tr>
-                                            <td>Id</td>
-                                            <td><?= $value['id_acara'] ?></td>
-                                        </tr>
                                         <tr>
                                             <td>Nama</td>
                                             <td><?= $value['nama'] ?></td>
@@ -55,7 +47,6 @@
                                             <td>NIP</td>
                                             <td><?= $value['nip'] ?></td>
                                         </tr>
-
                                         <tr>
                                             <td>Cetak</td>
                                             <td><a href="<?= base_url('acara/export/' . $value['id_acara'] . '/' . $value['id_peserta']); ?>" target="_blank"><span class="label label-success">DOWNLOAD VERSI CETAK</span></a><br>
@@ -75,12 +66,12 @@
                                     <?php } ?>
                                 </td> -->
                                 <td style="text-align:center;">
-                                <form action="<?= base_url('peserta/edit/' . $value['id_peserta'])  ?>" method="post" class="d-inline">
+                                <a class="btn btn-warning las la-pen" href="<?= base_url('peserta/edit/' . $value['id_peserta'])  ?>" role="button"></a>
+                                <!-- <form action="<?= base_url('peserta/' . $value['id_acara'] . '/' . $value['id_peserta']); ?>" method="post" class="d-inline">
                                     <?= csrf_field() ?>
-                                    <a class="btn btn-warning las la-pen" href="<?= base_url('peserta/edit/' . $value['id_peserta'])  ?>" role="button"></a>
                                     <input type="hidden" name="_method" value="DELETE">
                                     <button type="submit" class="btn btn-danger las la-trash" role="button" onclick="return confirm('Apakah anda yakin?')"></button>
-                                </form>
+                                </form> -->
                             </tr>
                         <?php endforeach; ?>
                     </tbody>

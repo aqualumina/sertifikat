@@ -27,6 +27,7 @@ class BaseController extends Controller
      * @var CLIRequest|IncomingRequest
      */
     protected $request;
+    protected $defaultImage;
 
     /**
      * An array of helpers to be loaded automatically upon
@@ -49,7 +50,6 @@ class BaseController extends Controller
 
         // E.g.: $this->session = \Config\Services::session();
         session();
-        $this->defaultImage ='default.jpg';
+        $this->defaultImage = 'default.jpg';
     }
-
 }

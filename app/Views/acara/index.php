@@ -22,7 +22,8 @@
         <div class="card-body">
             <form class="form-search" method=POST>
                 <span style="float: right">
-                    <a href="<?php echo base_url(); ?>format/format_upload.xlsx"><button class="btn btn-xs btn-success" style="background-color: #13988A;" type="button">Download Format Exel</button></a>
+                    <!-- <a href="/format/formatexcel.xlsx" download></a> -->
+                    <a href="/format/FormatExcel.xlsx" download><button class="btn btn-xs btn-success" style="background-color: #13988A;" type="button">Download Format Excel</button></a>
                     <a class="btn btn-primary" type="button" href="/acara/create">Tambah</a>
                     <a href="/" class="btn btn-xs btn-warning" type="reset" data-action="collapse">
                         <i class="ace-icon fa fa-undo bigger-110"></i>
@@ -30,7 +31,7 @@
                         </button></a>
                 </span>
             </form>
-        </div>
+        </div>`
         <table class="table table-bordered table-hover">
             <thead class="thin-border-bottom mt-1">
                 <tr style="text-align:center">
@@ -48,10 +49,6 @@
                         <td><?= $no++ ?></td>
                         <td>
                             <table id="fixed-table" class="table table-striped table-bordered table-fixed">
-                            <tr>
-                                    <td>id</td>
-                                    <td width="70%"><b><?= $value['id_acara'] ?></b></td>
-                                </tr>
                                 <tr>
                                     <td>Nama</td>
                                     <td width="70%"><b><?= $value['nama_acara'] ?></b></td>
@@ -80,8 +77,7 @@
                         </td>
 
                         <td style="text-align:center">
-                            <b><a href="/acara/<?= $value['id_acara'] ?>">
-                                    <span class="badge badge-success">Detail</a></b>
+                            <b><a href="/acara/<?= $value['id_acara'] ?>"><span class="badge badge-success">Detail</a></b>
                         </td>
 
                         <td>
