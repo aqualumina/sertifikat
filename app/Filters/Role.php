@@ -14,7 +14,7 @@ class Role implements FilterInterface
         // dd(session()->role);
         if (session()->role != "Admin" && session()->role != "Pengguna") {
             // maka redirct ke halaman login
-            return redirect()->to('/');
+            return redirect()->to('/beranda');
         }
     }
 

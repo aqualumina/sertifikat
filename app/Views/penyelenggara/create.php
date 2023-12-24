@@ -58,19 +58,6 @@
 
                         </div>
                     </div>
-                    <div class="mb-3 row">
-                    <label for="username" class="col-sm-2 col-form-label">Cap</label>
-                    <div class="col-sm-5">
-                            <input type="file" class="form-control <?= $validation->hasError('cap') ? 'is-invalid' : '' ?>" id="cap" name="cap" value="<?= old('cap') ?>" onchange="previewCap()">
-                            <div id="validationServer03Feedback" class="invalid-feedback">
-                                <?= $validation->getError('cap') ?>
-                            </div>
-                            <div class="col-sm-6 mt-2">
-                                <img src="<?= base_url()?>/images/default.jpg" alt="" class="img-thumbnail img-preview-cap">
-                            </div>
-
-                        </div>
-                    </div>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-center">
                         <button class="btn btn-primary me-md-2" type="submit">Simpan</button>
                         <button class="btn btn-danger" type="reset">Batal</button>

@@ -9,6 +9,14 @@ class Home extends BaseController
         $data=[
             'title'=> "Beranda"
         ];
+        return view('landing');
+    }
+
+    public function beranda()
+    {
+        $data=[
+            'title'=> "Beranda"
+        ];
         return view('beranda');
     }
 

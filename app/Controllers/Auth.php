@@ -75,7 +75,7 @@ class Auth extends Controller
                 $session->set($ses_data);
                 // dd($session->id);
                
-                return redirect()->to('/');
+                return redirect()->to('/beranda');
             } else {
                 $session->setFlashdata('msg', 'Password Salah');
                 return redirect()->to('/login')->withInput();
