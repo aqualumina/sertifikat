@@ -3,7 +3,7 @@
         <div class="modal-dialog modal-sm">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title"><?= $value['id_acara'] ?> Silahkan Upload Background Depan</h5>
+                    <h5 class="modal-title">Silahkan Upload Background Depan</h5>
                 </div>
                 <div class="modal-body">
                     <form action="/acara/upload/<?= $value['id_acara'] ?>" method="POST" enctype="multipart/form-data">

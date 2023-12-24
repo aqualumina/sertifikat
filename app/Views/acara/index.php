@@ -79,7 +79,6 @@
                             <b><a href="/acara/<?= $value['id_acara'] ?>">
                                     <span class="badge badge-success">Detail</a></b>
                         </td>
-
                         <td>
                             <table id="simple-table" class="table table-striped table-bordered table-hover">
                                 <tr>
@@ -90,22 +89,10 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Upload Background Depan<?= $value['id_acara'] ?></td>
+                                    <td>Upload Background</td>
                                     <td style="text-align:center">
                                         <a href="#depan<?= $value['id_acara'] ?>" data-toggle="modal">
                                             <button class="btn btn-xs btn-primary" type="">Upload</button></a>
-                                    </td>
-                                </tr>
-                                <!-- <tr>
-                                    <td>Upload Background Belakang</td>
-                                    <td style="text-align:center">
-                                        <a href="#belakang<?= $value['id_acara'] ?>" data-toggle="modal">
-                                            <button class="btn btn-xs btn-primary" type="">Upload</button></a>
-                                    </td>
-                                </tr> -->
-                                <tr>
-                                    <td>Upload Template</td>
-                                    <td style="text-align:center"><a href="#template" data-toggle="modal"><button class="btn btn-xs btn-primary" type="">Upload</button></a>
                                     </td>
                                 </tr>
                                 <tr>
@@ -128,6 +115,4 @@
 </main>
 <?= $this->include('acara/modal-peserta') ?>
 <?= $this->include('acara/modal-bgdepan') ?>
-<?= $this->include('acara/modal-bgbelakang') ?>
-<?= $this->include('acara/modal-template') ?>
 <?= $this->endSection() ?>
