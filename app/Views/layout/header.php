@@ -24,13 +24,14 @@ $tahun = date(" Y");
             <div class="navbar-nav ml-auto navbar-list">
                 <li class="line-height">
                     <a href="#" class="search-toggle iq-waves-effect d-flex align-items-center">
+                        <strong><?= session()->firstname ?> - <?= session()->lastname ?></strong>
                         <img src="<?= base_url() ?>/images/user/user.png" class="img-fluid rounded-circle" alt="user">
                     </a>
                     <div class="iq-sub-dropdown iq-user-dropdown">
                         <div class="iq-card shadow-none m-0">
                             <div class="iq-card-body p-0 ">
                                 <div class="p-3" style="background-color: #13998A;">
-                                    <h5 class="mb-0 text-white line-height"><?= session ()->id ?></h5>
+                                    <h5 class="mb-0 text-white line-height"><?= session()->id ?></h5>
                                     <span class="text-white font-size-12">Available</span>
                                 </div>
                                 <a href="profile.html" class="iq-sub-card iq-bg-primary-hover">

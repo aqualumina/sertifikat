@@ -9,12 +9,14 @@ use \App\Models\KategoriModel;
 use Mpdf\Mpdf;
 use PhpOffice\PhpSpreadsheet\Calculation\Web\Service;
 use PhpOffice\PhpSpreadsheet\Reader\Xls;
-use PhpOffice\PhpSpreadsheet\Reader\Xlsx;
+// use PhpOffice\PhpSpreadsheet\Reader\Xlsx;
 use PHPUnit\Util\Xml\Validator;
 use PhpOffice\PhpSpreadsheet\IOFactory;
 use PhpOffice\PhpSpreadsheet\Writer\Pdf\Dompdf;
 use Predis\Configuration\Options;
 use TCPDF;
+use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
 class Acara extends BaseController
 {
@@ -223,13 +225,11 @@ class Acara extends BaseController
 
         $id_kategori = $this->request->getVar('id_kategori');
 
-        if($id_kategori == 1)
-        {
+        if ($id_kategori == 1) {
             $no_sertifikat = 100;
         } else if ($id_kategori == 2) {
             $no_sertifikat = 200;
         } else {
-
         }
 
         $dataAcara->save([
@@ -244,7 +244,7 @@ class Acara extends BaseController
             'id_penyelenggara' => $this->request->getVar('penyelenggara'),
             'id_kategori' => $id_kategori,
             'jpl' => $jam,
-            
+
 
         ]);
 
@@ -289,7 +289,7 @@ class Acara extends BaseController
         $dataPeserta = new PesertaModel();
         $file = $this->request->getFile("uploadexcel");
         $ext = $file->getClientExtension();
-        
+
 
         // dd($ext);
         if ($ext == "xls")
@@ -321,12 +321,12 @@ class Acara extends BaseController
         return redirect()->to('/acara', $id);
     }
 
-    public function export($id,$idpeserta)
+    public function export($id, $idpeserta)
     {
         $acaraModel = new AcaraModel();
         $pesertaModel = new PesertaModel();
         $acara = $acaraModel->getAcara($id);
-        $peserta = $pesertaModel->getPesertabyAcara($id,$idpeserta);
+        $peserta = $pesertaModel->getPesertabyAcara($id, $idpeserta);
 
         $mpdf = new Mpdf();
         $mpdf->AddPage('L', 'A4');
@@ -370,6 +370,29 @@ class Acara extends BaseController
 
         $mpdf->WriteHTML($html);
 
-        $mpdf->Output($peserta['nama'] .'.pdf' , 'D');
+        $mpdf->Output($peserta['nama'] . '.pdf', 'D');
+    }
+
+    public function exportExcel()
+    {
+        $spreadsheet = new Spreadsheet();
+        // tulis header/nama kolom
+        $spreadsheet->setActiveSheetIndex(0)
+            ->setCellValue('A1', 'Nama')
+            ->setCellValue('B1', 'NIP')
+            ->setCellValue('C1', 'No Hp')
+            ->setCellValue('D1', 'Email')
+            ->setCellValue('E1', 'Kategori');
+
+        // tulis dalam format /xlsx
+        $writer = new Xlsx($spreadsheet);
+        $filename = 'Format-Excel';
+
+        // redirect hasil generate xlsx ke web client
+        header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+        header('Content-Disposition: attachment;filename=' . $filename . '.xlsx');
+        header('Cache-Control: max-age=0');
+
+        $writer->save('php://output');
     }
 }

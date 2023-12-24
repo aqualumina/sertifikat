@@ -31,9 +31,9 @@ $routes->setAutoRoute(false);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/','Home::index',);
+$routes->get('/', 'Home::index',);
 $routes->get('unduh/(:any)/(:any)', 'Acara::export/$1/$2');
-$routes->get('/beranda','Home::beranda', ['filter' => 'auth']);
+$routes->get('/beranda', 'Home::beranda', ['filter' => 'auth']);
 $routes->get('/login', 'Auth::indexlogin');
 $routes->post('/login/auth', 'Auth::auth');
 $routes->get('/register', 'Auth::indexregister');
@@ -50,7 +50,8 @@ $routes->group('acara', ['filter' => 'auth'], function ($rs) {
     $rs->get('format', 'Acara::index');
     $rs->get('create', 'Acara::create');
     $rs->post('create', 'Acara::save');
-    
+    $rs->get('template', 'Acara::exportExcel');
+
     $rs->get('edit/(:any)', 'Acara::edit/$1');
     $rs->post('edit/(:any)', 'Acara::update/$1');
     $rs->post('upload/(:any)', 'Acara::upload/$1');
@@ -59,7 +60,6 @@ $routes->group('acara', ['filter' => 'auth'], function ($rs) {
     $rs->post('import/(:any)', 'Acara::importData/$1');
     $rs->delete('(:num)', 'Acara::delete/$1');
     $rs->get('/', 'Acara::detail/$1');
-
 });
 
 
@@ -86,7 +86,7 @@ $routes->group('penyelenggara', ['filter' => 'auth'], function ($rs) {
     $rs->post('edit/(:any)', 'Penyelenggara::update/$1');
 });
 
-$routes->group('peserta',['filter' => 'auth'], function ($rs) {
+$routes->group('peserta', ['filter' => 'auth'], function ($rs) {
     $rs->get('(:num)', 'Peserta::index/$1');
     $rs->get('create', 'Peserta::create');
     $rs->post('create', 'Peserta::save');

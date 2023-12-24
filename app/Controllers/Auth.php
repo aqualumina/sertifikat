@@ -14,7 +14,7 @@ class Auth extends Controller
         $data = [];
         // dd($data);
         return view('auth/register', $data);
-    }   
+    }
     public function saveRegister()
     {
         helper(['form']);
@@ -66,15 +66,17 @@ class Auth extends Controller
             // dd($data['id']);
             if ($verify_pass) {
                 $ses_data = [
+                    'firstname'     => $data['firstname'],
+                    'lastname'      => $data['lastname'],
                     'user_id'       => $data['id'],
                     'user_name'     => $data['user_name'],
                     'user_email'    => $data['user_email'],
-                    'role'    => $data['role'],
+                    'role'          => $data['role'],
                     'logged_in'     => TRUE
                 ];
                 $session->set($ses_data);
                 // dd($session->id);
-               
+
                 return redirect()->to('/beranda');
             } else {
                 $session->setFlashdata('msg', 'Password Salah');
