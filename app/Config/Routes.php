@@ -32,12 +32,15 @@ $routes->setAutoRoute(false);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/','Home::index',);
+$routes->get('unduh/(:any)/(:any)', 'Acara::export/$1/$2');
 $routes->get('/beranda','Home::beranda', ['filter' => 'auth']);
 $routes->get('/login', 'Auth::indexlogin');
 $routes->post('/login/auth', 'Auth::auth');
 $routes->get('/register', 'Auth::indexregister');
 $routes->post('/login/save', 'Auth::saveRegister');
 $routes->get('/logout', 'Auth::logout');
+
+
 
 $routes->get('/landing', 'Landing::index');
 $routes->post('/landing', 'Landing::search');
@@ -47,7 +50,7 @@ $routes->group('acara', ['filter' => 'auth'], function ($rs) {
     $rs->get('format', 'Acara::index');
     $rs->get('create', 'Acara::create');
     $rs->post('create', 'Acara::save');
-    $rs->get('export/(:any)/(:any)', 'Acara::export/$1/$2');
+    
     $rs->get('edit/(:any)', 'Acara::edit/$1');
     $rs->post('edit/(:any)', 'Acara::update/$1');
     $rs->post('upload/(:any)', 'Acara::upload/$1');

@@ -15,9 +15,15 @@
                         </div><br>
                         <input type="text" placeholder="Ketikan NIP disini..." name="cari" id="certi" maxlength="100" class="form-control input-lg" style="width: 350px !important; display:inline-block; text-align: center;" required="">
                         <button type="submit" class="btn" style="background-color: #13998A; color:#FFFFFF"><i class="fa fa-search"></i><strong>C A R I</strong></button>
-                        <button type="reset" class="btn btn-danger" onclick="resetInput()"><strong>R E S E T</strong></button>
+                        <a class="btn btn-primary" href="/landing" role="button"><strong>R E S E T</strong></a>
                         <br>
                     </form>
+                    <?php if (isset($error) && !empty($error)) : ?>
+                                <br>
+                                <div style="font-size:18px; font-weight: bold; width: 70%; margin: 0 auto; text-align: center;">
+                                    <p style="color: #DC143C;"><?= $error ?></p>
+                                </div>
+                            <?php endif; ?>
                     <style>
                         .scroll {
                             height: 220px;
@@ -57,7 +63,7 @@
                                                     <td><?= $value['nip']  ?></td>
                                                     <td><?= $value['nama_acara']  ?></td>
                                                     <td>
-                                                        <a class="btn btn-primary" href="<?= base_url('acara/export/' . $value['id_acara'] . '/' . $value['id_peserta']); ?>" role="button">Download</a>
+                                                        <a class="btn btn-primary" href="<?= base_url('unduh/' . $value['id_acara'] . '/' . $value['id_peserta']); ?>" role="button">Download</a>
                                                         </form>
                                                     </td>
                                                 </tr>
