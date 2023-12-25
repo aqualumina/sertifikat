@@ -51,38 +51,32 @@ class Landing extends BaseController
     }
 
     public function search()
-    {
-        $keyword = $this->request->getPost('cari');
+{
+    $keyword = $this->request->getPost('cari');
 
-        // Validasi panjang NIP minimal
-        if (strlen($keyword) >= 8) {
-            $dataPeserta = $this->pesertaModel->like('nip', $keyword)
-                ->findAll();
+    // Validasi panjang NIP minimal
+    if (strlen($keyword) === 18) {
+        $dataPeserta = $this->pesertaModel
+            ->select('tbl_peserta.*, tbl_acara.nama_acara')
+            ->join('tbl_acara', 'tbl_acara.id_acara = tbl_peserta.id_acara')
+            ->like('tbl_peserta.nip', $keyword)
+            ->findAll();
 
-            // Nama Acara
-            foreach ($dataPeserta as &$peserta) {
-                $id_acara = $peserta['id_acara'];
-                $acara = $this->acaraModel->getAcara($id_acara);
+        $data = [
+            'title' => 'Data Peserta',
+            'result' => $dataPeserta,
+        ];
 
-                // Tambahkan informasi nama acara ke dalam data peserta
-                $peserta['nama_acara'] = $acara['nama_acara'];
-            }
+        return view('landing', $data);
+    } else {
+        // validasi
+        $error = "Nomor NIP harus terdiri dari 18 karakter";
+        $data = [
+            'title' => 'Data Peserta',
+            'error' => $error,
+        ];
 
-            $data = [
-                'title' => 'Data Peserta',
-                'result' => $dataPeserta,
-            ];
-
-            return view('landing', $data);
-        } else {
-            // validasi
-            $error = "Nomor NIP tidak terbaca";
-            $data = [
-                'title' => 'Data Peserta',
-                'error' => $error,
-            ];
-
-            return view('landing', $data);
-        }
+        return view('landing', $data);
     }
+}
 }
