@@ -50,8 +50,7 @@ $routes->group('acara', ['filter' => 'auth'], function ($rs) {
     $rs->get('format', 'Acara::index');
     $rs->get('create', 'Acara::create');
     $rs->post('create', 'Acara::save');
-    $rs->get('template', 'Acara::exportExcel');
-
+    $rs->get('export/(:any)/(:any)', 'Acara::export/$1/$2');
     $rs->get('edit/(:any)', 'Acara::edit/$1');
     $rs->post('edit/(:any)', 'Acara::update/$1');
     $rs->post('upload/(:any)', 'Acara::upload/$1');
@@ -60,7 +59,9 @@ $routes->group('acara', ['filter' => 'auth'], function ($rs) {
     $rs->post('import/(:any)', 'Acara::importData/$1');
     $rs->delete('(:num)', 'Acara::delete/$1');
     $rs->get('/', 'Acara::detail/$1');
+
 });
+
 
 
 $routes->group('users', ['filter' => 'auth'], function ($rs) {
