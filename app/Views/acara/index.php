@@ -38,6 +38,7 @@
                     <th class="center">No</th>
                     <th class="center">Acara</th>
                     <th class="center">Daftar Peserta</th>
+                    <th class="center">Preview Background</th>
                     <th class="center" colspan="4">Tindakan</th>
                 </tr>
             </thead>
@@ -78,6 +79,10 @@
 
                         <td style="text-align:center">
                             <b><a href="/acara/<?= $value['id_acara'] ?>"><span class="badge badge-success">Detail</a></b>
+                        </td>
+
+                        <td style="text-align:center">
+                            <img src="images/bgbelakang/<?= $value['gbr_sert_depan'] ?>" alt="" width="150">
                         </td>
 
                         <td>
