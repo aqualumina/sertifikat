@@ -31,7 +31,7 @@
                         </button></a>
                 </span>
             </form>
-        </div>`
+        </div>
         <table class="table table-bordered table-hover">
             <thead class="thin-border-bottom mt-1">
                 <tr style="text-align:center">
@@ -96,18 +96,6 @@
                                             <button class="btn btn-xs btn-primary" type="">Upload</button></a>
                                     </td>
                                 </tr>
-                                <!-- <tr>
-                                    <td>Upload Background Belakang</td>
-                                    <td style="text-align:center">
-                                        <a href="#belakang<?= $value['id_acara'] ?>" data-toggle="modal">
-                                            <button class="btn btn-xs btn-primary" type="">Upload</button></a>
-                                    </td>
-                                </tr> -->
-                                <tr>
-                                    <td>Upload Template</td>
-                                    <td style="text-align:center"><a href="#template" data-toggle="modal"><button class="btn btn-xs btn-primary" type="">Upload</button></a>
-                                    </td>
-                                </tr>
                                 <tr>
                                     <td>Edit Acara</td>
                                     <td style="text-align:center">
@@ -134,10 +122,7 @@
 
     </div>
 
-
 </main>
 <?= $this->include('acara/modal-peserta') ?>
 <?= $this->include('acara/modal-bgdepan') ?>
-<?= $this->include('acara/modal-bgbelakang') ?>
-<?= $this->include('acara/modal-template') ?>
 <?= $this->endSection() ?>
