@@ -11,7 +11,7 @@ class PesertaModel extends Model
     protected $primaryKey = 'id_peserta';
     protected $useTimestamps = true;
     protected $useSoftDeletes = true;
-    protected $allowedFields = ['id_acara','nama', 'nip', 'no_hp', 'email', 'kode_unik', 'nama_file', 'judul','kategori'];
+    protected $allowedFields = ['id_acara', 'nama', 'nip', 'no_hp', 'email', 'kode_unik', 'nama_file', 'judul', 'kategori'];
 
     public function getPeserta($id = false)
     {
@@ -23,17 +23,19 @@ class PesertaModel extends Model
             return $query->where(['id_peserta' => $id])->first();
         }
     }
-    public function getPesertabyAcara($id,$idpeserta)
+
+    public function getPesertabyAcara($id, $idpeserta)
     {
         $query = $this->select('*');
-                  return $query->where(['id_acara' => $id])->where(['id_peserta' => $idpeserta])->first();}
+        return $query->where(['id_acara' => $id])->where(['id_peserta' => $idpeserta])->first();
+    }
 
     public function getEditPes($id = false)
     {
-        
+
         $query = $this->table('tbl_peserta')
-        // ->join('tbl_acara', 'id_acara')
-        ->where('id_peserta', $id);
+            // ->join('tbl_acara', 'id_acara')
+            ->where('id_peserta', $id);
         // ->where('id', $id);
         if ($id === false) {
             return $query->findAll();
@@ -49,5 +51,4 @@ class PesertaModel extends Model
         $data = $this->countAll();
         return $data;
     }
-    
 }

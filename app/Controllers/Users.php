@@ -1,7 +1,5 @@
 <?php
-
 namespace App\Controllers;
-
 use App\Models\UserModel;
 
 class Users extends BaseController
@@ -10,7 +8,6 @@ class Users extends BaseController
     public function __construct()
     {
         $this->userModel = new UserModel();
-        // $this->usersModel = new UsersModel();
     }
 
     public function index()
@@ -22,8 +19,6 @@ class Users extends BaseController
         ];
         return view('user/index', $data);
     }
-
-
 
     public function create()
     {
@@ -85,13 +80,11 @@ class Users extends BaseController
             ],
         ])) {
             $validation = \Config\Services::validation();
-            // dd($validation);
             return redirect()->back()->withInput()->with('validation', $validation);
         }
 
         $user_myth = new UserModel();
         $user_myth->save([
-
             'firstname' => $this->request->getVar('firstname'),
             'lastname' => $this->request->getVar('lastname'),
             'user_name' => $this->request->getVar('username'),
@@ -99,12 +92,9 @@ class Users extends BaseController
             'role' => $this->request->getVar('role'),
             'user_password' => password_hash(
                 $this->request->getVar('password'),
-
                 PASSWORD_DEFAULT
             ),
-
         ]);
-
         session()->setFlashdata('msg', 'Berhasil menambahkan user');
         return redirect()->to('/users');
     }
@@ -117,8 +107,6 @@ class Users extends BaseController
             'result' => $dataUser,
             'validation' => \Config\Services::validation()
         ];
-
-
         return view('user/edit', $data);
     }
 
@@ -156,28 +144,26 @@ class Users extends BaseController
                     'required' => 'Silahkan Pilih Role',
                 ]
             ],
-            // 'password' => [
-            //     'rules' => 'required|min_length[5]',
-            //     'errors' => [
-            //         'required' => 'Silahkan Masukan Password',
-            //         'min_length' => 'Panjang password minimal 5',
-            //     ]
-            // ],
-            // 'pass_confirm' => [
-            //     'rules' => 'required|matches[password]',
-            //     'errors' => [
-            //         'required' => 'Silahkan Masukan Password',
-            //         'matches' => 'Password Harus Sama'
-            //     ]
-            // ],
+            'password' => [
+                'rules' => 'required|min_length[5]',
+                'errors' => [
+                    'required' => 'Silahkan Masukan Password',
+                    'min_length' => 'Panjang password minimal 5',
+                ]
+            ],
+            'pass_confirm' => [
+                'rules' => 'required|matches[password]',
+                'errors' => [
+                    'required' => 'Silahkan Masukan Password',
+                    'matches' => 'Password Harus Sama'
+                ]
+            ],
         ])) {
             $validation = \Config\Services::validation();
-            // dd($validation);
             return redirect()->back()->withInput()->with('validation', $validation);
         }
         
         $user_myth = new UserModel();
-        // dd($this->request->getVar('username'));
         $this->userModel->save([
             'id' => $id,
             'firstname' => $this->request->getVar('firstname'),
@@ -186,11 +172,9 @@ class Users extends BaseController
             'user_email' => $this->request->getVar('email'),
             'role' => $this->request->getVar('role'),
         ]);
-
         session()->setFlashdata('msg', 'Berhasil memperbarui user');
         return redirect()->to('/users');
     }
-
 
     public function delete($id)
     {

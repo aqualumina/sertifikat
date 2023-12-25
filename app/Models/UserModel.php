@@ -16,8 +16,6 @@ class UserModel extends Model
     public function getUsers($id = false)
     {
         $query = $this->select('*');
-
-        // ->where('id', $id);
         if ($id === false) {
             return $query->findAll();
         } else {

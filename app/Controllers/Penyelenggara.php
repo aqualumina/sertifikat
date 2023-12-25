@@ -1,7 +1,5 @@
 <?php
-
 namespace App\Controllers;
-
 use App\Models\PenyelenggaraModel;
 
 class Penyelenggara extends BaseController
@@ -57,15 +55,15 @@ class Penyelenggara extends BaseController
                     'exact_length' => 'NIP harus 18 digit',
                 ]
             ],
-            // 'ttd' =>
-            // [
-            //     'rules' => 'required||is_image[ttd]|mime_in[ttd,image/jpg,image/jpeg,image/png]',
-            //     'errors' => [
-            //         'max_size' => 'Gambar tidak boleh lebih dari 1MB!!',
-            //         'is_image' => 'Yang anda pilih bukan gambar!',
-            //         'mime_in' => 'Yang anda pilih bukan gambar!',
-            //     ]
-            // ],
+            'ttd' =>
+            [
+                'rules' => 'required||is_image[ttd]|mime_in[ttd,image/jpg,image/jpeg,image/png]',
+                'errors' => [
+                    'max_size' => 'Gambar tidak boleh lebih dari 1MB!!',
+                    'is_image' => 'Yang anda pilih bukan gambar!',
+                    'mime_in' => 'Yang anda pilih bukan gambar!',
+                ]
+            ],
 
         ])) 
         {
@@ -74,7 +72,6 @@ class Penyelenggara extends BaseController
         }
 
         $fileTTD = $this->request->getFile('ttd');
-        // dd($fileTTD);
         if ($fileTTD->getError() == 4) {
             $namaFileTTD = $this->defaultImage;
         } else {
@@ -132,43 +129,12 @@ class Penyelenggara extends BaseController
                     'exact_length' => 'NIP harus 18 digit',
                 ]
             ],
-            // 'ttd' =>
-            // [
-            //     'rules' => 'required||is_image[ttd]|mime_in[ttd,image/jpg,image/jpeg,image/png]',
-            //     'errors' => [
-            //         'max_size' => 'Gambar tidak boleh lebih dari 1MB!!',
-            //         'is_image' => 'Yang anda pilih bukan gambar!',
-            //         'mime_in' => 'Yang anda pilih bukan gambar!',
-            //     ]
-            // ],
 
         ])) 
         {
             $validation = \Config\Services::validation();
-            // dd($validation);
             return redirect()->back()->withInput()->with('validation', $validation);
         }
-        // //Data TTD
-        // $namaTTDLama = $this->request->getVar('ttdlama');
-        // // Mengambil File Sampul
-        // $fileTTD = $this->request->getFile('ttd');
-        // // Cek gambar, apakah masih gambar lama
-        // if ($fileTTD->getError() == 4) {
-        //     $namaFileTTD = $namaTTDLama;
-        // } else {
-        //     // Generate Nama File
-        //     $namaFileTTD = $fileTTD->getRandomName();
-        //     // Pindahkan File ke Folder img di public
-        //     $fileTTD->move('images/ttd', $namaFileTTD);
-
-        //     // Jika sampulnya default
-        //     $fileTTD->move('images',$namaFileTTD);
-        //     if($namaTTDLama != $this->defaultImage && $namaTTDLama != ""){
-        //         unlink('images/ttd' . $namaTTDLama);
-        //     }
-        // }
-
-        // Validasi input lainnya tetap ada di sini
 
     $fileTTD = $this->request->getFile('ttd');
 
@@ -178,7 +144,7 @@ class Penyelenggara extends BaseController
         $namaFileTTD = $fileTTD->getRandomName();
         $fileTTD->move('images/ttd', $namaFileTTD);
     } else {
-        // Jika tidak ada file baru diunggah, gunakan foto lama
+        // Jika tidak ada gunakan foto lama
         $dataPenyelenggara = $this->penyelenggaraModel->find($id);
         $namaFileTTD = $dataPenyelenggara['ttd'];
     }
@@ -186,20 +152,17 @@ class Penyelenggara extends BaseController
 
         
         $dataPenyelenggara = new PenyelenggaraModel();
-        // dd($this->request->getVar('username'));
         $this->penyelenggaraModel->save([
             'id_penyelenggara' => $id,
             'nama_penyelenggara' => $this->request->getVar('penyelenggara'),
             'nama_ttd' => $this->request->getVar('nama_ttd'),
             'nip_ttd' => $this->request->getVar('nip_ttd'),
-            // 'ttd' => $this->request->getVar('ttd'),
             'ttd' => $namaFileTTD,
         ]); 
 
         session()->setFlashdata('msg', 'Berhasil memperbarui Penyelenggara');
         return redirect()->to('/penyelenggara');
     }
-
 
     public function delete($id)
     {

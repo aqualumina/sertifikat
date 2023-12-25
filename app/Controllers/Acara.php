@@ -113,22 +113,20 @@ class Acara extends BaseController
                     'required' => 'Tanggal Sertifikat  Harus Diisi'
                 ]
             ],
-            // 'tgl_acara' =>  [
-            //     'rules' => 'required',
-            //     'errors' => [
-            //         'required' => 'Tanggal Acara  Harus Diisi'
-            //     ]
-            // ],
-            // 'tgl_acara_akhir' =>  [
-            //     'rules' => 'required',
-            //     'errors' => [
-            //         'required' => 'Tanggal Acara Akhir  Harus Diisi'
-            //     ]
-            // ],
+            'tgl_acara' =>  [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Tanggal Acara  Harus Diisi'
+                ]
+            ],
+            'tgl_acara_akhir' =>  [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Tanggal Acara Akhir  Harus Diisi'
+                ]
+            ],
         ])) {
-            // return redirect()->to('/acara/create')->withInput();
             $validation = \Config\Services::validation();
-            // dd($validation);
             return redirect()->back()->withInput()->with('validation', $validation);
         }
 
@@ -158,7 +156,6 @@ class Acara extends BaseController
         ]);
 
         session()->setFlashdata('msg', 'Berhasil menambahkan acara');
-        // dd($dataAcara);
 
         return redirect()->to('/acara');
     }
@@ -208,7 +205,6 @@ class Acara extends BaseController
             ],
         ])) {
             $validation = \Config\Services::validation();
-            // dd($validation);
             return redirect()->back()->withInput()->with('validation', $validation);
         }
 

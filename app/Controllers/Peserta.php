@@ -1,7 +1,5 @@
 <?php
-
 namespace App\Controllers;
-
 use App\Models\PesertaModel;
 
 class Peserta extends BaseController
@@ -16,13 +14,11 @@ class Peserta extends BaseController
     {
         $getTotal = $this->pesertaModel->Total();
         $dataPeserta = $this->pesertaModel->where('id_acara', $id)->findAll();
-        
         $data = [
             'title' => 'Data Peserta',
             'result' => $dataPeserta,
             'total' => $getTotal
         ];
-        
         return view('peserta/index', $data);
     }
 
@@ -31,19 +27,16 @@ class Peserta extends BaseController
         $dataPeserta = $this->pesertaModel->getEditPes($id);
         $data = [
             'title' => 'Ubah Peserta',
-            'validation'=> \Config\Services::validation(),
+            'validation' => \Config\Services::validation(),
             'result' => $dataPeserta
         ];
-
-        
         return view('peserta/edit', $data);
     }
 
     public function update($id)
     {
-        
-            if (!$this->validate(   
-                [
+        if (!$this->validate(
+            [
                 'nama' => [
                     'rules' => 'required',
                     'errors' => [
@@ -69,21 +62,19 @@ class Peserta extends BaseController
                         'valid_emails' => 'Masukan Email Yang Valid'
                     ]
                 ],
-            ])) 
-            {
-                $validation = \Config\Services::validation();
-                // dd($validation);
-                return redirect()->back()->withInput()->with('validation', $validation);
-            }
+            ]
+        )) {
+            $validation = \Config\Services::validation();
+            return redirect()->back()->withInput()->with('validation', $validation);
+        }
         $dataPeserta = new PesertaModel();
-        // dd($this->request->getVar('username'));
         $this->pesertaModel->save([
             'id_peserta' => $id,
             'nama' => $this->request->getVar('nama'),
             'nip' => $this->request->getVar('nip'),
             'no_hp' => $this->request->getVar('no_hp'),
             'email' => $this->request->getVar('email'),
-          'kode_unik' => md5($this->request->getVar('nip')+$id)
+            'kode_unik' => md5($this->request->getVar('nip') + $id)
         ]);
         session()->setFlashdata('msg', 'Berhasil memperbarui Peserta');
         return redirect()->to('/acara');

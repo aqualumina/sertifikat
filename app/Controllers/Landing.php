@@ -26,20 +26,6 @@ class Landing extends BaseController
 
     public function searchs()
     {
-        // $keyword = $this->request->getPost('cari');
-
-        // $dataPeserta = $this->pesertaModel->like('nama', $keyword)
-        //     ->orLike('nip', $keyword)
-        //     ->findAll();
-
-
-
-        // $data = [
-        //     'title' => 'Data Peserta',
-        //     'result' => $dataPeserta,
-        // ];
-
-        // return view('landing', $data);
         $keyword = $this->request->getPost('cari');
 
         $dataPeserta = $this->pesertaModel->like('nip', $keyword)
