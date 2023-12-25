@@ -353,10 +353,11 @@ class Acara extends BaseController
         <div style="margin-top: 15px;"></div>
         <div style="font-size: 50px; margin-bottom: 5px;"><strong>SERTIFIKAT</strong></div>
         <div style="font-size: 22px; margin-bottom: 50px;">Apresiasi</div>
-        <div style="font-size: 19px; margin-bottom: 25px;">Diberikan Kepada</div>
+        <div style="font-size: 19px; margin-bottom: 15px;">Diberikan Kepada</div>
         <div style="font-size: 32px; margin-bottom: 5px;"><strong>{$peserta['nama']}</strong></div>
         <hr>
-        <div style="font-size: 19px; margin-bottom: 20px;">Atas Partisipasinya dalam acara <b>{$acara['nama_acara']}</b> pada tanggal <b>{$tglacara}</b> yang Diselenggarakan oleh <b>{$acara['nama_penyelenggara']}</b></div>
+        <div style="font-size: 19px; margin-bottom: 0px;">Atas Partisipasinya dalam acara <b>{$acara['nama_acara']}</b> Pada Tanggal <b>{$tglacara}</b> yang Diselenggarakan oleh</div>
+        <div style="font-size: 19px; margin-bottom: 20px;"><b>{$acara['nama_penyelenggara']}</b></div>
         <div style="margin-top: 50px;"></div>
         <div style="font-size: 20px; margin-bottom: 5px;"><strong>Ketua</strong></div>
         <div>
@@ -365,7 +366,7 @@ class Acara extends BaseController
         <hr style="width:50%;text-align:center;margin-left:0">
         <div style="font-size: 18px; margin-bottom: 20px;"><strong>{$acara['nama_ttd']}</strong></div>
         </div>
-        <div style="font-size: 12px; margin-bottom: 20px;"><strong>{$peserta['kode_unik']}</strong></div>
+        <div style="font-size: 12px; margin-bottom: 20px;">{$peserta['kode_unik']}</div>
     HTML;
 
         $mpdf->WriteHTML($html);
